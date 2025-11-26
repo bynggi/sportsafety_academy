@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스포츠안전재단 아카데미 웹퍼블리싱 페이지 리스트</title>
+    <style>
+      body {font-family: 'NotoSansKR', sans-serif;font-size: 16px;color: #333;padding: 0;margin: 0;}
+      .pub-guide-top {width: 100%;background: #333;}
+      .pub-guide-wrap {width: 100%;max-width: 1000px;margin: 30px auto;padding: 0 20px;}
+      h1 {font-size: 20px;font-weight: bold;color: #fff;width: 100%;max-width: 1000px;margin: 0 auto;padding: 20px;}
+      h2 {margin: 30px 0 10px;font-size: 16px;font-weight: 600;border-left: 2px solid #333;padding-left: 10px;line-height: 1.6em;}
+      .table-style {border-top: 1px solid #ddd;border-left: 1px solid #ddd;}
+      .table-style table {width: 100%;}
+      .table-style th {text-align: left;background-color: #f8f8f8;}
+      .table-style th,.table-style td {border-right: 1px solid #ddd;border-bottom: 1px solid #ddd;padding: 5px;line-height: 1.6em;vertical-align: top;}
+      .table-style td.bg-gray {background-color: #fafafa;}
+      .table-style a {color: #4217a7;text-decoration: underline;}
+      .table-style td > ul > li {position: relative;font-size: 14px;padding-left: 12px;}
+      .table-style td > ul > li:before {content: '';position: absolute;display: inline-block;top: 10px;left: 0;width: 4px;height: 4px;border-radius: 50%;border: 1px solid #aaa;}
+      ul {list-style: none;}
+      .list-dash {margin: 5px 0 10px;}
+      .list-dash > li {position: relative;font-size: 13px;padding-left: 10px;}
+      .list-dash > li:before {content: '';position: absolute;display: inline-block;top: 10px;left: 0;width: 4px;height: 1px;background: #666;}
+      .list-dot > li {position: relative;font-size: 13px;padding-left: 10px;}
+      .list-dot > li:before {content: '';position: absolute;display: inline-block;top: 10px;left: 0;width: 2px;height: 2px;background: #666;}
+      .text-blue {color: #4573f0;}
+      .text-red {color: #d11515;}
+      table,tr,td,th {border-collapse: collapse;border-spacing: 0px;}
+      caption {width: 0;height: 0;font-size: 0;overflow: hidden;padding: 0;margin: 0;}
+    </style>
+  </head>
+  <body>
+    <div class="pub-guide-top">
+      <h1>스포츠안전재단 아카데미 웹퍼블리싱 페이지 리스트</h1>
+    </div>
+    <div class="pub-guide-wrap">
+      <h2>웹퍼블리싱 HTML 문서 콘텐츠 구조</h2>
+      <p>
+        [스포츠안전재단] 아카데미 고도화 관련 퍼블 작업물입니다. <br />
+        'SSES_PO_18_01_화면설계서_Ver0.4_250916.pptx' 기준으로 현행화 작업 완료. (25-09-22) <br />
+        dev서버의 소스를 다운로드 받아서 수정 및 추가되는 페이지만 작업했습니다.<br />
+      </p>
+      <div class="table-style">
+        <table>
+          <caption>
+            웹퍼블리싱 HTML 문서 콘텐츠 구조
+          </caption>
+          <colgroup>
+            <col style="width: 18%" />
+            <col style="width: 18%" />
+            <col style="width: 19%" />
+            <col />
+          </colgroup>
+          <thead>
+            <tr>
+              <th>1Depth</th>
+              <th>2Depth</th>
+              <th>3Depth</th>
+              <th>파일</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th colspan="4">사용자 화면(수강생) <a href="http://dev.edu.sportsafety.or.kr/" target="_blank">http://dev.edu.sportsafety.or.kr/</a></th>
+            </tr>
+            <tr>
+              <td>메인(디자인 작업 전)</td>
+              <td></td>
+              <td></td>
+              <td><a href="#" target="_blank"></a></td>
+            </tr>
+            <tr>
+              <td>권한 설정 </td>
+              <td>(POPUP)</td>
+              <td></td>
+              <td><a href="사용자/page/수강생/마이페이지_나의강의실_수강신청이력.html" target="_blank">마이페이지_나의강의실_수강신청이력.html</a></td>
+            </tr>
+            <tr>
+              <td>과정안내/신청</td>
+              <td>과정개설신청</td>
+              <td></td>
+              <td><a href="사용자/page/수강생/과정개설신청.html" target="_blank">과정개설신청.html</a></td>
+            </tr>
+            <tr>
+              <td rowspan="7">마이페이지</td>
+              <td>과정개설신청이력</td>
+              <td>교육중과정</td>
+              <td><a href="사용자/page/수강생/과정개설신청이력_교육중과정.html" target="_blank">과정개설신청이력_교육중과정.html</a></td>
+            </tr>
+            <tr>
+              <td>과정개설신청이력</td>
+              <td>상세(교육중과정)</td>
+              <td><a href="사용자/page/수강생/과정개설신청이력_교육중과정_상세.html" target="_blank">과정개설신청이력_교육중과정_상세.html</a></td>
+            </tr>
+            <tr>
+              <td>과정개설신청이력</td>
+              <td>상세(교육완료과정)</td>
+              <td><a href="사용자/page/수강생/과정개설신청이력_교육완료과정_상세.html" target="_blank">과정개설신청이력_교육완료과정_상세.html</a></td>
+            </tr>
+            <tr>
+              <td>과정개설신청이력</td>
+              <td>상세(승인대기)</td>
+              <td><a href="사용자/page/수강생/과정개설신청이력_상세_승인대기.html" target="_blank">과정개설신청이력_상세_승인대기.html</a></td>
+            </tr>
+            <tr>
+              <td>나의강의실</td>
+              <td>수강신청이력</td>
+              <td><a href="사용자/page/수강생/마이페이지_나의강의실_수강신청이력.html" target="_blank">마이페이지_나의강의실_수강신청이력.html</a></td>
+            </tr>
+            <tr>
+              <td>나의강의실</td>
+              <td>강의실(이러닝)</td>
+              <td><a href="사용자/page/수강생/마이페이지_나의강의실_강의실(이러닝).html" target="_blank">마이페이지_나의강의실_강의실(이러닝).html</a></td>
+            </tr>
+            <tr>
+              <td>나의강의실</td>
+              <td>강의실(집합교육)</td>
+              <td><a href="사용자/page/수강생/마이페이지_나의강의실_강의실(집합교육).html" target="_blank">마이페이지_나의강의실_강의실(집합교육).html</a></td>
+            </tr>
+            <tr>
+              <td>마이페이지</td>
+              <td>정보수정</td>
+              <td></td>
+              <td><a href="사용자/page/수강생/마이페이지_정보수정.html" target="_blank">마이페이지_정보수정.html</a></td>
+            </tr>
+            <tr>
+              <th colspan="4">사용자 화면(강사)</th>
+            </tr>
+            <tr>
+              <td rowspan="11">마이페이지</td>
+              <td>강의활동관리</td>
+              <td>프로필관리</td>
+              <td><a href="사용자/page/강사/마이페이지_강의활동관리_프로필관리.html" target="_blank">마이페이지_강의활동관리_프로필관리.html</a></td>
+            </tr>
+            <tr>
+              <td>강의활동관리</td>
+              <td>강의 승인/거부 이력</td>
+              <td><a href="사용자/page/강사/마이페이지_강의활동관리_강의승인거부이력.html" target="_blank">마이페이지_강의활동관리_강의승인거부이력.html</a></td>
+            </tr>
+            <tr>
+              <td>강의활동관리</td>
+              <td>교육정보</td>
+              <td><a href="사용자/page/강사/마이페이지_강의활동관리_교육정보.html" target="_blank">마이페이지_강의활동관리_교육정보.html</a></td>
+            </tr>
+            <tr>
+              <td>강의활동관리</td>
+              <td>교육정보(상세)</td>
+              <td><a href="사용자/page/강사/마이페이지_강의활동관리_교육정보_상세.html" target="_blank">마이페이지_강의활동관리_교육정보_상세.html</a></td>
+            </tr>
+            <tr>
+              <td>강의결과보고서</td>
+              <td></td>
+              <td><a href="사용자/page/강사/마이페이지_강의결과보고서.html" target="_blank">마이페이지_강의결과보고서.html</a></td>
+            </tr>
+            <tr>
+              <td>강의결과보고서</td>
+              <td>상세</td>
+              <td><a href="사용자/page/강사/마이페이지_강의결과보고서_상세.html" target="_blank">마이페이지_강의결과보고서_상세.html</a></td>
+            </tr>
+            <tr>
+              <td>강의결과보고서</td>
+              <td>등록/수정</td>
+              <td><a href="사용자/page/강사/마이페이지_강의결과보고서_등록.html" target="_blank">마이페이지_강의결과보고서_등록.html</a></td>
+            </tr>
+            <tr>
+              <td>강의결과보고서</td>
+              <td>지급조서(수수료 집행내역)</td>
+              <td><a href="사용자/page/강사/마이페이지_강의결과보고서_지급조서_수수료집행내역서.html" target="_blank">마이페이지_강의결과보고서_지급조서_수수료집행내역서.html</a></td>
+            </tr>
+            <tr>
+              <td>강의결과보고서</td>
+              <td>지급조서(교통비 집행내역)</td>
+              <td><a href="사용자/page/강사/마이페이지_강의결과보고서_지급조서_교통비집행내역서.html" target="_blank">마이페이지_강의결과보고서_지급조서_교통비집행내역서.html</a></td>
+            </tr>
+            <tr>
+              <td>출결관리</td>
+              <td></td>
+              <td><a href="사용자/page/강사/마이페이지_출결관리.html" target="_blank">마이페이지_출결관리.html</a></td>
+            </tr>
+            <tr>
+              <td>출결관리</td>
+              <td>상세</td>
+              <td><a href="사용자/page/강사/마이페이지_출결관리_상세.html" target="_blank">마이페이지_출결관리_상세.html</a></td>
+            </tr>
+            <tr>
+              <th colspan="4">관리자 화면 <a href="http://dev.edu.sportsafety.or.kr/adm/login" target="_blank">http://dev.edu.sportsafety.or.kr/adm/login</a></th>
+            </tr>
+            <tr>
+              <td>회원관리</td>
+              <td>운영자관리</td>
+              <td></td>
+              <td><a href="관리자/회원관리_운영자관리_목록.html" target="_blank">회원관리_운영자관리_목록.html</a></td>
+            </tr>
+            <tr>
+              <td rowspan="6">강의활동관리</td>
+              <td>자격증</td>
+              <td></td>
+              <td><a href="관리자/강의활동관리_자격증.html" target="_blank">강의활동관리_자격증.html</a></td>
+            </tr>
+            <tr>
+              <td>차수관리</td>
+              <td>이러닝</td>
+              <td><a href="관리자/교육운영관리_차수관리_이러닝.html" target="_blank">교육운영관리_차수관리_이러닝.html</a></td>
+            </tr>
+            <tr>
+              <td>차수관리</td>
+              <td>집합교육</td>
+              <td><a href="관리자/교육운영관리_차수관리_집합교육.html" target="_blank">교육운영관리_차수관리_집합교육.html</a></td>
+            </tr>
+            <tr>
+              <td>차수관리</td>
+              <td>집합교육(교과목)</td>
+              <td><a href="관리자/교육운영관리_차수관리_집합교육_교과목.html" target="_blank">교육운영관리_차수관리_집합교육_교과목.html</a></td>
+            </tr>
+            <tr>
+              <td>출결관리</td>
+              <td></td>
+              <td><a href="관리자/강의활동관리_출결관리_목록.html" target="_blank">강의활동관리_출결관리_목록.html</a></td>
+            </tr>
+            <tr>
+              <td>출결관리</td>
+              <td>상세</td>
+              <td><a href="관리자/강의활동관리_출결관리_상세.html" target="_blank">강의활동관리_출결관리_상세.html</a></td>
+            </tr>
+            <tr>
+              <td rowspan="5">강의결과보고서</td>
+              <td>강의결과보고서</td>
+              <td></td>
+              <td><a href="관리자/강의결과보고서_강의결과보고서_목록.html" target="_blank">강의결과보고서_강의결과보고서_목록.html</a></td>
+            </tr>
+            <tr>
+              <td>강의결과보고서</td>
+              <td>상세</td>
+              <td><a href="관리자/강의결과보고서_강의결과보고서_상세.html" target="_blank">강의결과보고서_강의결과보고서_상세.html</a></td>
+            </tr>
+            <tr>
+              <td>지급조서</td>
+              <td></td>
+              <td><a href="관리자/강의결과보고서_지급조서_목록.html" target="_blank">강의결과보고서_지급조서_목록.html</a></td>
+            </tr>
+            <tr>
+              <td>지급조서</td>
+              <td>수수료 집행내역</td>
+              <td><a href="관리자/강의결과보고서_지급조서_수수료집행내역서.html" target="_blank">강의결과보고서_지급조서_수수료집행내역서.html</a></td>
+            </tr>
+            <tr>
+              <td>지급조서</td>
+              <td>교통비 집행내역</td>
+              <td><a href="관리자/강의결과보고서_지급조서_교통비집행내역서.html" target="_blank">강의결과보고서_지급조서_교통비집행내역서.html</a></td>
+            </tr>
+            <tr>
+              <td>포털관리</td>
+              <td>게시판관리</td>
+              <td>질문과답변(등록)</td>
+              <td><a href="관리자/포털관리_게시판관리_질문과답변_등록.html" target="_blank">포털관리_게시판관리_질문과답변_등록.html</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

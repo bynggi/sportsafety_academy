@@ -1,0 +1,2365 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset= UTF8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스포츠안전아카데미</title>
+    <link rel="apple-touch-icon" href="http://dev.edu.sportsafety.or.kr/weven_service/asset/img/touch-icon-iphone.png" />
+    <link rel="shortcut icon" href="http://dev.edu.sportsafety.or.kr/weven_service/asset/img/home_icon_an.png" />
+
+    <link rel="stylesheet" href="http://dev.edu.sportsafety.or.kr/weven_service/asset/css/common.css" />
+    <link rel="stylesheet" href="http://dev.edu.sportsafety.or.kr/weven_service/asset/css/ionicons.min.css" />
+    <link rel="stylesheet" href="http://dev.edu.sportsafety.or.kr/weven_service/asset/css/wevenResponsive.css" />
+
+    <link rel="stylesheet" href="http://dev.edu.sportsafety.or.kr/weven_service/asset/toolbar/css/webkit.css" />
+    <meta property="og:title" content="스포츠안전아카데미" />
+    <meta property="og:description" content="스포츠안전아카데미" />
+    <meta name="naver-site-verification" content="c8e3baab115dcf7709a6484ea6abb813c7e0e4b6" />
+    <meta name="google-site-verification" content="kTu8NuP222EQ1R1jhf49waaCOHTtkIL_D-i8Jlz0S-M" />
+    <meta name="description" content="스포츠안전아카데미는 체육인을 위한 No.1 안전교육 서비스를 제공하는 교육전문포털입니다." />
+    <!-- favicon -->
+    <!-- // favicon -->
+
+    <link href="http://dev.edu.sportsafety.or.kr/weven_service/asset/css/wveditor.css" rel="stylesheet" />
+
+    <script type="text/javascript" charset="utf-8" src="http://dev.edu.sportsafety.or.kr/weven_service/asset/js/libs/jquery/jquery-1.9.1.min.js" data-wv-layout-element="weven-js"></script>
+
+    <script type="text/javascript" charset="utf-8" src="http://dev.edu.sportsafety.or.kr/weven_service/asset/js/libs/jquery/jquery.event.drag-2.2.js" data-wv-layout-element="weven-js"></script>
+
+    <!-- <script type="text/javascript" charset="utf-8" src="http://dev.edu.sportsafety.or.kr/weven_service/asset/js/libs/jquery/jquery-ui-1.8.16.custom.min.js" data-wv-layout-element="weven-js"></script>
+
+    <script type="text/javascript" charset="utf-8" src="http://dev.edu.sportsafety.or.kr/weven_service/asset/js/libs/jquery/jquery.autocomplete.js" data-wv-layout-element="weven-js"></script>
+
+    <script type="text/javascript" charset="utf-8" src="http://dev.edu.sportsafety.or.kr/weven_service/asset/js/libs/jquery/jquery.form.js" data-wv-layout-element="weven-js"></script>
+
+    <script type="text/javascript" charset="utf-8" src="http://dev.edu.sportsafety.or.kr/weven_service/asset/js/libs/jquery/printThis.js" data-wv-layout-element="weven-js"></script>
+
+    <script type="text/javascript" charset="utf-8" src="http://dev.edu.sportsafety.or.kr/weven_service/asset/js/libs/jquery/jquery.dotdotdot.js" data-wv-layout-element="weven-js"></script>
+
+    <script type="text/javascript" charset="utf-8" src="http://dev.edu.sportsafety.or.kr/weven_service/asset/js/libs/xlsx.full.min.js" data-wv-layout-element="weven-js"></script> -->
+
+    <!-- greensock -->
+
+    <!-- <script type="text/javascript" charset="utf-8" src="http://dev.edu.sportsafety.or.kr/weven_service/asset/js/libs/greensock/TimelineMax.js" data-wv-layout-element="weven-js"></script>
+ -->
+    <!-- <script type="text/javascript" charset="utf-8" src="http://dev.edu.sportsafety.or.kr/weven_service/asset/js/libs/greensock/TweenMax.js" data-wv-layout-element="weven-js"></script> -->
+
+    <!-- swiper -->
+
+    <link href="http://dev.edu.sportsafety.or.kr/weven_service/asset/js/libs/swiper/swiper.min.css" rel="stylesheet" />
+
+    <script type="text/javascript" charset="utf-8" src="http://dev.edu.sportsafety.or.kr/weven_service/asset/js/libs/swiper/swiper.min.js" data-wv-layout-element="weven-js"></script>
+
+    <!-- websocket -->
+
+    <!-- <script type="text/javascript" charset="utf-8" src="http://dev.edu.sportsafety.or.kr/weven_service/asset/js/libs/WebSocket.js" data-wv-layout-element="weven-js"></script> -->
+
+    <!-- clipboard -->
+
+    <!-- <script type="text/javascript" charset="utf-8" src="http://dev.edu.sportsafety.or.kr/weven_service/asset/js/libs/clipboard/clipboard.js" data-wv-layout-element="weven-js"></script> -->
+
+    <!-- cross browsing -->
+
+    <!--[if IE 8]>
+      <script type="text/javascript" charset="utf-8" src="http://dev.edu.sportsafety.or.kr/weven_service/asset/js/libs/cross-browsing/calc.js" data-wv-layout-element="weven-js"></script>
+
+      <script type="text/javascript" charset="utf-8" src="http://dev.edu.sportsafety.or.kr/weven_service/asset/js/libs/cross-browsing/respond.src.js" data-wv-layout-element="weven-js"></script>
+    <![endif]-->
+
+    <!-- vimeo -->
+
+    <script type="text/javascript">
+      var WEB_ROOT = '/';
+      var FRONT_ROOT = '/';
+      var WEVEN_ASSET_WEB_PATH = 'http://dev.edu.sportsafety.or.kr/weven_service/asset/';
+      var WEVEN_JS_WEB_PATH = 'http://dev.edu.sportsafety.or.kr/weven_service/asset/js/';
+      var USER_FILE_WEB_PATH = '/weven_data/kssfedu/';
+      var CONTENT_WEB_PATH = 'http://dev.edu.sportsafety.or.kr/weven_service/';
+      var PAGE_MODE = 'FRONT';
+      var IS_REST_MEMBER = 'N';
+      var loginSessionInfo = {};
+      loginSessionInfo.seq = '77425';
+      loginSessionInfo.id = 'datacook007';
+      loginSessionInfo.name = '데이터쿡_007(강사)';
+    </script>
+
+    <link rel="stylesheet" href="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/css/common.css" data-wv-layout-element="resource" data-wv-layout-element-param="%7B%22path%22%3A%22css%2Fcommon.css%22%7D" />
+    <link rel="stylesheet" href="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/css/block.style.css" data-wv-layout-element="resource" data-wv-layout-element-param="%7B%22path%22%3A%22css%2Fblock.style.css%22%7D" />
+    <link rel="stylesheet" href="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/css/wevenResponsive.css" data-wv-layout-element="resource" data-wv-layout-element-param="%7B%22path%22%3A%22css%2FwevenResponsive.css%22%7D" />
+    <link rel="stylesheet" href="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/css/theme.common.css" data-wv-layout-element="resource" data-wv-layout-element-param="%7B%22path%22%3A%22css%2Ftheme.common.css%22%7D" />
+    <link rel="stylesheet" href="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/css/theme.resource.header.css" data-wv-layout-element="resource" data-wv-layout-element-param="%7B%22path%22%3A%22css%2Ftheme.resource.header.css%22%7D" />
+    <link rel="stylesheet" href="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/css/theme.resource.footer.css" data-wv-layout-element="resource" data-wv-layout-element-param="%7B%22path%22%3A%22css%2Ftheme.resource.footer.css%22%7D" />
+    <link rel="stylesheet" href="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/css/theme.layout.sub.css" data-wv-layout-element="resource" data-wv-layout-element-param="%7B%22path%22%3A%22css%2Ftheme.layout.sub.css%22%7D" />
+    <link rel="stylesheet" href="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/css/theme.page.sub.css" data-wv-layout-element="resource" data-wv-layout-element-param="%7B%22path%22%3A%22css%2Ftheme.page.sub.css%22%7D" />
+    <link rel="stylesheet" href="../../weven_template/theme/PORTAL/1/resource/css/renewal_style.css" />
+
+    <script type="text/javascript" src="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/js/general.js" data-wv-layout-element="resource" data-wv-layout-element-param="%7B%22path%22%3A%22js%2Fgeneral.js%22%7D"></script>
+    <script type="text/javascript" src="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/js/PopupManager.js" data-wv-layout-element="resource" data-wv-layout-element-param="%7B%22path%22%3A%22js%2FPopupManager.js%22%7D"></script>
+    <script type="text/javascript" src="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/js/gnb.js" data-wv-layout-element="resource" data-wv-layout-element-param="%7B%22path%22%3A%22js%2Fgnb.js%22%7D"></script>
+    <script type="text/javascript" src="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/js/sub.js" data-wv-layout-element="resource" data-wv-layout-element-param="%7B%22path%22%3A%22js%2Fsub.js%22%7D"></script>
+  </head>
+  <body>
+    <div data-wv-layout="layout" data-wv-layout-element="layout_screen" data-wv-layout-seq="3" data-wv-page-seq="43" data-wv-menu-seq="-1">
+      <div class="wrapper sub">
+        <!-- header -->
+        <div class="col-12 header_wrap" data-wv-layout-element="layout" data-wv-inc="header">
+          <div class="col-12 pl-lg-15 pr-lg-15 header_inner">
+            <div class="col-12" data-wv-layout-element="wv-content" data-wv-layout-element-param="%7B%22id%22%3A%22web%2Fcontent%2Fcommon%2Forigin_util_menu%2Futil_menu%22%7D">
+              <!-- <script src="/weven_data/kssfedu/web/content/common/origin_util_menu/js/page.js" type="text/javascript"></script> -->
+              <!-- <script>
+                app.ready(function () {
+                  var utilMenu = {
+                    init: function () {},
+
+                    registEvent: function () {},
+
+                    setStatus: function (isLogin) {
+                      if (!isLogin) {
+                        //비회원일 때
+
+                        $('.wrapper').addClass('not_login');
+                        return false;
+                      }
+                    },
+                  };
+
+                  utilMenu.setStatus(true);
+                });
+              </script> -->
+              <div class="col-12 header_top_con login">
+                <div class="col-12 col-lg-0 logo_con">
+                  <a href="/">
+                    <img src="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/img/academy_private/logo_web.png" alt="스포츠안전재단" class="hidden show-lg" />
+                    <img src="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/img/academy_private/logo_mobile.png" alt="스포츠안전재단" class="hidden-lg" />
+                  </a>
+
+                  <a href="/page/my_course_list" class="mobile_certificate_btn hidden-lg" style="font-size: 14px; font-size: 1.4rem; line-height: 20px; line-height: 2rem; font-weight: 500; letter-spacing: 0em; color: #2dbfee; border: 1px solid #2dbfee; border-radius: 15px; padding: 3px 7px; box-sizing: border-box"> <span>나의강의실</span></a>
+
+                  <a href="/logout" class="mobile_logout_btn hidden-lg" style="font-size: 14px; font-size: 1.4rem; line-height: 20px; line-height: 2rem; font-weight: 500; letter-spacing: 0em; color: #2dbfee; border: 1px solid #2dbfee; border-radius: 15px; padding: 3px 7px; box-sizing: border-box">
+                    <span>로그아웃</span>
+                  </a>
+                </div>
+                <div class="col-0 mt12 fr right_con">
+                  <ul class="util_btn_con">
+                    <!-- 20250520(제거) 
+            <li> 
+                <a href="/page/attendance_check"><span class="font_roboto">QR</span> 출석체크</a>
+            </li>
+            -->
+                    <li style="background-image: url('http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/img/academy_private/23x23_login_icon_img.png')">
+                      <ul>
+                        <li>
+                          <a href="javascript:void(0)" style="cursor: default">데이터쿡_007(강사)</a>
+                        </li>
+                        <li>
+                          <a href="/logout" class="logout">
+                            <span>로그아웃</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a class="bg_point1" href="/page/my_course_list?edu_status=END"><span>수료증발급</span></a>
+                    </li>
+                    <li>
+                      <a class="bg_point1" href="/page/my_course_list"><span>나의강의실</span></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-0 menu_icon_style_0_con">
+                  <a href="javascript:void(0)" onclick="gnb.openClickGnb()" class="menu_icon_style_0">
+                    <span></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="header_bottom_con">
+              <div class="col-12 right_con">
+                <div class="col-12" data-wv-layout-element="menu" data-wv-layout-element-param="%7B%22renderDepth%22%3A2%2C%22domId%22%3A%22gnb%22%2C%22style%22%3A%22%22%2C%22indexPath%22%3Anull%2C%22extraClass%22%3A%22gnb_wrap%20scroll_hidden%22%7D">
+                  <ul class="gnb_wrap scroll_hidden menu_con menu_depth_1" id="gnb">
+                    <li class="menu_1_0" data-menu-seq="185">
+                      <a href="/page/main" target="" class=""><span>홈</span></a>
+                    </li>
+                    <li class="menu_1_1" data-menu-seq="193">
+                      <a href="/page/academy_intro" target="" class=""><span>아카데미소개</span></a>
+                      <ul class="menu_con menu_depth_2">
+                        <li class="menu_2_0" data-menu-seq="251">
+                          <a href="/page/academy_intro" target="" class=""><span>교육소개</span></a>
+                        </li>
+                        <li class="menu_2_1" data-menu-seq="252">
+                          <a href="/page/job_analysis" target="" class=""><span>직무 및 역량분석</span></a>
+                        </li>
+                        <li class="menu_2_2" data-menu-seq="253">
+                          <a href="/page/major_curriculum" target="" class=""><span>주요교육과정</span></a>
+                        </li>
+                        <li class="menu_2_3" data-menu-seq="254">
+                          <a href="/page/how_to_apply" target="" class=""><span>신청방법</span></a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu_1_2" data-menu-seq="194">
+                      <a href="/page/course_search_list" target="" class=""><span>과정안내/신청</span></a>
+                      <ul class="menu_con menu_depth_2">
+                        <li class="menu_2_0" data-menu-seq="195">
+                          <a href="/page/course_search_list" target="" class=""><span>과정검색</span></a>
+                        </li>
+                        <li class="menu_2_1 active" data-menu-seq="199">
+                          <a href="/page/course_open_apply" target="" class=""><span>과정개설신청</span></a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu_1_3" data-menu-seq="186">
+                      <a href="/page/open_course" target="" class=""><span>오픈강좌</span></a>
+                    </li>
+                    <li class="menu_1_4" data-menu-seq="202">
+                      <a href="/page/notice_list" target="" class=""><span>학습지원센터</span></a>
+                      <ul class="menu_con menu_depth_2">
+                        <li class="menu_2_0" data-menu-seq="203">
+                          <a href="/page/notice_list" target="" class=""><span>공지사항</span></a>
+                        </li>
+                        <li class="menu_2_1" data-menu-seq="205">
+                          <a href="/page/faq" target="" class=""><span>자주하는질문</span></a>
+                        </li>
+                        <li class="menu_2_2" data-menu-seq="206">
+                          <a href="/page/inquiry_list" target="" class=""><span>문의하기</span></a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu_1_5" data-menu-seq="208">
+                      <a href="/page/my_course_list" target="" class=""><span>마이페이지</span></a>
+                      <ul class="menu_con menu_depth_2">
+                        <li class="menu_2_0" data-menu-seq="209">
+                          <a href="/page/my_course_list" target="" class=""><span>나의강의실</span></a>
+                        </li>
+                        <li class="menu_2_1" data-menu-seq="215">
+                          <a href="/page/agent_apply_record" target="" class=""><span>교육생일괄신청이력</span></a>
+                        </li>
+                        <li class="menu_2_2" data-menu-seq="217">
+                          <a href="/page/process_apply_record" target="" class=""><span>과정개설신청이력</span></a>
+                        </li>
+                        <li class="menu_2_3" data-menu-seq="250">
+                          <a href="/page/course_open_history" target="" class=""><span>오픈강좌시청이력</span></a>
+                        </li>
+                        <li class="menu_2_4" data-menu-seq="218">
+                          <a href="/page/mypage_modify" target="" class=""><span>정보수정</span></a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+
+                  <script type="text/javascript">
+                    // 계층구조를 이용해 부모까지 a 태그에 active 클래스를 부여한다.
+                    $('#gnb .active')
+                      .parentsUntil('#gnb')
+                      .each(function () {
+                        $(this).removeClass('hidden').addClass('active');
+                      });
+
+                    var loc = location.href;
+
+                    // 모든 자식이 hidden 인경우 부모 ul 도 hidden 시킨다.
+                    (function () {
+                      $('#gnb ul').each(function (index, item) {
+                        var $li = $(item).find('> li');
+                        var len = $li.length;
+                        if (len == 0) return;
+                        $li.each(function () {
+                          if ($(this).hasClass('hidden')) len--;
+                        });
+
+                        if (loc.indexOf('find_pw_search') > -1) {
+                          $(this).removeClass('active').show();
+                        } else if (len == 0) {
+                          $(this).removeClass('active').hide();
+                        }
+                      });
+                    })();
+                  </script>
+                </div>
+              </div>
+              <div class="col-0 menu_icon_style_0_con">
+                <a href="javascript:void(0)" onclick="gnb.openClickGnb()" class="menu_icon_style_0">
+                  <span></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- active시 2depth 나오는 영역 BG -->
+          <div class="col-12 active_menu_bg_con"></div>
+        </div>
+
+        <!-- click_header & fixed_header -->
+        <div class="col-12">
+          <div class="col-12 click_header_wrap">
+            <div class="col-12">
+              <div class="col-12 col-center mw-1200 click_header_con">
+                <div class="col-12 pl-lg-15 pr-lg-15">
+                  <div class="col-12 logo_wrap">
+                    <div class="col-12 col-lg-0 logo_box">
+                      <a href="/" class="show">
+                        <img src="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/img/academy_private/click_header_logo_web.png" alt="스포츠안전재단" class="hidden show-lg" />
+                        <img src="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/img/academy_private/logo_mobile.png" alt="스포츠안전재단" class="show hidden-lg" />
+                      </a>
+                    </div>
+                    <!-- util_menu(로그인관련) -->
+                    <div class="col-12 col-lg-0 fr-lg mt-lg-20 util_menu_wrap">
+                      <div class="col-12" data-wv-layout-element="wv-content" data-wv-layout-element-param="%7B%22id%22%3A%22web%2Fcontent%2Fcommon%2Fclick_util_menu%2Futil_menu%22%7D">
+                        <ul class="member_menu_list">
+                          <li>
+                            <a href="/logout" class="logout">
+                              <span>로그아웃</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="/page/my_course_list" class="logout">
+                              <span>나의강의실</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="/page/my_course_list?edu_status=END" class="logout">
+                              <span>수료증발급</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- gnb -->
+                  <div class="col-12">
+                    <div class="col-12" data-wv-layout-element="menu" data-wv-layout-element-param="%7B%22renderDepth%22%3A2%2C%22domId%22%3A%22gnb%22%2C%22style%22%3A%22%22%2C%22indexPath%22%3Anull%2C%22extraClass%22%3A%22gnb_wrap%20scroll_hidden%22%7D">
+                      <ul class="gnb_wrap scroll_hidden menu_con menu_depth_1" id="gnb">
+                        <li class="menu_1_0" data-menu-seq="185">
+                          <a href="/page/main" target="" class=""><span>홈</span></a>
+                        </li>
+                        <li class="menu_1_1" data-menu-seq="193">
+                          <a href="/page/academy_intro" target="" class=""><span>아카데미소개</span></a>
+                          <ul class="menu_con menu_depth_2">
+                            <li class="menu_2_0" data-menu-seq="251">
+                              <a href="/page/academy_intro" target="" class=""><span>교육소개</span></a>
+                            </li>
+                            <li class="menu_2_1" data-menu-seq="252">
+                              <a href="/page/job_analysis" target="" class=""><span>직무 및 역량분석</span></a>
+                            </li>
+                            <li class="menu_2_2" data-menu-seq="253">
+                              <a href="/page/major_curriculum" target="" class=""><span>주요교육과정</span></a>
+                            </li>
+                            <li class="menu_2_3" data-menu-seq="254">
+                              <a href="/page/how_to_apply" target="" class=""><span>신청방법</span></a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="menu_1_2" data-menu-seq="194">
+                          <a href="/page/course_search_list" target="" class=""><span>과정안내/신청</span></a>
+                          <ul class="menu_con menu_depth_2">
+                            <li class="menu_2_0" data-menu-seq="195">
+                              <a href="/page/course_search_list" target="" class=""><span>과정검색</span></a>
+                            </li>
+                            <li class="menu_2_1 active" data-menu-seq="199">
+                              <a href="/page/course_open_apply" target="" class=""><span>과정개설신청</span></a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="menu_1_3" data-menu-seq="186">
+                          <a href="/page/open_course" target="" class=""><span>오픈강좌</span></a>
+                        </li>
+                        <li class="menu_1_4" data-menu-seq="202">
+                          <a href="/page/notice_list" target="" class=""><span>학습지원센터</span></a>
+                          <ul class="menu_con menu_depth_2">
+                            <li class="menu_2_0" data-menu-seq="203">
+                              <a href="/page/notice_list" target="" class=""><span>공지사항</span></a>
+                            </li>
+                            <li class="menu_2_1" data-menu-seq="205">
+                              <a href="/page/faq" target="" class=""><span>자주하는질문</span></a>
+                            </li>
+                            <li class="menu_2_2" data-menu-seq="206">
+                              <a href="/page/inquiry_list" target="" class=""><span>문의하기</span></a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="menu_1_5" data-menu-seq="208">
+                          <a href="/page/my_course_list" target="" class=""><span>마이페이지</span></a>
+                          <ul class="menu_con menu_depth_2">
+                            <li class="menu_2_0" data-menu-seq="209">
+                              <a href="/page/my_course_list" target="" class=""><span>나의강의실</span></a>
+                            </li>
+                            <li class="menu_2_1" data-menu-seq="215">
+                              <a href="/page/agent_apply_record" target="" class=""><span>교육생일괄신청이력</span></a>
+                            </li>
+                            <li class="menu_2_2" data-menu-seq="217">
+                              <a href="/page/process_apply_record" target="" class=""><span>과정개설신청이력</span></a>
+                            </li>
+                            <li class="menu_2_3" data-menu-seq="250">
+                              <a href="/page/course_open_history" target="" class=""><span>오픈강좌시청이력</span></a>
+                            </li>
+                            <li class="menu_2_4" data-menu-seq="218">
+                              <a href="/page/mypage_modify" target="" class=""><span>정보수정</span></a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+
+                      <script type="text/javascript">
+                        // 계층구조를 이용해 부모까지 a 태그에 active 클래스를 부여한다.
+                        $('#gnb .active')
+                          .parentsUntil('#gnb')
+                          .each(function () {
+                            $(this).removeClass('hidden').addClass('active');
+                          });
+
+                        var loc = location.href;
+
+                        // 모든 자식이 hidden 인경우 부모 ul 도 hidden 시킨다.
+                        (function () {
+                          $('#gnb ul').each(function (index, item) {
+                            var $li = $(item).find('> li');
+                            var len = $li.length;
+                            if (len == 0) return;
+                            $li.each(function () {
+                              if ($(this).hasClass('hidden')) len--;
+                            });
+
+                            if (loc.indexOf('find_pw_search') > -1) {
+                              $(this).removeClass('active').show();
+                            } else if (len == 0) {
+                              $(this).removeClass('active').hide();
+                            }
+                          });
+                        })();
+                      </script>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-0 close_btn_con">
+                <a href="javascript:void(0)" onclick="gnb.closeClickGnb()" class="close_btn">
+                  <span>닫기</span>
+                </a>
+              </div>
+              <div class="col-0 left_bg_con">
+                <img src="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/img/academy_private/click_header_left_bg.png" alt="" />
+              </div>
+            </div>
+            <div class="col-0 right_bg_wrap">
+              <div class="right_bg_con">
+                <img src="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/img/academy_private/click_header_right_bg.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="col-12 click_header_dim hidden"></div>
+          <div class="col-12 fixed_header_wrap">
+            <div class="col-12 fixed_header_inner">
+              <div class="logo_con">
+                <h1>
+                  <a href="/">
+                    <img src="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/img/academy_private/logo_web.png" alt="스포츠안전재단" />
+                  </a>
+                </h1>
+              </div>
+              <div class="col-12" data-wv-layout-element="menu" data-wv-layout-element-param="%7B%22renderDepth%22%3A2%2C%22domId%22%3A%22gnb%22%2C%22style%22%3A%22%22%2C%22indexPath%22%3Anull%2C%22extraClass%22%3A%22gnb_wrap%20scroll_hidden%22%7D">
+                <ul class="gnb_wrap scroll_hidden menu_con menu_depth_1" id="gnb">
+                  <li class="menu_1_0" data-menu-seq="185">
+                    <a href="/page/main" target="" class=""><span>홈</span></a>
+                  </li>
+                  <li class="menu_1_1" data-menu-seq="193">
+                    <a href="/page/academy_intro" target="" class=""><span>아카데미소개</span></a>
+                    <ul class="menu_con menu_depth_2">
+                      <li class="menu_2_0" data-menu-seq="251">
+                        <a href="/page/academy_intro" target="" class=""><span>교육소개</span></a>
+                      </li>
+                      <li class="menu_2_1" data-menu-seq="252">
+                        <a href="/page/job_analysis" target="" class=""><span>직무 및 역량분석</span></a>
+                      </li>
+                      <li class="menu_2_2" data-menu-seq="253">
+                        <a href="/page/major_curriculum" target="" class=""><span>주요교육과정</span></a>
+                      </li>
+                      <li class="menu_2_3" data-menu-seq="254">
+                        <a href="/page/how_to_apply" target="" class=""><span>신청방법</span></a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu_1_2" data-menu-seq="194">
+                    <a href="/page/course_search_list" target="" class=""><span>과정안내/신청</span></a>
+                    <ul class="menu_con menu_depth_2">
+                      <li class="menu_2_0" data-menu-seq="195">
+                        <a href="/page/course_search_list" target="" class=""><span>과정검색</span></a>
+                      </li>
+                      <li class="menu_2_1 active" data-menu-seq="199">
+                        <a href="/page/course_open_apply" target="" class=""><span>과정개설신청</span></a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu_1_3" data-menu-seq="186">
+                    <a href="/page/open_course" target="" class=""><span>오픈강좌</span></a>
+                  </li>
+                  <li class="menu_1_4" data-menu-seq="202">
+                    <a href="/page/notice_list" target="" class=""><span>학습지원센터</span></a>
+                    <ul class="menu_con menu_depth_2">
+                      <li class="menu_2_0" data-menu-seq="203">
+                        <a href="/page/notice_list" target="" class=""><span>공지사항</span></a>
+                      </li>
+                      <li class="menu_2_1" data-menu-seq="205">
+                        <a href="/page/faq" target="" class=""><span>자주하는질문</span></a>
+                      </li>
+                      <li class="menu_2_2" data-menu-seq="206">
+                        <a href="/page/inquiry_list" target="" class=""><span>문의하기</span></a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu_1_5" data-menu-seq="208">
+                    <a href="/page/my_course_list" target="" class=""><span>마이페이지</span></a>
+                    <ul class="menu_con menu_depth_2">
+                      <li class="menu_2_0" data-menu-seq="209">
+                        <a href="/page/my_course_list" target="" class=""><span>나의강의실</span></a>
+                      </li>
+                      <li class="menu_2_1" data-menu-seq="215">
+                        <a href="/page/agent_apply_record" target="" class=""><span>교육생일괄신청이력</span></a>
+                      </li>
+                      <li class="menu_2_2" data-menu-seq="217">
+                        <a href="/page/process_apply_record" target="" class=""><span>과정개설신청이력</span></a>
+                      </li>
+                      <li class="menu_2_3" data-menu-seq="250">
+                        <a href="/page/course_open_history" target="" class=""><span>오픈강좌시청이력</span></a>
+                      </li>
+                      <li class="menu_2_4" data-menu-seq="218">
+                        <a href="/page/mypage_modify" target="" class=""><span>정보수정</span></a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <script type="text/javascript">
+                  // 계층구조를 이용해 부모까지 a 태그에 active 클래스를 부여한다.
+                  $('#gnb .active')
+                    .parentsUntil('#gnb')
+                    .each(function () {
+                      $(this).removeClass('hidden').addClass('active');
+                    });
+
+                  var loc = location.href;
+
+                  // 모든 자식이 hidden 인경우 부모 ul 도 hidden 시킨다.
+                  (function () {
+                    $('#gnb ul').each(function (index, item) {
+                      var $li = $(item).find('> li');
+                      var len = $li.length;
+                      if (len == 0) return;
+                      $li.each(function () {
+                        if ($(this).hasClass('hidden')) len--;
+                      });
+
+                      if (loc.indexOf('find_pw_search') > -1) {
+                        $(this).removeClass('active').show();
+                      } else if (len == 0) {
+                        $(this).removeClass('active').hide();
+                      }
+                    });
+                  })();
+                </script>
+              </div>
+              <div class="menu_icon_style_0_con type_2">
+                <a href="javascript:void(0)" onclick="gnb.openClickGnb()" class="menu_icon_style_0">
+                  <span>메뉴</span>
+                </a>
+              </div>
+            </div>
+            <div class="col-12 active_menu_bg_con"></div>
+          </div>
+        </div>
+
+        <div class="col-12 contents_container">
+          <div class="col-12 sub_layout_title_con">
+            <div class="col-12 col-center mw-1200 pl30 pr30 pl-md-60 pr-md-60 pl-lg-15 pr-lg-15 sub_layout_title">
+              <div class="img_box">
+                <img src="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/img/academy_private/academy_sub_layout_web_icon.png" alt="서브레이아웃 이미지" />
+              </div>
+              <div class="desc_box">
+                <div class="col-12 font_gongGothic sub_title point1">스포츠안전아카데미</div>
+                <div class="col-12 font_gongGothic title"><span class="point0 font_gongGothic">과정안내</span>/신청</div>
+              </div>
+            </div>
+            <div class="right_bg"></div>
+          </div>
+          <div class="col-12" data-wv-layout-element="layout-page" data-wv-layout-element-param="null">
+            <style>
+              /* 선택한 과정 icon */
+              .course_target_selected_list_con {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: stretch;
+              }
+              .course_target_selected_list_con .course_target_selected_list {
+                position: relative;
+                text-align: center;
+                padding-left: 20px;
+                padding-right: 20px;
+                margin-bottom: 20px;
+              }
+              .course_target_selected_list_con .course_target_selected_list::after {
+                content: '';
+                position: absolute;
+                top: 2px;
+                right: 0;
+                height: calc(100% - 7px);
+                border-right: 1px solid #eceaf7;
+              }
+              .course_target_selected_list_con .course_target_selected_list:last-child::after {
+                content: none;
+              }
+              .course_target_selected_list_con .course_target_selected_list > span {
+                min-width: 54px;
+                text-align: center;
+                display: inline-block;
+                position: relative;
+                padding-top: 51px;
+                background-image: url('/weven_template/theme/PORTAL/1/resource/img/academy_private/course_select_icon_000_hybrid.png');
+                background-size: 53px 44px;
+                background-repeat: no-repeat;
+                background-position: center top;
+                font-size: 16px;
+                font-size: 1.6rem;
+                line-height: 22px;
+                line-height: 2.2rem;
+                font-weight: 300;
+                letter-spacing: -0.02em;
+                color: #353a40;
+              }
+              .course_target_selected_list_con .course_target_selected_list.education_leader > span {
+                background-image: url('/weven_template/theme/PORTAL/1/resource/img/academy_private/course_select_icon_001_hybrid.png');
+              }
+              .course_target_selected_list_con .course_target_selected_list.facility_official > span {
+                background-image: url('/weven_template/theme/PORTAL/1/resource/img/academy_private/course_select_icon_002_hybrid.png');
+              }
+              .course_target_selected_list_con .course_target_selected_list.referee > span {
+                background-image: url('/weven_template/theme/PORTAL/1/resource/img/academy_private/course_select_icon_003_hybrid.png');
+              }
+              .course_target_selected_list_con .course_target_selected_list.player > span {
+                background-image: url('/weven_template/theme/PORTAL/1/resource/img/academy_private/course_select_icon_004_hybrid.png');
+              }
+              .course_target_selected_list_con .course_target_selected_list.preparatory > span {
+                background-image: url('/weven_template/theme/PORTAL/1/resource/img/academy_private/course_select_icon_005_hybrid.png');
+              }
+
+              .group .course_target_selected_list_con .course_target_selected_list > span {
+                background-image: url('/weven_template/theme/PORTAL/1/resource/img/academy_private/course_select_icon_000_group.png');
+              }
+              .group .course_target_selected_list_con .course_target_selected_list.education_leader > span {
+                background-image: url('/weven_template/theme/PORTAL/1/resource/img/academy_private/course_select_icon_001_group.png');
+              }
+              .group .course_target_selected_list_con .course_target_selected_list.facility_official > span {
+                background-image: url('/weven_template/theme/PORTAL/1/resource/img/academy_private/course_select_icon_002_group.png');
+              }
+              .group .course_target_selected_list_con .course_target_selected_list.referee > span {
+                background-image: url('/weven_template/theme/PORTAL/1/resource/img/academy_private/course_select_icon_003_group.png');
+              }
+              .group .course_target_selected_list_con .course_target_selected_list.player > span {
+                background-image: url('/weven_template/theme/PORTAL/1/resource/img/academy_private/course_select_icon_004_group.png');
+              }
+              .group .course_target_selected_list_con .course_target_selected_list.preparatory > span {
+                background-image: url('/weven_template/theme/PORTAL/1/resource/img/academy_private/course_select_icon_005_group.png');
+              }
+
+              .elearn .course_target_selected_list_con .course_target_selected_list > span {
+                background-image: url('/weven_template/theme/PORTAL/1/resource/img/academy_private/course_select_icon_000_elearn.png');
+              }
+              .elearn .course_target_selected_list_con .course_target_selected_list.education_leader > span {
+                background-image: url('/weven_template/theme/PORTAL/1/resource/img/academy_private/course_select_icon_001_elearn.png');
+              }
+              .elearn .course_target_selected_list_con .course_target_selected_list.facility_official > span {
+                background-image: url('/weven_template/theme/PORTAL/1/resource/img/academy_private/course_select_icon_002_elearn.png');
+              }
+              .elearn .course_target_selected_list_con .course_target_selected_list.referee > span {
+                background-image: url('/weven_template/theme/PORTAL/1/resource/img/academy_private/course_select_icon_003_elearn.png');
+              }
+              .elearn .course_target_selected_list_con .course_target_selected_list.player > span {
+                background-image: url('/weven_template/theme/PORTAL/1/resource/img/academy_private/course_select_icon_004_elearn.png');
+              }
+              .elearn .course_target_selected_list_con .course_target_selected_list.preparatory > span {
+                background-image: url('/weven_template/theme/PORTAL/1/resource/img/academy_private/course_select_icon_005_elearn.png');
+              }
+
+              .course_selected_info_box {
+              }
+              .course_selected_info_box .course_selected_info_sub_title {
+                font-size: 17px;
+                font-size: 1.7rem;
+                line-height: 23px;
+                line-height: 2.3rem;
+                font-weight: 300;
+                letter-spacing: -0.04em;
+                color: #353a40;
+              }
+              .course_selected_info_box .course_selected_info_title {
+                font-size: 32px;
+                font-size: 3.2rem;
+                line-height: 56px;
+                line-height: 5.6rem;
+                font-weight: 500;
+                letter-spacing: -0.02em;
+                color: #353a40;
+              }
+
+              .lms_form_style_list_0.type_check .lms_form_style_list_0_contents_box > div {
+                max-width: 533px;
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 25px;
+              }
+              .lms_form_style_list_0.type_check .lms_form_style_list_0_contents_box > div:last-child {
+                margin-bottom: 0;
+              }
+              .lms_form_style_list_0.type_check .lms_form_style_list_0_contents_box > div > div {
+                margin-bottom: 25px;
+              }
+              .lms_form_style_list_0.type_check .lms_form_style_list_0_contents_box > div > div:last-child {
+                margin-bottom: 0;
+              }
+              .lms_form_style_list_0.type_check .lms_form_style_list_0_contents_box > div > div:nth-last-child(2) {
+                margin-bottom: 0;
+              }
+              .lms_form_style_list_0.type_check .lms_form_style_list_0_contents_box > div > div:nth-last-child(3) {
+                margin-bottom: 0;
+              }
+              /*.lms_form_style_list_0.type_check .lms_form_style_list_0_contents_box > div .col-40 { width: 40%; }*/
+              /*.lms_form_style_list_0.type_check .lms_form_style_list_0_contents_box > div > .lms_check_box_style_0_con:first-child { max-width: 129px; }*/
+              /*.lms_form_style_list_0.type_check .lms_form_style_list_0_contents_box > div:first-child > .lms_check_box_style_0_con:nth-child(2) { max-width: 108px; }*/
+              /*.lms_form_style_list_0.type_check .lms_form_style_list_0_contents_box > div:first-child > .lms_check_box_style_0_con:nth-child(3) { max-width: 88px; }*/
+              /*.lms_form_style_list_0.type_check .lms_form_style_list_0_contents_box > div:nth-child(2) > .lms_check_box_style_0_con:nth-child(2) { max-width: 196px; }*/
+
+              /*.lms_form_style_list_0.type_check .lms_form_style_list_0_contents_box > div > .lms_check_box_style_0_con:nth-last-child(2) { max-width: 150px; }*/
+
+              [data-wv-res-id='___lms_input_style_0___-1___1605679997802___'] input {
+                border-radius: 0;
+                position: relative;
+                width: 100%;
+                height: 45px;
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-bottom: 1px;
+                font-size: 16px;
+                font-size: 1.6rem;
+                line-height: 22px;
+                line-height: 2.2rem;
+                letter-spacing: -0.02em;
+                font-weight: 500;
+                border: 1px solid #e9f0f3;
+                outline: none;
+                box-sizing: border-box;
+                -webkit-appearance: none;
+              }
+              [data-wv-res-id='___lms_input_style_0___-1___1605679997802___'] input::-webkit-input-placeholder {
+                font-size: 16px;
+                font-size: 1.6rem;
+                line-height: 22px;
+                line-height: 2.2rem;
+                font-weight: 300;
+                letter-spacing: -0.02em;
+                color: #a29ebb;
+              }
+              [data-wv-res-id='___lms_input_style_0___-1___1605679997802___'] input:-moz-placeholder {
+                font-size: 16px;
+                font-size: 1.6rem;
+                font-weight: 300;
+                letter-spacing: -0.02em;
+                color: #a29ebb;
+                opacity: 1;
+              }
+              [data-wv-res-id='___lms_input_style_0___-1___1605679997802___'] input::-moz-placeholder {
+                font-size: 16px;
+                font-size: 1.6rem;
+                font-weight: 300;
+                letter-spacing: -0.02em;
+                color: #a29ebb;
+                opacity: 1;
+              }
+              [data-wv-res-id='___lms_input_style_0___-1___1605679997802___'] input:-ms-input-placeholder {
+                font-size: 16px;
+                font-size: 1.6rem;
+                font-weight: 300;
+                letter-spacing: -0.02em;
+                color: #a29ebb;
+              }
+              [data-wv-res-id='___lms_input_style_0___-1___1605679997802___'] input::-ms-input-placeholder {
+                font-size: 16px;
+                font-size: 1.6rem;
+                font-weight: 300;
+                letter-spacing: -0.02em;
+                color: #a29ebb;
+              }
+
+              .lms_popup_style_1_wrap .popup_inner .popup_contents_con .popup_contents.type_form .popup_contents_desc_con .popup_form_list_box .contents_box input {
+                height: 48px;
+              }
+
+              [data-wv-res-id='___lms_pagination_style_0_con___-1___1606378447219___'] .lms_paging_button_con {
+                font-size: 0;
+                white-space: nowrap;
+                text-align: center;
+              }
+              [data-wv-res-id='___lms_pagination_style_0_con___-1___1606378447219___'] .lms_paging_button_con li {
+                position: relative;
+                display: inline-block;
+                text-align: center;
+                background-repeat: no-repeat;
+                background-position: center center;
+                cursor: pointer;
+                font-weight: 700;
+                width: 28px;
+                height: 28px;
+                box-sizing: border-box;
+                font-family: 'GongGothic';
+              }
+              [data-wv-res-id='___lms_pagination_style_0_con___-1___1606378447219___'] .lms_paging_button_con li.lms_btn_page {
+                width: auto;
+                font-size: 14px;
+                font-size: 1.4rem;
+                line-height: 20px;
+                line-height: 2rem;
+                font-weight: 300;
+                color: #cad6ea;
+                padding-top: 5px;
+                padding-right: 2px;
+                padding-left: 2px;
+                z-index: 1;
+                margin-right: 8px;
+                margin-left: 8px;
+              }
+              [data-wv-res-id='___lms_pagination_style_0_con___-1___1606378447219___'] .lms_paging_button_con li.lms_btn_page.selected {
+                color: #353a40;
+                font-weight: 600;
+              }
+              [data-wv-res-id='___lms_pagination_style_0_con___-1___1606378447219___'] .lms_paging_button_con li.lms_btn_singlePage {
+                z-index: 0;
+                text-indent: -10000px;
+                border-radius: 50%;
+                background-color: #f4f7fb;
+                margin-right: 3px;
+                margin-left: 3px;
+                transition: all 0.2s;
+              }
+              [data-wv-res-id='___lms_pagination_style_0_con___-1___1606378447219___'] .lms_paging_button_con li.lms_btn_singlePage:hover {
+                background-color: #000;
+              }
+              [data-wv-res-id='___lms_pagination_style_0_con___-1___1606378447219___'] .lms_paging_button_con li.lms_btn_singlePage[data-wv-page-btn='first'] {
+                background-image: url('/weven_template/theme/PORTAL/1/resource/img/common/pagination_style_0_double_left_arrow.png');
+                background-size: 11px 10px;
+              }
+              [data-wv-res-id='___lms_pagination_style_0_con___-1___1606378447219___'] .lms_paging_button_con li.lms_btn_singlePage[data-wv-page-btn='first']:hover {
+                background-image: url('/weven_template/theme/PORTAL/1/resource/img/common/pagination_style_0_double_left_arrow_h.png');
+              }
+              [data-wv-res-id='___lms_pagination_style_0_con___-1___1606378447219___'] .lms_paging_button_con li.lms_btn_singlePage[data-wv-page-btn='prev'] {
+                background-image: url('/weven_template/theme/PORTAL/1/resource/img/common/pagination_style_0_single_left_arrow.png');
+                background-size: 6px 10px;
+                margin-right: 28px;
+              }
+              [data-wv-res-id='___lms_pagination_style_0_con___-1___1606378447219___'] .lms_paging_button_con li.lms_btn_singlePage[data-wv-page-btn='prev']:hover {
+                background-image: url('/weven_template/theme/PORTAL/1/resource/img/common/pagination_style_0_single_left_arrow_h.png');
+              }
+              [data-wv-res-id='___lms_pagination_style_0_con___-1___1606378447219___'] .lms_paging_button_con li.lms_btn_singlePage[data-wv-page-btn='next'] {
+                background-image: url('/weven_template/theme/PORTAL/1/resource/img/common/pagination_style_0_single_right_arrow.png');
+                background-size: 6px 10px;
+                margin-left: 28px;
+              }
+              [data-wv-res-id='___lms_pagination_style_0_con___-1___1606378447219___'] .lms_paging_button_con li.lms_btn_singlePage[data-wv-page-btn='next']:hover {
+                background-image: url('/weven_template/theme/PORTAL/1/resource/img/common/pagination_style_0_single_right_arrow_h.png');
+              }
+              [data-wv-res-id='___lms_pagination_style_0_con___-1___1606378447219___'] .lms_paging_button_con li.lms_btn_singlePage[data-wv-page-btn='last'] {
+                background-image: url('/weven_template/theme/PORTAL/1/resource/img/common/pagination_style_0_double_right_arrow.png');
+                background-size: 11px 10px;
+              }
+              [data-wv-res-id='___lms_pagination_style_0_con___-1___1606378447219___'] .lms_paging_button_con li.lms_btn_singlePage[data-wv-page-btn='last']:hover {
+                background-image: url('/weven_template/theme/PORTAL/1/resource/img/common/pagination_style_0_double_right_arrow_h.png');
+              }
+
+              .sport_academy_card_style_0_wrap .sport_academy_card_style_0 .sport_academy_card_style_0_desc_box {
+                border-bottom: 1px solid #e9f0f3;
+              }
+
+              .excel_notice_list_0 > li {
+                position: relative;
+                padding-left: 10px;
+              }
+              .excel_notice_list_0 > li:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 11px;
+                border-bottom: 1px solid #000;
+                width: 4px;
+              }
+
+              .privacy_info_wrap {
+              }
+
+              .privacy_info_wrap .privacy_info_title {
+                font-size: 19px;
+                font-size: 1.9rem;
+                line-height: 25px;
+                line-height: 2.5rem;
+                font-weight: 500;
+                letter-spacing: -0.04em;
+                color: #353a40;
+              }
+              .privacy_info_wrap .privacy_info_sub_title_box {
+                background-color: #fafbfe;
+                border: 1px solid #e9f0f3;
+                padding: 27px 40px;
+                font-size: 17px;
+                font-size: 1.7rem;
+                line-height: 30px;
+                line-height: 3rem;
+                font-weight: 300;
+                color: #353a40;
+              }
+              .privacy_info_wrap .privacy_info_sub_title_box > div {
+                max-width: 900px;
+                letter-spacing: -0.02em;
+              }
+
+              .privacy_info_wrap .privacy_info_desc_list_con {
+              }
+              .privacy_info_desc_list_con .privacy_info_desc_list {
+                border-bottom: 1px solid #e9f0f3;
+                padding-bottom: 24px;
+                margin-bottom: 24px;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+              }
+              .privacy_info_desc_list_con .privacy_info_desc_list .left_box {
+                font-size: 14px;
+                font-size: 1.4rem;
+                line-height: 20px;
+                line-height: 2rem;
+                font-weight: 500;
+                letter-spacing: -0.02em;
+                color: #353a40;
+                margin-bottom: 10px;
+              }
+              .privacy_info_desc_list_con .privacy_info_desc_list .right_box {
+                font-size: 17px;
+                font-size: 1.7rem;
+                line-height: 28px;
+                line-height: 2.8rem;
+                font-weight: 300;
+                letter-spacing: -0.02em;
+                color: #353a40;
+              }
+              .privacy_info_desc_list_con .privacy_info_desc_list:last-child {
+                border-bottom: 0px none;
+                padding-bottom: 0;
+                margin-bottom: 0;
+              }
+
+              @media all and (min-width: 768px) {
+                .privacy_info_desc_list_con .privacy_info_desc_list .left_box {
+                  width: 294px;
+                  margin-top: 5px;
+                  margin-bottom: 0;
+                }
+                .privacy_info_desc_list_con .privacy_info_desc_list .right_box {
+                  width: calc(100% - 294px);
+                }
+              }
+
+              @media all and (min-width: 992px) {
+                .course_target_selected_list_con {
+                  flex-wrap: nowrap;
+                }
+                .course_target_selected_list_con .course_target_selected_list {
+                  padding-right: 40px;
+                  padding-left: 40px;
+                  margin-bottom: 0;
+                }
+                .course_target_selected_list_con .course_target_selected_list > span {
+                  min-width: 72px;
+                }
+                .course_target_selected_list_con .course_target_selected_list:last-child::after {
+                  content: none;
+                }
+
+                .lms_form_style_list_0 .lms_form_style_list_0_label_box {
+                  width: 112px;
+                }
+                .lms_form_style_list_0 .lms_form_style_list_0_contents_box {
+                  width: calc(100% - 112px);
+                }
+
+                [data-wv-res-id='___lms_form_style_list_0_con___-1___1605678616052___'] {
+                  padding-left: 40px;
+                }
+              }
+            </style>
+            <div class="col-12 mb50 sub_layout_lnb_menu_wrap">
+              <div class="col-12 col-center mw-1200 sub_layout_lnb_menu_con">
+                <div class="pl15 sub_layout_lnb_active_depth">
+                  <div class="col-12" data-wv-layout-element="menu" data-wv-layout-element-param="%7B%22renderDepth%22%3A2%2C%22domId%22%3A%22lnb%22%2C%22style%22%3Anull%2C%22indexPath%22%3Anull%2C%22extraClass%22%3A%22lnb_menu_con%22%7D">
+                    <ul class="lnb_menu_con menu_con menu_depth_1" id="lnb">
+                      <li class="menu_1_0" data-menu-seq="185">
+                        <a href="/page/main" target="" class=""><span>홈</span></a>
+                      </li>
+                      <li class="menu_1_1" data-menu-seq="193">
+                        <a href="/page/academy_intro" target="" class=""><span>아카데미소개</span></a>
+                        <ul class="menu_con menu_depth_2">
+                          <li class="menu_2_0" data-menu-seq="251">
+                            <a href="/page/academy_intro" target="" class=""><span>교육소개</span></a>
+                          </li>
+                          <li class="menu_2_1" data-menu-seq="252">
+                            <a href="/page/job_analysis" target="" class=""><span>직무 및 역량분석</span></a>
+                          </li>
+                          <li class="menu_2_2" data-menu-seq="253">
+                            <a href="/page/major_curriculum" target="" class=""><span>주요교육과정</span></a>
+                          </li>
+                          <li class="menu_2_3" data-menu-seq="254">
+                            <a href="/page/how_to_apply" target="" class=""><span>신청방법</span></a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu_1_2 active" data-menu-seq="194">
+                        <a href="/page/course_search_list" target="" class=""><span>과정안내/신청</span></a>
+                        <ul class="menu_con menu_depth_2 active">
+                          <li class="menu_2_0" data-menu-seq="195">
+                            <a href="/page/course_search_list" target="" class=""><span>과정검색</span></a>
+                          </li>
+                          <li class="menu_2_1 active" data-menu-seq="199">
+                            <a href="/page/course_open_apply" target="" class=""><span>과정개설신청</span></a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu_1_3" data-menu-seq="186">
+                        <a href="/page/open_course" target="" class=""><span>오픈강좌</span></a>
+                      </li>
+                      <li class="menu_1_4" data-menu-seq="202">
+                        <a href="/page/notice_list" target="" class=""><span>학습지원센터</span></a>
+                        <ul class="menu_con menu_depth_2">
+                          <li class="menu_2_0" data-menu-seq="203">
+                            <a href="/page/notice_list" target="" class=""><span>공지사항</span></a>
+                          </li>
+                          <li class="menu_2_1" data-menu-seq="205">
+                            <a href="/page/faq" target="" class=""><span>자주하는질문</span></a>
+                          </li>
+                          <li class="menu_2_2" data-menu-seq="206">
+                            <a href="/page/inquiry_list" target="" class=""><span>문의하기</span></a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu_1_5" data-menu-seq="208">
+                        <a href="/page/my_course_list" target="" class=""><span>마이페이지</span></a>
+                        <ul class="menu_con menu_depth_2">
+                          <li class="menu_2_0" data-menu-seq="209">
+                            <a href="/page/my_course_list" target="" class=""><span>나의강의실</span></a>
+                          </li>
+                          <li class="menu_2_1" data-menu-seq="215">
+                            <a href="/page/agent_apply_record" target="" class=""><span>교육생일괄신청이력</span></a>
+                          </li>
+                          <li class="menu_2_2" data-menu-seq="217">
+                            <a href="/page/process_apply_record" target="" class=""><span>과정개설신청이력</span></a>
+                          </li>
+                          <li class="menu_2_3" data-menu-seq="250">
+                            <a href="/page/course_open_history" target="" class=""><span>오픈강좌시청이력</span></a>
+                          </li>
+                          <li class="menu_2_4" data-menu-seq="218">
+                            <a href="/page/mypage_modify" target="" class=""><span>정보수정</span></a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+
+                    <script type="text/javascript">
+                      // 계층구조를 이용해 부모까지 a 태그에 active 클래스를 부여한다.
+                      $('#lnb .active')
+                        .parentsUntil('#lnb')
+                        .each(function () {
+                          $(this).removeClass('hidden').addClass('active');
+                        });
+
+                      var loc = location.href;
+
+                      // 모든 자식이 hidden 인경우 부모 ul 도 hidden 시킨다.
+                      (function () {
+                        $('#lnb ul').each(function (index, item) {
+                          var $li = $(item).find('> li');
+                          var len = $li.length;
+                          if (len == 0) return;
+                          $li.each(function () {
+                            if ($(this).hasClass('hidden')) len--;
+                          });
+
+                          if (loc.indexOf('find_pw_search') > -1) {
+                            $(this).removeClass('active').show();
+                          } else if (len == 0) {
+                            $(this).removeClass('active').hide();
+                          }
+                        });
+                      })();
+                    </script>
+                  </div>
+                </div>
+                <div class="pr15 sub_layout_lnb_menu_route">
+                  <div class="col-12" data-wv-layout-element="menu" data-wv-layout-element-param="%7B%22renderDepth%22%3A2%2C%22domId%22%3A%22lnb%22%2C%22style%22%3Anull%2C%22indexPath%22%3Anull%2C%22extraClass%22%3A%22lnb_menu_con%22%7D">
+                    <ul class="lnb_menu_con menu_con menu_depth_1" id="lnb">
+                      <li class="menu_1_0" data-menu-seq="185">
+                        <a href="/page/main" target="" class=""><span>홈</span></a>
+                      </li>
+                      <li class="menu_1_1" data-menu-seq="193">
+                        <a href="/page/academy_intro" target="" class=""><span>아카데미소개</span></a>
+                        <ul class="menu_con menu_depth_2">
+                          <li class="menu_2_0" data-menu-seq="251">
+                            <a href="/page/academy_intro" target="" class=""><span>교육소개</span></a>
+                          </li>
+                          <li class="menu_2_1" data-menu-seq="252">
+                            <a href="/page/job_analysis" target="" class=""><span>직무 및 역량분석</span></a>
+                          </li>
+                          <li class="menu_2_2" data-menu-seq="253">
+                            <a href="/page/major_curriculum" target="" class=""><span>주요교육과정</span></a>
+                          </li>
+                          <li class="menu_2_3" data-menu-seq="254">
+                            <a href="/page/how_to_apply" target="" class=""><span>신청방법</span></a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu_1_2 active" data-menu-seq="194">
+                        <a href="/page/course_search_list" target="" class=""><span>과정안내/신청</span></a>
+                        <ul class="menu_con menu_depth_2 active">
+                          <li class="menu_2_0" data-menu-seq="195">
+                            <a href="/page/course_search_list" target="" class=""><span>과정검색</span></a>
+                          </li>
+                          <li class="menu_2_1 active" data-menu-seq="199">
+                            <a href="/page/course_open_apply" target="" class=""><span>과정개설신청</span></a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu_1_3" data-menu-seq="186">
+                        <a href="/page/open_course" target="" class=""><span>오픈강좌</span></a>
+                      </li>
+                      <li class="menu_1_4" data-menu-seq="202">
+                        <a href="/page/notice_list" target="" class=""><span>학습지원센터</span></a>
+                        <ul class="menu_con menu_depth_2">
+                          <li class="menu_2_0" data-menu-seq="203">
+                            <a href="/page/notice_list" target="" class=""><span>공지사항</span></a>
+                          </li>
+                          <li class="menu_2_1" data-menu-seq="205">
+                            <a href="/page/faq" target="" class=""><span>자주하는질문</span></a>
+                          </li>
+                          <li class="menu_2_2" data-menu-seq="206">
+                            <a href="/page/inquiry_list" target="" class=""><span>문의하기</span></a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu_1_5" data-menu-seq="208">
+                        <a href="/page/my_course_list" target="" class=""><span>마이페이지</span></a>
+                        <ul class="menu_con menu_depth_2">
+                          <li class="menu_2_0" data-menu-seq="209">
+                            <a href="/page/my_course_list" target="" class=""><span>나의강의실</span></a>
+                          </li>
+                          <li class="menu_2_1" data-menu-seq="215">
+                            <a href="/page/agent_apply_record" target="" class=""><span>교육생일괄신청이력</span></a>
+                          </li>
+                          <li class="menu_2_2" data-menu-seq="217">
+                            <a href="/page/process_apply_record" target="" class=""><span>과정개설신청이력</span></a>
+                          </li>
+                          <li class="menu_2_3" data-menu-seq="250">
+                            <a href="/page/course_open_history" target="" class=""><span>오픈강좌시청이력</span></a>
+                          </li>
+                          <li class="menu_2_4" data-menu-seq="218">
+                            <a href="/page/mypage_modify" target="" class=""><span>정보수정</span></a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+
+                    <script type="text/javascript">
+                      // 계층구조를 이용해 부모까지 a 태그에 active 클래스를 부여한다.
+                      $('#lnb .active')
+                        .parentsUntil('#lnb')
+                        .each(function () {
+                          $(this).removeClass('hidden').addClass('active');
+                        });
+
+                      var loc = location.href;
+
+                      // 모든 자식이 hidden 인경우 부모 ul 도 hidden 시킨다.
+                      (function () {
+                        $('#lnb ul').each(function (index, item) {
+                          var $li = $(item).find('> li');
+                          var len = $li.length;
+                          if (len == 0) return;
+                          $li.each(function () {
+                            if ($(this).hasClass('hidden')) len--;
+                          });
+
+                          if (loc.indexOf('find_pw_search') > -1) {
+                            $(this).removeClass('active').show();
+                          } else if (len == 0) {
+                            $(this).removeClass('active').hide();
+                          }
+                        });
+                      })();
+                    </script>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <style>
+              .normal_selectbox_style {
+                outline: none;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                cursor: pointer;
+                width: 100%;
+                height: 100%;
+                background-color: #fff;
+                box-sizing: border-box;
+                padding-right: 30px;
+                padding-left: 20px;
+                -webkit-appearance: none;
+                font-size: 16px;
+                font-size: 1.6rem;
+                line-height: 22px;
+                line-height: 2.2rem;
+                font-weight: 500;
+                letter-spacing: -0.02em;
+                color: #000;
+                border: 1px solid #e9f0f3;
+                background-image: url(http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/img/common/11x6_black_bottom_arrow.png);
+                background-size: 11px 6px;
+                background-position: right 15px top 19px;
+                background-repeat: no-repeat;
+                transition: background-image 0.2s ease;
+              }
+              .lms_form_style_list_0_contents_box .sport_academy_card_style_0_wrap {
+                margin-top: 15px;
+                margin-bottom: -35px;
+              }
+              .lms_form_style_list_0_contents_box .sport_academy_card_style_0_wrap .sport_academy_card_style_0 {
+                padding-left: 0;
+                padding-right: 0;
+                max-width: 300px;
+              }
+              .course_view_contents_title {
+                font-size: 21px;
+                font-size: 2.1rem;
+                line-height: 27px;
+                line-height: 2.7rem;
+                font-weight: 500;
+                letter-spacing: -0.04em;
+                color: #353a40;
+              }
+              .course_view_detail_desc_con {
+                font-size: 17px;
+                font-size: 1.7rem;
+                line-height: 30px;
+                line-height: 3rem;
+                font-weight: 300;
+                letter-spacing: -0.02em;
+                color: #353a40;
+              }
+              .course_view_desc_list_style_0_con {
+                border-bottom: 1px solid #e9f0f3;
+                padding-bottom: 33px;
+                margin-bottom: 37px;
+              }
+              .course_view_desc_list_style_0_wrap .course_view_desc_list_style_0_con:last-child {
+                border-bottom: 0px none;
+                padding-bottom: 0;
+                margin-bottom: 0;
+              }
+              .course_view_desc_list_style_0_con .course_view_desc_list_style_0_title {
+                margin-bottom: 19px;
+                font-size: 17px;
+                font-size: 1.7rem;
+                line-height: 23px;
+                line-height: 2.3rem;
+                font-weight: 500;
+                letter-spacing: -0.02em;
+                color: #353a40;
+              }
+              .course_view_desc_list_style_0_con .course_view_desc_list_style_0_desc {
+                display: block;
+                position: relative;
+                font-size: 17px;
+                font-size: 1.7rem;
+                line-height: 30px;
+                line-height: 3rem;
+                font-weight: 300;
+                letter-spacing: -0.02em;
+                color: #353a40;
+              }
+
+              .ui-datepicker-title {
+                text-align: center;
+                font-size: 18px;
+                font-weight: bold;
+              }
+
+              .ui-datepicker .ui-datepicker-header {
+                background-color: #00c7bd !important;
+              }
+            </style>
+            <div class="col-12 col-center mw-1200 pl30 pr30 pl-md-60 pr-md-60 pl-lg-15 pr-lg-15">
+              <div class="col-12 mb48 contents_top_con">
+                <div class="col-12 page_title type_2">과정개설신청</div>
+              </div>
+
+              <div class="col-12 group" id="step1" style="display: none">
+                <div class="col-12 mb57 mb-md-77 privacy_info_wrap">
+                  <div class="col-12 mb24 privacy_info_title font_gongGothic">개인정보의 수집 및 이용에 관한 사항 <span class="point">교육신청 (필수)</span></div>
+                  <div class="col-12 mb44 privacy_info_sub_title_box">
+                    <div>스포츠안전재단은 「개인정보 보호법」제15조에 의거하여, 해당법령이 허용하는 경우를 제외하고는 개인정보 수집 시 반드시 '정보주체의 동의'를 받고 있습니다. 수집된 개인정보는 정보주체의 사전 동의 없이 명시된 목적 외의 용도로 이용하거나, 타인에게 제공하지 않습니다. 또한 정보주체의 권리를 위하여, 개인정보 처리에 관한 사항을 명시한「개인정보 처리방침」을 대표홈페이지에 게재하고 있습니다.</div>
+                  </div>
+                  <div class="col-12 privacy_info_desc_list_con">
+                    <div class="col-12 privacy_info_desc_list">
+                      <div class="col-12 col-sm-0 left_box">개인정보수집/이용의 목적</div>
+                      <div class="col-12 col-sm-0 right_box">
+                        <ul class="list_style_0_con">
+                          <li>
+                            재단에서 진행하는 스포츠안전교육의 신청<br />
+                            신청단체 및 신청자의 본인 확인 및 일정 통보
+                          </li>
+                          <li>안전교육 이수 내역에 대한 참석여부 확인 및 수료증 등 발급</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-12 privacy_info_desc_list">
+                      <div class="col-12 col-sm-0 left_box">수집/이용하는 개인정보항목</div>
+                      <div class="col-12 col-sm-0 right_box">
+                        <ul class="list_style_0_con">
+                          <li>
+                            <span class="point_pink fontweight500">[필수정보]</span>단체 담당자 성명,휴대폰 번호, 이메일<br />
+                            <span class="point_pink fontweight500">[선택정보]</span> 없음
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-12 privacy_info_desc_list">
+                      <div class="col-12 col-sm-0 left_box">개인정보의 보유/이용기간</div>
+                      <div class="col-12 col-sm-0 right_box">
+                        <ul class="list_style_0_con">
+                          <li><span class="point_pink fontweight500">[준영구]</span> 참가 확인서 발급에 대한 용도로 보유 함.</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-12 privacy_info_desc_list">
+                      <div class="col-12 col-sm-0 left_box">동의거부에 대한 권리 및 거부시 불이익</div>
+                      <div class="col-12 col-sm-0 right_box">
+                        <ul class="list_style_0_con">
+                          <li>
+                            정보주체는 해당 목적의 개인정보 수집에 대한 동의를 거부하실 수 있습니다.<br />
+                            <span class="point_pink">(단 거부하실 경우에는, 프로그램의 참가 신청이 불가합니다.)</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 tc mb50">
+                  <div class="lms_check_box_style_0_con type_page">
+                    <input type="checkbox" class="lms_check_box_style_0 policy_agree" id="privateCheck" />
+                    <label for="privateCheck"
+                      >위 내용을 확인했으며, 개인정보<br class="hidden-md" />
+                      수집 및 이용에 동의합니다
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 mb57 mb-md-77 privacy_info_wrap">
+                  <div class="col-12 mb24 privacy_info_title font_gongGothic">단체 및 구성원에 관한 사항 <span class="point">교육신청 (필수)</span></div>
+                  <div class="col-12 mb44 privacy_info_sub_title_box">
+                    <div>
+                      스포츠안전재단은 「개인정보 보호법」제17조에 의거하여, '단체교육 신청자'로부터 '교육대상자(정보주체)'의 동의를 받은 개인정보를 제공(공유를 포함한다)받아 아래와 같이 취급하고 있습니다.<br />
+                      단체교육 신청을 위하여 아래의 내용을 자세히 읽어보신 후, '교육대상자(정보주체)'에게 알리고, 아래 개인정보 수집 및 제공에 대한 '교육대상자(정보주체)의 동의'를 받아 제공함을 확인하고, 스포츠안전재단에서 아래의 정보를 제공받아 사용하는 것에 대한 동의 여부를 결정하여 주시기 바랍니다.
+                    </div>
+                  </div>
+                  <div class="col-12 privacy_info_desc_list_con">
+                    <div class="col-12 privacy_info_desc_list">
+                      <div class="col-12 col-sm-0 left_box">개인정보 취급 목적</div>
+                      <div class="col-12 col-sm-0 right_box">
+                        <ul class="list_style_0_con">
+                          <li>재단에서 진행하는 스포츠안전교육의 신청</li>
+                          <li>신청단체 및 신청자의 본인 확인 및 일정 통보</li>
+                          <li>안전교육 이수 내역에 대한 참석여부 확인 및 수료증 등 발급</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-12 privacy_info_desc_list">
+                      <div class="col-12 col-sm-0 left_box">취급하는 개인정보 항목</div>
+                      <div class="col-12 col-sm-0 right_box">
+                        <ul class="list_style_0_con">
+                          <li>
+                            <span class="point_pink fontweight500">[필수정보]</span> 교육대상자의 성명, 휴대폰번호, 생년월일<br />
+                            <span class="point_pink fontweight500">[선택정보]</span> 없음
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-12 privacy_info_desc_list">
+                      <div class="col-12 col-sm-0 left_box">개인정보의 보유/이용기간</div>
+                      <div class="col-12 col-sm-0 right_box">
+                        <ul class="list_style_0_con">
+                          <li><span class="point_pink fontweight500">[준영구]</span> 참가 확인서 발급에 대한 용도로 보유 함.</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-12 privacy_info_desc_list">
+                      <div class="col-12 col-sm-0 left_box">동의거부에 대한 권리 및 거부시 불이익</div>
+                      <div class="col-12 col-sm-0 right_box">
+                        <ul class="list_style_0_con">
+                          <li>
+                            '단체교육 신청자'는 단체 및 구성원에 관한 사항에 대한 동의를 거부할 권리가 있습니다.<br />
+                            <span class="point_pink">(단 거부하실 경우에는, 프로그램의 참가 신청이 불가합니다.)</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 tc mb35">
+                  <div class="lms_check_box_style_0_con type_page">
+                    <input type="checkbox" class="lms_check_box_style_0 policy_agree" id="privateCheck2" />
+                    <label for="privateCheck2"
+                      >위 내용을 확인했으며, 단체 및 구성원에<br class="hidden-md" />
+                      관한 사항에 동의합니다
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 tc mb70">
+                  <div class="lms_check_box_style_0_con type_page">
+                    <input type="checkbox" class="lms_check_box_style_0" id="agreeAll" onchange="stepManager.allAgreeTerms()" /> <label for="agreeAll">위 내용을 확인했으며, 모든 사항에 <br class="hidden-md" />동의합니다 </label>
+                  </div>
+                </div>
+                <div class="col-12" data-wv-layout-element="block" data-wv-block-id="___lms_btn_style_0_con" data-wv-res-id="___lms_btn_style_0_con___-1___1606208948906___" contenteditable="false" data-wv-removetempid="true">
+                  <div class="mr15 font_gongGothic type_2" data-wv-layout-element="block" data-wv-block-id="___lms_btn_style_0" data-wv-res-id="___lms_btn_style_0___-1___1606208813703___" contenteditable="false" data-wv-removetempid="true" data-wv-layout-element-type="text" onclick="location.href='course_open_apply'">
+                    <span data-wv-res-id="___0___1606209325434___">이전으로</span>
+                  </div>
+                  <div class="bg_point font_gongGothic" data-wv-layout-element="block" data-wv-block-id="___lms_btn_style_0" data-wv-res-id="___lms_btn_style_0___-1___1606208813703___" contenteditable="false" data-wv-removetempid="true" data-wv-layout-element-type="text" onclick="stepManager.nextStep();">
+                    <span data-wv-res-id="___0___1606209325434___">신청하기</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- step2 -->
+              <div class="col-12 contents_inner group" id="step2" style="">
+                <div class="col-12 mb32 course_target_selected_list_con">
+                  <div class="col-0 course_target_selected_list preparatory hidden" style="display: block">
+                    <span class="point font_gongGothic"> 기타 </span>
+                  </div>
+                </div>
+                <div class="col-12 mb28 course_selected_info_box" style="display: none">
+                  <div class="col-12 tc mb4 course_selected_info_sub_title font_gongGothic">선택하신 직무 교육과정 중 최근 신청하신 과정은</div>
+                  <div class="col-12 tc course_selected_info_title font_gongGothic"><span class="point font_gongGothic" id="courseSelectedInfoTitle"></span>입니다</div>
+                </div>
+                <!-- btn -->
+                <div class="course-request-actions col-12 mb45" data-wv-layout-element="block" data-wv-block-id="___lms_btn_style_0_con" data-wv-res-id="___lms_btn_style_0_con___-1___1606208948906___" contenteditable="false" data-wv-removetempid="true">
+                  <div class="show bg_point" data-wv-layout-element="block" data-wv-block-id="___lms_btn_style_0" id="crseEstblReqstHistBtn" data-wv-res-id="___lms_btn_style_0___-1___1606208813703___" contenteditable="false" data-wv-removetempid="true" data-wv-layout-element-type="text">
+                    <span data-wv-res-id="___0___1606209325434___">과정개설 신청 이력 더보기</span>
+                  </div>
+                  <a class="show bg_point" data-wv-layout-element="block" data-wv-block-id="___lms_btn_style_0" data-wv-res-id="___lms_btn_style_0___-1___1606208813703___" contenteditable="false" data-wv-removetempid="true" data-wv-layout-element-type="text" href="https://edu.sportsafety.or.kr/page/notice_list?mode=view&seq=668&bbsctt_seq=668&bbs_seq=1&startPage=1&searchKeyLike%255B%255D=TITLE&searchValueLike%255B%255D=null" target="_blank" rel="noopener noreferrer" title="과정개설 신청방법 확인하기 (새창에서 열림)">
+                    <span data-wv-res-id="___0___1606209325434___">과정개설 신청방법 확인하기</span>
+                  </a>
+                </div>
+                <div class="col-12 mb60" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_wrap" data-wv-res-id="___lms_form_style_list_0_wrap___-1___1606300374038___" contenteditable="false" data-wv-removetempid="true">
+                  <div class="col-12 basic_layout_000" data-wv-layout-element="block" data-wv-block-id="___basic_layout_000" contenteditable="false" data-wv-res-id="___basic_layout_000___-1___1605677607603___" data-wv-removetempid="true">
+                    <div class="font_style_15 col-6 col-sm-0" data-wv-block-id="___font_style_15" data-wv-res-id="___font_style_15___-1___1606185531603___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" data-wv-removetempid="true">담당자정보</div>
+                    <div class="font_style_15 col-6 tr col-sm-0" data-wv-block-id="___font_style_15" data-wv-res-id="___font_style_15___-1___1605677725517___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" data-wv-removetempid="true">
+                      <div class="show left" data-wv-block-id="___lms_essential" data-wv-res-id="___lms_essential___-1___1605679211652___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" data-wv-removetempid="true">필수입력항목</div>
+                    </div>
+                  </div>
+                  <div class="col-12" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_con" data-wv-res-id="___lms_form_style_list_0_con___-1___1605678616052___" contenteditable="false" data-wv-removetempid="true">
+                    <input type="hidden" name="reqst_grp_sn" value="" />
+                    <div class="col-12 pb30 pb-md-0 mb27 mb-md-14 lms_form_style_list_0 lms_form_style_list_0" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0" data-wv-res-id="___lms_form_style_list_0___0___1605681620338___" contenteditable="false" data-wv-removetempid="true">
+                      <div class="lms_form_style_list_0_label_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_label_box" contenteditable="false" data-wv-res-id="___lms_form_style_list_0_label_box___-1___1605679273106___" data-wv-removetempid="true" data-wv-layout-element-type="text">
+                        <div class="show" data-wv-block-id="___lms_essential" data-wv-res-id="___lms_essential___-1___1605679211652___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" data-wv-removetempid="true">이름</div>
+                      </div>
+                      <div class="col-12 lms_form_style_list_0_contents_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_contents_box" data-wv-res-id="___lms_form_style_list_0_contents_box___-1___1605856444422___" contenteditable="false" data-wv-removetempid="true">
+                        <div class="col-12 sportFoundation_input_style_0_con" data-wv-layout-element="block" data-wv-block-id="___lms_input_style_0" data-wv-res-id="___lms_input_style_0___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true">
+                          <input type="text" placeholder="홍길동" value="데이터쿡_007(강사)" name="user_name" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 pb30 pb-md-0 mb27 mb-md-14 type_phone_num lms_form_style_list_0 lms_form_style_list_0" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0" data-wv-res-id="___lms_form_style_list_0___0___1605681620338___" contenteditable="false" data-wv-removetempid="true">
+                      <div class="lms_form_style_list_0_label_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_label_box" contenteditable="false" data-wv-res-id="___lms_form_style_list_0_label_box___-1___1605679273106___" data-wv-removetempid="true" data-wv-layout-element-type="text">
+                        <div class="show" data-wv-block-id="___lms_essential" data-wv-res-id="___lms_essential___-1___1605679211652___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" data-wv-removetempid="true">휴대폰</div>
+                      </div>
+                      <div class="col-12 lms_form_style_list_0_contents_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_contents_box" data-wv-res-id="___lms_form_style_list_0_contents_box___-1___1605856444422___" contenteditable="false" data-wv-removetempid="true">
+                        <div class="col-12 sportFoundation_select_style_0_wrap type_2 font_roboto">
+                          <select name="phoneNum" id="user_mobile_0" class="sportFoundation_select_style_0" data-wv-com="selectbox" data-wv-type="choice" data-wv-selected-value="010" data-wv-option="{url: /cmmn_code/getCategoryCodeList.json', param: {CODE_ID : PHONE}, dataAutoLoad: true}" style="display: none">
+                            <option value=""></option>
+
+                            <option data-wv-choice-template="" value="010">010</option>
+                            <option data-wv-choice-template="" value="011">011</option>
+                            <option data-wv-choice-template="" value="016">016</option>
+                            <option data-wv-choice-template="" value="017">017</option>
+                            <option data-wv-choice-template="" value="018">018</option>
+                            <option data-wv-choice-template="" value="019">019</option>
+                            <option data-wv-choice-template="" value="070">070</option>
+                          </select>
+                          <div class="selected_item_con bm_select_box" style="z-index: 9999">
+                            <div class="selected_item">010</div>
+                            <div class="sportFoundation_select_style_0_con">
+                              <ul class="sportFoundation_select_style_0">
+                                <li data-value=""><a href="javascript:void(0)"></a></li>
+                                <li data-value="010"><a href="javascript:void(0)">010</a></li>
+                                <li data-value="011"><a href="javascript:void(0)">011</a></li>
+                                <li data-value="016"><a href="javascript:void(0)">016</a></li>
+                                <li data-value="017"><a href="javascript:void(0)">017</a></li>
+                                <li data-value="018"><a href="javascript:void(0)">018</a></li>
+                                <li data-value="019"><a href="javascript:void(0)">019</a></li>
+                                <li data-value="070"><a href="javascript:void(0)">070</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 sportFoundation_input_style_0_con" data-wv-layout-element="block" data-wv-block-id="___lms_input_style_0" data-wv-res-id="___lms_input_style_0___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true">
+                          <input type="text" placeholder="1234" value="1111" name="user_tel1" />
+                        </div>
+                        <div class="col-12 sportFoundation_input_style_0_con" data-wv-layout-element="block" data-wv-block-id="___lms_input_style_0" data-wv-res-id="___lms_input_style_0___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true">
+                          <input type="text" placeholder="1234" value="2222" name="user_tel2" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 pb30 pb-md-0 mb27 mb-md-14 type_email lms_form_style_list_0 lms_form_style_list_0" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0" data-wv-res-id="___lms_form_style_list_0___0___1605681620338___" contenteditable="false" data-wv-removetempid="true">
+                      <div class="lms_form_style_list_0_label_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_label_box" contenteditable="false" data-wv-res-id="___lms_form_style_list_0_label_box___-1___1605679273106___" data-wv-removetempid="true" data-wv-layout-element-type="text">
+                        <div class="show" data-wv-block-id="___lms_essential" data-wv-res-id="___lms_essential___-1___1605679211652___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" data-wv-removetempid="true">이메일</div>
+                      </div>
+                      <div class="col-12 lms_form_style_list_0_contents_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_contents_box" data-wv-res-id="___lms_form_style_list_0_contents_box___-1___1605856444422___" contenteditable="false" data-wv-removetempid="true">
+                        <div class="col-12 sportFoundation_input_style_0_con" data-wv-layout-element="block" data-wv-block-id="___lms_input_style_0" data-wv-res-id="___lms_input_style_0___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true">
+                          <input type="text" placeholder="emailid" name="email0" value="1" />
+                        </div>
+                        <div class="col-0 ml9 mr10 mt11 font_style_15 addr_icon" data-wv-layout-element="block" data-wv-block-id="___font_style_15" data-wv-res-id="___font_style_15___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true" data-wv-layout-element-type="text">@</div>
+                        <div class="col-12 mb10 sportFoundation_input_style_0_con" data-wv-layout-element="block" data-wv-block-id="___lms_input_style_0" data-wv-res-id="___lms_input_style_0___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true">
+                          <input type="text" placeholder="email.com" id="user_email_1" name="email1" maxlength="20" data-wv-handler="{type:formHandler, action:onlyNumAndEn}" value="google.com" />
+                        </div>
+                        <div class="col-12 sportFoundation_select_style_0_wrap type_2 font_roboto">
+                          <select name="email" id="email" class="sportFoundation_select_style_0" data-wv-com="selectbox" data-wv-type="choice" data-wv-selected-value="google.com" data-wv-write-default-value="google.com" data-wv-option="{url: /cmmn_code/getCategoryCodeList.json', param: {CODE_ID : EMAIL}, dataAutoLoad: true}" onchange="courseOpenApply.onChangeEmailEvent(this.value)" style="display: none">
+                            <option value="">직접입력</option>
+
+                            <option data-wv-choice-template="" value="google.com">google.com</option>
+                            <option data-wv-choice-template="" value="naver.com">naver.com</option>
+                            <option data-wv-choice-template="" value="daum.net">daum.net</option>
+                            <option data-wv-choice-template="" value="hanmail.net">hanmail.net</option>
+                            <option data-wv-choice-template="" value="nate.com">nate.com</option>
+                            <option data-wv-choice-template="" value="outlook.com">outlook.com</option>
+                            <option data-wv-choice-template="" value="dreamwiz mail">dreamwiz mail</option>
+                          </select>
+                          <div class="selected_item_con bm_select_box" style="z-index: 9998">
+                            <div class="selected_item">google.com</div>
+                            <div class="sportFoundation_select_style_0_con">
+                              <ul class="sportFoundation_select_style_0">
+                                <li data-value=""><a href="javascript:void(0)">직접입력</a></li>
+                                <li data-value="google.com"><a href="javascript:void(0)">google.com</a></li>
+                                <li data-value="naver.com"><a href="javascript:void(0)">naver.com</a></li>
+                                <li data-value="daum.net"><a href="javascript:void(0)">daum.net</a></li>
+                                <li data-value="hanmail.net"><a href="javascript:void(0)">hanmail.net</a></li>
+                                <li data-value="nate.com"><a href="javascript:void(0)">nate.com</a></li>
+                                <li data-value="outlook.com"><a href="javascript:void(0)">outlook.com</a></li>
+                                <li data-value="dreamwiz mail"><a href="javascript:void(0)">dreamwiz mail</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 직장 연락처 입력 영역 추가 [S] -->
+                    <div class="col-12 pb30 pb-md-0 mb27 mb-md-14 type_phone_num lms_form_style_list_0 lms_form_style_list_0" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0" data-wv-res-id="___lms_form_style_list_0___0___1605681620338___" contenteditable="false" data-wv-removetempid="true">
+                      <div class="lms_form_style_list_0_label_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_label_box" contenteditable="false" data-wv-res-id="___lms_form_style_list_0_label_box___-1___1605679273106___" data-wv-removetempid="true" data-wv-layout-element-type="text">
+                        <div class="show" data-wv-block-id="___lms_essential" data-wv-res-id="___lms_essential___-1___1605679211653___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" data-wv-removetempid="true">직장 연락처</div>
+                      </div>
+                      <div class="col-12 lms_form_style_list_0_contents_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_contents_box" data-wv-res-id="___lms_form_style_list_0_contents_box___-1___1605856444422___" contenteditable="false" data-wv-removetempid="true">
+                        <div class="col-12 sportFoundation_input_style_0_con" data-wv-layout-element="block" data-wv-block-id="___lms_input_style_0" data-wv-res-id="___lms_input_style_0___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true">
+                          <input type="text" placeholder="" name="mber_tel0" maxlength="4" />
+                        </div>
+                        <div class="col-12 sportFoundation_input_style_0_con" data-wv-layout-element="block" data-wv-block-id="___lms_input_style_0" data-wv-res-id="___lms_input_style_0___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true">
+                          <input type="text" placeholder="1234" name="mber_tel1" maxlength="4" />
+                        </div>
+                        <div class="col-12 sportFoundation_input_style_0_con" data-wv-layout-element="block" data-wv-block-id="___lms_input_style_0" data-wv-res-id="___lms_input_style_0___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true">
+                          <input type="text" placeholder="1234" name="mber_tel2" maxlength="4" />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 직장 연락처 입력 영역 추가 [E] -->
+                  </div>
+                </div>
+
+                <div class="col-12 mb60" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_wrap" data-wv-res-id="___lms_form_style_list_0_wrap___-1___1606300374038___" contenteditable="false" data-wv-removetempid="true">
+                  <div class="col-12 basic_layout_000" data-wv-layout-element="block" data-wv-block-id="___basic_layout_000" contenteditable="false" data-wv-res-id="___basic_layout_000___-1___1605677607603___" data-wv-removetempid="true">
+                    <div class="font_style_15 col-6 col-sm-0" data-wv-block-id="___font_style_15" data-wv-res-id="___font_style_15___-1___1606185531603___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" data-wv-removetempid="true">교육대상자</div>
+                    <div class="font_style_15 col-6 tr col-sm-0" data-wv-block-id="___font_style_15" data-wv-res-id="___font_style_15___-1___1605677725517___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" data-wv-removetempid="true">
+                      <div class="show left" data-wv-block-id="___lms_essential" data-wv-res-id="___lms_essential___-1___1605679211652___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" data-wv-removetempid="true">필수입력항목</div>
+                    </div>
+                  </div>
+                  <div class="col-12 type_2" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_con" data-wv-res-id="___lms_form_style_list_0_con___-1___1605678616052___" contenteditable="false" data-wv-removetempid="true">
+                    <!-- <div class="col-12 pb30 pb-md-0 mb27 mb-md-14 lms_form_style_list_0 lms_form_style_list_0 type_text" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0" data-wv-res-id="___lms_form_style_list_0___0___1605681620338___" contenteditable="false" data-wv-removetempid="true">
+                    <div class="lms_form_style_list_0_label_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_label_box" contenteditable="false" data-wv-res-id="___lms_form_style_list_0_label_box___-1___1605679273106___" data-wv-removetempid="true" data-wv-layout-element-type="text">
+                        참가대상자
+                    </div>
+                    <div class="col-12 lms_form_style_list_0_contents_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_contents_box" data-wv-res-id="___lms_form_style_list_0_contents_box___-1___1605856444422___" contenteditable="false" data-wv-removetempid="true">
+                        <div class="col-12" data-wv-block-id="___font_style_15" data-wv-res-id="___font_style_15___-1___1605679385923___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" id="temperaryWvId2597862" data-wv-removetempid="true">
+                            <span class="point" id="dutyTargetName">행사운영자</span>로 등록된 회원만 신청이 가능합니다.
+                        </div>
+                    </div>
+                </div> -->
+                    <div class="col-12 pb30 pb-md-0 mb27 mb-md-14 type_file lms_form_style_list_0 lms_form_style_list_0" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0" data-wv-res-id="___lms_form_style_list_0___0___1605681620338___" contenteditable="false" data-wv-removetempid="true">
+                      <div class="lms_form_style_list_0_label_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_label_box" contenteditable="false" data-wv-res-id="___lms_form_style_list_0_label_box___-1___1605679273106___" data-wv-removetempid="true" data-wv-layout-element-type="text">
+                        <div class="show" data-wv-block-id="___lms_essential" data-wv-res-id="___lms_essential___-1___1605679211652___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" data-wv-removetempid="true">첨부파일</div>
+                      </div>
+                      <div class="col-12 lms_form_style_list_0_contents_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_contents_box" data-wv-res-id="___lms_form_style_list_0_contents_box___-1___1605856444422___" contenteditable="false" data-wv-removetempid="true">
+                        <div class="col-12 sportFoundation_input_style_0_con type_file" data-wv-layout-element="block" data-wv-block-id="___lms_input_style_0" data-wv-res-id="___lms_input_style_0___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true">
+                          <input type="file" id="attachFile" onchange="showFile(this);" class="hidden" name="stdnt_excel_file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" />
+                          <div class="col-12 attach_file_con"></div>
+                          <div class="mb25 file_btn" data-wv-layout-element="block" data-wv-block-id="___lms_btn_style_1" data-wv-res-id="___lms_btn_style_1___-1___1606208813703___" contenteditable="false" data-wv-removetempid="true" data-wv-layout-element-type="text">
+                            <label for="attachFile">파일선택</label>
+                          </div>
+                        </div>
+                        <div class="col-12 mb40 font_style_15" data-wv-block-id="___font_style_15" data-wv-res-id="___font_style_15___-1___1606269029897___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" data-wv-removetempid="true">
+                          <ul class="excel_notice_list_0">
+                            <li>회원으로 등록되지 않은 경우 명단등록이 불가하며, 통합회원인 경우에도 스포츠안전아카데미에 접속이력이 없는 경우 교육신청이 제한됩니다.</li>
+                            <li>휴대폰번호가 변경된 경우 신청이 불가할 수 있습니다. 변경된 휴대폰으로 본인인증을 완료한 후 진행해 주시기 바랍니다.</li>
+                            <li>명단등록이 불가한 교육생이 있는 경우, 제외하여 신청하신 후 각 교육과정 담당자에게 문의하여 주시기 바랍니다.</li>
+                            <li>첨부파일 재등록 시 기존에 등록한 교육대상자 명단은 삭제됩니다.</li>
+                            <li>선택한 엑셀파일의 두번째 행부터 등록됩니다. 샘플엑셀파일의 예시행(첫 행)을 삭제하지 마시고 두번째 행부터 기입해 주세요.</li>
+                            <li>샘플엑셀파일 <a class="point" href="/sharefile/과정개설신청_교육생명단_샘플.xlsx" target="_blank" download="">다운로드.xlsx</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-12 lms_table_style_0_wrap" data-wv-layout-element="block" data-wv-block-id="___lms_table_style_000" data-wv-res-id="___lms_table_style_000___-1___1606198010106___" contenteditable="false" data-wv-removetempid="true">
+                          <div class="col-12 lms_table_style_0">
+                            <div class="col-12 has_scroll">
+                              <div class="col-12 table_padding">
+                                <c:if test="true"> </c:if>
+                                <table class="col-12">
+                                  <caption>
+                                    선택과목 및 참가대상 테이블
+                                  </caption>
+                                  <colgroup>
+                                    <col width="50px" />
+                                    <col width="75px" />
+                                    <col width="80px" />
+                                    <col width="121px" />
+                                    <col width="110px" />
+                                    <col width="135px" />
+                                    <col width="100px" />
+                                    <col width="auto" />
+                                    <col width="55px" />
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th>번호</th>
+                                      <th>이름</th>
+                                      <th>생년월일</th>
+                                      <th>휴대폰번호</th>
+                                      <th>단체</th>
+                                      <th>직무</th>
+                                      <th>아이디</th>
+                                      <th>비고</th>
+                                      <th>삭제</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody id="stdtListCon">
+                                    <tr>
+                                      <td colspan="9" style="text-align: center">교육생 명단 없음</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 mb60" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_wrap" data-wv-res-id="___lms_form_style_list_0_wrap___-1___1606300374038___" contenteditable="false" data-wv-removetempid="true">
+                  <div class="col-12 basic_layout_000" data-wv-layout-element="block" data-wv-block-id="___basic_layout_000" contenteditable="false" data-wv-res-id="___basic_layout_000___-1___1605677607603___" data-wv-removetempid="true">
+                    <div class="font_style_15 col-6 col-sm-0" data-wv-block-id="___font_style_15" data-wv-res-id="___font_style_15___-1___1606185531603___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" data-wv-removetempid="true">신청서정보</div>
+                    <div class="font_style_15 col-6 tr col-sm-0" data-wv-block-id="___font_style_15" data-wv-res-id="___font_style_15___-1___1605677725517___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" data-wv-removetempid="true">
+                      <div class="show left" data-wv-block-id="___lms_essential" data-wv-res-id="___lms_essential___-1___1605679211652___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" data-wv-removetempid="true">필수입력항목</div>
+                    </div>
+                  </div>
+                  <div class="col-12 type_2" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_con" data-wv-res-id="___lms_form_style_list_0_con___-1___1605678616052___" contenteditable="false" data-wv-removetempid="true">
+                    <div class="col-12 pb30 pb-md-0 mb27 mb-md-14 lms_form_style_list_0 lms_form_style_list_0 type_text" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0" data-wv-res-id="___lms_form_style_list_0___0___1605681620338___" contenteditable="false" data-wv-removetempid="true">
+                      <div class="lms_form_style_list_0_label_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_label_box" contenteditable="false" data-wv-res-id="___lms_form_style_list_0_label_box___-1___1605679273106___" data-wv-removetempid="true" data-wv-layout-element-type="text">신청단체</div>
+                      <div class="col-12 lms_form_style_list_0_contents_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_contents_box" data-wv-res-id="___lms_form_style_list_0_contents_box___-1___1605856444422___" contenteditable="false" data-wv-removetempid="true">
+                        <div class="col-12" data-wv-block-id="___font_style_15" data-wv-res-id="___font_style_15___-1___1605679385923___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" id="temperaryWvId2597862" data-wv-removetempid="true">
+                          <input type="hidden" name="user_grp_nm" value="" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 pb30 pb-md-0 mb27 mb-md-14 lms_form_style_list_0 lms_form_style_list_0 type_text" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0" data-wv-res-id="___lms_form_style_list_0___0___1605681620338___" contenteditable="false" data-wv-removetempid="true">
+                      <div class="lms_form_style_list_0_label_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_label_box" contenteditable="false" data-wv-res-id="___lms_form_style_list_0_label_box___-1___1605679273106___" data-wv-removetempid="true" data-wv-layout-element-type="text">
+                        <div class="show" data-wv-block-id="___lms_essential" data-wv-res-id="___lms_essential___-1___1605679211652___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" data-wv-removetempid="true">신청단체명</div>
+                      </div>
+                      <div class="col-12 lms_form_style_list_0_contents_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_contents_box" data-wv-res-id="___lms_form_style_list_0_contents_box___-1___1605856444422___" contenteditable="false" data-wv-removetempid="true">
+                        <div class="col-12 sportFoundation_input_style_0_con" data-wv-layout-element="block" data-wv-block-id="___lms_input_style_0" data-wv-res-id="___lms_input_style_0___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true">
+                          <input type="text" placeholder="단체 명" name="temp_grp_nm" maxlength="30" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 pb30 pb-md-0 mb27 mb-md-14 lms_form_style_list_0 lms_form_style_list_0 type_select" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0" data-wv-res-id="___lms_form_style_list_0___0___1605681620338___" contenteditable="false" data-wv-removetempid="true">
+                      <div class="lms_form_style_list_0_label_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_label_box" contenteditable="false" data-wv-res-id="___lms_form_style_list_0_label_box___-1___1605679273106___" data-wv-removetempid="true" data-wv-layout-element-type="text">
+                        <div class="show" data-wv-block-id="___lms_essential" data-wv-res-id="___lms_essential___-1___1605679211652___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" data-wv-removetempid="true">교육유형</div>
+                      </div>
+                      <div class="col-12 lms_form_style_list_0_contents_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_contents_box" data-wv-res-id="___lms_form_style_list_0_contents_box___-1___1605856444422___" contenteditable="false" data-wv-removetempid="true">
+                        <div class="col-12 sportFoundation_select_style_0_wrap type_2 font_roboto">
+                          <select id="courseType" class="sportFoundation_select_style_0 normal_selectbox_style">
+                            <option selected="" disabled="">유형선택</option>
+                            <option value="0">이러닝</option>
+                            <option value="1">집합</option>
+                            <!-- 
+                                   <option value="2">혼합</option>
+                                   <option value="3">실시간</option>
+                                   -->
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 
+                <div class="col-12 pb30 pb-md-0 mb27 mb-md-22 lms_form_style_list_0 lms_form_style_list_0 type_calendar" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0" data-wv-res-id="___lms_form_style_list_0___0___1605681620338___" contenteditable="false" data-wv-removetempid="true">
+                    <div class="lms_form_style_list_0_label_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_label_box" contenteditable="false" data-wv-res-id="___lms_form_style_list_0_label_box___-1___1605679273106___" data-wv-removetempid="true" data-wv-layout-element-type="text">
+                        <div class="show" data-wv-block-id="___lms_essential" data-wv-res-id="___lms_essential___-1___1605679211652___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" data-wv-removetempid="true">
+                            신청기간
+                        </div>
+                    </div>
+                    <div class="col-12 lms_form_style_list_0_contents_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_contents_box" data-wv-res-id="___lms_form_style_list_0_contents_box___-1___1605856444422___" contenteditable="false" data-wv-removetempid="true">
+                        <div class="col-12 sportFoundation_input_style_0_con type_calendar" data-wv-layout-element="block" data-wv-block-id="___lms_input_style_0" data-wv-res-id="___lms_input_style_0___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true" style="margin-right: 10px;">
+                            <input type="text" placeholder="신청시작일" data-wv-handler="{type:datepicker, isClear:false}" readonly name="reqst_bgnde">
+                        </div>
+                        <div class="col-12 sportFoundation_input_style_0_con type_calendar" data-wv-layout-element="block" data-wv-block-id="___lms_input_style_0" data-wv-res-id="___lms_input_style_0___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true">
+                            <input type="text" placeholder="신청종료일" data-wv-handler="{type:datepicker, isClear:false}" readonly name="reqst_endde">
+                        </div>
+                    </div>
+                </div>
+                 -->
+
+                    <div class="col-12 pb30 pb-md-0 mb27 mb-md-22 lms_form_style_list_0 lms_form_style_list_0 type_calendar" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0" data-wv-res-id="___lms_form_style_list_0___0___1605681620338___" contenteditable="false" data-wv-removetempid="true">
+                      <div class="lms_form_style_list_0_label_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_label_box" contenteditable="false" data-wv-res-id="___lms_form_style_list_0_label_box___-1___1605679273106___" data-wv-removetempid="true" data-wv-layout-element-type="text">
+                        <div class="show" data-wv-block-id="___lms_essential" data-wv-res-id="___lms_essential___-1___1605679211652___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" data-wv-removetempid="true">교육기간</div>
+                      </div>
+                      <div class="col-12 lms_form_style_list_0_contents_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_contents_box" data-wv-res-id="___lms_form_style_list_0_contents_box___-1___1605856444422___" contenteditable="false" data-wv-removetempid="true">
+                        <div class="col-12 sportFoundation_input_style_0_con type_calendar" data-wv-layout-element="block" data-wv-block-id="___lms_input_style_0" data-wv-res-id="___lms_input_style_0___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true" style="margin-right: 10px">
+                          <input type="text" id="edc_bgnde" placeholder="교육시작일" readonly="" name="edc_bgnde" />
+                        </div>
+                        <div class="col-12 sportFoundation_input_style_0_con type_calendar edc_endde" data-wv-layout-element="block" data-wv-block-id="___lms_input_style_0" data-wv-res-id="___lms_input_style_0___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true">
+                          <input type="text" id="edc_endde" placeholder="교육종료일" readonly="" name="edc_endde" />
+                        </div>
+
+                        <div class="col-12 col-sm-0 mt11 ml-sm-31 font_style_15" data-wv-block-id="___font_style_15" data-wv-res-id="___font_style_15___-1___1606269029897___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" data-wv-removetempid="true">- <span class="point_pink">신청일 기준 3일 이후</span>부터 신청이 가능합니다(이러닝교육의 교육기간은 <span class="point_pink">최대2주</span> 입니다)</div>
+                      </div>
+                    </div>
+                    <!-- 
+                 
+                <div class="col-12 pb30 pb-md-0 mb27 mb-md-22 lms_form_style_list_0 lms_form_style_list_0 type_calendar" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0" data-wv-res-id="___lms_form_style_list_0___0___1605681620338___" contenteditable="false" data-wv-removetempid="true">
+                    <div class="lms_form_style_list_0_label_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_label_box" contenteditable="false" data-wv-res-id="___lms_form_style_list_0_label_box___-1___1605679273106___" data-wv-removetempid="true" data-wv-layout-element-type="text">
+                        <div class="show" data-wv-block-id="___lms_essential" data-wv-res-id="___lms_essential___-1___1605679211652___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" data-wv-removetempid="true">
+                            교육기간
+                        </div>
+                    </div>
+                    <div class="col-12 lms_form_style_list_0_contents_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_contents_box" data-wv-res-id="___lms_form_style_list_0_contents_box___-1___1605856444422___" contenteditable="false" data-wv-removetempid="true">
+                        
+                        
+                        <div class="col-12 sportFoundation_input_style_0_con type_calendar" data-wv-layout-element="block" data-wv-block-id="___lms_input_style_0" data-wv-res-id="___lms_input_style_0___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true" style="margin-right: 10px;">
+                            <input type="text" placeholder="교육시작일" data-wv-handler="{type:datepicker, isClear:false}" readonly name="edc_bgnde">
+                        </div>
+                        <div class="col-12 sportFoundation_input_style_0_con type_calendar edc_endde" data-wv-layout-element="block" data-wv-block-id="___lms_input_style_0" data-wv-res-id="___lms_input_style_0___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true">
+                            <input type="text" placeholder="교육종료일" data-wv-handler="{type:datepicker, isClear:false}" readonly name="edc_endde">
+                        </div>
+                        
+                        
+                        <div class="col-12 col-sm-0 mt11 ml-sm-31 font_style_15" data-wv-block-id="___font_style_15" data-wv-res-id="___font_style_15___-1___1606269029897___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" data-wv-removetempid="true">
+                            - <span class="point_pink">신청일 기준 3일 이후</span>부터 신청이 가능합니다(이러닝교육의 교육기간은 <span class="point_pink">최대2주</span> 입니다)
+                        </div>
+                    </div>
+                </div>
+                 -->
+
+                    <div class="col-12 pb30 pb-md-0 mb27 mb-md-35 lms_form_style_list_0 lms_form_style_list_0 type_address" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0" data-wv-res-id="___lms_form_style_list_0___0___1605681620338___" contenteditable="false" data-wv-removetempid="true">
+                      <div class="lms_form_style_list_0_label_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_label_box" contenteditable="false" data-wv-res-id="___lms_form_style_list_0_label_box___-1___1605679273106___" data-wv-removetempid="true" data-wv-layout-element-type="text">
+                        <div class="show" data-wv-block-id="___lms_essential" data-wv-res-id="___lms_essential___-1___1605679211652___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" data-wv-removetempid="true">교육인원(명)</div>
+                      </div>
+                      <div class="col-12 lms_form_style_list_0_contents_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_contents_box" data-wv-res-id="___lms_form_style_list_0_contents_box___-1___1605856444422___" contenteditable="false" data-wv-removetempid="true">
+                        <div class="col-12 sportFoundation_input_style_0_con" data-wv-layout-element="block" data-wv-block-id="___lms_input_style_0" data-wv-res-id="___lms_input_style_0___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true">
+                          <input type="text" placeholder="교육인원" name="psncpa_edc" style="width: 100px; text-align: right" data-wv-handler="{type: formHandler, action: onlyNum}" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 pb30 pb-md-0 mb27 mb-md-36 lms_form_style_list_0 lms_form_style_list_0 type_file" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0" data-wv-res-id="___lms_form_style_list_0___0___1605681620338___" contenteditable="false" data-wv-removetempid="true">
+                      <div class="lms_form_style_list_0_label_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_label_box" contenteditable="false" data-wv-res-id="___lms_form_style_list_0_label_box___-1___1605679273106___" data-wv-removetempid="true" data-wv-layout-element-type="text">
+                        <div class="show" data-wv-block-id="___lms_essential" data-wv-res-id="___lms_essential___-1___1605679211652___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" data-wv-removetempid="true">교육과정선택</div>
+                      </div>
+                      <div class="col-12 lms_form_style_list_0_contents_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_contents_box" data-wv-res-id="___lms_form_style_list_0_contents_box___-1___1605856444422___" contenteditable="false" data-wv-removetempid="true">
+                        <div class="show" data-wv-layout-element="block" data-wv-block-id="___lms_btn_style_1" data-wv-res-id="___lms_btn_style_1___-1___1606208813703___" contenteditable="false" data-wv-removetempid="true" data-wv-layout-element-type="text" id="openCrseListPopBtn">
+                          <span>과정선택</span>
+                        </div>
+                        <div class="col-12 sport_academy_card_style_0_wrap hidden" id="selected_crse_item_con"></div>
+                      </div>
+                    </div>
+                    <!--고도화 추가/수정-->
+                    <div class="col-12 pb30 pb-md-0 mb27 mb-md-14 lms_form_style_list_0 lms_form_style_list_0 type_select" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0" data-wv-res-id="___lms_form_style_list_0___0___1605681620338___" contenteditable="false" data-wv-removetempid="true">
+                      <div class="lms_form_style_list_0_label_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_label_box" contenteditable="false" data-wv-res-id="___lms_form_style_list_0_label_box___-1___1605679273106___" data-wv-removetempid="true" data-wv-layout-element-type="text">
+                        <div class="show" data-wv-block-id="___lms_essential" data-wv-res-id="___lms_essential___-1___1605679211652___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" data-wv-removetempid="true">희망강사선택</div>
+                      </div>
+                      <div class="col-12 lms_form_style_list_0_contents_box pref-region-instructor" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_contents_box" data-wv-res-id="___lms_form_style_list_0_contents_box___-1___1605856444422___" contenteditable="false" data-wv-removetempid="true">
+                        <div class="sportFoundation_select_style_0_wrap type_2 font_roboto pref-region">
+                          <label for="prefLocation" class="screen-reader-only">희망강사 지역선택</label>
+                          <select id="prefLocation" class="sportFoundation_select_style_0 normal_selectbox_style">
+                            <option selected="" disabled="">지역선택</option>
+                            <option value="0">서울</option>
+                            <option value="1">경기</option>
+                          </select>
+                        </div>
+                        <div class="pref-instructor">
+                          <div class="acdm-btn-group">
+                            <button class="col-0" data-wv-layout-element="block" data-wv-block-id="___lms_btn_style_1" data-wv-res-id="___lms_btn_style_1___-1___1606208813703___" contenteditable="false" data-wv-removetempid="true" data-wv-layout-element-type="text" id="openInstructorListPopBtn">
+                              추천강사<br />
+                              선택하기
+                            </button>
+                            <!-- [dev] 추천강사 팝업에서 선택 후 해당버튼 disabled 처리 -->
+                            <button class="col-0" data-wv-layout-element="block" data-wv-block-id="___lms_btn_style_1" data-wv-res-id="___lms_btn_style_1___-1___1606208813703___" contenteditable="false" data-wv-removetempid="true" data-wv-layout-element-type="text" disabled>
+                              재단에서<br />
+                              강사 추천하기
+                            </button>
+                          </div>
+                          <div class="pref-instructor-container">
+                            <div class="pref-instructor-item">
+                              <span class="instructor-rank">1순위</span>
+                              <span class="instructor-name">홍길동 강사</span>
+                              <button type="button" class="instructor-close" aria-label="강사 1순위 항목 삭제" title="삭제">
+                                <span aria-hidden="true">×</span>
+                                <span class="screen-reader-only">삭제</span>
+                              </button>
+                            </div>
+                            <div class="pref-instructor-item">
+                              <span class="instructor-rank">2순위</span>
+                              <span class="instructor-name">김철수 강사</span>
+                              <button type="button" class="instructor-close" aria-label="강사 2순위 항목 삭제" title="삭제">
+                                <span aria-hidden="true">×</span>
+                                <span class="screen-reader-only">삭제</span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //고도화 추가/수정-->
+                    <div class="col-12 pb30 pb-md-0 mb27 mb-md-14 lms_form_style_list_0 lms_form_style_list_0 type_textarea" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0" data-wv-res-id="___lms_form_style_list_0___0___1605681620338___" contenteditable="false" data-wv-removetempid="true">
+                      <div class="lms_form_style_list_0_label_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_label_box" contenteditable="false" data-wv-res-id="___lms_form_style_list_0_label_box___-1___1605679273106___" data-wv-removetempid="true" data-wv-layout-element-type="text">추가요청사항</div>
+                      <div class="col-12 lms_form_style_list_0_contents_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_contents_box" data-wv-res-id="___lms_form_style_list_0_contents_box___-1___1605856444422___" contenteditable="false" data-wv-removetempid="true">
+                        <div class="col-12" data-wv-layout-element="block" data-wv-block-id="___lms_textarea_style_0" contenteditable="false" data-wv-res-id="___lms_textarea_style_0___-1___1605770162768___" data-wv-removetempid="true">
+                          <textarea cols="30" rows="10" placeholder="추가내용을 입력해주세요" name="requst_matter"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 pb30 pb-md-0 mb27 mb-md-14 lms_form_style_list_0 lms_form_style_list_0 type_text" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0" data-wv-res-id="___lms_form_style_list_0___0___1605681620338___" contenteditable="false" data-wv-removetempid="true">
+                      <div class="lms_form_style_list_0_label_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_label_box" contenteditable="false" data-wv-res-id="___lms_form_style_list_0_label_box___-1___1605679273106___" data-wv-removetempid="true" data-wv-layout-element-type="text">
+                        <div class="show" data-wv-block-id="___lms_essential" data-wv-res-id="___lms_essential___-1___1605679211652___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" data-wv-removetempid="true">교육시간선택</div>
+                      </div>
+                      <div class="col-12 lms_form_style_list_0_contents_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_contents_box" data-wv-res-id="___lms_form_style_list_0_contents_box___-1___1605856444422___" contenteditable="false" data-wv-removetempid="true">
+                        <div class="col-12 mb27 font_style_15" data-wv-block-id="___font_style_15" data-wv-res-id="___font_style_15___-1___1606269029897___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" data-wv-removetempid="true">과정에 따른 교육시간은 다음과 같습니다</div>
+                        <div class="col-12 lms_table_style_0_wrap" data-wv-layout-element="block" data-wv-block-id="___lms_table_style_000" data-wv-res-id="___lms_table_style_000___-1___1606198010106___" contenteditable="false" data-wv-removetempid="true">
+                          <div class="col-12 lms_table_style_0">
+                            <div class="col-12 has_scroll">
+                              <div class="col-12 table_padding">
+                                <table class="col-12">
+                                  <caption>
+                                    선택과목 및 참가대상 테이블
+                                  </caption>
+                                  <colgroup>
+                                    <col width="94px" />
+                                    <col width="auto" />
+                                    <col width="86px" />
+                                    <col width="447px" />
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th>교시</th>
+                                      <th>과목</th>
+                                      <th>시간(분)</th>
+                                      <th>시간</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody id="sbjectListCon"></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 pb30 pb-md-0 mb27 mb-md-35 lms_form_style_list_0 lms_form_style_list_0 type_address only_group_items only_offline" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0" data-wv-res-id="___lms_form_style_list_0___0___1605681620338___" contenteditable="false" data-wv-removetempid="true">
+                      <div class="lms_form_style_list_0_label_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_label_box" contenteditable="false" data-wv-res-id="___lms_form_style_list_0_label_box___-1___1605679273106___" data-wv-removetempid="true" data-wv-layout-element-type="text">
+                        <div class="show" data-wv-block-id="___lms_essential" data-wv-res-id="___lms_essential___-1___1605679211652___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" data-wv-removetempid="true">교육장소</div>
+                      </div>
+                      <div class="col-12 lms_form_style_list_0_contents_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_contents_box" data-wv-res-id="___lms_form_style_list_0_contents_box___-1___1605856444422___" contenteditable="false" data-wv-removetempid="true">
+                        <div class="col-12 sportFoundation_input_style_0_con" data-wv-layout-element="block" data-wv-block-id="___lms_input_style_0" data-wv-res-id="___lms_input_style_0___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true">
+                          <input type="text" placeholder="우편번호" readonly="" name="zipcode" />
+                        </div>
+                        <div class="col-0 ml20 mt6" data-wv-layout-element="block" data-wv-block-id="___lms_btn_style_1" data-wv-res-id="___lms_btn_style_1___-1___1606208813703___" contenteditable="false" data-wv-removetempid="true" data-wv-layout-element-type="text" id="findAddressBtn">
+                          <span>주소찾기</span>
+                        </div>
+                        <div class="col-12 sportFoundation_input_style_0_con" data-wv-layout-element="block" data-wv-block-id="___lms_input_style_0" data-wv-res-id="___lms_input_style_0___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true">
+                          <input type="text" placeholder="주소" readonly="" name="addr0" />
+                        </div>
+                        <div class="col-12 sportFoundation_input_style_0_con" data-wv-layout-element="block" data-wv-block-id="___lms_input_style_0" data-wv-res-id="___lms_input_style_0___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true">
+                          <input type="text" placeholder="상세 주소" readonly="" name="addr1" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 pb30 pb-md-0 mb27 mb-md-35 lms_form_style_list_0 lms_form_style_list_0 type_check only_group_items only_offline" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0" data-wv-res-id="___lms_form_style_list_0___0___1605681620338___" contenteditable="false" data-wv-removetempid="true">
+                      <div class="lms_form_style_list_0_label_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_label_box" contenteditable="false" data-wv-res-id="___lms_form_style_list_0_label_box___-1___1605679273106___" data-wv-removetempid="true" data-wv-layout-element-type="text">
+                        <div class="show" data-wv-block-id="___lms_essential" data-wv-res-id="___lms_essential___-1___1605679211652___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" data-wv-removetempid="true">교보재<br class="hidden show-md" />구비여부</div>
+                      </div>
+                      <div class="col-12 lms_form_style_list_0_contents_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_contents_box" data-wv-res-id="___lms_form_style_list_0_contents_box___-1___1605856444422___" contenteditable="false" data-wv-removetempid="true">
+                        <div class="col-12">
+                          <div class="col-6 col-sm-4 lms_check_box_style_0_con"><input type="checkbox" class="lms_check_box_style_0" name="toolsEquipWhether" id="001" value="001" /><label for="001">노트북</label></div>
+                          <div class="col-6 col-sm-4 lms_check_box_style_0_con"><input type="checkbox" class="lms_check_box_style_0" name="toolsEquipWhether" id="002" value="002" /><label for="002">의자</label></div>
+                          <div class="col-6 col-sm-4 lms_check_box_style_0_con"><input type="checkbox" class="lms_check_box_style_0" name="toolsEquipWhether" id="003" value="003" /><label for="003">책상</label></div>
+                          <div class="col-6 col-sm-4 lms_check_box_style_0_con"><input type="checkbox" class="lms_check_box_style_0" name="toolsEquipWhether" id="004" value="004" /><label for="004">마이크</label></div>
+                          <div class="col-6 col-sm-4 lms_check_box_style_0_con"><input type="checkbox" class="lms_check_box_style_0" name="toolsEquipWhether" id="005" value="005" /><label for="005">빔프로젝트</label></div>
+                          <div class="col-6 col-sm-4 lms_check_box_style_0_con"><input type="checkbox" class="lms_check_box_style_0" name="toolsEquipWhether" id="006" value="006" /><label for="006">음향시설(스피커등)</label></div>
+                          <div class="col-6 col-sm-4 lms_check_box_style_0_con"><input type="checkbox" class="lms_check_box_style_0" name="toolsEquipWhether" id="007" value="007" /><label for="007">레이져포인터</label></div>
+                          <div class="col-6 col-sm-4 lms_check_box_style_0_con"><input type="checkbox" class="lms_check_box_style_0" name="toolsEquipWhether" id="008" value="008" /><label for="008">없음</label></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12" data-wv-layout-element="block" data-wv-block-id="___lms_btn_style_0_con" data-wv-res-id="___lms_btn_style_0_con___-1___1606208948906___" contenteditable="false" data-wv-removetempid="true">
+                  <div class="mr15 font_gongGothic type_2" data-wv-layout-element="block" data-wv-block-id="___lms_btn_style_0" data-wv-res-id="___lms_btn_style_0___-1___1606208813703___" contenteditable="false" data-wv-removetempid="true" data-wv-layout-element-type="text">
+                    <span data-wv-res-id="___0___1606209325434___">취소하기</span>
+                  </div>
+                  <div class="bg_point font_gongGothic" data-wv-layout-element="block" data-wv-block-id="___lms_btn_style_0" data-wv-res-id="___lms_btn_style_0___-1___1606208813703___" contenteditable="false" data-wv-removetempid="true" data-wv-layout-element-type="text" id="submitCrseEstbleReqstBtn">
+                    <span data-wv-res-id="___0___1606209325434___">개설신청</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- footer -->
+        <div data-wv-layout-element="layout">
+          <div class="col-12 footer_wrap" data-wv-layout-element="block" data-wv-inc="footer">
+            <!-- banner -->
+            <div id="defaultBanner" class="col-12 mb35 expert_layout_001 pl30 pr30 pl-md-60 pr-md-60 pl-lg-15 pr-lg-15" data-wv-layout-element="block" data-wv-block-id="___expert_layout_001" data-wv-res-id="___expert_layout_001___-1___1605592790699___" contenteditable="false" style="float: none; clear: both; overflow: hidden; margin-left: auto; margin-right: auto; max-width: 1200px" id="temperaryWvId7791361" data-wv-removetempid="true">
+              <div class="col-12" data-wv-layout-element="block" data-wv-block-id="___expert_layout_000" onclick="location.href='/page/education_schedule'" data-wv-res-id="___expert_layout_000___-1___1605597254446___" contenteditable="false" id="temperaryWvId4672790" data-wv-removetempid="true">
+                <div class="col-0 col-sm-0 col-md-0 col-lg-0 col-xl-0" data-wv-layout-element="block" data-wv-block-id="___expert_layout_000" data-wv-res-id="___expert_layout_000___-1___1605593923248___" contenteditable="false" id="temperaryWvId3304804" data-wv-removetempid="true">
+                  <div class="font_style_25 col-0 col-sm-0 col-md-0 col-lg-0 col-xl-0" data-wv-block-id="___font_style_25" data-wv-res-id="___font_style_25___-1___1605593012551___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" id="temperaryWvId7791362" data-wv-removetempid="true">온라인 교육일정</div>
+                  <div class="font_style_20 font_roboto col-0 col-sm-0 col-md-0 col-lg-0 col-xl-0" data-wv-block-id="___font_style_20_en" data-wv-res-id="___font_style_20_en___-1___1605593327795___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" id="temperaryWvId7791363" data-wv-removetempid="true">이달의 온라인 교육일정은?</div>
+                </div>
+              </div>
+            </div>
+            <div id="qnaBanner" class="col-12 mb35 expert_layout_001 pl30 pr30 pl-md-60 pr-md-60 pl-lg-15 pr-lg-15" data-wv-layout-element="block" data-wv-block-id="___expert_layout_001" data-wv-res-id="___expert_layout_001___-1___1605592790699___" contenteditable="false" style="float: none; clear: both; overflow: hidden; margin-left: auto; margin-right: auto; max-width: 1200px; display: none" id="temperaryWvId7791361" data-wv-removetempid="true">
+              <div class="col-12" data-wv-layout-element="block" data-wv-block-id="___expert_layout_000" onclick="location.href='/page/notice_list'" data-wv-res-id="___expert_layout_000___-1___1605597254446___" contenteditable="false" id="temperaryWvId4672790" data-wv-removetempid="true">
+                <div class="col-0 col-sm-0 col-md-0 col-lg-0 col-xl-0" data-wv-layout-element="block" data-wv-block-id="___expert_layout_000" data-wv-res-id="___expert_layout_000___-1___1605593923248___" contenteditable="false" id="temperaryWvId3304804" data-wv-removetempid="true">
+                  <div class="font_style_25 col-0 col-sm-0 col-md-0 col-lg-0 col-xl-0" data-wv-block-id="___font_style_25" data-wv-res-id="___font_style_25___-1___1605593012551___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" id="temperaryWvId7791362" data-wv-removetempid="true">공지사항</div>
+                  <div class="font_style_20 font_roboto col-0 col-sm-0 col-md-0 col-lg-0 col-xl-0" data-wv-block-id="___font_style_20_en" data-wv-res-id="___font_style_20_en___-1___1605593327795___" data-wv-layout-element="block" contenteditable="false" data-wv-layout-element-type="text" id="temperaryWvId7791363" data-wv-removetempid="true">공지사항으로 이동</div>
+                </div>
+              </div>
+            </div>
+
+            <!--contents-->
+            <div class="col-12 col-center mw-1200 pl30 pr30 pl-md-60 pr-md-60 pl-lg-15 pr-lg-15 footer_inner">
+              <ul class="col-12 mb38 mb-md-33 footer_util_list_con">
+                <li>
+                  <a href="http://www.sportsafety.or.kr/front/user/termsPage.do?terms_no=c0480b299f7a4a34bf49dcf1ae0ba216&menu_id=abb71ba477084fb6912b4cddf8253c2a" target="_blank">개인정보처리방침</a>
+                </li>
+                <li>
+                  <a href="http://www.sportsafety.or.kr/front/user/termsPage.do?terms_no=a7ce30a1e34b45abbd44e400cbed4aa1&menu_id=f984a2e43bfe4ecabc66e18fa0368c40" target="_blank">이용약관</a>
+                </li>
+                <li>
+                  <a href="http://www.sportsafety.or.kr/front/user/termsPage.do?terms_no=c0480b299f7a4a34bf49dcf1ae0ba216&menu_id=abb71ba477084fb6912b4cddf8253c2a" target="_blank">이메일무단수집거부</a>
+                </li>
+              </ul>
+              <div class="col-12 mb40 mb-md-21 footer_middle_con">
+                <div class="col-6 footer_logo_con">
+                  <img src="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/img/common/footer_logo.png" alt="스포츠안전재단" />
+                </div>
+                <div class="col-6 fr family_site_select_wrap">
+                  <select class="family_site_select" name="" id="familySite" data-wv-com="selectbox" style="display: none" data-wv-select-placeholder="관련사이트 보기">
+                    <option value="">관련사이트 보기</option>
+                    <option value="http://www.sportsafety.or.kr/front/main.do">스포츠안전재단</option>
+                    <option value="https://insu.sportsafety.or.kr/tf/front/user/login.do">스포츠안전공제</option>
+                    <option value="https://event.sportsafety.or.kr">스포츠행사안전관리포털</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-12 mb38 footer_bottom_con">
+                <ul class="col-12 mb5 footer_addr_list_con">
+                  <li>
+                    <div class="show-md mr-md-10"><span class="point1 fontweight500">교육사업 문의</span>  <span class="fontweight500">02.2023.5552</span>  이메일문의  <span class="fontweight500 font_roboto">hwumm@sports.or.kr</span></div>
+                  </li>
+                  <li><span class="point1 fontweight500">업무시간</span>  평일 09:00 ~ 18:00(토요일 공휴일 휴무)</li>
+                  <li><span class="font_roboto">05540</span> 서울특별시 송파구 올림픽로 <span class="font_roboto">424</span> 올림픽공원테니스경기장 <span class="font_roboto">3</span>층 스포츠안전재단</li>
+                </ul>
+                <div class="col-12 footer_copyright_con">
+                  <span class="font_roboto">COPYRIGHT(C)2020</span>
+                  스포츠안전재단.
+                  <span class="font_roboto">ALL RIGHTS RESERVED.</span>
+                </div>
+              </div>
+              <div class="col-12 tc move_to_top_btn_con">
+                <div class="move_to_top_btn">
+                  <img src="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/img/common/20x11_purple_top_arrow.png" alt="top button" />
+                </div>
+              </div>
+            </div>
+            <!--bg-->
+            <div class="col-12 tr footer_right_bg">
+              <img src="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/img/academy_private/footer_right_bg_mobile.png" alt="푸터 배경 모바일 이미지" class="hidden-md" />
+              <img src="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/img/academy_private/footer_right_bg.png" alt="푸터 배경 웹 이미지" class="hidden show-md" />
+            </div>
+          </div>
+        </div>
+        <div class="sports_foundation_quick_menu_wrap">
+          <div class="sports_foundation_web_quick_menu_con">
+            <div class="sports_foundation_quick_menu_title">
+              QUICK<br />
+              MENU
+            </div>
+            <ul class="sports_foundation_quick_menu_list">
+              <li>
+                <a href="https://www.sportsafety.or.kr" target="_blank">
+                  <span>
+                    스포츠<br />
+                    안전재단
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://event.sportsafety.or.kr" target="_blank">
+                  <span>
+                    스포츠행사<br />
+                    안전관리포털
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://insu.sportsafety.or.kr" target="_blank">
+                  <span>
+                    스포츠안전<br />
+                    공제
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="sports_foundation_mobile_quick_menu_con">
+            <a href="javascript:void(0)" class="sports_foundation_mobile_quick_menu_open_btn"></a>
+            <ul class="sports_foundation_quick_menu_list">
+              <li></li>
+              <li>
+                <a href="https://www.sportsafety.or.kr" target="_blank">
+                  <span>
+                    스포츠<br />
+                    안전재단
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://event.sportsafety.or.kr" target="_blank">
+                  <span> 스포츠행사안전관리포털 </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://insu.sportsafety.or.kr" target="_blank">
+                  <span> 스포츠안전공제 </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="sports_foundation_mobile_quick_menu_dim"></div>
+      </div>
+    </div>
+
+    <!--고도화 추가/수정-->
+    <!-- 팝업: 추천 강사 선택 -->
+    <div class="col-12 lms_popup_style_1_wrap" id="instructorListPop">
+      <div class="col-12 popup_con" style="max-width: 1170px">
+        <div class="col-12 popup_inner">
+          <div class="popup_close_btn_wrap">
+            <a href="javascript:void(0)" onclick="popupManager.removePopLatest(true)" class="popup_close_btn_con">
+              <div class="popup_close_btn_bg"></div>
+              <div class="popup_close_btn"></div>
+            </a>
+          </div>
+          <div class="col-12 popup_header_con">
+            <div class="fl font_gongGothic popup_title">추천 강사 선택</div>
+          </div>
+          <div class="col-12 pb50 popup_contents_con type_card">
+            <div class="col-12 popup_contents">
+              <div class="col-12" data-wv-block-id="___lms_table_style_000" data-wv-res-id="___lms_table_style_000___-1___1606198010106___" contenteditable="false">
+                <div class="col-12">
+                  <div class="col-12 mb50 sport_academy_card_style_0_wrap instructor-card-group">
+                    <div class="swiper-container instructorSwiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="instructor-card">
+                            <div class="card-image">
+                              <img src="https://picsum.photos/200/300?random=1" alt="" />
+                            </div>
+                            <div class="card-content">
+                              <h3 class="instructor-name">홍길동</h3>
+                              <div class="info-section">
+                                <span class="info-label">전분분야</span>
+                                <div class="info-content">스포츠 통급처리 스포츠 행사</div>
+                              </div>
+                              <div class="info-section">
+                                <span class="info-label">활동지역</span>
+                                <div class="info-content">수도권, 강원권, 충청권, 호남권, 영남권</div>
+                              </div>
+                              <div class="info-section">
+                                <span class="info-label">학력</span>
+                                <div class="info-content">용인대 스포츠안전학과 졸업</div>
+                              </div>
+                              <div class="info-section">
+                                <span class="info-label">경력</span>
+                                <div class="info-content">
+                                  24' 스포츠안전재단 강사과정 수료<br />
+                                  23' 안전스포츠 강사과정 수료
+                                </div>
+                              </div>
+                            </div>
+                            <div class="button-group">
+                              <!-- [dev] 버튼 클릭 시, selected 클래스 추가 -->
+                              <button type="button" class="select-button selected" data-rank="1">1순위 선택</button>
+                              <button type="button" class="select-button" data-rank="2">2순위 선택</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="instructor-card">
+                            <div class="card-image">
+                              <img src="https://picsum.photos/200/300?random=1" alt="" />
+                            </div>
+                            <div class="card-content">
+                              <h3 class="instructor-name">홍길동</h3>
+                              <div class="info-section">
+                                <span class="info-label">전분분야</span>
+                                <div class="info-content">스포츠 통급처리 스포츠 행사</div>
+                              </div>
+                              <div class="info-section">
+                                <span class="info-label">활동지역</span>
+                                <div class="info-content">수도권, 강원권, 충청권, 호남권, 영남권</div>
+                              </div>
+                              <div class="info-section">
+                                <span class="info-label">학력</span>
+                                <div class="info-content">용인대 스포츠안전학과 졸업</div>
+                              </div>
+                              <div class="info-section">
+                                <span class="info-label">경력</span>
+                                <div class="info-content">
+                                  24' 스포츠안전재단 강사과정 수료<br />
+                                  23' 안전스포츠 강사과정 수료
+                                </div>
+                              </div>
+                            </div>
+                            <div class="button-group">
+                              <!-- [dev] 버튼 클릭 시, selected 클래스 추가 -->
+                              <button type="button" class="select-button selected" data-rank="1">1순위 선택</button>
+                              <button type="button" class="select-button" data-rank="2">2순위 선택</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="instructor-card">
+                            <div class="card-image">
+                              <img src="https://picsum.photos/200/300?random=1" alt="" />
+                            </div>
+                            <div class="card-content">
+                              <h3 class="instructor-name">홍길동</h3>
+                              <div class="info-section">
+                                <span class="info-label">전분분야</span>
+                                <div class="info-content">스포츠 통급처리 스포츠 행사</div>
+                              </div>
+                              <div class="info-section">
+                                <span class="info-label">활동지역</span>
+                                <div class="info-content">수도권, 강원권, 충청권, 호남권, 영남권</div>
+                              </div>
+                              <div class="info-section">
+                                <span class="info-label">학력</span>
+                                <div class="info-content">용인대 스포츠안전학과 졸업</div>
+                              </div>
+                              <div class="info-section">
+                                <span class="info-label">경력</span>
+                                <div class="info-content">
+                                  24' 스포츠안전재단 강사과정 수료<br />
+                                  23' 안전스포츠 강사과정 수료
+                                </div>
+                              </div>
+                            </div>
+                            <div class="button-group">
+                              <!-- [dev] 버튼 클릭 시, selected 클래스 추가 -->
+                              <button type="button" class="select-button" data-rank="1">1순위 선택</button>
+                              <button type="button" class="select-button selected" data-rank="2">2순위 선택</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="instructor-card">
+                            <div class="card-image">
+                              <img src="https://picsum.photos/200/300?random=1" alt="" />
+                            </div>
+                            <div class="card-content">
+                              <h3 class="instructor-name">홍길동</h3>
+                              <div class="info-section">
+                                <span class="info-label">전분분야</span>
+                                <div class="info-content">스포츠 통급처리 스포츠 행사</div>
+                              </div>
+                              <div class="info-section">
+                                <span class="info-label">활동지역</span>
+                                <div class="info-content">수도권, 강원권, 충청권, 호남권, 영남권</div>
+                              </div>
+                              <div class="info-section">
+                                <span class="info-label">학력</span>
+                                <div class="info-content">용인대 스포츠안전학과 졸업</div>
+                              </div>
+                              <div class="info-section">
+                                <span class="info-label">경력</span>
+                                <div class="info-content">
+                                  24' 스포츠안전재단 강사과정 수료<br />
+                                  23' 안전스포츠 강사과정 수료
+                                </div>
+                              </div>
+                            </div>
+                            <div class="button-group">
+                              <!-- [dev] 버튼 클릭 시, selected 클래스 추가 -->
+                              <button type="button" class="select-button" data-rank="1">1순위 선택</button>
+                              <button type="button" class="select-button selected" data-rank="2">2순위 선택</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="instructor-card">
+                            <div class="card-image">
+                              <img src="https://picsum.photos/200/300?random=1" alt="" />
+                            </div>
+                            <div class="card-content">
+                              <h3 class="instructor-name">홍길동</h3>
+                              <div class="info-section">
+                                <span class="info-label">전분분야</span>
+                                <div class="info-content">스포츠 통급처리 스포츠 행사</div>
+                              </div>
+                              <div class="info-section">
+                                <span class="info-label">활동지역</span>
+                                <div class="info-content">수도권, 강원권, 충청권, 호남권, 영남권</div>
+                              </div>
+                              <div class="info-section">
+                                <span class="info-label">학력</span>
+                                <div class="info-content">용인대 스포츠안전학과 졸업</div>
+                              </div>
+                              <div class="info-section">
+                                <span class="info-label">경력</span>
+                                <div class="info-content">
+                                  24' 스포츠안전재단 강사과정 수료<br />
+                                  23' 안전스포츠 강사과정 수료
+                                </div>
+                              </div>
+                            </div>
+                            <div class="button-group">
+                              <!-- [dev] 버튼 클릭 시, selected 클래스 추가 -->
+                              <button type="button" class="select-button" data-rank="1">1순위 선택</button>
+                              <button type="button" class="select-button selected" data-rank="2">2순위 선택</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="nodata tc pt15 pb15" style="display: none">추천 강사가 없습니다.</div>
+                  </div>
+                  <div class="col-12 acdm-btn-group">
+                    <button class="acdm-btn acdm-btn-primary-fill">
+                      <span>선택완료</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 팝업: 희망 강사 추천 확인 -->
+    <div class="col-12 lms_popup_style_1_wrap" id="instructorRecPop">
+      <div class="col-12 popup_con" style="max-width: 500px">
+        <div class="col-12 popup_inner">
+          <div class="popup_close_btn_wrap">
+            <a href="javascript:void(0)" onclick="popupManager.removePopLatest(true)" class="popup_close_btn_con">
+              <div class="popup_close_btn_bg"></div>
+              <div class="popup_close_btn"></div>
+            </a>
+          </div>
+          <div class="col-12 popup_header_con">
+            <div class="fl font_gongGothic popup_title">희망강사 선택</div>
+          </div>
+          <div class="col-12 pb50 popup_contents_con type_card">
+            <div class="col-12 popup_contents">
+              <div class="col-12" data-wv-block-id="___lms_table_style_000" data-wv-res-id="___lms_table_style_000___-1___1606198010106___" contenteditable="false">
+                <div class="col-12">
+                  <div class="col-12 mb30 sport_academy_card_style_0_wrap">
+                    <div class="tc fontsize14">
+                      희망강사가 선택되지 않았습니다.<br />
+                      재단에서 강사추천을 받으시겠습니까?
+                    </div>
+                  </div>
+                  <div class="col-12 acdm-btn-group">
+                    <button class="acdm-btn acdm-btn-secondary-fill">
+                      <span>취소</span>
+                    </button>
+                    <button class="acdm-btn acdm-btn-primary-fill">
+                      <span>확인</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 팝업확인용 추가 -->
+    <script>
+      $(document).ready(function () {
+        $('#openInstructorListPopBtn').on('click', function () {
+          popupManager.add('#instructorListPop');
+        });
+        $('#submitCrseEstbleReqstBtn').on('click', function () {
+          popupManager.add('#instructorRecPop');
+        });
+
+        /* 추천 강사 스와이퍼 */
+        var swiper = new Swiper('.instructorSwiper', {
+          observer: true,
+          observeParents: true,
+          slidesPerView: 3,
+          spaceBetween: 10,
+          navigation: {
+            nextEl: '.instructorSwiper .swiper-button-next',
+            prevEl: '.instructorSwiper .swiper-button-prev',
+          },
+          breakpoints: {
+            767: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            991: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+          },
+          onInit: function (swiper) {
+            // 초기화 완료 후 강제 업데이트
+            setTimeout(function () {
+              swiper.update();
+            }, 100);
+          },
+        });
+      });
+    </script>
+    <!-- //고도화 추가/수정-->
+  </body>
+</html>
