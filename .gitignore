@@ -7,7 +7,6 @@ yarn.lock
 app/
 .publish/
 dist/
-ex/
 
 # Logs
 *.log

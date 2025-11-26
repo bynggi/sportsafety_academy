@@ -10,20 +10,723 @@
             @@include('../../../common/user/header.html')
 
             <!-- container -->
-            <div class="col-12 container_wrap admin_contents_min_height">
-              <div class="col-12 col-center mw-1630 admin_contents_min_height">
-                <div class="col-12 pr15 pl15 container_table_wrap admin_contents_min_height">
-                  <div class="temp_container">
-                    <h2>강의결과보고서 지급조서 교통비집행내역서</h2>
-                    <p>임시 페이지입니다.</p>
+            <div class="col-12 contents_container">
+          <div class="col-12 sub_layout_title_con">
+            <div class="col-12 col-center mw-1200 pl30 pr30 pl-md-60 pr-md-60 pl-lg-15 pr-lg-15 sub_layout_title">
+              <div class="img_box">
+                <img src="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/img/academy_private/academy_sub_layout_web_icon.png" alt="서브레이아웃 이미지" />
+              </div>
+              <div class="desc_box">
+                <div class="col-12 font_gongGothic sub_title point1">스포츠안전아카데미</div>
+                <div class="col-12 font_gongGothic title"><span class="point0 font_gongGothic">마이</span>페이지</div>
+              </div>
+            </div>
+            <div class="right_bg"></div>
+          </div>
+          <div class="col-12" data-wv-layout-element="layout-page" data-wv-layout-element-param="null">
+            <style>
+              .course_view_top_contents_con .course_view_top_contents_info_list_con .course_view_top_contents_info_list:last-child li:last-child > span:first-child::after {
+                height: calc(100% + 1px);
+                top: -5px;
+              }
+              .course_view_top_contents_con .course_view_top_contents_info_list li > span:first-child::after {
+                height: calc(100% - 5px);
+              }
+              @media all and (min-width: 1200px) {
+                .course_view_top_contents_con .course_view_top_contents_info_list_con .course_view_top_contents_info_list:last-child li:last-child > span:first-child::after {
+                  height: calc(100% + 1px);
+                }
+              }
+            </style>
+            <div class="col-12 mb50 sub_layout_lnb_menu_wrap">
+              <div class="col-12 col-center mw-1200 sub_layout_lnb_menu_con">
+                <div class="pl15 sub_layout_lnb_active_depth">
+                  <div class="col-12" data-wv-layout-element="menu" data-wv-layout-element-param="%7B%22renderDepth%22%3A2%2C%22domId%22%3A%22lnb%22%2C%22style%22%3Anull%2C%22indexPath%22%3Anull%2C%22extraClass%22%3A%22lnb_menu_con%22%7D">
+                    <ul class="lnb_menu_con menu_con menu_depth_1" id="lnb">
+                      <li class="menu_1_0" data-menu-seq="185">
+                        <a href="/page/main" target="" class=""><span>홈</span></a>
+                      </li>
+                      <li class="menu_1_1" data-menu-seq="193">
+                        <a href="/page/academy_intro" target="" class=""><span>아카데미소개</span></a>
+                        <ul class="menu_con menu_depth_2">
+                          <li class="menu_2_0" data-menu-seq="251">
+                            <a href="/page/academy_intro" target="" class=""><span>교육소개</span></a>
+                          </li>
+                          <li class="menu_2_1" data-menu-seq="252">
+                            <a href="/page/job_analysis" target="" class=""><span>직무 및 역량분석</span></a>
+                          </li>
+                          <li class="menu_2_2" data-menu-seq="253">
+                            <a href="/page/major_curriculum" target="" class=""><span>주요교육과정</span></a>
+                          </li>
+                          <li class="menu_2_3" data-menu-seq="254">
+                            <a href="/page/how_to_apply" target="" class=""><span>신청방법</span></a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu_1_2" data-menu-seq="194">
+                        <a href="/page/course_search_list" target="" class=""><span>과정안내/신청</span></a>
+                        <ul class="menu_con menu_depth_2">
+                          <li class="menu_2_0" data-menu-seq="195">
+                            <a href="/page/course_search_list" target="" class=""><span>과정검색</span></a>
+                          </li>
+                          <li class="menu_2_1" data-menu-seq="199">
+                            <a href="/page/course_open_apply" target="" class=""><span>과정개설신청</span></a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu_1_3" data-menu-seq="186">
+                        <a href="/page/open_course" target="" class=""><span>오픈강좌</span></a>
+                      </li>
+                      <li class="menu_1_4" data-menu-seq="202">
+                        <a href="/page/notice_list" target="" class=""><span>학습지원센터</span></a>
+                        <ul class="menu_con menu_depth_2">
+                          <li class="menu_2_0" data-menu-seq="203">
+                            <a href="/page/notice_list" target="" class=""><span>공지사항</span></a>
+                          </li>
+                          <li class="menu_2_1" data-menu-seq="205">
+                            <a href="/page/faq" target="" class=""><span>자주하는질문</span></a>
+                          </li>
+                          <li class="menu_2_2" data-menu-seq="206">
+                            <a href="/page/inquiry_list" target="" class=""><span>문의하기</span></a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu_1_5 active" data-menu-seq="208">
+                        <a href="/page/my_course_list" target="" class=""><span>마이페이지</span></a>
+                        <ul class="menu_con menu_depth_2 active">
+                          <li class="menu_2_0" data-menu-seq="209">
+                            <a href="/page/my_course_list" target="" class=""><span>나의강의실</span></a>
+                          </li>
+                          <li class="menu_2_2" data-menu-seq="217">
+                            <a href="/page/process_apply_record" target="" class=""><span>과정개설신청이력</span></a>
+                          </li>
+                          <li class="menu_2_3" data-menu-seq="250">
+                            <a href="/page/course_open_history" target="" class=""><span>오픈강좌시청이력</span></a>
+                          </li>
+                          <li class="menu_2_4" data-menu-seq="218">
+                            <a href="/page/mypage_modify" target="" class=""><span>정보수정</span></a>
+                          </li>
+                          <li class="" data-menu-seq="">
+                            <a href="마이페이지_강의활동관리_프로필관리.html" target="" class=""><span>강의활동관리</span></a>
+                          </li>
+                          <li class="active" data-menu-seq="">
+                            <a href="마이페이지_강의결과보고서.html" target="" class=""><span>강의결과보고서</span></a>
+                          </li>
+                          <li class="" data-menu-seq="">
+                            <a href="마이페이지_출결관리.html" target="" class=""><span>출결관리</span></a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+
+                    <script type="text/javascript">
+                      // 계층구조를 이용해 부모까지 a 태그에 active 클래스를 부여한다.
+                      $('#lnb .active')
+                        .parentsUntil('#lnb')
+                        .each(function () {
+                          $(this).removeClass('hidden').addClass('active');
+                        });
+
+                      var loc = location.href;
+
+                      // 모든 자식이 hidden 인경우 부모 ul 도 hidden 시킨다.
+                      (function () {
+                        $('#lnb ul').each(function (index, item) {
+                          var $li = $(item).find('> li');
+                          var len = $li.length;
+                          if (len == 0) return;
+                          $li.each(function () {
+                            if ($(this).hasClass('hidden')) len--;
+                          });
+
+                          if (loc.indexOf('find_pw_search') > -1) {
+                            $(this).removeClass('active').show();
+                          } else if (len == 0) {
+                            $(this).removeClass('active').hide();
+                          }
+                        });
+                      })();
+                    </script>
+                  </div>
+                </div>
+                <div class="pr15 sub_layout_lnb_menu_route">
+                  <div class="col-12" data-wv-layout-element="menu" data-wv-layout-element-param="%7B%22renderDepth%22%3A2%2C%22domId%22%3A%22lnb%22%2C%22style%22%3Anull%2C%22indexPath%22%3Anull%2C%22extraClass%22%3A%22lnb_menu_con%22%7D">
+                    <ul class="lnb_menu_con menu_con menu_depth_1" id="lnb">
+                      <li class="menu_1_0" data-menu-seq="185">
+                        <a href="/page/main" target="" class=""><span>홈</span></a>
+                      </li>
+                      <li class="menu_1_1" data-menu-seq="193">
+                        <a href="/page/academy_intro" target="" class=""><span>아카데미소개</span></a>
+                        <ul class="menu_con menu_depth_2">
+                          <li class="menu_2_0" data-menu-seq="251">
+                            <a href="/page/academy_intro" target="" class=""><span>교육소개</span></a>
+                          </li>
+                          <li class="menu_2_1" data-menu-seq="252">
+                            <a href="/page/job_analysis" target="" class=""><span>직무 및 역량분석</span></a>
+                          </li>
+                          <li class="menu_2_2" data-menu-seq="253">
+                            <a href="/page/major_curriculum" target="" class=""><span>주요교육과정</span></a>
+                          </li>
+                          <li class="menu_2_3" data-menu-seq="254">
+                            <a href="/page/how_to_apply" target="" class=""><span>신청방법</span></a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu_1_2" data-menu-seq="194">
+                        <a href="/page/course_search_list" target="" class=""><span>과정안내/신청</span></a>
+                        <ul class="menu_con menu_depth_2">
+                          <li class="menu_2_0" data-menu-seq="195">
+                            <a href="/page/course_search_list" target="" class=""><span>과정검색</span></a>
+                          </li>
+                          <li class="menu_2_1" data-menu-seq="199">
+                            <a href="/page/course_open_apply" target="" class=""><span>과정개설신청</span></a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu_1_3" data-menu-seq="186">
+                        <a href="/page/open_course" target="" class=""><span>오픈강좌</span></a>
+                      </li>
+                      <li class="menu_1_4" data-menu-seq="202">
+                        <a href="/page/notice_list" target="" class=""><span>학습지원센터</span></a>
+                        <ul class="menu_con menu_depth_2">
+                          <li class="menu_2_0" data-menu-seq="203">
+                            <a href="/page/notice_list" target="" class=""><span>공지사항</span></a>
+                          </li>
+                          <li class="menu_2_1" data-menu-seq="205">
+                            <a href="/page/faq" target="" class=""><span>자주하는질문</span></a>
+                          </li>
+                          <li class="menu_2_2" data-menu-seq="206">
+                            <a href="/page/inquiry_list" target="" class=""><span>문의하기</span></a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu_1_5 active" data-menu-seq="208">
+                        <a href="/page/my_course_list" target="" class=""><span>마이페이지</span></a>
+                        <ul class="menu_con menu_depth_2 active">
+                          <li class="menu_2_0" data-menu-seq="209">
+                            <a href="/page/my_course_list" target="" class=""><span>나의강의실</span></a>
+                          </li>
+                          <li class="menu_2_2" data-menu-seq="217">
+                            <a href="/page/process_apply_record" target="" class=""><span>과정개설신청이력</span></a>
+                          </li>
+                          <li class="menu_2_3" data-menu-seq="250">
+                            <a href="/page/course_open_history" target="" class=""><span>오픈강좌시청이력</span></a>
+                          </li>
+                          <li class="menu_2_4" data-menu-seq="218">
+                            <a href="/page/mypage_modify" target="" class=""><span>정보수정</span></a>
+                          </li>
+                          <li class="" data-menu-seq="">
+                            <a href="마이페이지_강의활동관리_프로필관리.html" target="" class=""><span>강의활동관리</span></a>
+                          </li>
+                          <li class="active" data-menu-seq="">
+                            <a href="마이페이지_강의결과보고서.html" target="" class=""><span>강의결과보고서</span></a>
+                          </li>
+                          <li class="" data-menu-seq="">
+                            <a href="마이페이지_출결관리.html" target="" class=""><span>출결관리</span></a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+
+                    <script type="text/javascript">
+                      // 계층구조를 이용해 부모까지 a 태그에 active 클래스를 부여한다.
+                      $('#lnb .active')
+                        .parentsUntil('#lnb')
+                        .each(function () {
+                          $(this).removeClass('hidden').addClass('active');
+                        });
+
+                      var loc = location.href;
+
+                      // 모든 자식이 hidden 인경우 부모 ul 도 hidden 시킨다.
+                      (function () {
+                        $('#lnb ul').each(function (index, item) {
+                          var $li = $(item).find('> li');
+                          var len = $li.length;
+                          if (len == 0) return;
+                          $li.each(function () {
+                            if ($(this).hasClass('hidden')) len--;
+                          });
+
+                          if (loc.indexOf('find_pw_search') > -1) {
+                            $(this).removeClass('active').show();
+                          } else if (len == 0) {
+                            $(this).removeClass('active').hide();
+                          }
+                        });
+                      })();
+                    </script>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="col-12" data-wv-layout-element="pgm-content" data-wv-layout-element-param="%7B%22id%22%3A%22my_lecture%22%7D">
+              <input type="hidden" id="eduStatus" value="END" />
+
+              <input type="hidden" id="eduStatus" value="END" />
+
+              <script>
+                $(function () {
+                  $('.sportFoundation_filter_style_1_wrap')
+                    .find('.sportFoundation_filter_style_1_mobile_open_btn > span')
+                    .on('click', function () {
+                      if (checkMobileSize()) {
+                        if (!$(this).closest('.sportFoundation_filter_style_1_wrap').hasClass('open')) {
+                          $(this).closest('.sportFoundation_filter_style_1_wrap').addClass('open');
+                        } else {
+                          $(this).closest('.sportFoundation_filter_style_1_wrap').removeClass('open');
+                        }
+                      }
+                    });
+                });
+              </script>
+              <div class="col-12 col-center mw-1200 mb50 pl30 pr30 pl-md-60 pr-md-60 pl-lg-15 pr-lg-15 contents_top_con">
+                <div class="col-12 col-sm-5 page_title">강의결과보고서</div>
+                <div class="col-12 col-sm-7 mt27 mt-sm-0">
+                  <div class="tl tr-sm">
+                    <button class="acdm-btn acdm-btn-primary-outline" onclick="location.href='마이페이지_강의결과보고서_지급조서_수수료집행내역서.html'">지급조서 집행내역 작성</button>
+                    <button class="acdm-btn acdm-btn-primary-outline ml5" onclick="location.href='마이페이지_강의결과보고서_지급조서_교통비집행내역서.html'">지급조서 교통비 작성</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-center mw-1200 pl30 pr30 pl-md-60 pr-md-60 pl-lg-15 pr-lg-15" id="crudMerge" data-wv-type="view" data-wv-option="{url: '/crse_estbl_reqst/selectFrontCrseEstblReqstDetail', param: {seq1: 6916, seq2: 6614, mode: 'view'}}">
+                <div class="col-12 contents_inner group" data-wv-interpreter="" style="display: block">
+                  <div class="col-12 mb50 mb-sm-70 mb-md-93 sub_contents_section">
+                    <!-- 지급조서 교통비 -->
+                    <div class="col-12 mb50" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_wrap" data-wv-res-id="___lms_form_style_list_0_wrap___-1___1606300374038___">
+                      <div class="col-12 col-center mb25 sportFoundation_filter_style_0_wrap type_2" data-wv-layout-element="block" data-wv-block-id="___expert_layout_000" data-wv-res-id="___expert_layout_000___-1___1606958481051___" contenteditable="false" id="temperaryWvId448106" data-wv-removetempid="true">
+                        <div class="col-12 sportFoundation_filter_style_0_text_con" data-wv-layout-element="block" data-wv-block-id="___expert_layout_000" data-wv-res-id="___expert_layout_000___-1___1606958601865___" contenteditable="false" data-wv-removetempid="true">지급조서 교통비</div>
+                      </div>
+                      <div class="acdm-table-wrapper">
+                        <table class="acdm-table-detail" role="table" aria-label="지급조서 교통비 지급내역">
+                          <caption class="acdm-table-caption">
+                            지급조서 교통비 지급내역을 제공하는 테이블입니다. 집행일시, 집행내역 정보를 포함합니다.
+                          </caption>
+                          <colgroup>
+                            <col style="width: 140px" />
+                            <col />
+                          </colgroup>
+                          <tbody class="acdm-table-body">
+                            <tr class="acdm-table-row">
+                              <th class="acdm-table-cell" scope="row">집행일시</th>
+                              <td class="acdm-table-cell" data-label="집행일시" colspan="3">2025년 9월 30일</td>
+                            </tr>
+                            <tr class="acdm-table-row">
+                              <th class="acdm-table-cell" scope="row">집행내역</th>
+                              <td class="acdm-table-cell" data-label="집행내역" colspan="3">[공통] 스포츠응급처치 과정 C형</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <!-- 지급내역 -->
+                    <div class="col-12" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_wrap" data-wv-res-id="___lms_form_style_list_0_wrap___-1___1606300374038___">
+                      <div class="col-12 col-center mb25 sportFoundation_filter_style_0_wrap type_2" data-wv-layout-element="block" data-wv-block-id="___expert_layout_000" data-wv-res-id="___expert_layout_000___-1___1606958481051___" contenteditable="false" id="temperaryWvId448106" data-wv-removetempid="true">
+                        <div class="col-12 sportFoundation_filter_style_0_text_con" data-wv-layout-element="block" data-wv-block-id="___expert_layout_000" data-wv-res-id="___expert_layout_000___-1___1606958601865___" contenteditable="false" data-wv-removetempid="true">지급내역</div>
+                      </div>
+                      <div class="acdm-table-wrapper">
+                        <div class="acdm-table-scroll">
+                          <div class="acdm-table-inner">
+                            <table class="acdm-table-list" role="table" aria-label="지급내역">
+                              <caption class="acdm-table-caption">
+                                지급내역 정보를 제공하는 테이블입니다. 번호, 이름, 생년월일, 전화번호, 은행, 계좌번호, 교통비 지급액(총액), 이동구간, 교육날짜, 서명 정보를 포함합니다.
+                              </caption>
+                              <colgroup>
+                                <col style="width: 30px" />
+                                <col style="width: 90px" />
+                                <col style="width: 100px" />
+                                <col style="width: 120px" />
+                                <col style="width: 90px" />
+                                <col />
+                                <col style="width: 140px" />
+                                <col style="width: 140px" />
+                                <col style="width: 140px" />
+                                <col style="width: 100px" />
+                              </colgroup>
+                              <thead class="acdm-table-head">
+                                <tr class="acdm-table-row">
+                                  <th class="acdm-table-header" scope="col">번호</th>
+                                  <th class="acdm-table-header" scope="col">이름</th>
+                                  <th class="acdm-table-header" scope="col">생년월일</th>
+                                  <th class="acdm-table-header" scope="col">전화번호</th>
+                                  <th class="acdm-table-header" scope="col">은행</th>
+                                  <th class="acdm-table-header" scope="col">계좌번호</th>
+                                  <th class="acdm-table-header" scope="col">교통비 지급액(총액)</th>
+                                  <th class="acdm-table-header" scope="col">이동구간</th>
+                                  <th class="acdm-table-header" scope="col">교육날짜</th>
+                                  <th class="acdm-table-header" scope="col">서명</th>
+                                </tr>
+                              </thead>
+                              <tbody class="acdm-table-body">
+                                <tr class="acdm-table-row">
+                                  <td class="acdm-table-cell" data-label="번호">1</td>
+                                  <td class="acdm-table-cell" data-label="이름">홍길동</td>
+                                  <td class="acdm-table-cell" data-label="생년월일">1990-01-01</td>
+                                  <td class="acdm-table-cell" data-label="전화번호">010-9839-5512</td>
+                                  <td class="acdm-table-cell" data-label="은행">한국은행</td>
+                                  <td class="acdm-table-cell" data-label="계좌번호">1234567891234</td>
+                                  <td class="acdm-table-cell" data-label="교통비 지급액">100,000</td>
+                                  <td class="acdm-table-cell" data-label="이동구간">(출발지) – (도착지) (거리) km</td>
+                                  <td class="acdm-table-cell" data-label="교육날짜">2025년 01월 01일</td>
+                                  <td class="acdm-table-cell" data-label="서명">
+                                    <div id="instructor-signature" class="instructor-signature">
+                                      <span class="point_pink">하단에서 진행</span>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="acdm-table-wrapper mt27">
+                        <table class="acdm-table-detail" role="table" aria-label="파일첨부">
+                          <caption class="acdm-table-caption">
+                            파일첨부
+                          </caption>
+                          <colgroup>
+                            <col style="width: 140px" />
+                            <col />
+                          </colgroup>
+                          <tbody class="acdm-table-body">
+                            <tr class="acdm-table-row">
+                              <th class="acdm-table-cell" scope="row">산출근거<br />(재단작성)</th>
+                              <td class="acdm-table-cell" data-label="산출근거(재단작성)">
+                                <div class="col-12 lms_form_style_list_0_contents_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_contents_box" data-wv-res-id="___lms_form_style_list_0_contents_box___-1___1605856444422___" contenteditable="false" data-wv-removetempid="true">
+                                  <div class="attach-file-wrap">
+                                    <div class="col-12 attach_file_con has_contents">
+                                      <div class="col-12">
+                                        <div class="attach-file-list">
+                                          <div class="attach-file-item is-full">
+                                            <div class="attach-file-preview">
+                                              <img src="https://image.ajunews.com/content/image/2015/02/13/20150213112205171325.jpg" alt="" />
+                                            </div>
+                                            <div class="attach-file-name">
+                                              <span title="sample_images_00.png">this_is_sample_images_00.png</span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr class="acdm-table-row">
+                              <th class="acdm-table-cell" scope="row">산출근거<br />(강사작성)</th>
+                              <td class="acdm-table-cell" data-label="산출근거(강사작성)">
+                                <div class="d-flex col-12 mb5">
+                                  <div class="col">
+                                    <div class="file_btn" data-wv-layout-element="block" data-wv-block-id="___lms_btn_style_1" data-wv-res-id="___lms_btn_style_1___-1___1606208813703___" contenteditable="false" data-wv-removetempid="true" data-wv-layout-element-type="text">
+                                      <input type="file" id="attachFile" onchange="showFile(this)" class="hidden" name="FILE_ID" />
+                                      <label for="attachFile">파일선택</label>
+                                    </div>
+                                  </div>
+                                  <div class="col-10 pl10">
+                                    <p class="point_pink fontSize13">
+                                      ※ 첨부파일 용량은 10MB 이하만 가능합니다. <br />
+                                      ※ JPG, JPEG, PNG 등 웹에서 지원하는 파일 형식만 업로드가 가능합니다.
+                                    </p>
+                                  </div>
+                                </div>
+                                <div class="col-12 lms_form_style_list_0_contents_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_contents_box" data-wv-res-id="___lms_form_style_list_0_contents_box___-1___1605856444422___" contenteditable="false" data-wv-removetempid="true">
+                                  <div class="attach-file-wrap">
+                                    <div class="col-12 attach_file_con has_contents">
+                                      <div class="attach-file-list">
+                                        <div class="attach-file-item is-full">
+                                          <div class="attach-file-preview">
+                                            <img src="https://image.ajunews.com/content/image/2015/02/13/20150213112205171325.jpg" alt="" />
+                                          </div>
+                                          <div class="attach-file-name">
+                                            <span title="sample_images_00.png">this_is_sample_images_00.png</span>
+                                          </div>
+                                          <button class="attach-file-delete">
+                                            <span class="screen-reader-only">첨부파일 삭제</span>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="acdm-table-wrapper mt27">
+                        <div class="acdm-table-scroll">
+                          <div class="acdm-table-inner">
+                            <table class="acdm-table-list" role="table" aria-label="지급조서 작성자, 확인자">
+                              <caption class="acdm-table-caption">
+                                지급조서 작성자, 확인자 정보를 제공하는 테이블입니다. 확인, 구분, 이름, 직급, 부서 정보를 포함합니다.
+                              </caption>
+                              <colgroup>
+                                <col style="width: 80px" />
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                              </colgroup>
+                              <thead class="acdm-table-head">
+                                <tr class="acdm-table-row">
+                                  <th class="acdm-table-header" scope="col">확인</th>
+                                  <th class="acdm-table-header" scope="col">구분</th>
+                                  <th class="acdm-table-header" scope="col">이름</th>
+                                  <th class="acdm-table-header" scope="col">직급</th>
+                                  <th class="acdm-table-header" scope="col">부서</th>
+                                </tr>
+                              </thead>
+                              <tbody class="acdm-table-body">
+                                <tr class="acdm-table-row">
+                                  <td class="acdm-table-cell" data-label="확인">
+                                    <div class="lms_check_box_style_0_con">
+                                      <input type="checkbox" name="managerConfirm" id="managerConfirm01" value="" checked disabled />
+                                      <label for="managerConfirm01"><span class="screen-reader-only">작성자 확인</span></label>
+                                    </div>
+                                  </td>
+                                  <td class="acdm-table-cell" data-label="구분">작성자</td>
+                                  <td class="acdm-table-cell" data-label="이름">홍길동</td>
+                                  <td class="acdm-table-cell" data-label="직급">주임</td>
+                                  <td class="acdm-table-cell" data-label="부서">안전관리실</td>
+                                </tr>
+                                <tr class="acdm-table-row">
+                                  <td class="acdm-table-cell" data-label="확인">
+                                    <div class="lms_check_box_style_0_con">
+                                      <input type="checkbox" name="managerConfirm" id="managerConfirm02" value="" disabled />
+                                      <label for="managerConfirm02"><span class="screen-reader-only">확인자 확인</span></label>
+                                    </div>
+                                  </td>
+                                  <td class="acdm-table-cell" data-label="구분">확인자</td>
+                                  <td class="acdm-table-cell" data-label="이름">박팀장</td>
+                                  <td class="acdm-table-cell" data-label="직급">팀장</td>
+                                  <td class="acdm-table-cell" data-label="부서">안전관리실</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 강사 서명 정보 -->
+                      <div class="acdm-table-wrapper mt27">
+                        <table class="acdm-table-detail" role="table" aria-label="강사 서명 정보">
+                          <caption class="acdm-table-caption">
+                            강사 서명 정보
+                          </caption>
+                          <colgroup>
+                            <col style="width: 140px" />
+                            <col />
+                          </colgroup>
+                          <tbody class="acdm-table-body">
+                            <tr class="acdm-table-row">
+                              <th class="acdm-table-cell" scope="row">강사 서명</th>
+                              <td class="acdm-table-cell" data-label="강사 서명">
+                                <p class="point_pink mb5 fontSize13">※ 마우스를 활용하여 서명해주세요</p>
+                                <div class="signature-container">
+                                  <canvas id="signature-canvas" class="signature-canvas"></canvas>
+                                  <div class="signature-controls">
+                                    <button class="acdm-btn acdm-btn-sm acdm-btn-primary-outline" id="saveBtn" onclick="saveSignature()">서명 적용</button>
+                                    <button class="acdm-btn acdm-btn-sm acdm-btn-secondary-outline" onclick="clearSignature()">서명 지우기</button>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 mb50" data-wv-layout-element="block" data-wv-block-id="___expert_layout_000" data-wv-res-id="___expert_layout_000___-1___1606283669064___" contenteditable="false" id="temperaryWvId5623823" data-wv-removetempid="true">
+                    <div class="col-12" data-wv-layout-element="block" data-wv-block-id="___lms_btn_style_0_con" data-wv-res-id="___lms_btn_style_0_con___-1___1606208948906___" contenteditable="false" data-wv-removetempid="true">
+                      <div class="col-10 col-center col-sm-0 mb30 mb-sm-0">
+                        <div class="mr15 font_gongGothic type_2" data-wv-layout-element="block" data-wv-block-id="___lms_btn_style_0" data-wv-res-id="___lms_btn_style_0___-1___1606208813703___" contenteditable="false" data-wv-removetempid="true" data-wv-layout-element-type="text">
+                          <span data-wv-res-id="___0___1606209325434___">임시저장</span>
+                        </div>
+                        <div class="bg_point1 font_gongGothic" data-wv-layout-element="block" data-wv-block-id="___lms_btn_style_0" data-wv-res-id="___lms_btn_style_0___-1___1606208813703___" contenteditable="false" data-wv-removetempid="true" data-wv-layout-element-type="text" onclick="showPaymentVoucherPop();" style="cursor: pointer;">
+                          <span data-wv-res-id="___0___1606209325434___" data-wv-updatebtn="">제출</span>
+                        </div>
+                      </div>
+                      <a href="마이페이지_강의결과보고서.html" class="col fr font_gongGothic type_2 right" data-wv-layout-element="block" data-wv-block-id="___lms_btn_style_0" data-wv-res-id="___lms_btn_style_0___-1___1606208813703___" contenteditable="false" data-wv-removetempid="true" data-wv-layout-element-type="text">
+                        <span data-wv-res-id="___0___1606209325434___">목록으로</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
             <!-- //container -->
             @@include('../../../common/user/footer.html')
         </div>
     </div>
+
+    <!-- 팝업 : 교통비 집행 내역서 출력 미리보기 -->
+    <div id="paymentVoucherPop" class="col-12 lms_popup_style_1_wrap type_2" style="display: none; z-index: 10003; position: fixed; top: 0px; left: 0px;">
+      <div class="col-12 popup_con" style="max-width: 1170px;">
+        <div class="col-12 popup_inner">
+          <div class="popup_close_btn_wrap" style="border-top-right-radius: 0px;">
+            <a href="javascript:void(0)" onclick="hidePaymentVoucherPop();" class="popup_close_btn_con" aria-label="팝업 닫기">
+              <div class="popup_close_btn_bg"></div>
+              <div class="popup_close_btn"></div>
+            </a>
+          </div>
+          <div class="col-12 popup_header_con">
+            <div class="fl font_gongGothic popup_title">교통비 집행 내역서 출력 미리보기</div>
+          </div>
+          <div class="col-12 popup_contents_con print-preview-contents-wrapper">
+            <div class="print-preview-container">
+              <div class="print-preview-content">
+              <!-- 1페이지: 교통비 집행 내역서 -->
+              <div class="print-report-page">
+                <div class="print-report-header">
+                  <h1 class="print-report-title">교통비 집행 내역서</h1>
+                  <div class="print-report-header-info">
+                    <p>- 집행내역: 2025년도</p>
+                  </div>
+                </div>
+
+                <div class="print-report-section-label">
+                  <p>- 지급내역</p>
+                </div>
+
+                <!-- 지급내역 테이블 -->
+                <div class="acdm-table-wrapper">
+                  <div class="acdm-table-scroll">
+                    <div class="acdm-table-inner">
+                      <table class="acdm-table-list" role="table" aria-label="지급내역">
+                        <caption class="acdm-table-caption">
+                          지급내역 정보를 제공하는 테이블입니다. 순번, 이름, 은행, 계좌번호, 교통비 이동구간, 지급액, 서명 정보를 포함합니다.
+                        </caption>
+                        <colgroup>
+                          <col width="8%" />
+                          <col width="12%" />
+                          <col width="10%" />
+                          <col width="12%" />
+                          <col width="20%" />
+                          <col width="18%" />
+                          <col width="20%" />
+                        </colgroup>
+                        <thead class="acdm-table-head">
+                          <tr class="acdm-table-row">
+                            <th class="acdm-table-header" rowspan="2" scope="col">순번</th>
+                            <th class="acdm-table-header" rowspan="2" scope="col">이름</th>
+                            <th class="acdm-table-header" rowspan="2" scope="col">은행</th>
+                            <th class="acdm-table-header" rowspan="2" scope="col">계좌번호</th>
+                            <th class="acdm-table-header" colspan="2" scope="colgroup">교통비</th>
+                            <th class="acdm-table-header" rowspan="2" scope="col">서명<br /><span class="print-report-signature-note">※개인정보활용<br />동의 포함</span></th>
+                          </tr>
+                          <tr class="acdm-table-row">
+                            <th class="acdm-table-header" scope="col">이동구간</th>
+                            <th class="acdm-table-header" scope="col">지급액</th>
+                          </tr>
+                        </thead>
+                        <tbody class="acdm-table-body">
+                          <tr class="acdm-table-row">
+                            <td class="acdm-table-cell text-center">1</td>
+                            <td class="acdm-table-cell">{{위원명}}</td>
+                            <td class="acdm-table-cell">{{은행}}</td>
+                            <td class="acdm-table-cell">{{계좌번호}}</td>
+                            <td class="acdm-table-cell">{{출발지}} - {{도착지}} ({{거리}}km)</td>
+                            <td class="acdm-table-cell text-right">{{지급액}}원</td>
+                            <td class="acdm-table-cell"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="print-report-page">
+                <!-- 산출근거 섹션 -->
+                <div class="print-report-calculation-section">
+                  <div class="print-report-calculation-title">산출근거 (재단작성)</div>
+                  <div class="print-report-calculation-image">
+                    <img
+                      src="/assets/images/ex/eximg.png"
+                      alt="산출근거 지도"
+                      onerror="this.style.display='none';"
+                    />
+                  </div>
+                </div>
+              </div>
+               <div class="print-report-page">
+                <!-- 날짜 -->
+                <div class="print-report-date">
+                  2025년 {{월}}월 {{일}}일
+                </div>
+
+                <!-- 확인 테이블 -->
+                <div class="acdm-table-wrapper" style="margin-top: 30px;">
+                  <div class="acdm-table-scroll">
+                    <div class="acdm-table-inner">
+                      <table class="acdm-table-list" role="table" aria-label="확인">
+                        <caption class="acdm-table-caption">
+                          확인 정보를 제공하는 테이블입니다. 구분, 부서, 직급, 이름, 확인 정보를 포함합니다.
+                        </caption>
+                        <colgroup>
+                          <col width="15%" />
+                          <col width="20%" />
+                          <col width="20%" />
+                          <col width="20%" />
+                          <col width="25%" />
+                        </colgroup>
+                        <thead class="acdm-table-head">
+                          <tr class="acdm-table-row">
+                            <th class="acdm-table-header" scope="col">구분</th>
+                            <th class="acdm-table-header" scope="col">부서</th>
+                            <th class="acdm-table-header" scope="col">직급</th>
+                            <th class="acdm-table-header" scope="col">이름</th>
+                            <th class="acdm-table-header" scope="col">확인</th>
+                          </tr>
+                        </thead>
+                        <tbody class="acdm-table-body">
+                          <tr class="acdm-table-row">
+                            <td class="acdm-table-cell">작성자</td>
+                            <td class="acdm-table-cell">안전관리실</td>
+                            <td class="acdm-table-cell">주임</td>
+                            <td class="acdm-table-cell">박</td>
+                            <td class="acdm-table-cell"></td>
+                          </tr>
+                          <tr class="acdm-table-row">
+                            <td class="acdm-table-cell">확인자</td>
+                            <td class="acdm-table-cell">안전관리실</td>
+                            <td class="acdm-table-cell">팀장</td>
+                            <td class="acdm-table-cell">임</td>
+                            <td class="acdm-table-cell"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 각주 -->
+                <div class="print-report-footnotes">
+                  <p>* 수집된 개인정보는 교통비지급의 목적으로만 사용되며, 타용도로는 사용되지 않습니다.</p>
+                  <p>• 지급된 교통비는 기타소득으로 신고하며, 기타소득에 대한 원천소득공제(8.8%) 공제 한 후 지급</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 tc" data-wv-layout-element="block" data-wv-block-id="___lms_btn_style_0_con" data-wv-res-id="___lms_btn_style_0_con___-1___1606208948906___" contenteditable="false" data-wv-removetempid="true" style="padding: 20px 0;">
+            <div class="show font_gongGothic bg_point1" data-wv-layout-element="block" onclick="javascript:send();" data-wv-block-id="___lms_btn_style_0" data-wv-res-id="___lms_btn_style_0___-1___1606208813703___" contenteditable="false" data-wv-removetempid="true" data-wv-layout-element-type="text">
+              <span data-wv-res-id="___0___1606209325434___">제출</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<script>
+    function showPaymentVoucherPop() {
+        document.getElementById('paymentVoucherPop').style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function hidePaymentVoucherPop() {
+        document.getElementById('paymentVoucherPop').style.display = 'none';
+        document.body.style.overflow = '';
+    }
+</script>
 </body>
 </html>
 

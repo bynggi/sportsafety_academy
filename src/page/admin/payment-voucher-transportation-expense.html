@@ -529,7 +529,9 @@
                                   <div>
                                     <h4 class="section_title">집행내역</h4>
                                   </div>
-                                  <div></div>
+                                  <div>
+                                    <a href="#" class="btn_small lime paymentVoucherBtn">지급조서_교통비 (확인용)</a>
+                                  </div>
                                 </div>
                                 <div class="panel_body">
                                   <table class="tb_detail0" summary="집행내역을 위한 테이블입니다.">
@@ -1063,9 +1065,216 @@
             <!-- @@include('../../common/footer.html') -->
         </div>
     </div>
+
+    <!-- 팝업 : 수당 등 수수료 집행 내역서 출력 미리보기 -->
+    <div id="paymentVoucherPop" class="hidden col-10 popup_wrap">
+      <!-- 팝업 타이틀 & 닫기 버튼 -->
+      <div class="popup_title_close_con print-preview-header-sticky">
+        <h1 class="popup_title">교통비 집행 내역서 출력 미리보기</h1>
+        <div class="popup_close_con">
+          <span class="close_btn" onclick="bm.popupManager.removePopLatest();"
+            ><img
+              src="http://dev.edu.sportsafety.or.kr/weven_template/theme/_admin_style4_new/1/resource/img/close_small_black.png"
+              alt="X"
+          /></span>
+        </div>
+      </div>
+      <div class="col-12 popup_con">
+        <!-- //팝업 타이틀 & 닫기 버튼 -->
+        <div class="popup_contents_con print-preview-contents-wrapper">
+          <div class="print-preview-container">
+            <div class="print-preview-content">
+              <!-- 1페이지: 교통비 집행 내역서 -->
+              <div class="print-report-page">
+                <div class="print-report-header">
+                  <h1 class="print-report-title">교통비 집행 내역서</h1>
+                  <div class="print-report-header-info">
+                    <p>- 집행내역: 2025년도</p>
+                  </div>
+                </div>
+
+                <div class="print-report-section-label">
+                  <p>- 지급내역</p>
+                </div>
+
+                <!-- 지급내역 테이블 -->
+                <table class="print-report-table print-report-table-fixed">
+                  <colgroup>
+                    <col width="8%" />
+                    <col width="12%" />
+                    <col width="10%" />
+                    <col width="12%" />
+                    <col width="20%" />
+                    <col width="18%" />
+                    <col width="20%" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th rowspan="2" class="text-center vertical-middle">순번</th>
+                      <th rowspan="2" class="text-center vertical-middle">이름</th>
+                      <th rowspan="2" class="text-center vertical-middle">은행</th>
+                      <th rowspan="2" class="text-center vertical-middle">계좌번호</th>
+                      <th colspan="2" class="text-center">교통비</th>
+                      <th rowspan="2" class="text-center vertical-middle">서명<br /><span class="print-report-signature-note">※개인정보활용<br />동의 포함</span></th>
+                    </tr>
+                    <tr>
+                      <th class="text-center">이동구간</th>
+                      <th class="text-center">지급액</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">1</td>
+                      <td>{{위원명}}</td>
+                      <td>{{은행}}</td>
+                      <td>{{계좌번호}}</td>
+                      <td>{{출발지}} - {{도착지}} ({{거리}}km)</td>
+                      <td class="text-right">{{지급액}}원</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="print-report-page">
+                <!-- 산출근거 섹션 -->
+                <div class="print-report-calculation-section">
+                  <div class="print-report-calculation-title">산출근거 (재단작성)</div>
+                  <div class="print-report-calculation-image">
+                    <img
+                      src="/assets/images/ex/eximg.png"
+                      alt="산출근거 지도"
+                      onerror="this.style.display='none';"
+                    />
+                  </div>
+                </div>
+              </div>
+               <div class="print-report-page">
+                <!-- 날짜 -->
+                <div class="print-report-date">
+                  2025년 {{월}}월 {{일}}일
+                </div>
+
+                <!-- 확인 테이블 -->
+                <table class="print-report-table print-report-table-margin-top">
+                  <colgroup>
+                    <col width="15%" />
+                    <col width="20%" />
+                    <col width="20%" />
+                    <col width="20%" />
+                    <col width="25%" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th class="text-center">구분</th>
+                      <th class="text-center">부서</th>
+                      <th class="text-center">직급</th>
+                      <th class="text-center">이름</th>
+                      <th class="text-center">확인</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>작성자</td>
+                      <td>안전관리실</td>
+                      <td>주임</td>
+                      <td>박</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>확인자</td>
+                      <td>안전관리실</td>
+                      <td>팀장</td>
+                      <td>임</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <!-- 각주 -->
+                <div class="print-report-footnotes">
+                  <p>* 수집된 개인정보는 교통비지급의 목적으로만 사용되며, 타용도로는 사용되지 않습니다.</p>
+                  <p>• 지급된 교통비는 기타소득으로 신고하며, 기타소득에 대한 원천소득공제(8.8%) 공제 한 후 지급</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="print-preview-actions print-preview-actions-sticky">
+        <button type="button" class="btn_guide black paymentVoucherPrintBtn">
+          인쇄
+        </button>
+        <button
+          type="button"
+          class="btn_guide gray"
+          onclick="bm.popupManager.removePopLatest();"
+        >
+          닫기
+        </button>
+      </div>
+    </div>
     
+    
+
     <div id="give-freely-root-mbnbehikldjhnfehhnaidhjhoofhpehk" class="give-freely-root" data-extension-id="mbnbehikldjhnfehhnaidhjhoofhpehk" data-extension-name="CSS Peeper" style="display: block"></div>
     <convert-webpage-to-pdf-extension data-wxt-shadow-root=""></convert-webpage-to-pdf-extension>
+    <script>
+      // 수당 등 수수료 집행 내역서 출력 기능
+      $(".paymentVoucherBtn").on("click", function (e) {
+        e.preventDefault();
+        bm.popupManager.add("#paymentVoucherPop");
+      });
+
+      // 인쇄 버튼 클릭 이벤트 - 동적으로 인쇄 영역 준비
+      $(".paymentVoucherPrintBtn").on("click", function () {
+        try {
+          // print-preview-content 영역의 HTML 가져오기
+          const printContent = document.querySelector("#paymentVoucherPop .print-preview-content");
+
+          if (!printContent) {
+            alert("인쇄할 내용을 찾을 수 없습니다.");
+            return;
+          }
+
+          // 인쇄용 임시 컨테이너 생성 (화면에는 보이지 않음)
+          let printContainer = document.getElementById("print-container-temp");
+
+          // 기존 컨테이너가 있으면 제거
+          if (printContainer) {
+            printContainer.remove();
+          }
+
+          // 새로운 인쇄용 컨테이너 생성
+          printContainer = document.createElement("div");
+          printContainer.id = "print-container-temp";
+          printContainer.style.position = "absolute";
+          printContainer.style.left = "-9999px";
+          printContainer.style.top = "-9999px";
+          printContainer.style.width = "1px";
+          printContainer.style.height = "1px";
+          printContainer.style.overflow = "hidden";
+
+          // print-preview-content의 내용 복사
+          printContainer.innerHTML = printContent.innerHTML;
+
+          // body에 추가 (화면에는 보이지 않음)
+          document.body.appendChild(printContainer);
+
+          // 인쇄 실행
+          window.print();
+
+          // 인쇄 후 임시 컨테이너 제거
+          setTimeout(function () {
+            if (printContainer && printContainer.parentNode) {
+              printContainer.remove();
+            }
+          }, 100);
+        } catch (error) {
+          console.error("인쇄 중 오류 발생:", error);
+          alert("인쇄 중 오류가 발생했습니다.");
+        }
+      });
+    </script>
 </body>
 </html>
 

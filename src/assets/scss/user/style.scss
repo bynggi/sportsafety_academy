@@ -604,3 +604,217 @@ body#printArea {
 @media screen and (max-width: 768px) {
   .generate-qrcode {grid-template-columns: 1fr;border-radius: 8px;}
 }
+
+/* 인쇄 미리보기 관련 스타일 (관리자단에서 가져옴) */
+.print-preview-contents-wrapper {
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.print-preview-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.print-preview-content {
+  width: 100%;
+  background: #fff;
+}
+
+.print-report-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto 20px;
+  padding: 20mm;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.print-report-header {
+  text-align: center;
+  margin-bottom: 25px;
+  flex-shrink: 0;
+}
+.print-report-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.print-report-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+  border: 1px solid #000;
+  flex-shrink: 0;
+}
+.print-report-table th,
+.print-report-table td {
+  padding: 12px;
+  border: 1px solid #000;
+  text-align: left;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.print-report-table th {
+  background: #f5f5f5;
+  font-weight: bold;
+}
+
+.print-report-section-item {
+  margin-bottom: 15px;
+  flex-shrink: 0;
+}
+.print-report-section-item:last-child {
+  margin-bottom: 0;
+}
+.print-report-section-item strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.print-report-section-item p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.print-report-page-break {
+  page-break-before: always;
+  break-before: page;
+  display: block;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.print-report-photos {
+  margin-top: 30px;
+}
+.print-report-photos-label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.print-report-photos-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.print-report-photo-item {
+  flex: 1;
+  width: 50%;
+}
+.print-report-photo-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #ddd;
+}
+
+.print-report-signature {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: 40px;
+  text-align: right;
+  position: relative;
+}
+.print-report-signature-label {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.print-report-signature-img {
+  display: inline-block;
+  height: 70px;
+}
+.print-report-signature-img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.print-report-header-info {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.print-report-section-label {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.print-report-table-fixed {
+  margin-top: 10px;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.print-report-table th.text-center,
+.print-report-table td.text-center {
+  text-align: center;
+}
+
+.print-report-table th.text-right,
+.print-report-table td.text-right {
+  text-align: right;
+}
+
+.print-report-table th.vertical-middle {
+  vertical-align: middle;
+}
+
+.print-report-table td.vertical-middle {
+  vertical-align: middle;
+}
+
+.print-report-signature-note {
+  font-size: 10px;
+}
+
+.print-report-calculation-section {
+  margin-top: 30px;
+}
+
+.print-report-calculation-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.print-report-calculation-image {
+  border: 1px solid #000;
+  padding: 10px;
+  min-height: 200px;
+}
+
+.print-report-calculation-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.print-report-date {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.print-report-footnotes {
+  margin-top: 30px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.print-report-table-margin-top {
+  margin-top: 30px;
+}
