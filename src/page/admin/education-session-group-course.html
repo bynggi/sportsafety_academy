@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('../../common/admin/head.html')
+    <link rel="stylesheet" href="/assets/css/admin-style.css">
+</head>
+<body cz-shortcut-listen="true">
+    <div data-wv-layout="layout" data-wv-layout-element="layout_screen" data-wv-layout-seq="0" data-wv-page-seq="0" data-wv-menu-seq="-1">
+      <div class="col-12 wrapper">
+            @@include('../../common/admin/header.html')
+
+            <!-- container -->
+            <div class="col-12 container_wrap admin_contents_min_height">
+              <div class="col-12 col-center mw-1630 admin_contents_min_height">
+                <div class="col-12 pr15 pl15 container_table_wrap admin_contents_min_height">
+                  <div class="temp_container">
+                    <!-- side -->
+                    <div class="side_wrap">
+                      <div class="col-12 show-table lnb_wrap lnb_title_con_by_static_menu">
+                        <div class="col-12" data-wv-layout-element="menu" data-wv-layout-element-param="%7B%22renderDepth%22%3A4%2C%22domId%22%3A%22adminDynamicMenuLNB%22%2C%22style%22%3A%22aDefault%22%2C%22indexPath%22%3Anull%2C%22extraClass%22%3A%22lnb_wrap%22%7D">
+                          <ul class="lnb_wrap menu_depth_1" id="adminDynamicMenuLNB">
+                            <li class="menu_1_0 has_child" data-menu-seq="260">
+                              <a href="/adm/dashboard" target="_self" class="gnb_dashboard"><span>대시보드</span></a>
+                              <ul class="hidden menu_depth_2">
+                                <li class="menu_2_0 hidden" data-menu-seq="353">
+                                  <a href="/adm/dashboard" target="_self" class=""><span>대시보드</span></a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="menu_1_1 has_child" data-menu-seq="262">
+                              <a href="/adm/sbject_elrn" target="_self" class="gnb_cal"><span>교육과정관리</span></a>
+                              <ul class="hidden menu_depth_2">
+                                <li class="menu_2_0 has_child" data-menu-seq="324">
+                                  <a href="/adm/sbject_elrn" target="_self" class=""><span>이러닝</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="332">
+                                      <a href="/adm/sbject_elrn" target="_self" class=""><span>과목관리</span></a>
+                                    </li>
+                                    <li class="menu_3_1" data-menu-seq="334">
+                                      <a href="/adm/crse_elrn" target="_self" class=""><span>과정관리</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="menu_2_1 has_child" data-menu-seq="326">
+                                  <a href="/adm/sbject_oflne" target="_self" class=""><span>집합교육</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="336">
+                                      <a href="/adm/sbject_oflne" target="_self" class=""><span>교과목관리</span></a>
+                                    </li>
+                                    <li class="menu_3_1" data-menu-seq="338">
+                                      <a href="/adm/crse_oflne" target="_self" class=""><span>과정관리</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="menu_2_2 has_child" data-menu-seq="328">
+                                  <a href="/adm/crse_blend" target="_self" class=""><span>혼합교육</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="251">
+                                      <a href="/adm/crse_blend" target="_self" class=""><span>과정관리</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="menu_2_3 has_child" data-menu-seq="243">
+                                  <a href="/adm/sbject_real_time" target="_self" class=""><span>실시간교육</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="246">
+                                      <a href="/adm/sbject_real_time" target="_self" class=""><span>과목관리</span></a>
+                                    </li>
+                                    <li class="menu_3_1" data-menu-seq="244">
+                                      <a href="/adm/crse_real_time" target="_self" class=""><span>과정관리</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="menu_2_4" data-menu-seq="249">
+                                  <a href="/adm/open_crse" target="_self" class=""><span>오픈강좌관리</span></a>
+                                </li>
+                                <li class="menu_2_5 has_child" data-menu-seq="330">
+                                  <a href="/adm/test_ques" target="_self" class=""><span>시험관리</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="258">
+                                      <a href="/adm/test_ques" target="_self" class=""><span>문제관리</span></a>
+                                    </li>
+                                    <li class="menu_3_1" data-menu-seq="257">
+                                      <a href="/adm/test_tmplat" target="_self" class=""><span>시험지관리</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="menu_1_2 active has_child" data-menu-seq="321">
+                              <a href="/adm/crse_estbl_reqst" target="_self" class="gnb_board"><span>강의활동관리</span></a>
+                              <ul class="menu_depth_2 active">
+                                <li class="" data-menu-seq="">
+                                  <a href="강의활동관리_자격증.html" target="_self" class=""><span>자격증</span></a>
+                                </li>
+                                <li class="menu_2_0" data-menu-seq="252">
+                                  <a href="/adm/crse_estbl_reqst" target="_self" class=""><span>과정개설신청</span></a>
+                                </li>
+                                <li class="menu_2_1 active has_child" data-menu-seq="264">
+                                  <a href="/adm/odr_elrn" target="_self" class=""><span>차수관리</span></a>
+                                  <ul class="menu_depth_3 active">
+                                    <li class="menu_3_0" data-menu-seq="341">
+                                      <a href="/adm/odr_elrn" target="_self" class=""><span>이러닝</span></a>
+                                    </li>
+                                    <li class="menu_3_1 active" data-menu-seq="342">
+                                      <a href="/adm/odr_oflne" target="_self" class=""><span class="active_txt">집합교육</span></a>
+                                    </li>
+                                    <li class="menu_3_2" data-menu-seq="343">
+                                      <a href="/adm/odr_blend" target="_self" class=""><span>혼합교육</span></a>
+                                    </li>
+                                    <li class="menu_3_3" data-menu-seq="245">
+                                      <a href="/adm/odr_real_time" target="_self" class=""><span>실시간교육</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="" data-menu-seq="">
+                                  <a href="강의활동관리_출결관리_목록.html" target="_self" class=""><span>출결관리</span></a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="menu_1_3 has_child" data-menu-seq="266">
+                              <a href="/adm/mber_instrctr" target="_self" class="gnb_member"><span>회원관리</span></a>
+                              <ul class="hidden menu_depth_2">
+                                <li class="menu_2_0" data-menu-seq="270">
+                                  <a href="/adm/mber_instrctr" target="_self" class=""><span>강사관리</span></a>
+                                </li>
+                                <li class="menu_2_1 has_child" data-menu-seq="268">
+                                  <a href="/adm/mber_stdnt" target="_self" class=""><span>교육생 관리</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="351">
+                                      <a href="/adm/mber_stdnt" target="_self" class=""><span>전체</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="menu_2_2" data-menu-seq="272">
+                                  <a href="/adm/mber_oprtr" target="_self" class=""><span>운영자관리</span></a>
+                                </li>
+                                <li class="menu_2_3 hidden" data-menu-seq="274">
+                                  <a href="/adm/mber_instt" target="_self" class=""><span>기관관리</span></a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="menu_1_4 has_child" data-menu-seq="276">
+                              <a href="/adm/bbsCtt?bbs_id=notice" target="_self" class="gnb_board"><span>포털관리</span></a>
+                              <ul class="hidden menu_depth_2">
+                                <li class="menu_2_0 has_child" data-menu-seq="278">
+                                  <a href="/adm/bbsCtt?bbs_id=notice" target="_self" class=""><span>게시판관리</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="288">
+                                      <a href="/adm/bbsCtt?bbs_id=notice" target="_self" class=""><span>공지사항</span></a>
+                                    </li>
+                                    <li class="menu_3_1" data-menu-seq="290">
+                                      <a href="/adm/bbs_faq" target="_self" class=""><span>자주하는 질문</span></a>
+                                    </li>
+                                    <li class="menu_3_2" data-menu-seq="292">
+                                      <a href="/adm/bbs_qna" target="_self" class=""><span>질문과 답변</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="menu_2_1" data-menu-seq="280">
+                                  <a href="/adm/popup" target="_self" class=""><span>팝업관리</span></a>
+                                </li>
+                                <li class="menu_2_2 has_child" data-menu-seq="284">
+                                  <a href="/adm/banner" target="_self" class=""><span>배너관리</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="253">
+                                      <a href="/adm/banner" target="_self" class=""><span>풋터 배너</span></a>
+                                    </li>
+                                    <li class="menu_3_1" data-menu-seq="254">
+                                      <a href="/adm/main_visual" target="_self" class=""><span>메인 비주얼</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="menu_2_3" data-menu-seq="286">
+                                  <a href="/adm/edc_schdul" target="_self" class=""><span>교육일정관리</span></a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="menu_1_5 has_child" data-menu-seq="282">
+                              <a href="/adm/group_perm" target="_self" class="gnb_monitor"><span>시스템 관리</span></a>
+                              <ul class="hidden menu_depth_2">
+                                <li class="menu_2_0 hidden" data-menu-seq="255">
+                                  <a href="/adm/userMenuManage" target="_self" class=""><span>메뉴관리</span></a>
+                                </li>
+                                <li class="menu_2_1" data-menu-seq="295">
+                                  <a href="/adm/group_perm" target="_self" class=""><span>권한그룹관리</span></a>
+                                </li>
+                                <li class="menu_2_2" data-menu-seq="299">
+                                  <a href="/adm/admin_access_log" target="_self" class=""><span>관리자 접근이력</span></a>
+                                </li>
+                                <li class="menu_2_3" data-menu-seq="301">
+                                  <a href="/adm/cmmn_code" target="_self" class=""><span>공통코드관리</span></a>
+                                </li>
+                                <li class="menu_2_4 has_child" data-menu-seq="303">
+                                  <a href="/adm/ctgry_sbject" target="_self" class=""><span>분류체계관리</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="309">
+                                      <a href="/adm/ctgry_sbject" target="_self" class=""><span>과목분류관리</span></a>
+                                    </li>
+                                    <li class="menu_3_1" data-menu-seq="311">
+                                      <a href="/adm/ctgry_crse" target="_self" class=""><span>과정분류관리</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="menu_2_5" data-menu-seq="305">
+                                  <a href="/adm/send_sms" target="_self" class=""><span>SMS 관리</span></a>
+                                </li>
+                                <li class="menu_2_6 has_child" data-menu-seq="307">
+                                  <a href="/adm/qustnr_qesitm_tmplat" target="_self" class=""><span>설문관리</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="313">
+                                      <a href="/adm/qustnr_qesitm_tmplat" target="_self" class=""><span>문항관리</span></a>
+                                    </li>
+                                    <li class="menu_3_1" data-menu-seq="315">
+                                      <a href="/adm/qestnr_tmplat" target="_self" class=""><span>설문지관리</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="menu_2_7" data-menu-seq="250">
+                                  <a href="/adm/userAdminMenuManage" target="_self" class=""><span>관리자메뉴관리</span></a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="menu_1_6 has_child" data-menu-seq="352">
+                              <a href="/adm/result_reprt" target="_self" class="gnb_member"><span>강사결과보고서</span></a>
+                              <ul class="hidden menu_depth_2">
+                                <li class="menu_2_0" data-menu-seq="354">
+                                  <a href="/adm/result_reprt" target="_self" class=""><span>강사결과보고서</span></a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="menu_1_7" data-menu-seq="256">
+                              <a href="/adm/checkMemberAttend" target="_self" class="gnb_member"><span>출결관리</span></a>
+                            </li>
+                            <li class="menu_1_8 has_child" data-menu-seq="297">
+                              <a href="/adm/stats_edc" target="_self" class="gnb_statistics"><span>통계</span></a>
+                              <ul class="hidden menu_depth_2">
+                                <li class="menu_2_0" data-menu-seq="317">
+                                  <a href="/adm/stats_edc" target="_self" class=""><span>교육통계</span></a>
+                                </li>
+                                <li class="menu_2_1" data-menu-seq="319">
+                                  <a href="/adm/stats_instrctr" target="_self" class=""><span>강사통계</span></a>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+
+                          <script type="text/javascript">
+                            var domId = 'adminDynamicMenuLNB' ? 'adminDynamicMenuLNB' : '';
+
+                            if (domId.toUpperCase().indexOf('LNB') > -1) {
+                              // 계층구조를 이용해 부모까지 a 태그에 active 클래스를 부여한다.
+                              $('#adminDynamicMenuLNB .active')
+                                .parentsUntil('#adminDynamicMenuLNB')
+                                .each(function () {
+                                  $(this).removeClass('hidden').addClass('active');
+                                });
+                            } else {
+                              // GNB일 경우
+                              $('#adminDynamicMenuLNB .active')
+                                .parentsUntil('#adminDynamicMenuLNB')
+                                .each(function () {
+                                  if ($(this).attr('class').indexOf('menu_1_') > -1) {
+                                    $(this).removeClass('hidden').addClass('active');
+                                  }
+                                });
+                            }
+
+                            (function () {
+                              // 하위 메뉴를 가지고 있는 경우 has_child 클래스를 부여한다.
+                              $('#adminDynamicMenuLNB li').each(function (index, item) {
+                                var $li = $(item);
+                                var $ul = $li.find('> ul');
+
+                                if ($ul.length > 0) $li.addClass('has_child');
+                              });
+
+                              // lnb 에 active 적용
+                              var _path = decodeURI(location.href);
+                              // 동일한 문자가 더 많은 메뉴를 판정한다.
+                              var _selectItemPoint = -1;
+                              var $selectItem = null;
+
+                              $('#adminDynamicMenuLNB li').each(function (index, item) {
+                                var $item = $(item);
+                                var href = $item.find('a').attr('href');
+
+                                if (_path.indexOf(href) > -1 && href.length >= _selectItemPoint) {
+                                  _selectItemPoint = href.length;
+                                  $selectItem = $item;
+                                }
+                              });
+
+                              if ($selectItem != null) $selectItem.children().last().find('span').addClass('active_txt');
+                            })();
+
+                            $(function () {
+                              // 관리자 페이지 타이틀 네비게이터
+                              //     	bm.wvLayoutFieldManager.setAdminPageTitle();
+                              bm.wvLayoutFieldManager.setAdminPageTitleAsc();
+                            });
+                          </script>
+                        </div>
+                      </div>
+
+                      <script type="text/javascript">
+                        var setSecond;
+                        var closeSecond;
+                        var newTime;
+
+                        function setCountNumber() {
+                          --setSecond;
+                          if (closeSecond == setSecond) {
+                            clearInterval(newTime);
+                            if (opener) {
+                              self.close();
+                              return;
+                            }
+                            location.href = WEB_ROOT + 'logout';
+                            alert('세션이 종료되어 로그아웃 되었습니다.');
+                          }
+                        }
+
+                        function startCount() {
+                          setSecond = 120 * 60; // 초단위임
+                          closeSecond = 1 * 60;
+                          newTime = setInterval(setCountNumber, 1000);
+                        }
+
+                        $(function () {
+                          startCount();
+                        });
+                      </script>
+                    </div>
+                    <!-- //side -->
+
+                    <!-- contents -->
+                    <div class="contents_wrap h-100 admin_contents_min_height">
+                      <div class="left_margin_border"></div>
+                      <div class="h-100 pl22 pr22 over-hidden contents_con admin_contents_min_height">
+                        <!-- 페이지 타이틀 -->
+                        <div class="col-12 show-table contents_header">
+                          <h3 class="show-tablecell vm fontsize20" data-wv-layout-field="page-title"><span class="asc">강의활동관리</span><span class="asc">차수관리</span><span class="asc current_menu_point">집합교육</span></h3>
+                        </div>
+                        <!-- //페이지 타이틀 -->
+
+                        <!-- 페이지 컨텐츠 -->
+                        <div class="col-12 pt30 pb90 contents_body">
+                          <div class="col-12" data-wv-layout-element="layout-page" data-wv-layout-element-param="null">
+                            <script type="text/javascript">
+                              app.interfaceKey = 'odr_oflne';
+                              var crud = {};
+                              crud.list = new CrudList();
+                            </script>
+                            <script src="http://dev.edu.sportsafety.or.kr/weven_service/module/program/odr_oflne/js/subjectList.js" type="text/javascript"></script>
+
+                            <div id="con_list_block_template">
+                              <!-- 필터 -->
+                              <!-- //필터 -->
+
+                              <div class="panel">
+                                <div class="panel_container">
+                                  <div class="panel_header style_2 noprint">
+                                    <div></div>
+                                    <div>
+                                      <a href="javascript:void(0)" onclick="subjectListPrint.init($('#con_list_block_template'))" class="btn_small lime">출력하기</a>
+                                      <a href="javascript:subjectList.addSubject();" class="btn_small lime" data-wv-item-addbtn="">교과목추가</a>
+                                    </div>
+                                  </div>
+                                  <div class="panel_body bm_slick_grid" id="crudList" style="width: 100%" data-wv-type="list" data-wv-option="{url: '/adm/odr_oflne/selectOrderSubjectList', param: {odr_mastr_sn: '6515}, dataAutoLoad: true, history: false, wrapper: #curdListContainer}">
+                                    <table>
+                                      <caption></caption>
+                                      <colgroup>
+                                        <col width="100px" />
+                                        <col width="auto" />
+                                        <col width="auto" />
+                                        <col class="500px" />
+                                        <col width="70px" />
+                                        <col width="70px" />
+                                        <col width="90px" />
+                                        <col width="100px" />
+                                        <col width="90px" class="noprint_table_col" />
+                                      </colgroup>
+                                      <thead>
+                                        <tr>
+                                          <th class="grid_header">교과목분류</th>
+                                          <th class="grid_header">교과목</th>
+                                          <th class="grid_header">교육시간</th>
+                                          <th class="grid_header">배정시간</th>
+                                          <th class="grid_header">1순위</th>
+                                          <th class="grid_header">2순위</th>
+                                          <th class="grid_header">배정강사</th>
+                                          <th class="grid_header">배정현황</th>
+                                          <th class="grid_header">삭제</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr data-wv-template="">
+                                          <td>응급처치</td>
+                                          <td>
+                                            <div>
+                                              <input type="hidden" name="odr_oflne_sbject_sn" value="6000" />
+                                              <input type="hidden" name="sbject_mastr_sn" value="1302" />
+                                              <span class="subject_title">[공통]심정지 발생 시 응급처치(초급)</span>
+                                            </div>
+                                            <div class="noprint">
+                                              <a href="javascript:void(0);" onclick="subjectList.onChangeSubject(this);" class="btn_small blue subject_select_btn">선택</a>
+                                            </div>
+                                          </td>
+                                          <td>
+                                            <div class="mb10">
+                                              시작시간
+                                              <select class="select_style0 start_hour" data-wv-selected-value="14">
+                                                <option value="00">00</option>
+                                                <option value="01">01</option>
+                                                <option value="02">02</option>
+                                                <option value="03">03</option>
+                                                <option value="04">04</option>
+                                                <option value="05">05</option>
+                                                <option value="06">06</option>
+                                                <option value="07">07</option>
+                                                <option value="08">08</option>
+                                                <option value="09">09</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="13">13</option>
+                                                <option value="14">14</option>
+                                                <option value="15">15</option>
+                                                <option value="16">16</option>
+                                                <option value="17">17</option>
+                                                <option value="18">18</option>
+                                                <option value="19">19</option>
+                                                <option value="20">20</option>
+                                                <option value="21">21</option>
+                                                <option value="22">22</option>
+                                                <option value="23">23</option>
+                                              </select>
+                                              :
+                                              <select class="select_style0 start_min" data-wv-selected-value="00">
+                                                <option value="00">00</option>
+                                                <option value="10">10</option>
+                                                <option value="20">20</option>
+                                                <option value="30">30</option>
+                                                <option value="40">40</option>
+                                                <option value="50">50</option>
+                                              </select>
+                                            </div>
+                                            <div>
+                                              종료시간
+                                              <select class="select_style0 end_hour" data-wv-selected-value="15">
+                                                <option value="00">00</option>
+                                                <option value="01">01</option>
+                                                <option value="02">02</option>
+                                                <option value="03">03</option>
+                                                <option value="04">04</option>
+                                                <option value="05">05</option>
+                                                <option value="06">06</option>
+                                                <option value="07">07</option>
+                                                <option value="08">08</option>
+                                                <option value="09">09</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="13">13</option>
+                                                <option value="14">14</option>
+                                                <option value="15">15</option>
+                                                <option value="16">16</option>
+                                                <option value="17">17</option>
+                                                <option value="18">18</option>
+                                                <option value="19">19</option>
+                                                <option value="20">20</option>
+                                                <option value="21">21</option>
+                                                <option value="22">22</option>
+                                                <option value="23">23</option>
+                                              </select>
+                                              :
+                                              <select class="select_style0 end_min" data-wv-selected-value="00">
+                                                <option value="00">00</option>
+                                                <option value="10">10</option>
+                                                <option value="20">20</option>
+                                                <option value="30">30</option>
+                                                <option value="40">40</option>
+                                                <option value="50">50</option>
+                                              </select>
+                                            </div>
+                                          </td>
+                                          <!--  
+                            <td class="brd_tit">
+                              <a href="?mode=update&sbjectSn=1302" class="table_link">[공통]심정지 발생 시 응급처치(초급)</a>
+                            </td>
+                            -->
+                                          <td>
+                                            <div>
+                                              <table class="tb_list0 small tc" summary="배정시간 표입니다.">
+                                                <caption>
+                                                  배정시간 표
+                                                </caption>
+                                                <colgroup>
+                                                  <col class="auto" />
+                                                  <col class="auto" />
+                                                  <col class="auto" />
+                                                  <col class="auto" />
+                                                  <col class="auto" />
+                                                  <col class="auto" />
+                                                  <col class="auto" />
+                                                </colgroup>
+                                                <thead>
+                                                  <tr>
+                                                    <th>이론<br />강의</th>
+                                                    <th>실습<br />강의</th>
+                                                    <th>토의</th>
+                                                    <th>견학</th>
+                                                    <th>시험</th>
+                                                    <th>과제</th>
+                                                    <th>총계</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td class=""><input type="text" name="asign_theory_hour" data-set-print-content="input" data-wv-defaultvalue="0" value="0" class="tr input_100 input_assign_time" data-wv-handler="{type: formHandler, action: onlyNumDot}" /></td>
+                                                    <td class=""><input type="text" name="asign_prctice_hour" data-set-print-content="input" data-wv-defaultvalue="0" value="0" class="tr input_100 input_assign_time" data-wv-handler="{type: formHandler, action: onlyNumDot}" /></td>
+                                                    <td class=""><input type="text" name="asign_dscn_hour" data-set-print-content="input" data-wv-defaultvalue="0" value="0" class="tr input_100 input_assign_time" data-wv-handler="{type: formHandler, action: onlyNumDot}" /></td>
+                                                    <td class=""><input type="text" name="asign_lnbns_hour" data-set-print-content="input" data-wv-defaultvalue="0" value="0" class="tr input_100 input_assign_time" data-wv-handler="{type: formHandler, action: onlyNumDot}" /></td>
+                                                    <td class=""><input type="text" name="asign_test_hour" data-set-print-content="input" data-wv-defaultvalue="0" value="0" class="tr input_100 input_assign_time" data-wv-handler="{type: formHandler, action: onlyNumDot}" /></td>
+                                                    <td class=""><input type="text" name="asign_task_hour" data-set-print-content="input" data-wv-defaultvalue="0" value="0" class="tr input_100 input_assign_time" data-wv-handler="{type: formHandler, action: onlyNumDot}" /></td>
+                                                    <td class=""><span class="total_assign_time">0</span></td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                          </td>
+                                          <td>김영철</td>
+                                          <td>최춘식</td>
+                                          <td>
+                                            <div class="teacher_list_con">
+                                              <div class="instructor">
+                                                안경준<a href="javascript:void(0)" onclick="instructor.onDeleteSelectedName(this)" class="remove_btn fontweight_bold noprint ml5">X</a>
+                                                <input type="hidden" value="303" name="mber_seq" id="303" class="seqs" />
+                                                <input type="hidden" value="안경준" name="nm" id="안경준" class="seqs" />
+                                                <input type="hidden" value="undefined" name="moblphon" id="undefined" class="seqs" />
+                                              </div>
+                                            </div>
+                                            <div>
+                                              <!-- <a href="javascript:void(0);" onclick="subjectItem.loadTeacherPopup(this);" class="btn_small blue teacher_select_btn">선택</a> -->
+                                              <a href="javascript:void(0);" class="btn_small blue teacher_select_btn noprint" id="instructor_choose_btn_02">선택</a>
+                                            </div>
+                                          </td>
+                                          <td>
+                                            관리자 배정완료
+                                            <!-- [dev] 상태값 -->
+                                            <!-- 1순위 승인
+                                            2순위 대기
+                                            2순위 승인
+                                            관리자 배정대기
+                                            관리자 배정완료 -->
+                                          </td>
+                                          <td>
+                                            <a href="javascript:void(0);" onclick="subjectList.removeSubject(this);" class="btn_small blue">삭제</a>
+                                          </td>
+                                        </tr>
+                                        <tr data-wv-template="">
+                                          <td>응급처치</td>
+                                          <td>
+                                            <div>
+                                              <input type="hidden" name="odr_oflne_sbject_sn" value="6001" />
+                                              <input type="hidden" name="sbject_mastr_sn" value="1303" />
+                                              <span class="subject_title">[공통]질환별 응급처치(초급)</span>
+                                            </div>
+                                            <div class="noprint">
+                                              <a href="javascript:void(0);" onclick="subjectList.onChangeSubject(this);" class="btn_small blue subject_select_btn">선택</a>
+                                            </div>
+                                          </td>
+                                          <td>
+                                            <div class="mb10">
+                                              시작시간
+                                              <select class="select_style0 start_hour" data-wv-selected-value="15">
+                                                <option value="00">00</option>
+                                                <option value="01">01</option>
+                                                <option value="02">02</option>
+                                                <option value="03">03</option>
+                                                <option value="04">04</option>
+                                                <option value="05">05</option>
+                                                <option value="06">06</option>
+                                                <option value="07">07</option>
+                                                <option value="08">08</option>
+                                                <option value="09">09</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="13">13</option>
+                                                <option value="14">14</option>
+                                                <option value="15">15</option>
+                                                <option value="16">16</option>
+                                                <option value="17">17</option>
+                                                <option value="18">18</option>
+                                                <option value="19">19</option>
+                                                <option value="20">20</option>
+                                                <option value="21">21</option>
+                                                <option value="22">22</option>
+                                                <option value="23">23</option>
+                                              </select>
+                                              :
+                                              <select class="select_style0 start_min" data-wv-selected-value="00">
+                                                <option value="00">00</option>
+                                                <option value="10">10</option>
+                                                <option value="20">20</option>
+                                                <option value="30">30</option>
+                                                <option value="40">40</option>
+                                                <option value="50">50</option>
+                                              </select>
+                                            </div>
+                                            <div>
+                                              종료시간
+                                              <select class="select_style0 end_hour" data-wv-selected-value="16">
+                                                <option value="00">00</option>
+                                                <option value="01">01</option>
+                                                <option value="02">02</option>
+                                                <option value="03">03</option>
+                                                <option value="04">04</option>
+                                                <option value="05">05</option>
+                                                <option value="06">06</option>
+                                                <option value="07">07</option>
+                                                <option value="08">08</option>
+                                                <option value="09">09</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="13">13</option>
+                                                <option value="14">14</option>
+                                                <option value="15">15</option>
+                                                <option value="16">16</option>
+                                                <option value="17">17</option>
+                                                <option value="18">18</option>
+                                                <option value="19">19</option>
+                                                <option value="20">20</option>
+                                                <option value="21">21</option>
+                                                <option value="22">22</option>
+                                                <option value="23">23</option>
+                                              </select>
+                                              :
+                                              <select class="select_style0 end_min" data-wv-selected-value="00">
+                                                <option value="00">00</option>
+                                                <option value="10">10</option>
+                                                <option value="20">20</option>
+                                                <option value="30">30</option>
+                                                <option value="40">40</option>
+                                                <option value="50">50</option>
+                                              </select>
+                                            </div>
+                                          </td>
+                                          <!--  
+                            <td class="brd_tit">
+                              <a href="?mode=update&sbjectSn=1303" class="table_link">[공통]질환별 응급처치(초급)</a>
+                            </td>
+                            -->
+                                          <td>
+                                            <div>
+                                              <table class="tb_list0 small tc" summary="배정시간 표입니다.">
+                                                <caption>
+                                                  배정시간 표
+                                                </caption>
+                                                <colgroup>
+                                                  <col class="auto" />
+                                                  <col class="auto" />
+                                                  <col class="auto" />
+                                                  <col class="auto" />
+                                                  <col class="auto" />
+                                                  <col class="auto" />
+                                                  <col class="auto" />
+                                                </colgroup>
+                                                <thead>
+                                                  <tr>
+                                                    <th>이론<br />강의</th>
+                                                    <th>실습<br />강의</th>
+                                                    <th>토의</th>
+                                                    <th>견학</th>
+                                                    <th>시험</th>
+                                                    <th>과제</th>
+                                                    <th>총계</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td class=""><input type="text" name="asign_theory_hour" data-set-print-content="input" data-wv-defaultvalue="0" value="0" class="tr input_100 input_assign_time" data-wv-handler="{type: formHandler, action: onlyNumDot}" /></td>
+                                                    <td class=""><input type="text" name="asign_prctice_hour" data-set-print-content="input" data-wv-defaultvalue="0" value="0" class="tr input_100 input_assign_time" data-wv-handler="{type: formHandler, action: onlyNumDot}" /></td>
+                                                    <td class=""><input type="text" name="asign_dscn_hour" data-set-print-content="input" data-wv-defaultvalue="0" value="0" class="tr input_100 input_assign_time" data-wv-handler="{type: formHandler, action: onlyNumDot}" /></td>
+                                                    <td class=""><input type="text" name="asign_lnbns_hour" data-set-print-content="input" data-wv-defaultvalue="0" value="0" class="tr input_100 input_assign_time" data-wv-handler="{type: formHandler, action: onlyNumDot}" /></td>
+                                                    <td class=""><input type="text" name="asign_test_hour" data-set-print-content="input" data-wv-defaultvalue="0" value="0" class="tr input_100 input_assign_time" data-wv-handler="{type: formHandler, action: onlyNumDot}" /></td>
+                                                    <td class=""><input type="text" name="asign_task_hour" data-set-print-content="input" data-wv-defaultvalue="0" value="0" class="tr input_100 input_assign_time" data-wv-handler="{type: formHandler, action: onlyNumDot}" /></td>
+                                                    <td class=""><span class="total_assign_time">0</span></td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                          </td>
+                                          <td>김영철</td>
+                                          <td>최춘식</td>
+                                          <td>
+                                            <div>
+                                              <!-- <a href="javascript:void(0);" onclick="subjectItem.loadTeacherPopup(this);" class="btn_small blue teacher_select_btn">선택</a> -->
+                                              <a href="javascript:void(0);" onclick="instructor.onChooseIntstructorAtList(this);" class="btn_small blue teacher_select_btn noprint" id="instructor_choose_btn_02">선택</a>
+                                            </div>
+                                          </td>
+                                          <td>
+                                            1순위 승인
+                                            <!-- [dev] 상태값 -->
+                                            <!-- 1순위 승인
+                                            2순위 대기
+                                            2순위 승인
+                                            관리자 배정대기
+                                            관리자 배정완료 -->
+                                          </td>
+                                          <td>
+                                            <a href="javascript:void(0);" onclick="subjectList.removeSubject(this);" class="btn_small blue">삭제</a>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <div class="nodata tc pt15 pb15" style="display: none">등록된 교과목이 없습니다.</div>
+                                  </div>
+                                </div>
+                                <div class="panel_util noprint">
+                                  <input type="button" class="btn_guide pink icon_edit" value="저장" onclick="subjectList.updateOrderSubject();" />
+                                  <input type="button" class="btn_guide gray icon_close cancel_btn" value="목록" onclick="history.back();" />
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- 교과목팝업 -->
+
+                            <script src="http://dev.edu.sportsafety.or.kr/weven_service/module/common/inc/popup_subject_list/js/subject.js" type="text/javascript"></script>
+                            <div id="subjectListPopup" class="hidden col-8 popup_wrap">
+                              <div class="col-12 popup_con">
+                                <!-- 팝업 타이틀 & 닫기 버튼 -->
+                                <div class="popup_title_close_con">
+                                  <h1 class="popup_title">과목목록</h1>
+                                  <div class="popup_close_con">
+                                    <span class="close_btn" onclick="subject.closePopup();"><img src="http://dev.edu.sportsafety.or.kr/weven_template/theme/_admin_style4_new/1/resource/img/close_small_black.png" alt="X" /></span>
+                                  </div>
+                                </div>
+                                <!-- //팝업 타이틀 & 닫기 버튼 -->
+                                <div class="popup_contents_con">
+                                  <div id="con_list_block_template">
+                                    <div id="subjectListFilter" class="panel" data-wv-type="filter" data-wv-bind="subjectList">
+                                      <input class="hidden" name="orderKey" data-wv-key="orderKey" value="REGIST_DT" />
+                                      <input class="hidden" name="orderVal" data-wv-key="orderVal" value="DESC" />
+                                      <div class="panel_container">
+                                        <div class="panel_header"></div>
+                                        <div class="panel_body">
+                                          <table class="filter_table" summary="검색을 위한 테이블입니다.">
+                                            <caption>
+                                              필터
+                                            </caption>
+                                            <colgroup>
+                                              <col width="150px" />
+                                              <col class="perAuto" />
+                                              <col width="150px" />
+                                              <col class="perAuto" />
+                                            </colgroup>
+                                            <tbody>
+                                              <tr>
+                                                <th>과목분류</th>
+                                                <td>
+                                                  <input type="hidden" value="sbject_ctgry" data-wv-key="searchKey[]" />
+                                                  <select class="select_style0" id="sbject_ctgry" data-wv-key="searchValue[]" name="sbject_ctgry" data-wv-type="choice" data-wv-option="{url: /adm/cmmn_code/selectCommonCodeList', param: {cmmn_code_id: SBJECT_CTGRY, use_yn: 1}, dataAutoLoad: true}" data-wv-valid="과목분류를 선택해주세요.">
+                                                    <option value="">선택하세요</option>
+
+                                                    <option data-wv-choice-template="" value="006">공통역량</option>
+                                                    <option data-wv-choice-template="" value="001">위험성평가</option>
+                                                    <option data-wv-choice-template="" value="002">응급처치</option>
+                                                    <option data-wv-choice-template="" value="003">시설관리</option>
+                                                    <option data-wv-choice-template="" value="004">안전관리</option>
+                                                    <option data-wv-choice-template="" value="005">안전일반</option>
+                                                  </select>
+                                                </td>
+                                                <th>과목코드</th>
+                                                <td>
+                                                  <input type="hidden" data-wv-key="searchKeyLike[]" value="sbject_code" />
+                                                  <input type="text" class="input_100" data-wv-key="searchValueLike[]" name="sbject_code" placeholder="" value="" />
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <th>과목명</th>
+                                                <td colspan="3">
+                                                  <input type="hidden" data-wv-key="searchKeyLike[]" value="sbject_nm" />
+                                                  <input type="text" class="input_100" data-wv-key="searchValueLike[]" name="sbject_nm" placeholder="" value="" />
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                      </div>
+                                      <div class="panel_util">
+                                        <a class="btn_guide blue icon_search" data-wv-filtersubmit="">검색</a>
+                                      </div>
+                                    </div>
+                                    <!-- //필터 -->
+                                    <!-- 리스트 -->
+                                    <div class="panel">
+                                      <div class="panel_container">
+                                        <div class="panel_header style_1"></div>
+                                        <div class="panel_body bm_slick_grid" id="subjectList" style="width: 100%" data-wv-type="list" data-wv-option="{url: '/adm/sbject_oflne/selectSbjectOflineList' , param: {numPerPage: 10}, dataAutoLoad: false, history: false, wrapper: #questionItemTemplateListContainer}">
+                                          <table>
+                                            <caption></caption>
+                                            <colgroup>
+                                              <col width="100px" />
+                                              <col width="100px" />
+                                              <col class="perAuto" />
+                                              <col width="100px" />
+                                            </colgroup>
+                                            <thead>
+                                              <tr>
+                                                <th class="grid_header">과목분류</th>
+                                                <th class="grid_header">과목코드</th>
+                                                <th class="grid_header">과목명</th>
+                                                <th class="grid_header">선택</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody></tbody>
+                                          </table>
+                                          <div class="nodata tc pt15 pb15" style="display: none">조회된 데이터가 없습니다.</div>
+                                        </div>
+                                        <!-- 페이징 -->
+                                        <div class="panel_footer" data-wv-comp-pagenavi="" style="display: block">
+                                          <div id="subjectListPaging" class="paging" data-wv-type="paging" data-wv-option="{selectedIndex: 1, numPerPage: 10}" data-wv-bind="subjectList">
+                                            <ul class="button_container" data-wv-comp-pagenavi="">
+                                              <li class="btn_singlePage btn_firstPage">&lt;&lt;</li>
+                                              <li class="btn_singlePage btn_prevPage">&lt;</li>
+                                              <li class="btn_page first selected">1</li>
+                                              <li class="btn_singlePage btn_nextPage">&gt;</li>
+                                              <li class="btn_singlePage btn_lastPage">&gt;&gt;</li>
+                                            </ul>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- //리스트 -->
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- 강사팝업 -->
+
+                            <script src="http://dev.edu.sportsafety.or.kr/weven_service/module/common/inc/popup_subject_list/js/instructor.js" type="text/javascript"></script>
+                            <!-- <div style="width: 100%; height: 100%; position: fixed; left: 0; top: 0; background-color: #000; opacity: 0.7; filter: alpha(opacity=70); z-index: 10002"></div> -->
+                            <div id="instructorPop" class="hidden col-8 popup_wrap">
+                              <div class="col-12 popup_con">
+                                <!-- 팝업 타이틀 & 닫기 버튼 -->
+                                <div class="popup_title_close_con">
+                                  <h1 class="popup_title">강사목록</h1>
+                                  <div class="popup_close_con">
+                                    <span class="close_btn" onclick="subject.closePopup();"><img src="http://dev.edu.sportsafety.or.kr/weven_template/theme/_admin_style4_new/1/resource/img/close_small_black.png" alt="X" /></span>
+                                  </div>
+                                </div>
+                                <!-- //팝업 타이틀 & 닫기 버튼 -->
+                                <div class="popup_contents_con">
+                                  <div id="con_list_block_template">
+                                    <div id="instructorListFilter" class="panel" data-wv-type="filter" data-wv-bind="instructorList">
+                                      <div class="panel_container">
+                                        <div class="panel_header"></div>
+                                        <div class="panel_body">
+                                          <table class="filter_table" summary="검색을 위한 테이블입니다.">
+                                            <caption>
+                                              필터
+                                            </caption>
+                                            <colgroup>
+                                              <col width="150px" />
+                                              <col class="perAuto" />
+                                            </colgroup>
+                                            <tbody>
+                                              <tr>
+                                                <th>강사명</th>
+                                                <td>
+                                                  <input type="hidden" data-wv-key="searchKeyLike[]" value="user_nm" />
+                                                  <input type="text" class="input_100" data-wv-key="searchValueLike[]" name="user_nm" placeholder="" value="" />
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                      </div>
+                                      <div class="panel_util">
+                                        <a class="btn_guide blue icon_search" data-wv-filtersubmit="">검색</a>
+                                      </div>
+                                    </div>
+                                    <!-- //필터 -->
+                                    <!-- 리스트 -->
+                                    <div class="panel">
+                                      <div class="panel_container">
+                                        <div class="panel_header style_1">
+                                          <div></div>
+                                          <div>
+                                            <span class="fontsize13 point_red">※ 강사 배정 시 문자 발송도 함께 진행됩니다.</span>
+                                          </div>
+                                        </div>
+                                        <div class="panel_body bm_slick_grid" id="instructorList" style="width: 100%" data-wv-type="list" data-wv-option="{url: '/adm/odr_oflne/selectSbjectOflineList' , param: {numPerPage: 10}, dataAutoLoad: false, history: false, wrapper: #questionItemTemplateListContainer}">
+                                          <table>
+                                            <caption></caption>
+                                            <colgroup>
+                                              <col width="perAuto" />
+                                              <col width="perAuto" />
+                                              <col width="perAuto" />
+                                              <col width="perAuto" />
+                                              <col class="perAuto" />
+                                              <col width="perAuto" />
+                                            </colgroup>
+                                            <thead>
+                                              <tr>
+                                                <th class="grid_header">번호</th>
+                                                <th class="grid_header">이름</th>
+                                                <th class="grid_header">전문분야</th>
+                                                <th class="grid_header">생년월일</th>
+                                                <th class="grid_header">연차</th>
+                                                <th class="grid_header">선택</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr data-wv-template="">
+                                                <td>42</td>
+                                                <td>test111123</td>
+                                                <td>응급처치</td>
+                                                <td>20241112</td>
+                                                <td>1년차</td>
+                                                <td>
+                                                  <!-- <input type="hidden" value="" name="seq"> -->
+                                                  <a href="javascript:void(0);" onclick="instructor.onChooseInstructor('','test111123', '010-1234-1234', this);" class="btn_small blue teacher_select_btn noprint">선택</a>
+                                                </td>
+                                              </tr>
+                                              <tr data-wv-template="">
+                                                <td>41</td>
+                                                <td>티쳐일</td>
+                                                <td>재난대응</td>
+                                                <td>19900801</td>
+                                                <td>2년차</td>
+                                                <td>
+                                                  <!-- <input type="hidden" value="77474" name="seq"> -->
+                                                  <a href="javascript:void(0);" onclick="instructor.onChooseInstructor('77474','티쳐일', '010-1111-2222', this);" class="btn_small blue teacher_select_btn noprint">선택</a>
+                                                </td>
+                                              </tr>
+                                              <tr data-wv-template="">
+                                                <td>40</td>
+                                                <td>데이터쿡_007(강사)</td>
+                                                <td>안전관리</td>
+                                                <td>19800101</td>
+                                                <td>5년차</td>
+                                                <td>
+                                                  <!-- <input type="hidden" value="77425" name="seq"> -->
+                                                  <a href="javascript:void(0);" onclick="instructor.onChooseInstructor('77425','데이터쿡_007(강사)', '010-1111-2222', this);" class="btn_small blue teacher_select_btn noprint">선택</a>
+                                                </td>
+                                              </tr>
+                                              <tr data-wv-template="">
+                                                <td>39</td>
+                                                <td>최은혜</td>
+                                                <td>안전관리사</td>
+                                                <td>19900405</td>
+                                                <td>-</td>
+                                                <td>
+                                                  <!-- <input type="hidden" value="77424" name="seq"> -->
+                                                  <a href="javascript:void(0);" onclick="instructor.onChooseInstructor('75705','최은혜', '010-6472-2531', this);" class="btn_small blue teacher_select_btn noprint">선택</a>
+                                                </td>
+                                              </tr>
+                                              <tr data-wv-template="">
+                                                <td>38</td>
+                                                <td>정현</td>
+                                                <td>재난대응</td>
+                                                <td>19841122</td>
+                                                <td>5년차</td>
+                                                <td>
+                                                  <!-- <input type="hidden" value="73756" name="seq"> -->
+                                                  <a href="javascript:void(0);" onclick="instructor.onChooseInstructor('73756','정현', '010-3511-1093', this);" class="btn_small blue teacher_select_btn noprint">선택</a>
+                                                </td>
+                                              </tr>
+                                              <tr data-wv-template="">
+                                                <td>37</td>
+                                                <td>김재용</td>
+                                                <td>재난대응</td>
+                                                <td>19750328</td>
+                                                <td>5년차</td>
+                                                <td>
+                                                  <!-- <input type="hidden" value="72767" name="seq"> -->
+                                                  <a href="javascript:void(0);" onclick="instructor.onChooseInstructor('72767','김재용', '010-2417-0328', this);" class="btn_small blue teacher_select_btn noprint">선택</a>
+                                                </td>
+                                              </tr>
+                                              <tr data-wv-template="">
+                                                <td>36</td>
+                                                <td>유근호</td>
+                                                <td>재난대응</td>
+                                                <td>19690713</td>
+                                                <td>5년차</td>
+                                                <td>
+                                                  <!-- <input type="hidden" value="56343" name="seq"> -->
+                                                  <a href="javascript:void(0);" onclick="instructor.onChooseInstructor('56343','유근호', '010-8024-1513', this);" class="btn_small blue teacher_select_btn noprint">선택</a>
+                                                </td>
+                                              </tr>
+                                              <tr data-wv-template="">
+                                                <td>35</td>
+                                                <td>최주현</td>
+                                                <td>재난대응</td>
+                                                <td>19831104</td>
+                                                <td>5년차</td>
+                                                <td>
+                                                  <!-- <input type="hidden" value="56342" name="seq"> -->
+                                                  <a href="javascript:void(0);" onclick="instructor.onChooseInstructor('56342','최주현', '010-2897-9302', this);" class="btn_small blue teacher_select_btn noprint">선택</a>
+                                                </td>
+                                              </tr>
+                                              <tr data-wv-template="">
+                                                <td>33</td>
+                                                <td>양서형</td>
+                                                <td>응급처치</td>
+                                                <td>19820131</td>
+                                                <td>5년차</td>
+                                                <td>
+                                                  <!-- <input type="hidden" value="56338" name="seq"> -->
+                                                  <a href="javascript:void(0);" onclick="instructor.onChooseInstructor('56338','양서형', '010-3186-4000', this);" class="btn_small blue teacher_select_btn noprint">선택</a>
+                                                </td>
+                                              </tr>
+                                              <tr data-wv-template="">
+                                                <td>32</td>
+                                                <td>김남수</td>
+                                                <td>재난대응</td>
+                                                <td>19940101</td>
+                                                <td>-</td>
+                                                <td>
+                                                  <!-- <input type="hidden" value="56337" name="seq"> -->
+                                                  <a href="javascript:void(0);" onclick="instructor.onChooseInstructor('56337','김남수', '010-9102-3364', this);" class="btn_small blue teacher_select_btn noprint">선택</a>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                          <div class="nodata tc pt15 pb15" style="display: none">조회된 데이터가 없습니다.</div>
+                                        </div>
+                                        <!-- 페이징 -->
+                                        <div class="panel_footer" data-wv-comp-pagenavi="" style="display: block">
+                                          <div id="instructorListPaging" class="paging" data-wv-type="paging" data-wv-option="{selectedIndex: 1, numPerPage: 10}" data-wv-bind="instructorList">
+                                            <ul class="button_container" data-wv-comp-pagenavi="">
+                                              <li class="btn_singlePage btn_firstPage">&lt;&lt;</li>
+                                              <li class="btn_singlePage btn_prevPage">&lt;</li>
+                                              <li class="btn_page first selected">1</li>
+                                              <li class="btn_singlePage btn_nextPage">&gt;</li>
+                                              <li class="btn_singlePage btn_lastPage">&gt;&gt;</li>
+                                            </ul>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- //리스트 -->
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- //페이지 컨텐츠 -->
+                      </div>
+                    </div>
+                    <!-- contents -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- //container -->
+
+            <!-- @@include('../../common/footer.html') -->
+        </div>
+    </div>
+    
+    <!-- 팝업 -->
+
+    <div id="give-freely-root-mbnbehikldjhnfehhnaidhjhoofhpehk" class="give-freely-root" data-extension-id="mbnbehikldjhnfehhnaidhjhoofhpehk" data-extension-name="CSS Peeper" style="display: block"></div>
+    <convert-webpage-to-pdf-extension data-wxt-shadow-root=""></convert-webpage-to-pdf-extension>
+    <div id="css-checker-widget"></div>
+
+    <script>
+      $('#instructor_choose_btn_02').on('click', function () {
+        bm.popupManager.add('#instructorPop');
+      });
+    </script>
+</body>
+</html>
+

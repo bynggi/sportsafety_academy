@@ -1,0 +1,482 @@
+<!-- header -->
+        <div class="col-12 header_wrap" data-wv-layout-element="layout" data-wv-inc="header">
+          <div class="col-12 pl-lg-15 pr-lg-15 header_inner">
+            <div class="col-12" data-wv-layout-element="wv-content" data-wv-layout-element-param="%7B%22id%22%3A%22web%2Fcontent%2Fcommon%2Forigin_util_menu%2Futil_menu%22%7D">
+              <!-- <script src="/weven_data/kssfedu/web/content/common/origin_util_menu/js/page.js" type="text/javascript"></script>
+              <script>
+                app.ready(function () {
+                  var utilMenu = {
+                    init: function () {},
+
+                    registEvent: function () {},
+
+                    setStatus: function (isLogin) {
+                      if (!isLogin) {
+                        //비회원일 때
+
+                        $('.wrapper').addClass('not_login');
+                        return false;
+                      }
+                    },
+                  };
+
+                  utilMenu.setStatus(true);
+                });
+              </script> -->
+              <div class="col-12 header_top_con login">
+                <div class="col-12 col-lg-0 logo_con">
+                  <a href="/">
+                    <img src="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/img/academy_private/logo_web.png" alt="스포츠안전재단" class="hidden show-lg" />
+                    <img src="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/img/academy_private/logo_mobile.png" alt="스포츠안전재단" class="hidden-lg" />
+                  </a>
+
+                  <a href="/page/my_course_list" class="mobile_certificate_btn hidden-lg" style="font-size: 14px; font-size: 1.4rem; line-height: 20px; line-height: 2rem; font-weight: 500; letter-spacing: 0em; color: #2dbfee; border: 1px solid #2dbfee; border-radius: 15px; padding: 3px 7px; box-sizing: border-box"> <span>나의강의실</span></a>
+
+                  <a href="/logout" class="mobile_logout_btn hidden-lg" style="font-size: 14px; font-size: 1.4rem; line-height: 20px; line-height: 2rem; font-weight: 500; letter-spacing: 0em; color: #2dbfee; border: 1px solid #2dbfee; border-radius: 15px; padding: 3px 7px; box-sizing: border-box">
+                    <span>로그아웃</span>
+                  </a>
+                </div>
+                <div class="col-0 mt12 fr right_con">
+                  <ul class="util_btn_con">
+                    <!-- 20250520(제거) 
+            <li> 
+                <a href="/page/attendance_check"><span class="font_roboto">QR</span> 출석체크</a>
+            </li>
+            -->
+                    <li style="background-image: url('http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/img/academy_private/23x23_login_icon_img.png')">
+                      <ul>
+                        <li>
+                          <a href="javascript:void(0)" style="cursor: default">데이터쿡_007(강사)</a>
+                        </li>
+                        <li>
+                          <a href="/logout" class="logout">
+                            <span>로그아웃</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a class="bg_point1" href="/page/my_course_list?edu_status=END"><span>수료증발급</span></a>
+                    </li>
+                    <li>
+                      <a class="bg_point1" href="/page/my_course_list"><span>나의강의실</span></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-0 menu_icon_style_0_con">
+                  <a href="javascript:void(0)" onclick="gnb.openClickGnb()" class="menu_icon_style_0">
+                    <span></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="header_bottom_con">
+              <div class="col-12 right_con">
+                <div class="col-12" data-wv-layout-element="menu" data-wv-layout-element-param="%7B%22renderDepth%22%3A2%2C%22domId%22%3A%22gnb%22%2C%22style%22%3A%22%22%2C%22indexPath%22%3Anull%2C%22extraClass%22%3A%22gnb_wrap%20scroll_hidden%22%7D">
+                  <ul class="gnb_wrap scroll_hidden menu_con menu_depth_1" id="gnb">
+                    <li class="menu_1_0" data-menu-seq="185">
+                      <a href="/page/main" target="" class=""><span>홈</span></a>
+                    </li>
+                    <li class="menu_1_1" data-menu-seq="193">
+                      <a href="/page/academy_intro" target="" class=""><span>아카데미소개</span></a>
+                      <ul class="menu_con menu_depth_2" style="width: 209px">
+                        <li class="menu_2_0" data-menu-seq="251">
+                          <a href="/page/academy_intro" target="" class=""><span>교육소개</span></a>
+                        </li>
+                        <li class="menu_2_1" data-menu-seq="252">
+                          <a href="/page/job_analysis" target="" class=""><span>직무 및 역량분석</span></a>
+                        </li>
+                        <li class="menu_2_2" data-menu-seq="253">
+                          <a href="/page/major_curriculum" target="" class=""><span>주요교육과정</span></a>
+                        </li>
+                        <li class="menu_2_3" data-menu-seq="254">
+                          <a href="/page/how_to_apply" target="" class=""><span>신청방법</span></a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu_1_2" data-menu-seq="194">
+                      <a href="/page/course_search_list" target="" class=""><span>과정안내/신청</span></a>
+                      <ul class="menu_con menu_depth_2" style="width: 209px">
+                        <li class="menu_2_0" data-menu-seq="195">
+                          <a href="/page/course_search_list" target="" class=""><span>과정검색</span></a>
+                        </li>
+                        <li class="menu_2_1" data-menu-seq="199">
+                          <a href="/page/course_open_apply" target="" class=""><span>과정개설신청</span></a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu_1_3" data-menu-seq="186">
+                      <a href="/page/open_course" target="" class=""><span>오픈강좌</span></a>
+                    </li>
+                    <li class="menu_1_4" data-menu-seq="202">
+                      <a href="/page/notice_list" target="" class=""><span>학습지원센터</span></a>
+                      <ul class="menu_con menu_depth_2" style="width: 209px">
+                        <li class="menu_2_0" data-menu-seq="203">
+                          <a href="/page/notice_list" target="" class=""><span>공지사항</span></a>
+                        </li>
+                        <li class="menu_2_1" data-menu-seq="205">
+                          <a href="/page/faq" target="" class=""><span>자주하는질문</span></a>
+                        </li>
+                        <li class="menu_2_2" data-menu-seq="206">
+                          <a href="/page/inquiry_list" target="" class=""><span>문의하기</span></a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu_1_5 active" data-menu-seq="208">
+                      <a href="/page/my_course_list" target="" class=""><span>마이페이지</span></a>
+                      <ul class="menu_con menu_depth_2 active" style="width: 209px">
+                        <li class="menu_2_0" data-menu-seq="209">
+                          <a href="/page/my_course_list" target="" class=""><span>나의강의실</span></a>
+                        </li>
+                        <li class="menu_2_2" data-menu-seq="217">
+                          <a href="/page/process_apply_record" target="" class=""><span>과정개설신청이력</span></a>
+                        </li>
+                        <li class="menu_2_3" data-menu-seq="250">
+                          <a href="/page/course_open_history" target="" class=""><span>오픈강좌시청이력</span></a>
+                        </li>
+                        <li class="menu_2_4" data-menu-seq="218">
+                          <a href="/page/mypage_modify" target="" class=""><span>정보수정</span></a>
+                        </li>
+                        <li class="" data-menu-seq="">
+                          <a href="마이페이지_강의활동관리_프로필관리.html" target="" class=""><span>강의활동관리</span></a>
+                        </li>
+                        <li class="active" data-menu-seq="">
+                          <a href="마이페이지_강의결과보고서.html" target="" class=""><span>강의결과보고서</span></a>
+                        </li>
+                        <li class="" data-menu-seq="">
+                          <a href="마이페이지_출결관리.html" target="" class=""><span>출결관리</span></a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+
+                  <script type="text/javascript">
+                    // 계층구조를 이용해 부모까지 a 태그에 active 클래스를 부여한다.
+                    $('#gnb .active')
+                      .parentsUntil('#gnb')
+                      .each(function () {
+                        $(this).removeClass('hidden').addClass('active');
+                      });
+
+                    var loc = location.href;
+
+                    // 모든 자식이 hidden 인경우 부모 ul 도 hidden 시킨다.
+                    (function () {
+                      $('#gnb ul').each(function (index, item) {
+                        var $li = $(item).find('> li');
+                        var len = $li.length;
+                        if (len == 0) return;
+                        $li.each(function () {
+                          if ($(this).hasClass('hidden')) len--;
+                        });
+
+                        if (loc.indexOf('find_pw_search') > -1) {
+                          $(this).removeClass('active').show();
+                        } else if (len == 0) {
+                          $(this).removeClass('active').hide();
+                        }
+                      });
+                    })();
+                  </script>
+                </div>
+              </div>
+              <div class="col-0 menu_icon_style_0_con">
+                <a href="javascript:void(0)" onclick="gnb.openClickGnb()" class="menu_icon_style_0">
+                  <span></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- active시 2depth 나오는 영역 BG -->
+          <div class="col-12 active_menu_bg_con"></div>
+        </div>
+
+        <!-- click_header & fixed_header -->
+        <div class="col-12">
+          <div class="col-12 click_header_wrap">
+            <div class="col-12">
+              <div class="col-12 col-center mw-1200 click_header_con">
+                <div class="col-12 pl-lg-15 pr-lg-15">
+                  <div class="col-12 logo_wrap">
+                    <div class="col-12 col-lg-0 logo_box">
+                      <a href="/" class="show">
+                        <img src="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/img/academy_private/click_header_logo_web.png" alt="스포츠안전재단" class="hidden show-lg" />
+                        <img src="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/img/academy_private/logo_mobile.png" alt="스포츠안전재단" class="show hidden-lg" />
+                      </a>
+                    </div>
+                    <!-- util_menu(로그인관련) -->
+                    <div class="col-12 col-lg-0 fr-lg mt-lg-20 util_menu_wrap">
+                      <div class="col-12" data-wv-layout-element="wv-content" data-wv-layout-element-param="%7B%22id%22%3A%22web%2Fcontent%2Fcommon%2Fclick_util_menu%2Futil_menu%22%7D">
+                        <ul class="member_menu_list">
+                          <li>
+                            <a href="/logout" class="logout">
+                              <span>로그아웃</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="/page/my_course_list" class="logout">
+                              <span>나의강의실</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="/page/my_course_list?edu_status=END" class="logout">
+                              <span>수료증발급</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- gnb -->
+                  <div class="col-12">
+                    <div class="col-12" data-wv-layout-element="menu" data-wv-layout-element-param="%7B%22renderDepth%22%3A2%2C%22domId%22%3A%22gnb%22%2C%22style%22%3A%22%22%2C%22indexPath%22%3Anull%2C%22extraClass%22%3A%22gnb_wrap%20scroll_hidden%22%7D">
+                      <ul class="gnb_wrap scroll_hidden menu_con menu_depth_1" id="gnb">
+                        <li class="menu_1_0" data-menu-seq="185">
+                          <a href="/page/main" target="" class=""><span>홈</span></a>
+                        </li>
+                        <li class="menu_1_1" data-menu-seq="193">
+                          <a href="/page/academy_intro" target="" class=""><span>아카데미소개</span></a>
+                          <ul class="menu_con menu_depth_2">
+                            <li class="menu_2_0" data-menu-seq="251">
+                              <a href="/page/academy_intro" target="" class=""><span>교육소개</span></a>
+                            </li>
+                            <li class="menu_2_1" data-menu-seq="252">
+                              <a href="/page/job_analysis" target="" class=""><span>직무 및 역량분석</span></a>
+                            </li>
+                            <li class="menu_2_2" data-menu-seq="253">
+                              <a href="/page/major_curriculum" target="" class=""><span>주요교육과정</span></a>
+                            </li>
+                            <li class="menu_2_3" data-menu-seq="254">
+                              <a href="/page/how_to_apply" target="" class=""><span>신청방법</span></a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="menu_1_2" data-menu-seq="194">
+                          <a href="/page/course_search_list" target="" class=""><span>과정안내/신청</span></a>
+                          <ul class="menu_con menu_depth_2">
+                            <li class="menu_2_0" data-menu-seq="195">
+                              <a href="/page/course_search_list" target="" class=""><span>과정검색</span></a>
+                            </li>
+                            <li class="menu_2_1" data-menu-seq="199">
+                              <a href="/page/course_open_apply" target="" class=""><span>과정개설신청</span></a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="menu_1_3" data-menu-seq="186">
+                          <a href="/page/open_course" target="" class=""><span>오픈강좌</span></a>
+                        </li>
+                        <li class="menu_1_4" data-menu-seq="202">
+                          <a href="/page/notice_list" target="" class=""><span>학습지원센터</span></a>
+                          <ul class="menu_con menu_depth_2">
+                            <li class="menu_2_0" data-menu-seq="203">
+                              <a href="/page/notice_list" target="" class=""><span>공지사항</span></a>
+                            </li>
+                            <li class="menu_2_1" data-menu-seq="205">
+                              <a href="/page/faq" target="" class=""><span>자주하는질문</span></a>
+                            </li>
+                            <li class="menu_2_2" data-menu-seq="206">
+                              <a href="/page/inquiry_list" target="" class=""><span>문의하기</span></a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="menu_1_5 active" data-menu-seq="208">
+                          <a href="/page/my_course_list" target="" class=""><span>마이페이지</span></a>
+                          <ul class="menu_con menu_depth_2 active">
+                            <li class="menu_2_0" data-menu-seq="209">
+                              <a href="/page/my_course_list" target="" class=""><span>나의강의실</span></a>
+                            </li>
+                            <li class="menu_2_2" data-menu-seq="217">
+                              <a href="/page/process_apply_record" target="" class=""><span>과정개설신청이력</span></a>
+                            </li>
+                            <li class="menu_2_3" data-menu-seq="250">
+                              <a href="/page/course_open_history" target="" class=""><span>오픈강좌시청이력</span></a>
+                            </li>
+                            <li class="menu_2_4" data-menu-seq="218">
+                              <a href="/page/mypage_modify" target="" class=""><span>정보수정</span></a>
+                            </li>
+                            <li class="" data-menu-seq="">
+                              <a href="마이페이지_강의활동관리_프로필관리.html" target="" class=""><span>강의활동관리</span></a>
+                            </li>
+                            <li class="active" data-menu-seq="">
+                              <a href="마이페이지_강의결과보고서.html" target="" class=""><span>강의결과보고서</span></a>
+                            </li>
+                            <li class="" data-menu-seq="">
+                              <a href="마이페이지_출결관리.html" target="" class=""><span>출결관리</span></a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+
+                      <script type="text/javascript">
+                        // 계층구조를 이용해 부모까지 a 태그에 active 클래스를 부여한다.
+                        $('#gnb .active')
+                          .parentsUntil('#gnb')
+                          .each(function () {
+                            $(this).removeClass('hidden').addClass('active');
+                          });
+
+                        var loc = location.href;
+
+                        // 모든 자식이 hidden 인경우 부모 ul 도 hidden 시킨다.
+                        (function () {
+                          $('#gnb ul').each(function (index, item) {
+                            var $li = $(item).find('> li');
+                            var len = $li.length;
+                            if (len == 0) return;
+                            $li.each(function () {
+                              if ($(this).hasClass('hidden')) len--;
+                            });
+
+                            if (loc.indexOf('find_pw_search') > -1) {
+                              $(this).removeClass('active').show();
+                            } else if (len == 0) {
+                              $(this).removeClass('active').hide();
+                            }
+                          });
+                        })();
+                      </script>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-0 close_btn_con">
+                <a href="javascript:void(0)" onclick="gnb.closeClickGnb()" class="close_btn">
+                  <span>닫기</span>
+                </a>
+              </div>
+              <div class="col-0 left_bg_con">
+                <img src="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/img/academy_private/click_header_left_bg.png" alt="" />
+              </div>
+            </div>
+            <div class="col-0 right_bg_wrap">
+              <div class="right_bg_con">
+                <img src="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/img/academy_private/click_header_right_bg.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="col-12 click_header_dim hidden"></div>
+          <div class="col-12 fixed_header_wrap">
+            <div class="col-12 fixed_header_inner">
+              <div class="logo_con">
+                <h1>
+                  <a href="/">
+                    <img src="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/img/academy_private/logo_web.png" alt="스포츠안전재단" />
+                  </a>
+                </h1>
+              </div>
+              <div class="col-12" data-wv-layout-element="menu" data-wv-layout-element-param="%7B%22renderDepth%22%3A2%2C%22domId%22%3A%22gnb%22%2C%22style%22%3A%22%22%2C%22indexPath%22%3Anull%2C%22extraClass%22%3A%22gnb_wrap%20scroll_hidden%22%7D">
+                <ul class="gnb_wrap scroll_hidden menu_con menu_depth_1" id="gnb">
+                  <li class="menu_1_0" data-menu-seq="185">
+                    <a href="/page/main" target="" class=""><span>홈</span></a>
+                  </li>
+                  <li class="menu_1_1" data-menu-seq="193">
+                    <a href="/page/academy_intro" target="" class=""><span>아카데미소개</span></a>
+                    <ul class="menu_con menu_depth_2">
+                      <li class="menu_2_0" data-menu-seq="251">
+                        <a href="/page/academy_intro" target="" class=""><span>교육소개</span></a>
+                      </li>
+                      <li class="menu_2_1" data-menu-seq="252">
+                        <a href="/page/job_analysis" target="" class=""><span>직무 및 역량분석</span></a>
+                      </li>
+                      <li class="menu_2_2" data-menu-seq="253">
+                        <a href="/page/major_curriculum" target="" class=""><span>주요교육과정</span></a>
+                      </li>
+                      <li class="menu_2_3" data-menu-seq="254">
+                        <a href="/page/how_to_apply" target="" class=""><span>신청방법</span></a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu_1_2" data-menu-seq="194">
+                    <a href="/page/course_search_list" target="" class=""><span>과정안내/신청</span></a>
+                    <ul class="menu_con menu_depth_2">
+                      <li class="menu_2_0" data-menu-seq="195">
+                        <a href="/page/course_search_list" target="" class=""><span>과정검색</span></a>
+                      </li>
+                      <li class="menu_2_1" data-menu-seq="199">
+                        <a href="/page/course_open_apply" target="" class=""><span>과정개설신청</span></a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu_1_3" data-menu-seq="186">
+                    <a href="/page/open_course" target="" class=""><span>오픈강좌</span></a>
+                  </li>
+                  <li class="menu_1_4" data-menu-seq="202">
+                    <a href="/page/notice_list" target="" class=""><span>학습지원센터</span></a>
+                    <ul class="menu_con menu_depth_2">
+                      <li class="menu_2_0" data-menu-seq="203">
+                        <a href="/page/notice_list" target="" class=""><span>공지사항</span></a>
+                      </li>
+                      <li class="menu_2_1" data-menu-seq="205">
+                        <a href="/page/faq" target="" class=""><span>자주하는질문</span></a>
+                      </li>
+                      <li class="menu_2_2" data-menu-seq="206">
+                        <a href="/page/inquiry_list" target="" class=""><span>문의하기</span></a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu_1_5 active" data-menu-seq="208">
+                    <a href="/page/my_course_list" target="" class=""><span>마이페이지</span></a>
+                    <ul class="menu_con menu_depth_2 active">
+                      <li class="menu_2_0" data-menu-seq="209">
+                        <a href="/page/my_course_list" target="" class=""><span>나의강의실</span></a>
+                      </li>
+                      <li class="menu_2_2" data-menu-seq="217">
+                        <a href="/page/process_apply_record" target="" class=""><span>과정개설신청이력</span></a>
+                      </li>
+                      <li class="menu_2_3" data-menu-seq="250">
+                        <a href="/page/course_open_history" target="" class=""><span>오픈강좌시청이력</span></a>
+                      </li>
+                      <li class="menu_2_4" data-menu-seq="218">
+                        <a href="/page/mypage_modify" target="" class=""><span>정보수정</span></a>
+                      </li>
+                      <li class="" data-menu-seq="">
+                        <a href="마이페이지_강의활동관리_프로필관리.html" target="" class=""><span>강의활동관리</span></a>
+                      </li>
+                      <li class="active" data-menu-seq="">
+                        <a href="마이페이지_강의결과보고서.html" target="" class=""><span>강의결과보고서</span></a>
+                      </li>
+                      <li class="" data-menu-seq="">
+                        <a href="마이페이지_출결관리.html" target="" class=""><span>출결관리</span></a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <script type="text/javascript">
+                  // 계층구조를 이용해 부모까지 a 태그에 active 클래스를 부여한다.
+                  $('#gnb .active')
+                    .parentsUntil('#gnb')
+                    .each(function () {
+                      $(this).removeClass('hidden').addClass('active');
+                    });
+
+                  var loc = location.href;
+
+                  // 모든 자식이 hidden 인경우 부모 ul 도 hidden 시킨다.
+                  (function () {
+                    $('#gnb ul').each(function (index, item) {
+                      var $li = $(item).find('> li');
+                      var len = $li.length;
+                      if (len == 0) return;
+                      $li.each(function () {
+                        if ($(this).hasClass('hidden')) len--;
+                      });
+
+                      if (loc.indexOf('find_pw_search') > -1) {
+                        $(this).removeClass('active').show();
+                      } else if (len == 0) {
+                        $(this).removeClass('active').hide();
+                      }
+                    });
+                  })();
+                </script>
+              </div>
+              <div class="menu_icon_style_0_con type_2">
+                <a href="javascript:void(0)" onclick="gnb.openClickGnb()" class="menu_icon_style_0">
+                  <span>메뉴</span>
+                </a>
+              </div>
+            </div>
+            <div class="col-12 active_menu_bg_con"></div>
+          </div>
+        </div>

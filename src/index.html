@@ -1,22 +1,521 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    @@include('common/head.html')
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    @@include('common/header.html')
+  <head>
+    @@include('common/admin/head.html')
+    <link rel="stylesheet" href="assets/css/admin-style.css" />
+    <style>
+      .page-index {
+        padding: 40px 20px;
+        max-width: 1366px;
+        margin: 0 auto;
+      }
+      .page-index h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+        color: #333;
+      }
+      .page-index .description {
+        color: #666;
+        margin-bottom: 40px;
+        font-size: 16px;
+      }
+      .page-index table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 40px;
+      }
+      .page-index table thead {
+        background: #f5f5f5;
+      }
+      .page-index table th {
+        padding: 16px;
+        text-align: left;
+        font-weight: 600;
+        color: #333;
+        border-bottom: 2px solid #ddd;
+      }
+      .page-index table td {
+        padding: 14px 16px;
+        border-bottom: 1px solid #eee;
+      }
+      .page-index table tbody tr:hover {
+        background: #f9f9f9;
+      }
+      .page-index table a {
+        color: #447ff6;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .page-index table a:hover {
+        text-decoration: underline;
+      }
+      .page-index .category-title {
+        font-size: 24px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        color: #333;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #447ff6;
+      }
+      .page-index .category-title:first-child {
+        margin-top: 0;
+      }
+      .page-index .file-path {
+        color: #999;
+        font-size: 13px;
+        font-family: "Courier New", monospace;
+      }
+    </style>
+  </head>
+  <body cz-shortcut-listen="true">
+    <div class="page-index">
+      <h1>페이지 목록</h1>
+      <p class="description">
+        프로젝트에 포함된 모든 페이지를 확인하고 이동할 수 있습니다.
+      </p>
 
-    <main id="main-content">
-        @@include('components/main/section01.html')
-        @@include('components/main/section02.html')
-        @@include('components/main/section03.html')
-        @@include('components/main/section04.html')
-    </main>
+      <h2 class="category-title">관리자 페이지 (Admin)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">페이지명</th>
+            <th style="width: 35%">파일 경로</th>
+            <th style="width: 35%">비고</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href="page/admin/lecture-report-list.html" target="_blank"
+                >강의결과보고서 목록</a
+              >
+            </td>
+            <td>
+              <span class="file-path">page/admin/lecture-report-list.html</span>
+            </td>
+            <td>출력하기 버튼 제공으로 팝업 추가</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="page/admin/lecture-report-detail.html" target="_blank"
+                >강의결과보고서 상세</a
+              >
+            </td>
+            <td>
+              <span class="file-path"
+                >page/admin/lecture-report-detail.html</span
+              >
+            </td>
+            <td>강의 결과서 팝업 (강의결과 출력이라는 버튼으로 제공하여 팝업 제공 작업)</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="page/admin/payment-voucher-list.html" target="_blank"
+                >지급조서 목록</a
+              >
+            </td>
+            <td>
+              <span class="file-path"
+                >page/admin/payment-voucher-list.html</span
+              >
+            </td>
+            <td>옮기기 완료</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="page/admin/payment-voucher-transportation-expense.html"
+                target="_blank"
+                >지급조서 교통비집행내역서</a
+              >
+            </td>
+            <td>
+              <span class="file-path"
+                >page/admin/payment-voucher-transportation-expense.html</span
+              >
+            </td>
+            <td>옮기기 완료</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="page/admin/payment-voucher-fee-expense.html"
+                target="_blank"
+                >지급조서 수수료집행내역서</a
+              >
+            </td>
+            <td>
+              <span class="file-path"
+                >page/admin/payment-voucher-fee-expense.html</span
+              >
+            </td>
+            <td>옮기기 완료</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="page/admin/lecture-activity-certificate.html"
+                target="_blank"
+                >강의활동관리 자격증</a
+              >
+            </td>
+            <td>
+              <span class="file-path"
+                >page/admin/lecture-activity-certificate.html</span
+              >
+            </td>
+            <td>옮기기 완료</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="page/admin/lecture-activity-attendance-list.html"
+                target="_blank"
+                >강의활동관리 출결관리 목록</a
+              >
+            </td>
+            <td>
+              <span class="file-path"
+                >page/admin/lecture-activity-attendance-list.html</span
+              >
+            </td>
+            <td>옮기기 완료</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="page/admin/lecture-activity-attendance-detail.html"
+                target="_blank"
+                >강의활동관리 출결관리 상세</a
+              >
+            </td>
+            <td>
+              <span class="file-path"
+                >page/admin/lecture-activity-attendance-detail.html</span
+              >
+            </td>
+            <td>옮기기 완료</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="page/admin/education-session-elearning.html"
+                target="_blank"
+                >교육운영관리 차수관리 이러닝</a
+              >
+            </td>
+            <td>
+              <span class="file-path"
+                >page/admin/education-session-elearning.html</span
+              >
+            </td>
+            <td>옮기기 완료</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="page/admin/education-session-group.html" target="_blank"
+                >교육운영관리 차수관리 집합교육</a
+              >
+            </td>
+            <td>
+              <span class="file-path"
+                >page/admin/education-session-group.html</span
+              >
+            </td>
+            <td>옮기기 완료</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="page/admin/education-session-group-course.html"
+                target="_blank"
+                >교육운영관리 차수관리 집합교육 교과목</a
+              >
+            </td>
+            <td>
+              <span class="file-path"
+                >page/admin/education-session-group-course.html</span
+              >
+            </td>
+            <td>옮기기 완료</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="page/admin/portal-board-qna-register.html"
+                target="_blank"
+                >포털관리 게시판관리 질문과답변 등록</a
+              >
+            </td>
+            <td>
+              <span class="file-path"
+                >page/admin/portal-board-qna-register.html</span
+              >
+            </td>
+            <td>옮기기 완료</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="page/admin/member-admin-list.html" target="_blank"
+                >회원관리 운영자관리 목록</a
+              >
+            </td>
+            <td>
+              <span class="file-path">page/admin/member-admin-list.html</span>
+            </td>
+            <td>옮기기 완료</td>
+          </tr>
+        </tbody>
+      </table>
 
-    @@include('common/footer.html')
+      <h2 class="category-title">사용자 페이지 - 강사 (User - Instructor)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">페이지명</th>
+            <th style="width: 35%">파일 경로</th>
+            <th style="width: 35%">비고</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href="page/user/instructor/mypage-lecture-report-list.html" target="_blank"
+                >강의결과보고서 목록</a
+              >
+            </td>
+            <td>
+              <span class="file-path">page/user/instructor/mypage-lecture-report-list.html</span>
+            </td>
+            <td>옮기기 완료</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="page/user/instructor/mypage-lecture-report-register.html" target="_blank"
+                >강의결과보고서 등록</a
+              >
+            </td>
+            <td>
+              <span class="file-path">page/user/instructor/mypage-lecture-report-register.html</span>
+            </td>
+            <td>예정</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="page/user/instructor/mypage-lecture-report-detail.html" target="_blank"
+                >강의결과보고서 상세</a
+              >
+            </td>
+            <td>
+              <span class="file-path">page/user/instructor/mypage-lecture-report-detail.html</span>
+            </td>
+            <td>예정</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="page/user/instructor/mypage-lecture-report-payment-voucher-transportation-expense.html" target="_blank"
+                >강의결과보고서 지급조서 교통비집행내역서</a
+              >
+            </td>
+            <td>
+              <span class="file-path">page/user/instructor/mypage-lecture-report-payment-voucher-transportation-expense.html</span>
+            </td>
+            <td>예정</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="page/user/instructor/mypage-lecture-report-payment-voucher-fee-expense.html" target="_blank"
+                >강의결과보고서 지급조서 수수료집행내역서</a
+              >
+            </td>
+            <td>
+              <span class="file-path">page/user/instructor/mypage-lecture-report-payment-voucher-fee-expense.html</span>
+            </td>
+            <td>예정</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="page/user/instructor/mypage-lecture-activity-approval-history.html" target="_blank"
+                >강의활동관리 강의승인거부이력</a
+              >
+            </td>
+            <td>
+              <span class="file-path">page/user/instructor/mypage-lecture-activity-approval-history.html</span>
+            </td>
+            <td>예정</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="page/user/instructor/mypage-lecture-activity-education-info.html" target="_blank"
+                >강의활동관리 교육정보</a
+              >
+            </td>
+            <td>
+              <span class="file-path">page/user/instructor/mypage-lecture-activity-education-info.html</span>
+            </td>
+            <td>예정</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="page/user/instructor/mypage-lecture-activity-education-info-detail.html" target="_blank"
+                >강의활동관리 교육정보 상세</a
+              >
+            </td>
+            <td>
+              <span class="file-path">page/user/instructor/mypage-lecture-activity-education-info-detail.html</span>
+            </td>
+            <td>예정</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="page/user/instructor/mypage-lecture-activity-profile.html" target="_blank"
+                >강의활동관리 프로필관리</a
+              >
+            </td>
+            <td>
+              <span class="file-path">page/user/instructor/mypage-lecture-activity-profile.html</span>
+            </td>
+            <td>예정</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="page/user/instructor/mypage-attendance-list.html" target="_blank"
+                >출결관리 목록</a
+              >
+            </td>
+            <td>
+              <span class="file-path">page/user/instructor/mypage-attendance-list.html</span>
+            </td>
+            <td>예정</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="page/user/instructor/mypage-attendance-detail.html" target="_blank"
+                >출결관리 상세</a
+              >
+            </td>
+            <td>
+              <span class="file-path">page/user/instructor/mypage-attendance-detail.html</span>
+            </td>
+            <td>예정</td>
+          </tr>
+        </tbody>
+      </table>
 
+      <h2 class="category-title">사용자 페이지 - 수강생 (User - Students)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 30%">페이지명</th>
+            <th style="width: 35%">파일 경로</th>
+            <th style="width: 35%">비고</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href="page/user/students/course-opening-application.html" target="_blank"
+                >과정개설신청</a
+              >
+            </td>
+            <td>
+              <span class="file-path">page/user/students/course-opening-application.html</span>
+            </td>
+            <td>예정</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="page/user/students/course-opening-application-history-in-progress.html" target="_blank"
+                >과정개설신청이력 교육중과정</a
+              >
+            </td>
+            <td>
+              <span class="file-path">page/user/students/course-opening-application-history-in-progress.html</span>
+            </td>
+            <td>예정</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="page/user/students/course-opening-application-history-in-progress-detail.html" target="_blank"
+                >과정개설신청이력 교육중과정 상세</a
+              >
+            </td>
+            <td>
+              <span class="file-path">page/user/students/course-opening-application-history-in-progress-detail.html</span>
+            </td>
+            <td>예정</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="page/user/students/course-opening-application-history-completed-detail.html" target="_blank"
+                >과정개설신청이력 교육완료과정 상세</a
+              >
+            </td>
+            <td>
+              <span class="file-path">page/user/students/course-opening-application-history-completed-detail.html</span>
+            </td>
+            <td>예정</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="page/user/students/course-opening-application-history-detail-approval-pending.html" target="_blank"
+                >과정개설신청이력 상세 승인대기</a
+              >
+            </td>
+            <td>
+              <span class="file-path">page/user/students/course-opening-application-history-detail-approval-pending.html</span>
+            </td>
+            <td>예정</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="page/user/students/mypage-my-classroom-classroom-elearning.html" target="_blank"
+                >마이페이지 나의강의실 강의실(이러닝)</a
+              >
+            </td>
+            <td>
+              <span class="file-path">page/user/students/mypage-my-classroom-classroom-elearning.html</span>
+            </td>
+            <td>예정</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="page/user/students/mypage-my-classroom-classroom-group.html" target="_blank"
+                >마이페이지 나의강의실 강의실(집합교육)</a
+              >
+            </td>
+            <td>
+              <span class="file-path">page/user/students/mypage-my-classroom-classroom-group.html</span>
+            </td>
+            <td>예정</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="page/user/students/mypage-my-classroom-course-application-history.html" target="_blank"
+                >마이페이지 나의강의실 수강신청이력</a
+              >
+            </td>
+            <td>
+              <span class="file-path">page/user/students/mypage-my-classroom-course-application-history.html</span>
+            </td>
+            <td>예정</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="page/user/students/mypage-info-modification.html" target="_blank"
+                >마이페이지 정보수정</a
+              >
+            </td>
+            <td>
+              <span class="file-path">page/user/students/mypage-info-modification.html</span>
+            </td>
+            <td>예정</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <script src="assets/js/scripts.js"></script>
-</body>
+  </body>
 </html>
-

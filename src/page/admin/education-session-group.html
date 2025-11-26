@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('../../common/admin/head.html')
+    <link rel="stylesheet" href="/assets/css/admin-style.css">
+</head>
+<body cz-shortcut-listen="true">
+    <div data-wv-layout="layout" data-wv-layout-element="layout_screen" data-wv-layout-seq="0" data-wv-page-seq="0" data-wv-menu-seq="-1">
+      <div class="col-12 wrapper">
+            @@include('../../common/admin/header.html')
+
+            <!-- container -->
+            <div class="col-12 container_wrap admin_contents_min_height">
+              <div class="col-12 col-center mw-1630 admin_contents_min_height">
+                <div class="col-12 pr15 pl15 container_table_wrap admin_contents_min_height">
+                  <div class="temp_container">
+                    <!-- side -->
+                    <div class="side_wrap">
+                      <div class="col-12 show-table lnb_wrap lnb_title_con_by_static_menu">
+                        <div class="col-12" data-wv-layout-element="menu" data-wv-layout-element-param="%7B%22renderDepth%22%3A4%2C%22domId%22%3A%22adminDynamicMenuLNB%22%2C%22style%22%3A%22aDefault%22%2C%22indexPath%22%3Anull%2C%22extraClass%22%3A%22lnb_wrap%22%7D">
+                          <ul class="lnb_wrap menu_depth_1" id="adminDynamicMenuLNB">
+                            <li class="menu_1_0 has_child" data-menu-seq="260">
+                              <a href="/adm/dashboard" target="_self" class="gnb_dashboard"><span>대시보드</span></a>
+                              <ul class="hidden menu_depth_2">
+                                <li class="menu_2_0 hidden" data-menu-seq="353">
+                                  <a href="/adm/dashboard" target="_self" class=""><span>대시보드</span></a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="menu_1_1 has_child" data-menu-seq="262">
+                              <a href="/adm/sbject_elrn" target="_self" class="gnb_cal"><span>교육과정관리</span></a>
+                              <ul class="hidden menu_depth_2">
+                                <li class="menu_2_0 has_child" data-menu-seq="324">
+                                  <a href="/adm/sbject_elrn" target="_self" class=""><span>이러닝</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="332">
+                                      <a href="/adm/sbject_elrn" target="_self" class=""><span>과목관리</span></a>
+                                    </li>
+                                    <li class="menu_3_1" data-menu-seq="334">
+                                      <a href="/adm/crse_elrn" target="_self" class=""><span>과정관리</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="menu_2_1 has_child" data-menu-seq="326">
+                                  <a href="/adm/sbject_oflne" target="_self" class=""><span>집합교육</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="336">
+                                      <a href="/adm/sbject_oflne" target="_self" class=""><span>교과목관리</span></a>
+                                    </li>
+                                    <li class="menu_3_1" data-menu-seq="338">
+                                      <a href="/adm/crse_oflne" target="_self" class=""><span>과정관리</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="menu_2_2 has_child" data-menu-seq="328">
+                                  <a href="/adm/crse_blend" target="_self" class=""><span>혼합교육</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="251">
+                                      <a href="/adm/crse_blend" target="_self" class=""><span>과정관리</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="menu_2_3 has_child" data-menu-seq="243">
+                                  <a href="/adm/sbject_real_time" target="_self" class=""><span>실시간교육</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="246">
+                                      <a href="/adm/sbject_real_time" target="_self" class=""><span>과목관리</span></a>
+                                    </li>
+                                    <li class="menu_3_1" data-menu-seq="244">
+                                      <a href="/adm/crse_real_time" target="_self" class=""><span>과정관리</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="menu_2_4" data-menu-seq="249">
+                                  <a href="/adm/open_crse" target="_self" class=""><span>오픈강좌관리</span></a>
+                                </li>
+                                <li class="menu_2_5 has_child" data-menu-seq="330">
+                                  <a href="/adm/test_ques" target="_self" class=""><span>시험관리</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="258">
+                                      <a href="/adm/test_ques" target="_self" class=""><span>문제관리</span></a>
+                                    </li>
+                                    <li class="menu_3_1" data-menu-seq="257">
+                                      <a href="/adm/test_tmplat" target="_self" class=""><span>시험지관리</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="menu_1_2 active has_child" data-menu-seq="321">
+                              <a href="/adm/crse_estbl_reqst" target="_self" class="gnb_board"><span>강의활동관리</span></a>
+                              <ul class="menu_depth_2 active">
+                                <li class="" data-menu-seq="">
+                                  <a href="강의활동관리_자격증.html" target="_self" class=""><span>자격증</span></a>
+                                </li>
+                                <li class="menu_2_0" data-menu-seq="252">
+                                  <a href="/adm/crse_estbl_reqst" target="_self" class=""><span>과정개설신청</span></a>
+                                </li>
+                                <li class="menu_2_1 active has_child" data-menu-seq="264">
+                                  <a href="/adm/odr_elrn" target="_self" class=""><span>차수관리</span></a>
+                                  <ul class="menu_depth_3 active">
+                                    <li class="menu_3_0" data-menu-seq="341">
+                                      <a href="/adm/odr_elrn" target="_self" class=""><span>이러닝</span></a>
+                                    </li>
+                                    <li class="menu_3_1 active" data-menu-seq="342">
+                                      <a href="/adm/odr_oflne" target="_self" class=""><span class="active_txt">집합교육</span></a>
+                                    </li>
+                                    <li class="menu_3_2" data-menu-seq="343">
+                                      <a href="/adm/odr_blend" target="_self" class=""><span>혼합교육</span></a>
+                                    </li>
+                                    <li class="menu_3_3" data-menu-seq="245">
+                                      <a href="/adm/odr_real_time" target="_self" class=""><span>실시간교육</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="" data-menu-seq="">
+                                  <a href="강의활동관리_출결관리_목록.html" target="_self" class=""><span>출결관리</span></a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="menu_1_3 has_child" data-menu-seq="266">
+                              <a href="/adm/mber_instrctr" target="_self" class="gnb_member"><span>회원관리</span></a>
+                              <ul class="hidden menu_depth_2">
+                                <li class="menu_2_0" data-menu-seq="270">
+                                  <a href="/adm/mber_instrctr" target="_self" class=""><span>강사관리</span></a>
+                                </li>
+                                <li class="menu_2_1 has_child" data-menu-seq="268">
+                                  <a href="/adm/mber_stdnt" target="_self" class=""><span>교육생 관리</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="351">
+                                      <a href="/adm/mber_stdnt" target="_self" class=""><span>전체</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="menu_2_2" data-menu-seq="272">
+                                  <a href="/adm/mber_oprtr" target="_self" class=""><span>운영자관리</span></a>
+                                </li>
+                                <li class="menu_2_3 hidden" data-menu-seq="274">
+                                  <a href="/adm/mber_instt" target="_self" class=""><span>기관관리</span></a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="menu_1_4 has_child" data-menu-seq="276">
+                              <a href="/adm/bbsCtt?bbs_id=notice" target="_self" class="gnb_board"><span>포털관리</span></a>
+                              <ul class="hidden menu_depth_2">
+                                <li class="menu_2_0 has_child" data-menu-seq="278">
+                                  <a href="/adm/bbsCtt?bbs_id=notice" target="_self" class=""><span>게시판관리</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="288">
+                                      <a href="/adm/bbsCtt?bbs_id=notice" target="_self" class=""><span>공지사항</span></a>
+                                    </li>
+                                    <li class="menu_3_1" data-menu-seq="290">
+                                      <a href="/adm/bbs_faq" target="_self" class=""><span>자주하는 질문</span></a>
+                                    </li>
+                                    <li class="menu_3_2" data-menu-seq="292">
+                                      <a href="/adm/bbs_qna" target="_self" class=""><span>질문과 답변</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="menu_2_1" data-menu-seq="280">
+                                  <a href="/adm/popup" target="_self" class=""><span>팝업관리</span></a>
+                                </li>
+                                <li class="menu_2_2 has_child" data-menu-seq="284">
+                                  <a href="/adm/banner" target="_self" class=""><span>배너관리</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="253">
+                                      <a href="/adm/banner" target="_self" class=""><span>풋터 배너</span></a>
+                                    </li>
+                                    <li class="menu_3_1" data-menu-seq="254">
+                                      <a href="/adm/main_visual" target="_self" class=""><span>메인 비주얼</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="menu_2_3" data-menu-seq="286">
+                                  <a href="/adm/edc_schdul" target="_self" class=""><span>교육일정관리</span></a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="menu_1_5 has_child" data-menu-seq="282">
+                              <a href="/adm/group_perm" target="_self" class="gnb_monitor"><span>시스템 관리</span></a>
+                              <ul class="hidden menu_depth_2">
+                                <li class="menu_2_0 hidden" data-menu-seq="255">
+                                  <a href="/adm/userMenuManage" target="_self" class=""><span>메뉴관리</span></a>
+                                </li>
+                                <li class="menu_2_1" data-menu-seq="295">
+                                  <a href="/adm/group_perm" target="_self" class=""><span>권한그룹관리</span></a>
+                                </li>
+                                <li class="menu_2_2" data-menu-seq="299">
+                                  <a href="/adm/admin_access_log" target="_self" class=""><span>관리자 접근이력</span></a>
+                                </li>
+                                <li class="menu_2_3" data-menu-seq="301">
+                                  <a href="/adm/cmmn_code" target="_self" class=""><span>공통코드관리</span></a>
+                                </li>
+                                <li class="menu_2_4 has_child" data-menu-seq="303">
+                                  <a href="/adm/ctgry_sbject" target="_self" class=""><span>분류체계관리</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="309">
+                                      <a href="/adm/ctgry_sbject" target="_self" class=""><span>과목분류관리</span></a>
+                                    </li>
+                                    <li class="menu_3_1" data-menu-seq="311">
+                                      <a href="/adm/ctgry_crse" target="_self" class=""><span>과정분류관리</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="menu_2_5" data-menu-seq="305">
+                                  <a href="/adm/send_sms" target="_self" class=""><span>SMS 관리</span></a>
+                                </li>
+                                <li class="menu_2_6 has_child" data-menu-seq="307">
+                                  <a href="/adm/qustnr_qesitm_tmplat" target="_self" class=""><span>설문관리</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="313">
+                                      <a href="/adm/qustnr_qesitm_tmplat" target="_self" class=""><span>문항관리</span></a>
+                                    </li>
+                                    <li class="menu_3_1" data-menu-seq="315">
+                                      <a href="/adm/qestnr_tmplat" target="_self" class=""><span>설문지관리</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="menu_2_7" data-menu-seq="250">
+                                  <a href="/adm/userAdminMenuManage" target="_self" class=""><span>관리자메뉴관리</span></a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="menu_1_6 has_child" data-menu-seq="352">
+                              <a href="/adm/result_reprt" target="_self" class="gnb_member"><span>강사결과보고서</span></a>
+                              <ul class="hidden menu_depth_2">
+                                <li class="menu_2_0" data-menu-seq="354">
+                                  <a href="/adm/result_reprt" target="_self" class=""><span>강사결과보고서</span></a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="menu_1_7" data-menu-seq="256">
+                              <a href="/adm/checkMemberAttend" target="_self" class="gnb_member"><span>출결관리</span></a>
+                            </li>
+                            <li class="menu_1_8 has_child" data-menu-seq="297">
+                              <a href="/adm/stats_edc" target="_self" class="gnb_statistics"><span>통계</span></a>
+                              <ul class="hidden menu_depth_2">
+                                <li class="menu_2_0" data-menu-seq="317">
+                                  <a href="/adm/stats_edc" target="_self" class=""><span>교육통계</span></a>
+                                </li>
+                                <li class="menu_2_1" data-menu-seq="319">
+                                  <a href="/adm/stats_instrctr" target="_self" class=""><span>강사통계</span></a>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+
+                          <script type="text/javascript">
+                            var domId = 'adminDynamicMenuLNB' ? 'adminDynamicMenuLNB' : '';
+
+                            if (domId.toUpperCase().indexOf('LNB') > -1) {
+                              // 계층구조를 이용해 부모까지 a 태그에 active 클래스를 부여한다.
+                              $('#adminDynamicMenuLNB .active')
+                                .parentsUntil('#adminDynamicMenuLNB')
+                                .each(function () {
+                                  $(this).removeClass('hidden').addClass('active');
+                                });
+                            } else {
+                              // GNB일 경우
+                              $('#adminDynamicMenuLNB .active')
+                                .parentsUntil('#adminDynamicMenuLNB')
+                                .each(function () {
+                                  if ($(this).attr('class').indexOf('menu_1_') > -1) {
+                                    $(this).removeClass('hidden').addClass('active');
+                                  }
+                                });
+                            }
+
+                            (function () {
+                              // 하위 메뉴를 가지고 있는 경우 has_child 클래스를 부여한다.
+                              $('#adminDynamicMenuLNB li').each(function (index, item) {
+                                var $li = $(item);
+                                var $ul = $li.find('> ul');
+
+                                if ($ul.length > 0) $li.addClass('has_child');
+                              });
+
+                              // lnb 에 active 적용
+                              var _path = decodeURI(location.href);
+                              // 동일한 문자가 더 많은 메뉴를 판정한다.
+                              var _selectItemPoint = -1;
+                              var $selectItem = null;
+
+                              $('#adminDynamicMenuLNB li').each(function (index, item) {
+                                var $item = $(item);
+                                var href = $item.find('a').attr('href');
+
+                                if (_path.indexOf(href) > -1 && href.length >= _selectItemPoint) {
+                                  _selectItemPoint = href.length;
+                                  $selectItem = $item;
+                                }
+                              });
+
+                              if ($selectItem != null) $selectItem.children().last().find('span').addClass('active_txt');
+                            })();
+
+                            $(function () {
+                              // 관리자 페이지 타이틀 네비게이터
+                              //     	bm.wvLayoutFieldManager.setAdminPageTitle();
+                              bm.wvLayoutFieldManager.setAdminPageTitleAsc();
+                            });
+                          </script>
+                        </div>
+                      </div>
+
+                      <script type="text/javascript">
+                        var setSecond;
+                        var closeSecond;
+                        var newTime;
+
+                        function setCountNumber() {
+                          --setSecond;
+                          if (closeSecond == setSecond) {
+                            clearInterval(newTime);
+                            if (opener) {
+                              self.close();
+                              return;
+                            }
+                            location.href = WEB_ROOT + 'logout';
+                            alert('세션이 종료되어 로그아웃 되었습니다.');
+                          }
+                        }
+
+                        function startCount() {
+                          setSecond = 120 * 60; // 초단위임
+                          closeSecond = 1 * 60;
+                          newTime = setInterval(setCountNumber, 1000);
+                        }
+
+                        $(function () {
+                          startCount();
+                        });
+                      </script>
+                    </div>
+                    <!-- //side -->
+
+                    <!-- contents -->
+                    <div class="contents_wrap h-100 admin_contents_min_height">
+                      <div class="left_margin_border"></div>
+                      <div class="h-100 pl22 pr22 over-hidden contents_con admin_contents_min_height">
+                        <!-- 페이지 타이틀 -->
+                        <div class="col-12 show-table contents_header">
+                          <h3 class="show-tablecell vm fontsize20" data-wv-layout-field="page-title"><span class="asc">강의활동관리</span><span class="asc">차수관리</span><span class="asc current_menu_point">집합교육</span></h3>
+                        </div>
+                        <!-- //페이지 타이틀 -->
+
+                        <!-- 페이지 컨텐츠 -->
+                        <div class="col-12 pt30 pb90 contents_body">
+                          <div class="col-12" data-wv-layout-element="layout-page" data-wv-layout-element-param="null">
+                            <script type="text/javascript">
+                              app.interfaceKey = 'odr_oflne';
+                              var crud = {};
+                              crud.list = new CrudList();
+                              crud.list.onSelectItem = function () {
+                                return false;
+                              };
+                            </script>
+
+                            <script src="http://dev.edu.sportsafety.or.kr/weven_service/module/program/odr_oflne/js/list.js" type="text/javascript"></script>
+                            <div id="con_list_block_template">
+                              <!-- 필터 -->
+                              <div id="crudFilter" class="panel" data-wv-type="filter" data-wv-bind="crudList">
+                                <input class="hidden" name="orderKey" data-wv-key="orderKey" value="OM.EDC_BGNDE" />
+                                <input class="hidden" name="orderVal" data-wv-key="orderVal" value="DESC" />
+                                <div class="panel_container">
+                                  <div class="panel_header"></div>
+                                  <div class="panel_body">
+                                    <table class="filter_table" summary="검색을 위한 테이블입니다.">
+                                      <caption>
+                                        필터
+                                      </caption>
+                                      <colgroup>
+                                        <col width="150px" />
+                                        <col class="perAuto" />
+                                        <col width="150px" />
+                                        <col class="perAuto" />
+                                      </colgroup>
+                                      <tbody>
+                                        <tr>
+                                          <th>과정명</th>
+                                          <td class="" colspan="">
+                                            <input type="hidden" data-wv-key="searchKeyLike[]" value="cm.crse_nm" />
+                                            <input type="text" class="input_100" data-wv-key="searchValueLike[]" name="cm.crse_nm" placeholder="" value="" />
+                                          </td>
+                                          <th>단체명</th>
+                                          <td class="">
+                                            <input type="hidden" data-wv-key="searchKeyLike[]" value="om.reqst_grp_nm" />
+                                            <input type="text" class="input_100" name="reqst_grp_nm" data-wv-key="searchValueLike[]" placeholder="" value="" />
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>담당자명</th>
+                                          <td class="">
+                                            <input type="hidden" data-wv-key="searchKeyLike[]" value="om.charger" />
+                                            <input type="text" class="input_100" name="charger" data-wv-key="searchValueLike[]" placeholder="" value="" />
+                                          </td>
+                                          <th>신청기간</th>
+                                          <td>
+                                            <div class="calendar_con">
+                                              <input type="hidden" data-wv-key="searchKey[]" value="om.reqst_bgnde" />
+                                              <input type="text" placeholder="기간선택" id="reqst_bgnde" class="is_calendar" data-wv-key="searchValue[]" data-wv-handler="{type:datepicker, isClear:true, isVital: true}" data-wv-valid="생년월일을 입력 해 주세요." />
+                                              <a class="btn_del_date fontsize8" data-formrenderer-datepicker-btn-clear="" style="display: none">X</a>
+                                            </div>
+                                            ~
+                                            <div class="calendar_con">
+                                              <input type="hidden" data-wv-key="searchKey[]" value="om.reqst_endde" />
+                                              <input type="text" placeholder="기간선택" id="reqst_endde" class="is_calendar" data-wv-key="searchValue[]" data-wv-handler="{type:datepicker, isClear:true, isVital: true}" data-wv-valid="생년월일을 입력 해 주세요." />
+                                              <a class="btn_del_date fontsize8" data-formrenderer-datepicker-btn-clear="" style="display: none">X</a>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>교육기간</th>
+                                          <td>
+                                            <div class="calendar_con">
+                                              <input type="hidden" data-wv-key="searchKey[]" value="om.edc_bgnde" />
+                                              <input type="text" placeholder="기간선택" id="edc_bgnde" class="is_calendar" data-wv-key="searchValue[]" data-wv-handler="{type:datepicker, isClear:true, isVital: true}" data-wv-valid="생년월일을 입력 해 주세요." />
+                                              <a class="btn_del_date fontsize8" data-formrenderer-datepicker-btn-clear="" style="display: none">X</a>
+                                            </div>
+                                            ~
+                                            <div class="calendar_con">
+                                              <input type="hidden" data-wv-key="searchKey[]" value="om.edc_endde" />
+                                              <input type="text" placeholder="기간선택" id="edc_endde" class="is_calendar" data-wv-key="searchValue[]" data-wv-handler="{type:datepicker, isClear:true, isVital: true}" data-wv-valid="생년월일을 입력 해 주세요." />
+                                              <a class="btn_del_date fontsize8" data-formrenderer-datepicker-btn-clear="" style="display: none">X</a>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                                <div class="panel_util">
+                                  <a class="btn_guide blue icon_search" data-wv-filtersubmit="">검색</a>
+                                  <a class="btn_guide pink icon_write" href="?mode=insert">차수등록</a>
+                                </div>
+                              </div>
+                              <!-- //필터 -->
+
+                              <div class="panel">
+                                <div class="panel_container">
+                                  <div class="panel_header style_1">
+                                    <div>
+                                      <span class="show vm">Total : <span id="crudTotalCount">1,674</span>건</span>
+                                      <a href="javascript:deleteOdrOflneList();" class="btn_small pink">선택삭제</a>
+                                    </div>
+                                    <div>
+                                      <select class="select_style0" id="numPerPaging" data-wv-type="numPerPaging" data-wv-option="{filter: crudFilter, grid: crudList}">
+                                        <option value="1000">1000개씩 보기</option>
+                                        <option value="500">500개씩 보기</option>
+                                        <option value="300">300개씩 보기</option>
+                                        <option value="100">100개씩 보기</option>
+                                        <option value="50">50개씩 보기</option>
+                                        <option value="10" selected="selected">10개씩 보기</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                  <div class="panel_body bm_slick_grid" id="crudList" style="width: 100%" data-wv-type="list" data-wv-option="{url: '/adm/odr_oflne/selectCourseOrderList', param: {numPerPage: 10}, dataAutoLoad: true, history: false, wrapper: #curdListContainer}">
+                                    <table>
+                                      <caption></caption>
+                                      <colgroup>
+                                        <col width="50px" />
+                                        <col class="auto" />
+                                        <col width="165px" />
+                                        <col width="auto" />
+                                        <col width="auto" />
+                                        <col width="auto" />
+                                        <col width="95px" />
+                                        <col width="60px" />
+                                        <col width="120px" />
+                                        <col width="120px" />
+                                        <col width="65px" />
+                                      </colgroup>
+                                      <thead>
+                                        <tr>
+                                          <th class="grid_header"><input type="checkbox" name="" data-wv-checkbox-header="" /></th>
+                                          <th data-wv-cell="CM.CRSE_NM" class="grid_header">과정명(차수)</th>
+                                          <th data-wv-cell="OM.EDC_BGNDE" class="grid_header">신청기간<br />교육기간</th>
+                                          <th data-wv-cell="REQST_GRP_NM" class="grid_header">단체명</th>
+                                          <th data-wv-cell="OM.CHARGER" class="grid_header">담당자(연락처)</th>
+                                          <th class="grid_header">교육위치</th>
+                                          <th class="grid_header">교과목</th>
+                                          <th class="grid_header">강사</th>
+                                          <th class="grid_header">교육현황</th>
+                                          <th class="grid_header">강의결과관리</th>
+                                          <th class="grid_header">등록인원 / <br />수료인원</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr data-wv-template="">
+                                          <td data-wv-checkbox-row="6618"><input type="checkbox" name="" /></td>
+                                          <td class="brd_tit">
+                                            <a href="javascript:courseOrder.openPopup(6618, 1);" class="table_link">[공통] 스포츠응급처치 과정 A형(10차)</a>
+                                          </td>
+                                          <td>2025-09-04 ~ 2025-09-04<br />2025-09-08 ~ 2025-09-08</td>
+                                          <td>단체없음(단체명_250904)</td>
+                                          <td>이명훈(010-2441-8186)</td>
+                                          <td class="brd_tit">세종특별자치시 나성로 33-6 1층</td>
+                                          <td><a href="?mode=sbject&amp;odrSn=6618&amp;edcBgnde=2025-09-08&amp;edcEndde=2025-09-08" class="btn_small blue">교과목</a></td>
+                                          <td>-</td>
+                                          <td>
+                                            강사배정중
+                                            <!-- [dev] 상태값 -->
+                                            <!-- 
+                                            강사배정중
+                                            강사배정완료
+                                            강사배정실패
+                                            결과보고서 미제출
+                                            결과보고서 승인대기
+                                            결과보고서 반려
+                                            결과보고 완료 -->
+                                          </td>
+                                          <td>
+                                            <a href="/adm/reqst_oflne?mode=update&amp;odrSn=6618" class="btn_small lime">신청관리</a>
+                                            <a href="/adm/compl_oflne?mode=update&amp;odrSn=6618" class="btn_small lime">수료관리</a>
+                                            <a href="/adm/compl_oflne?mode=update&amp;odrSn=6618" class="btn_small lime">강의결과관리</a>
+                                          </td>
+                                          <td>28 / 1</td>
+                                        </tr>
+                                        <tr data-wv-template="">
+                                          <td data-wv-checkbox-row="6614"><input type="checkbox" name="" /></td>
+                                          <td class="brd_tit">
+                                            <a href="javascript:courseOrder.openPopup(6614, 1);" class="table_link">[공통] 스포츠테이핑 과정 B형(2차)</a>
+                                          </td>
+                                          <td>2025-09-01 ~ 2025-09-01<br />2025-09-01 ~ 2025-09-01</td>
+                                          <td>단체없음(단체명_250901)</td>
+                                          <td>김성우(010-6683-1291)</td>
+                                          <td class="brd_tit">대전광역시 서구 대덕대로234번길 46 2층</td>
+                                          <td><a href="?mode=sbject&amp;odrSn=6614&amp;edcBgnde=2025-09-01&amp;edcEndde=2025-09-01" class="btn_small blue">교과목</a></td>
+                                          <td>-</td>
+                                          <td>강사배정완료</td>
+                                          <td>
+                                            <a href="/adm/reqst_oflne?mode=update&amp;odrSn=6618" class="btn_small lime">신청관리</a>
+                                            <a href="/adm/compl_oflne?mode=update&amp;odrSn=6618" class="btn_small lime">수료관리</a>
+                                            <a href="/adm/compl_oflne?mode=update&amp;odrSn=6618" class="btn_small lime">강의결과관리</a>
+                                          </td>
+                                          <td>28 / 1</td>
+                                        </tr>
+                                        <tr data-wv-template="">
+                                          <td data-wv-checkbox-row="6584"><input type="checkbox" name="" /></td>
+                                          <td class="brd_tit">
+                                            <a href="javascript:courseOrder.openPopup(6584, 1);" class="table_link">[재단 주관] 체육행사 안전관리 법정교육 과정(안전관리책임자/안전관리자)(22차)</a>
+                                          </td>
+                                          <td>2025-05-16 ~ 2025-05-16<br />2025-05-19 ~ 2025-05-19</td>
+                                          <td>서울특별시체육회</td>
+                                          <td>데이터쿡_002(010-1111-1111)</td>
+                                          <td class="brd_tit">서울특별시 강남구 테헤란로2길 27 405</td>
+                                          <td><a href="?mode=sbject&amp;odrSn=6584&amp;edcBgnde=2025-05-19&amp;edcEndde=2025-05-19" class="btn_small blue">교과목</a></td>
+                                          <td>데이터쿡_007(강사)</td>
+                                          <td>강사배정실패</td>
+                                          <td>
+                                            <a href="/adm/reqst_oflne?mode=update&amp;odrSn=6618" class="btn_small lime">신청관리</a>
+                                            <a href="/adm/compl_oflne?mode=update&amp;odrSn=6618" class="btn_small lime">수료관리</a>
+                                            <a href="/adm/compl_oflne?mode=update&amp;odrSn=6618" class="btn_small lime">강의결과관리</a>
+                                          </td>
+                                          <td>28 / 1</td>
+                                        </tr>
+                                        <tr data-wv-template="">
+                                          <td data-wv-checkbox-row="6580"><input type="checkbox" name="" /></td>
+                                          <td class="brd_tit">
+                                            <a href="javascript:courseOrder.openPopup(6580, 1);" class="table_link">[공통] 스포츠테이핑 과정 B형(1차)</a>
+                                          </td>
+                                          <td>2025-05-03 ~ 2025-05-10<br />2025-05-12 ~ 2025-05-16</td>
+                                          <td>대한체육회</td>
+                                          <td>김담당(000)</td>
+                                          <td class="brd_tit">서울</td>
+                                          <td><a href="?mode=sbject&amp;odrSn=6580&amp;edcBgnde=2025-05-12&amp;edcEndde=2025-05-16" class="btn_small blue">교과목</a></td>
+                                          <td>최은혜</td>
+                                          <td>결과보고서 미제출</td>
+                                          <td>
+                                            <a href="/adm/reqst_oflne?mode=update&amp;odrSn=6618" class="btn_small lime">신청관리</a>
+                                            <a href="/adm/compl_oflne?mode=update&amp;odrSn=6618" class="btn_small lime">수료관리</a>
+                                            <a href="/adm/compl_oflne?mode=update&amp;odrSn=6618" class="btn_small lime">강의결과관리</a>
+                                          </td>
+                                          <td>28 / 1</td>
+                                        </tr>
+                                        <tr data-wv-template="">
+                                          <td data-wv-checkbox-row="6558"><input type="checkbox" name="" /></td>
+                                          <td class="brd_tit">
+                                            <a href="javascript:courseOrder.openPopup(6558, 1);" class="table_link">[공통] 스포츠응급처치 과정 B형(4차)</a>
+                                          </td>
+                                          <td>2025-04-01 ~ 2025-05-08<br />2025-05-09 ~ 2025-05-09</td>
+                                          <td>서울올림픽기념국민체육진흥공단</td>
+                                          <td>김필성(070-4390-1110)</td>
+                                          <td class="brd_tit">대구광역시 수성구 미술관로 88 1층 대구체력인증센터</td>
+                                          <td><a href="?mode=sbject&amp;odrSn=6558&amp;edcBgnde=2025-05-09&amp;edcEndde=2025-05-09" class="btn_small blue">교과목</a></td>
+                                          <td>안경준</td>
+                                          <td>결과보고서 승인대기</td>
+                                          <td>
+                                            <a href="/adm/reqst_oflne?mode=update&amp;odrSn=6618" class="btn_small lime">신청관리</a>
+                                            <a href="/adm/compl_oflne?mode=update&amp;odrSn=6618" class="btn_small lime">수료관리</a>
+                                            <a href="/adm/compl_oflne?mode=update&amp;odrSn=6618" class="btn_small lime">강의결과관리</a>
+                                          </td>
+                                          <td>28 / 1</td>
+                                        </tr>
+                                        <tr data-wv-template="">
+                                          <td data-wv-checkbox-row="6559"><input type="checkbox" name="" /></td>
+                                          <td class="brd_tit">
+                                            <a href="javascript:courseOrder.openPopup(6559, 1);" class="table_link">[공통] 스포츠응급처치 과정 A형(8차)</a>
+                                          </td>
+                                          <td>2025-04-01 ~ 2025-04-01<br />2025-05-02 ~ 2025-05-02</td>
+                                          <td>서울올림픽기념국민체육진흥공단</td>
+                                          <td>김필성(070-4390-1110)</td>
+                                          <td class="brd_tit">대구광역시 수성구 미술관로 88 1층 대구체력인증센터</td>
+                                          <td><a href="?mode=sbject&amp;odrSn=6559&amp;edcBgnde=2025-05-02&amp;edcEndde=2025-05-02" class="btn_small blue">교과목</a></td>
+                                          <td>안경준</td>
+                                          <td>결과보고서 반려</td>
+                                          <td>
+                                            <a href="/adm/reqst_oflne?mode=update&amp;odrSn=6618" class="btn_small lime">신청관리</a>
+                                            <a href="/adm/compl_oflne?mode=update&amp;odrSn=6618" class="btn_small lime">수료관리</a>
+                                            <a href="/adm/compl_oflne?mode=update&amp;odrSn=6618" class="btn_small lime">강의결과관리</a>
+                                          </td>
+                                          <td>28 / 1</td>
+                                        </tr>
+                                        <tr data-wv-template="">
+                                          <td data-wv-checkbox-row="6524"><input type="checkbox" name="" /></td>
+                                          <td class="brd_tit">
+                                            <a href="javascript:courseOrder.openPopup(6524, 1);" class="table_link">[법정교육] 체육행사 안전관리 법정교육 과정(안전요원)(19차)</a>
+                                          </td>
+                                          <td>2025-03-26 ~ 2025-03-26<br />2025-04-29 ~ 2025-04-29</td>
+                                          <td>단체없음(경남자원봉사센터)</td>
+                                          <td>백수진(010-2889-3676)</td>
+                                          <td class="brd_tit">경상남도 진주시 내동면 삼계로 430 진주시평생학습관</td>
+                                          <td><a href="?mode=sbject&amp;odrSn=6524&amp;edcBgnde=2025-04-29&amp;edcEndde=2025-04-29" class="btn_small blue">교과목</a></td>
+                                          <td>데이터쿡_007(강사)</td>
+                                          <td>결과보고 완료</td>
+                                          <td>
+                                            <a href="/adm/reqst_oflne?mode=update&amp;odrSn=6618" class="btn_small lime">신청관리</a>
+                                            <a href="/adm/compl_oflne?mode=update&amp;odrSn=6618" class="btn_small lime">수료관리</a>
+                                            <a href="/adm/compl_oflne?mode=update&amp;odrSn=6618" class="btn_small lime">강의결과관리</a>
+                                          </td>
+                                          <td>28 / 1</td>
+                                        </tr>
+                                        <tr data-wv-template="">
+                                          <td data-wv-checkbox-row="6515"><input type="checkbox" name="" /></td>
+                                          <td class="brd_tit">
+                                            <a href="javascript:courseOrder.openPopup(6515, 1);" class="table_link">[공통] 스포츠응급처치 과정 A형(5차)</a>
+                                          </td>
+                                          <td>2025-03-27 ~ 2025-03-27<br />2025-04-24 ~ 2025-04-24</td>
+                                          <td>제주특별자치도 제주시장애인체육회</td>
+                                          <td>강민정(010-3691-9513)</td>
+                                          <td class="brd_tit">충청남도 아산시 곡교천로27번길 33 아산시장애인체육관</td>
+                                          <td><a href="?mode=sbject&amp;odrSn=6515&amp;edcBgnde=2025-04-24&amp;edcEndde=2025-04-24" class="btn_small blue">교과목</a></td>
+                                          <td>안경준</td>
+                                          <td>결과보고 완료</td>
+                                          <td>
+                                            <a href="/adm/reqst_oflne?mode=update&amp;odrSn=6618" class="btn_small lime">신청관리</a>
+                                            <a href="/adm/compl_oflne?mode=update&amp;odrSn=6618" class="btn_small lime">수료관리</a>
+                                            <a href="/adm/compl_oflne?mode=update&amp;odrSn=6618" class="btn_small lime">강의결과관리</a>
+                                          </td>
+                                          <td>28 / 1</td>
+                                        </tr>
+                                        <tr data-wv-template="">
+                                          <td data-wv-checkbox-row="6505"><input type="checkbox" name="" /></td>
+                                          <td class="brd_tit">
+                                            <a href="javascript:courseOrder.openPopup(6505, 1);" class="table_link">[법정교육] 체육행사 안전관리 법정교육 과정(안전요원)(14차)</a>
+                                          </td>
+                                          <td>2025-03-24 ~ 2025-03-24<br />2025-04-24 ~ 2025-04-24</td>
+                                          <td>대한배드민턴협회</td>
+                                          <td>허창무(02-421-2724)</td>
+                                          <td class="brd_tit">전라남도 화순군 화순읍 학포로 2698 하니움문화스포츠센터 세미나실</td>
+                                          <td><a href="?mode=sbject&amp;odrSn=6505&amp;edcBgnde=2025-04-24&amp;edcEndde=2025-04-24" class="btn_small blue">교과목</a></td>
+                                          <td>-</td>
+                                          <td>결과보고 완료</td>
+                                          <td>
+                                            <a href="/adm/reqst_oflne?mode=update&amp;odrSn=6618" class="btn_small lime">신청관리</a>
+                                            <a href="/adm/compl_oflne?mode=update&amp;odrSn=6618" class="btn_small lime">수료관리</a>
+                                            <a href="/adm/compl_oflne?mode=update&amp;odrSn=6618" class="btn_small lime">강의결과관리</a>
+                                          </td>
+                                          <td>28 / 1</td>
+                                        </tr>
+                                        <tr data-wv-template="">
+                                          <td data-wv-checkbox-row="6526"><input type="checkbox" name="" /></td>
+                                          <td class="brd_tit">
+                                            <a href="javascript:courseOrder.openPopup(6526, 1);" class="table_link">[지도자] 스포츠안전 선택교육 과정 A형 (2차)</a>
+                                          </td>
+                                          <td>2025-03-28 ~ 2025-03-28<br />2025-04-24 ~ 2025-04-24</td>
+                                          <td>대한민국댄스스포츠연맹</td>
+                                          <td>최우석(02--)</td>
+                                          <td class="brd_tit">서울특별시 송파구 올림픽로 424 sk핸드볼경기장</td>
+                                          <td><a href="?mode=sbject&amp;odrSn=6526&amp;edcBgnde=2025-04-24&amp;edcEndde=2025-04-24" class="btn_small blue">교과목</a></td>
+                                          <td>장석왕</td>
+                                          <td>결과보고 완료</td>
+                                          <td>
+                                            <a href="/adm/reqst_oflne?mode=update&amp;odrSn=6618" class="btn_small lime">신청관리</a>
+                                            <a href="/adm/compl_oflne?mode=update&amp;odrSn=6618" class="btn_small lime">수료관리</a>
+                                            <a href="/adm/compl_oflne?mode=update&amp;odrSn=6618" class="btn_small lime">강의결과관리</a>
+                                          </td>
+                                          <td>28 / 1</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <div class="nodata tc pt15 pb15" style="display: none">조회된 데이터가 없습니다.</div>
+                                  </div>
+                                  <!-- 페이징 -->
+                                  <div class="panel_footer" data-wv-comp-pagenavi="" style="display: block">
+                                    <div id="crudPaging" class="paging" data-wv-type="paging" data-wv-option="{selectedIndex: 1, numPerPage: 10}" data-wv-bind="crudList">
+                                      <ul class="button_container" data-wv-comp-pagenavi="">
+                                        <li class="btn_singlePage btn_firstPage">&lt;&lt;</li>
+                                        <li class="btn_singlePage btn_prevPage">&lt;</li>
+                                        <li class="btn_page first selected">1</li>
+                                        <li class="btn_page">2</li>
+                                        <li class="btn_page">3</li>
+                                        <li class="btn_page">4</li>
+                                        <li class="btn_page">5</li>
+                                        <li class="btn_page">6</li>
+                                        <li class="btn_page">7</li>
+                                        <li class="btn_page">8</li>
+                                        <li class="btn_page">9</li>
+                                        <li class="btn_page last">10</li>
+                                        <li class="btn_singlePage btn_nextPage">&gt;</li>
+                                        <li class="btn_singlePage btn_lastPage">&gt;&gt;</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- 기수 상세정보 팝업 -->
+
+                            <script type="text/javascript">
+                              app.interfaceKey = 'odr_oflne';
+                            </script>
+                            <script src="http://dev.edu.sportsafety.or.kr/weven_service/module/common/inc/popup_course_order_detail/js/courseOrderDetail.js"></script>
+
+                            <div id="courseOrderDetailPopup" class="hidden col-8 popup_wrap">
+                              <div class="col-12 popup_con">
+                                <!-- 팝업 타이틀 & 닫기 버튼 -->
+                                <div class="popup_title_close_con">
+                                  <h1 class="popup_title">과정 차수 정보</h1>
+                                  <div class="popup_close_con">
+                                    <span class="close_btn" onclick="courseOrder.closePopup();"><img src="http://dev.edu.sportsafety.or.kr/weven_template/theme/_admin_style4_new/1/resource/img/close_small_black.png" alt="X" /></span>
+                                  </div>
+                                </div>
+                                <!-- //팝업 타이틀 & 닫기 버튼 -->
+                                <div class="popup_contents_con">
+                                  <div id="courseOrderMerge" class="panel" data-wv-type="update" data-wv-option="{url: '/adm/odr_oflne/selectCourseOrderDetail', param: {mode: 'list'}, confirmMsg: '저장되었습니다.'}">
+                                    <form action="/adm/odr_oflne/mergeCourseOrder" method="post" name="course_merge" enctype="multipart/form-data">
+                                      <div data-wv-interpreter="">
+                                        <input type="hidden" name="odr_mastr_sn" value="{{odr_mastr_sn}}" />
+                                        <div class="panel_container">
+                                          <div class="panel_header style_1">
+                                            <div>
+                                              <!-- <h4 class="section_title">과정정보</h4> -->
+                                            </div>
+                                            <div>
+                                              <!-- <span class="fontsize13 point_red">* 표시는 필수입력 항목입니다.</span> -->
+                                            </div>
+                                          </div>
+                                          <div class="panel_body">
+                                            <table class="tb_detail0">
+                                              <colgroup>
+                                                <col width="150px" />
+                                                <col class="perAuto" />
+                                              </colgroup>
+                                              <tbody>
+                                                <tr>
+                                                  <th><span class="point_red">*</span> 신청기간</th>
+                                                  <td>
+                                                    <div class="calendar_con">
+                                                      <input type="text" value="{{reqst_bgnde}}" placeholder="기간선택" autocomplete="off" name="reqst_bgnde" class="is_calendar" data-wv-handler="{type:datepicker, isClear:true, isVital: true}" data-wv-valid="신청 시작일을 입력 해 주세요." />
+                                                      <a class="btn_del_date fontsize8" data-formrenderer-datepicker-btn-clear="" style="display: none">X</a>
+                                                    </div>
+                                                    <select name="begin_hour" class="select_style0" style="width: 100px; margin-right: 20px; margin-left: 5px" id="begin_hour">
+                                                      <option value="0">00</option>
+                                                      <option value="01">01</option>
+                                                      <option value="02">02</option>
+                                                      <option value="03">03</option>
+                                                      <option value="04">04</option>
+                                                      <option value="05">05</option>
+                                                      <option value="06">06</option>
+                                                      <option value="07">07</option>
+                                                      <option value="08">08</option>
+                                                      <option value="09">09</option>
+                                                      <option value="10">10</option>
+                                                      <option value="11">11</option>
+                                                      <option value="12">12</option>
+                                                      <option value="13">13</option>
+                                                      <option value="14">14</option>
+                                                      <option value="15">15</option>
+                                                      <option value="16">16</option>
+                                                      <option value="17">17</option>
+                                                      <option value="18">18</option>
+                                                      <option value="19">19</option>
+                                                      <option value="20">20</option>
+                                                      <option value="21">21</option>
+                                                      <option value="22">22</option>
+                                                      <option value="23">23</option>
+                                                    </select>
+                                                    :
+                                                    <select name="begin_mnt" class="select_style0" style="width: 100px; margin-right: 20px; margin-left: 10px" id="begin_mnt">
+                                                      <option value="00">00</option>
+                                                      <option value="10">10</option>
+                                                      <option value="20">20</option>
+                                                      <option value="30">30</option>
+                                                      <option value="40">40</option>
+                                                      <option value="50">50</option>
+                                                    </select>
+                                                    ~
+                                                    <div class="calendar_con">
+                                                      <input type="text" value="{{reqst_endde}}" placeholder="기간선택" autocomplete="off" name="reqst_endde" class="is_calendar" data-wv-handler="{type:datepicker, isClear:true, isVital: true}" data-wv-valid="신청 종료일을 입력 해 주세요." />
+                                                      <a class="btn_del_date fontsize8" data-formrenderer-datepicker-btn-clear="" style="display: none">X</a>
+                                                    </div>
+                                                    <select name="end_hour" class="select_style0" style="width: 100px; margin-right: 20px; margin-left: 5px" id="end_hour">
+                                                      <option value="00">00</option>
+                                                      <option value="01">01</option>
+                                                      <option value="02">02</option>
+                                                      <option value="03">03</option>
+                                                      <option value="04">04</option>
+                                                      <option value="05">05</option>
+                                                      <option value="06">06</option>
+                                                      <option value="07">07</option>
+                                                      <option value="08">08</option>
+                                                      <option value="09">09</option>
+                                                      <option value="10">10</option>
+                                                      <option value="11">11</option>
+                                                      <option value="12">12</option>
+                                                      <option value="13">13</option>
+                                                      <option value="14">14</option>
+                                                      <option value="15">15</option>
+                                                      <option value="16">16</option>
+                                                      <option value="17">17</option>
+                                                      <option value="18">18</option>
+                                                      <option value="19">19</option>
+                                                      <option value="20">20</option>
+                                                      <option value="21">21</option>
+                                                      <option value="22">22</option>
+                                                      <option value="23">23</option>
+                                                    </select>
+                                                    :
+                                                    <select name="end_mnt" class="select_style0" style="width: 100px; margin-right: 24px; margin-left: 10px" id="end_mnt">
+                                                      <option value="00">00</option>
+                                                      <option value="10">10</option>
+                                                      <option value="20">20</option>
+                                                      <option value="30">30</option>
+                                                      <option value="40">40</option>
+                                                      <option value="50">50</option>
+                                                    </select>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <th><span class="point_red">*</span> 교육기간</th>
+                                                  <td>
+                                                    <div class="calendar_con">
+                                                      <input type="text" value="{{edc_bgnde}}" placeholder="기간선택" autocomplete="off" name="edc_bgnde" class="is_calendar" data-wv-handler="{type:datepicker, isClear:true, isVital: true}" data-wv-valid="교육 시작일을 입력 해 주세요." />
+                                                      <a class="btn_del_date fontsize8" data-formrenderer-datepicker-btn-clear="" style="display: none">X</a>
+                                                    </div>
+                                                    ~
+                                                    <div class="calendar_con">
+                                                      <input type="text" value="{{edc_endde}}" placeholder="기간선택" autocomplete="off" name="edc_endde" class="is_calendar" data-wv-handler="{type:datepicker, isClear:true, isVital: true}" data-wv-valid="교육 종료일을 입력 해 주세요." />
+                                                      <a class="btn_del_date fontsize8" data-formrenderer-datepicker-btn-clear="" style="display: none">X</a>
+                                                    </div>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <th><span class="point_red">*</span> 단체선택</th>
+                                                  <td>
+                                                    <input type="hidden" value="{{reqst_grp_sn}}" name="reqst_grp_sn" readonly="" />
+                                                    <input type="text" class="input_50" value="{{reqst_grp_nm}}" data-wv-valid="단체를 선택해주세요." name="reqst_grp_nm" readonly="" />
+                                                    <a href="javascript:void(0);" onclick="agencyList.openPopup(this);" class="btn_small lime">단체검색</a>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <th><span class="point_red">*</span> 실제정원<br />(계획정원)</th>
+                                                  <td><input type="text" name="psncpa_rl" class="input_20" value="{{psncpa_rl}}" data-wv-handler="{type: formHandler, action: onlyNum}" data-wv-valid="실제정원을 입력해주세요." /> 명 &nbsp; &nbsp; ( <input type="text" name="psncpa_plan" class="input_20" value="{{psncpa_plan}}" data-wv-handler="{type: formHandler, action: onlyNum}" data-wv-valid="계획정원을 입력해주세요." /> 명 )</td>
+                                                </tr>
+                                                <tr class="offline">
+                                                  <th><span class="point_red">*</span> 담당자</th>
+                                                  <td>
+                                                    <input type="text" name="charger" class="input_100" value="{{charger}}" data-wv-valid="담당자를 입력해주세요." />
+                                                  </td>
+                                                </tr>
+                                                <tr class="offline">
+                                                  <th><span class="point_red">*</span> 담당자 전화번호</th>
+                                                  <td>
+                                                    <input type="text" name="charger_telno" class="input_100" value="{{charger_telno}}" data-wv-valid="담당자 전화번호를 입력해주세요." />
+                                                  </td>
+                                                </tr>
+                                                <tr class="offline">
+                                                  <th><span class="point_red">*</span> 교육 위치</th>
+                                                  <td>
+                                                    <input type="text" name="eduspntd_lc" class="input_100" value="{{eduspntd_lc}}" data-wv-valid="교육 위치를 입력해주세요." />
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <th><span class="point_red">*</span> 추천과정</th>
+                                                  <td>
+                                                    <div class="radiobox_con">
+                                                      <input type="radio" name="recomend_yn" class="radio_style0 blue" value="N" id="recommendYn0" />
+                                                      <label for="recommendYn0">미선택</label>
+                                                    </div>
+                                                    <div class="radiobox_con">
+                                                      <input type="radio" name="recomend_yn" class="radio_style0 blue" value="Y" id="recommendYn1" />
+                                                      <label for="recommendYn1">선택</label>
+                                                    </div>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <th><span class="point_red">*</span> 교육대상자 승인</th>
+                                                  <td>
+                                                    <div class="radiobox_con">
+                                                      <input type="radio" name="autoconfirm_yn" class="radio_style0 blue" value="Y" id="autoconfirmYn0" />
+                                                      <label for="autoconfirmYn0">자동승인</label>
+                                                    </div>
+                                                    <div class="radiobox_con">
+                                                      <input type="radio" name="autoconfirm_yn" class="radio_style0 blue" value="N" id="autoconfirmYn1" />
+                                                      <label for="autoconfirmYn1">수동승인</label>
+                                                    </div>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <th>차수이미지</th>
+                                                  <td>
+                                                    <div class="admin_file_con" data-fileinfo="{{file_info-&gt;image_file-&gt;display_name}}">
+                                                      <input type="text" class="file_text" readonly="readonly" placeholder="첨부파일" value="{{file_info-&gt;image_file-&gt;display_name}}" id="image_file_text" /><label for="image_file_text"></label>
+                                                      <div class="file_button_con">
+                                                        <label for="image_file" class="btn_small lime icon_attach file_button">파일선택</label>
+                                                        <a class="btn_small navy icon_delete file_delete" onclick="fileHandler.onFileDelete('image_file');">파일삭제</a>
+                                                      </div>
+                                                      <input type="file" id="image_file" name="image_file" class="file_input" onchange="fileHandler.onFileChange('image_file');" accept="image/*" />
+                                                    </div>
+                                                    <div>
+                                                      <a class="ext_file_name file_text" data-wv-file-href="" data-wv-onlyupdate="" href="/adm//downloadManagerFile?file_id={{file_info-&gt;image_file-&gt;file_id}}&amp;uuid={{file_info-&gt;image_file-&gt;uuid}}" target="_blank" data-wv-print="{{file_info-&gt;image_file-&gt;display_name ::?? style='display:none;'}}"> {{file_info-&gt;image_file-&gt;display_name}} </a>
+                                                    </div>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <th>실시간 교육 링크</th>
+                                                  <td>
+                                                    <input type="text" class="input_100" name="live_link" placeholder="" value="{{live_link}}" />
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <th>비공개과정 코멘트</th>
+                                                  <td>
+                                                    <input type="text" class="input_100" name="secret_comment" placeholder="" value="{{secret_comment}}" />
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="panel_util">
+                                        <input type="button" class="btn_guide pink icon_edit" value="저장" data-wv-updatebtn="" />
+                                        <input type="button" class="btn_guide gray icon_close" value="닫기" onclick="courseOrder.closePopup();" />
+                                      </div>
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- 단체목록 -->
+
+                            <script type="text/javascript">
+                              var smallGroupList = JSON.parse(
+                                '[{"code_1":"G","code_2":"L","code_3":"00","code_4":null,"code_5":null,"code_nm":"기타지방자치단체"},{"code_1":"I","code_2":"M","code_3":"MB","code_4":null,"code_5":null,"code_nm":"사업자"},{"code_1":"I","code_2":"M","code_3":"MC","code_4":null,"code_5":null,"code_nm":"동호회"},{"code_1":"I","code_2":"M","code_3":"MA","code_4":null,"code_5":null,"code_nm":"기타"},{"code_1":"I","code_2":"B","code_3":"BO","code_4":null,"code_5":null,"code_nm":"민간체육단체"},{"code_1":"I","code_2":"B","code_3":"BF","code_4":null,"code_5":null,"code_nm":"민간체육시설"},{"code_1":"G","code_2":"S","code_3":"KS","code_4":null,"code_5":null,"code_nm":"대한체육회"},{"code_1":"G","code_2":"S","code_3":"SS","code_4":null,"code_5":null,"code_nm":"시도체육회"},{"code_1":"G","code_2":"S","code_3":"SS","code_4":"BS","code_5":null,"code_nm":"시군구체육회"},{"code_1":"G","code_2":"S","code_3":"SS","code_4":"BG","code_5":null,"code_nm":"시도종목단체"},{"code_1":"G","code_2":"S","code_3":"SS","code_4":"BS","code_5":"G","code_nm":"시군구종목단체"},{"code_1":"G","code_2":"S","code_3":"SG","code_4":null,"code_5":null,"code_nm":"중앙종목단체"},{"code_1":"G","code_2":"S","code_3":"KP","code_4":null,"code_5":null,"code_nm":"대한장애인체육회"},{"code_1":"G","code_2":"S","code_3":"SP","code_4":null,"code_5":null,"code_nm":"시도장애인체육회"},{"code_1":"G","code_2":"S","code_3":"SP","code_4":"BP","code_5":null,"code_nm":"시군구장애인체육회"},{"code_1":"G","code_2":"S","code_3":"SP","code_4":"BD","code_5":null,"code_nm":"시도장애인가맹단체"},{"code_1":"G","code_2":"S","code_3":"SP","code_4":"BP","code_5":"D","code_nm":"시군구장애인가맹단체"},{"code_1":"G","code_2":"S","code_3":"SD","code_4":null,"code_5":null,"code_nm":"중앙장애인가맹단체"},{"code_1":"G","code_2":"L","code_3":"LL","code_4":null,"code_5":null,"code_nm":"광역자치단체"},{"code_1":"G","code_2":"L","code_3":"LL","code_4":"BL","code_5":null,"code_nm":"기초자치단체"},{"code_1":"G","code_2":"L","code_3":"LE","code_4":null,"code_5":null,"code_nm":"시도교육청"},{"code_1":"G","code_2":"L","code_3":"LE","code_4":"BE","code_5":null,"code_nm":"교육지원청"},{"code_1":"G","code_2":"E","code_3":"EE","code_4":null,"code_5":null,"code_nm":"초등학교"},{"code_1":"G","code_2":"E","code_3":"EM","code_4":null,"code_5":null,"code_nm":"중학교"},{"code_1":"G","code_2":"E","code_3":"EH","code_4":null,"code_5":null,"code_nm":"고등학교"},{"code_1":"G","code_2":"E","code_3":"EU","code_4":null,"code_5":null,"code_nm":"대학교(대학)"},{"code_1":"G","code_2":"E","code_3":"EG","code_4":null,"code_5":null,"code_nm":"대학원"},{"code_1":"G","code_2":"E","code_3":"ES","code_4":null,"code_5":null,"code_nm":"특수학교"},{"code_1":"G","code_2":"E","code_3":"EA","code_4":null,"code_5":null,"code_nm":"기타학교"},{"code_1":"G","code_2":"P","code_3":"PF","code_4":null,"code_5":null,"code_nm":"시설관리공단"},{"code_1":"G","code_2":"P","code_3":"PC","code_4":null,"code_5":null,"code_nm":"도시개발공사"},{"code_1":"G","code_2":"P","code_3":"PA","code_4":null,"code_5":null,"code_nm":"기타지방공사·공단"},{"code_1":"G","code_2":"S","code_3":"SA","code_4":null,"code_5":null,"code_nm":"기타체육행정기관"}]',
+                              );
+                            </script>
+                            <script src="http://dev.edu.sportsafety.or.kr/weven_service/module/program/odr_oflne/js/agency.js" type="text/javascript"></script>
+
+                            <div id="agencyListPop" class="hidden col-8 popup_wrap">
+                              <div class="col-12 popup_con">
+                                <!-- 팝업 타이틀 & 닫기 버튼 -->
+                                <div class="popup_title_close_con">
+                                  <h1 class="popup_title">기관 목록</h1>
+                                  <div class="popup_close_con">
+                                    <span class="close_btn" onclick="agencyList.closePopup();"><img src="http://dev.edu.sportsafety.or.kr/weven_template/theme/_admin_style4_new/1/resource/img/close_small_black.png" alt="X" /></span>
+                                  </div>
+                                </div>
+                                <!-- //팝업 타이틀 & 닫기 버튼 -->
+
+                                <div class="popup_contents_con">
+                                  <div id="con_list_block_template">
+                                    <div id="agencyListFilter" class="panel" data-wv-type="filter" data-wv-bind="agencyList">
+                                      <div class="panel_container">
+                                        <div class="panel_header"></div>
+                                        <div class="panel_body">
+                                          <table class="filter_table" summary="검색을 위한 테이블입니다.">
+                                            <caption>
+                                              필터
+                                            </caption>
+                                            <colgroup>
+                                              <col width="150px" />
+                                              <col class="perAuto" />
+                                              <col width="150px" />
+                                              <col class="perAuto" />
+                                            </colgroup>
+                                            <tbody>
+                                              <tr>
+                                                <th>기관명</th>
+                                                <td colspan="3">
+                                                  <input type="hidden" data-wv-key="g_code_1" name="g_code_1" value="" />
+                                                  <input type="hidden" data-wv-key="g_code_2" name="g_code_2" value="" />
+                                                  <input type="hidden" data-wv-key="g_code_3" name="g_code_3" value="" />
+                                                  <input type="hidden" data-wv-key="g_code_4" name="g_code_4" value="" />
+                                                  <input type="hidden" data-wv-key="g_code_5" name="g_code_5" value="" />
+
+                                                  <input type="hidden" data-wv-key="searchKey[]" value="ignore_key_0" />
+                                                  <select name="ignore_key_0" class="select_style0" data-wv-key="searchValue[]" id="groupCode0" onchange="group.onChangeGroup('l');">
+                                                    <option value="">대분류</option>
+
+                                                    <option value="GS" data-group-code1="G" data-group-code2="S">체육행정기관</option>
+
+                                                    <option value="GL" data-group-code1="G" data-group-code2="L">지방자치단체</option>
+
+                                                    <option value="GE" data-group-code1="G" data-group-code2="E">학교</option>
+
+                                                    <option value="GP" data-group-code1="G" data-group-code2="P">지방공사·공단</option>
+
+                                                    <option value="IB" data-group-code1="I" data-group-code2="B">민간체육단체·시설</option>
+
+                                                    <option value="IM" data-group-code1="I" data-group-code2="M">기타</option>
+                                                  </select>
+                                                  <input type="hidden" data-wv-key="searchKey[]" value="ignore_key_1" />
+                                                  <select name="ignore_key_1" class="select_style0" data-wv-key="searchValue[]" id="groupCode1" onchange="group.onChangeGroup('s');">
+                                                    <option value="">소분류</option>
+                                                  </select>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <th>단체명</th>
+                                                <td colspan="3">
+                                                  <input type="hidden" data-wv-key="searchKeyLike[]" value="code_nm" />
+                                                  <input type="text" class="input_100" name="code_nm" data-wv-key="searchValueLike[]" value="" />
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                      </div>
+                                      <div class="panel_util">
+                                        <a class="btn_guide blue icon_search" data-wv-filtersubmit="">검색</a>
+                                      </div>
+                                    </div>
+                                    <!-- //필터 -->
+                                    <!-- 리스트 -->
+                                    <div class="panel">
+                                      <div class="panel_container">
+                                        <div class="panel_header style_1"></div>
+                                        <div
+                                          class="panel_body bm_slick_grid"
+                                          id="agencyList"
+                                          style="width: 100%"
+                                          data-wv-type="list"
+                                          data-wv-option="{url: '/adm/grp_info/selectGroupList'
+                          , param:{startPage : 1, numPerPage: 5}
+                          , dataAutoLoad: false, history: false, wrapper: #agencyListContainer}"
+                                        >
+                                          <table>
+                                            <caption></caption>
+                                            <colgroup>
+                                              <col width="100px" />
+                                              <col width="200px" />
+                                              <col class="200px" />
+                                              <col class="200px" />
+                                              <col width="perAuto" />
+                                              <col class="200px" />
+                                            </colgroup>
+                                            <thead>
+                                              <tr>
+                                                <th class="grid_header">번호</th>
+                                                <th class="grid_header">코드</th>
+                                                <th class="grid_header">대분류</th>
+                                                <th class="grid_header">소분류</th>
+                                                <th class="grid_header">단체명</th>
+                                                <th class="grid_header">선택</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody></tbody>
+                                          </table>
+                                          <div class="nodata tc pt15 pb15" style="display: none">조회된 데이터가 없습니다.</div>
+                                        </div>
+                                        <!-- 페이징 -->
+                                        <div class="panel_footer" data-wv-comp-pagenavi="" style="display: block">
+                                          <div id="agencyListPaging" class="paging" data-wv-type="paging" data-wv-option="{selectedIndex: 1, numPerPage: 10}" data-wv-bind="agencyList">
+                                            <ul class="button_container" data-wv-comp-pagenavi="">
+                                              <li class="btn_singlePage btn_firstPage">&lt;&lt;</li>
+                                              <li class="btn_singlePage btn_prevPage">&lt;</li>
+                                              <li class="btn_page first selected">1</li>
+                                              <li class="btn_singlePage btn_nextPage">&gt;</li>
+                                              <li class="btn_singlePage btn_lastPage">&gt;&gt;</li>
+                                            </ul>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- //리스트 -->
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- //페이지 컨텐츠 -->
+                      </div>
+                    </div>
+                    <!-- contents -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- //container -->
+
+            <!-- @@include('../../common/footer.html') -->
+        </div>
+    </div>
+    <div id="give-freely-root-mbnbehikldjhnfehhnaidhjhoofhpehk" class="give-freely-root" data-extension-id="mbnbehikldjhnfehhnaidhjhoofhpehk" data-extension-name="CSS Peeper" style="display: block"></div>
+    <convert-webpage-to-pdf-extension data-wxt-shadow-root=""></convert-webpage-to-pdf-extension>
+    <div id="css-checker-widget"></div>
+</body>
+</html>
+

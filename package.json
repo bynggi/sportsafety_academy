@@ -24,14 +24,14 @@
     "@babel/preset-env": "^7.23.9",
     "@babel/register": "^7.23.7",
     "autoprefixer": "^10.4.17",
-    "browser-sync": "^2.29.3",
+    "browser-sync": "^3.0.4",
     "del": "^6.1.1",
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.1",
     "gulp-csso": "^4.0.1",
     "gulp-file-include": "^2.3.0",
     "gulp-postcss": "^9.0.1",
     "gulp-sass": "^5.1.0",
-    "gulp-webserver": "^0.3.4",
+    "gulp-webserver": "^0.1.0",
     "sass": "^1.69.5"
   }
 }

@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('../../common/admin/head.html')
+    <link rel="stylesheet" href="/assets/css/admin-style.css">
+</head>
+<body cz-shortcut-listen="true">
+    <div data-wv-layout="layout" data-wv-layout-element="layout_screen" data-wv-layout-seq="0" data-wv-page-seq="0" data-wv-menu-seq="-1">
+      <div class="col-12 wrapper">
+            @@include('../../common/admin/header.html')
+
+            <!-- container -->
+            <div class="col-12 container_wrap admin_contents_min_height">
+              <div class="col-12 col-center mw-1630 admin_contents_min_height">
+                <div class="col-12 pr15 pl15 container_table_wrap admin_contents_min_height">
+                  <div class="temp_container">
+                    <!-- side -->
+                    <div class="side_wrap">
+                      <div class="col-12 show-table lnb_wrap lnb_title_con_by_static_menu">
+                        <div class="col-12" data-wv-layout-element="menu" data-wv-layout-element-param="%7B%22renderDepth%22%3A4%2C%22domId%22%3A%22adminDynamicMenuLNB%22%2C%22style%22%3A%22aDefault%22%2C%22indexPath%22%3Anull%2C%22extraClass%22%3A%22lnb_wrap%22%7D">
+                          <ul class="lnb_wrap menu_depth_1" id="adminDynamicMenuLNB">
+                            <li class="menu_1_0 has_child" data-menu-seq="260">
+                              <a href="/adm/dashboard" target="_self" class="gnb_dashboard"><span>대시보드</span></a>
+                              <ul class="hidden menu_depth_2">
+                                <li class="menu_2_0 hidden" data-menu-seq="353">
+                                  <a href="/adm/dashboard" target="_self" class=""><span>대시보드</span></a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="menu_1_1 has_child" data-menu-seq="262">
+                              <a href="/adm/sbject_elrn" target="_self" class="gnb_cal"><span>교육과정관리</span></a>
+                              <ul class="hidden menu_depth_2">
+                                <li class="menu_2_0 has_child" data-menu-seq="324">
+                                  <a href="/adm/sbject_elrn" target="_self" class=""><span>이러닝</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="332">
+                                      <a href="/adm/sbject_elrn" target="_self" class=""><span>과목관리</span></a>
+                                    </li>
+                                    <li class="menu_3_1" data-menu-seq="334">
+                                      <a href="/adm/crse_elrn" target="_self" class=""><span>과정관리</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="menu_2_1 has_child" data-menu-seq="326">
+                                  <a href="/adm/sbject_oflne" target="_self" class=""><span>집합교육</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="336">
+                                      <a href="/adm/sbject_oflne" target="_self" class=""><span>교과목관리</span></a>
+                                    </li>
+                                    <li class="menu_3_1" data-menu-seq="338">
+                                      <a href="/adm/crse_oflne" target="_self" class=""><span>과정관리</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="menu_2_2 has_child" data-menu-seq="328">
+                                  <a href="/adm/crse_blend" target="_self" class=""><span>혼합교육</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="251">
+                                      <a href="/adm/crse_blend" target="_self" class=""><span>과정관리</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="menu_2_3 has_child" data-menu-seq="243">
+                                  <a href="/adm/sbject_real_time" target="_self" class=""><span>실시간교육</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="246">
+                                      <a href="/adm/sbject_real_time" target="_self" class=""><span>과목관리</span></a>
+                                    </li>
+                                    <li class="menu_3_1" data-menu-seq="244">
+                                      <a href="/adm/crse_real_time" target="_self" class=""><span>과정관리</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="menu_2_4" data-menu-seq="249">
+                                  <a href="/adm/open_crse" target="_self" class=""><span>오픈강좌관리</span></a>
+                                </li>
+                                <li class="menu_2_5 has_child" data-menu-seq="330">
+                                  <a href="/adm/test_ques" target="_self" class=""><span>시험관리</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="258">
+                                      <a href="/adm/test_ques" target="_self" class=""><span>문제관리</span></a>
+                                    </li>
+                                    <li class="menu_3_1" data-menu-seq="257">
+                                      <a href="/adm/test_tmplat" target="_self" class=""><span>시험지관리</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="menu_1_2 active has_child" data-menu-seq="321">
+                              <a href="/adm/crse_estbl_reqst" target="_self" class="gnb_board"><span>강의활동관리</span></a>
+                              <ul class="menu_depth_2 active">
+                                <li class="" data-menu-seq="">
+                                  <a href="강의활동관리_자격증.html" target="_self" class=""><span>자격증</span></a>
+                                </li>
+                                <li class="menu_2_0" data-menu-seq="252">
+                                  <a href="/adm/crse_estbl_reqst" target="_self" class=""><span>과정개설신청</span></a>
+                                </li>
+                                <li class="menu_2_1 has_child" data-menu-seq="264">
+                                  <a href="/adm/odr_elrn" target="_self" class=""><span>차수관리</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="341">
+                                      <a href="/adm/odr_elrn" target="_self" class=""><span>이러닝</span></a>
+                                    </li>
+                                    <li class="menu_3_1" data-menu-seq="342">
+                                      <a href="/adm/odr_oflne" target="_self" class=""><span>집합교육</span></a>
+                                    </li>
+                                    <li class="menu_3_2" data-menu-seq="343">
+                                      <a href="/adm/odr_blend" target="_self" class=""><span>혼합교육</span></a>
+                                    </li>
+                                    <li class="menu_3_3" data-menu-seq="245">
+                                      <a href="/adm/odr_real_time" target="_self" class=""><span>실시간교육</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="" data-menu-seq="">
+                                  <a href="강의활동관리_출결관리_목록.html" target="_self" class=""><span class="active_txt">출결관리</span></a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="menu_1_3 has_child" data-menu-seq="266">
+                              <a href="/adm/mber_instrctr" target="_self" class="gnb_member"><span>회원관리</span></a>
+                              <ul class="hidden menu_depth_2">
+                                <li class="menu_2_0" data-menu-seq="270">
+                                  <a href="/adm/mber_instrctr" target="_self" class=""><span>강사관리</span></a>
+                                </li>
+                                <li class="menu_2_1 has_child" data-menu-seq="268">
+                                  <a href="/adm/mber_stdnt" target="_self" class=""><span>교육생 관리</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="351">
+                                      <a href="/adm/mber_stdnt" target="_self" class=""><span>전체</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="menu_2_2" data-menu-seq="272">
+                                  <a href="/adm/mber_oprtr" target="_self" class=""><span>운영자관리</span></a>
+                                </li>
+                                <li class="menu_2_3 hidden" data-menu-seq="274">
+                                  <a href="/adm/mber_instt" target="_self" class=""><span>기관관리</span></a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="menu_1_4 has_child" data-menu-seq="276">
+                              <a href="/adm/bbsCtt?bbs_id=notice" target="_self" class="gnb_board"><span>포털관리</span></a>
+                              <ul class="hidden menu_depth_2">
+                                <li class="menu_2_0 has_child" data-menu-seq="278">
+                                  <a href="/adm/bbsCtt?bbs_id=notice" target="_self" class=""><span>게시판관리</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="288">
+                                      <a href="/adm/bbsCtt?bbs_id=notice" target="_self" class=""><span>공지사항</span></a>
+                                    </li>
+                                    <li class="menu_3_1" data-menu-seq="290">
+                                      <a href="/adm/bbs_faq" target="_self" class=""><span>자주하는 질문</span></a>
+                                    </li>
+                                    <li class="menu_3_2" data-menu-seq="292">
+                                      <a href="/adm/bbs_qna" target="_self" class=""><span>질문과 답변</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="menu_2_1" data-menu-seq="280">
+                                  <a href="/adm/popup" target="_self" class=""><span>팝업관리</span></a>
+                                </li>
+                                <li class="menu_2_2 has_child" data-menu-seq="284">
+                                  <a href="/adm/banner" target="_self" class=""><span>배너관리</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="253">
+                                      <a href="/adm/banner" target="_self" class=""><span>풋터 배너</span></a>
+                                    </li>
+                                    <li class="menu_3_1" data-menu-seq="254">
+                                      <a href="/adm/main_visual" target="_self" class=""><span>메인 비주얼</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="menu_2_3" data-menu-seq="286">
+                                  <a href="/adm/edc_schdul" target="_self" class=""><span>교육일정관리</span></a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="menu_1_5 has_child" data-menu-seq="282">
+                              <a href="/adm/group_perm" target="_self" class="gnb_monitor"><span>시스템 관리</span></a>
+                              <ul class="hidden menu_depth_2">
+                                <li class="menu_2_0 hidden" data-menu-seq="255">
+                                  <a href="/adm/userMenuManage" target="_self" class=""><span>메뉴관리</span></a>
+                                </li>
+                                <li class="menu_2_1" data-menu-seq="295">
+                                  <a href="/adm/group_perm" target="_self" class=""><span>권한그룹관리</span></a>
+                                </li>
+                                <li class="menu_2_2" data-menu-seq="299">
+                                  <a href="/adm/admin_access_log" target="_self" class=""><span>관리자 접근이력</span></a>
+                                </li>
+                                <li class="menu_2_3" data-menu-seq="301">
+                                  <a href="/adm/cmmn_code" target="_self" class=""><span>공통코드관리</span></a>
+                                </li>
+                                <li class="menu_2_4 has_child" data-menu-seq="303">
+                                  <a href="/adm/ctgry_sbject" target="_self" class=""><span>분류체계관리</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="309">
+                                      <a href="/adm/ctgry_sbject" target="_self" class=""><span>과목분류관리</span></a>
+                                    </li>
+                                    <li class="menu_3_1" data-menu-seq="311">
+                                      <a href="/adm/ctgry_crse" target="_self" class=""><span>과정분류관리</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="menu_2_5" data-menu-seq="305">
+                                  <a href="/adm/send_sms" target="_self" class=""><span>SMS 관리</span></a>
+                                </li>
+                                <li class="menu_2_6 has_child" data-menu-seq="307">
+                                  <a href="/adm/qustnr_qesitm_tmplat" target="_self" class=""><span>설문관리</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="313">
+                                      <a href="/adm/qustnr_qesitm_tmplat" target="_self" class=""><span>문항관리</span></a>
+                                    </li>
+                                    <li class="menu_3_1" data-menu-seq="315">
+                                      <a href="/adm/qestnr_tmplat" target="_self" class=""><span>설문지관리</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="menu_2_7" data-menu-seq="250">
+                                  <a href="/adm/userAdminMenuManage" target="_self" class=""><span>관리자메뉴관리</span></a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="menu_1_6 has_child" data-menu-seq="352">
+                              <a href="/adm/result_reprt" target="_self" class="gnb_member"><span>강사결과보고서</span></a>
+                              <ul class="hidden menu_depth_2">
+                                <li class="menu_2_0" data-menu-seq="354">
+                                  <a href="/adm/result_reprt" target="_self" class=""><span>강사결과보고서</span></a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="menu_1_7" data-menu-seq="256">
+                              <a href="/adm/checkMemberAttend" target="_self" class="gnb_member"><span>출결관리</span></a>
+                            </li>
+                            <li class="menu_1_8 has_child" data-menu-seq="297">
+                              <a href="/adm/stats_edc" target="_self" class="gnb_statistics"><span>통계</span></a>
+                              <ul class="hidden menu_depth_2">
+                                <li class="menu_2_0" data-menu-seq="317">
+                                  <a href="/adm/stats_edc" target="_self" class=""><span>교육통계</span></a>
+                                </li>
+                                <li class="menu_2_1" data-menu-seq="319">
+                                  <a href="/adm/stats_instrctr" target="_self" class=""><span>강사통계</span></a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="menu_1_9 hidden has_child" data-menu-seq="360">
+                              <a href="/adm/adminLectureManage" target="_self" class="gnb_member"><span>강의활동관리</span></a>
+                              <ul class="hidden menu_depth_2">
+                                <li class="menu_2_0" data-menu-seq="361">
+                                  <a href="/adm/aaa" target="_self" class=""><span>과정개설신청</span></a>
+                                </li>
+                                <li class="menu_2_1 has_child" data-menu-seq="362">
+                                  <a href="/adm/bbb" target="_self" class=""><span>차수관리</span></a>
+                                  <ul class="hidden menu_depth_3">
+                                    <li class="menu_3_0" data-menu-seq="363">
+                                      <a href="/adm/aaa" target="_self" class=""><span>이러닝</span></a>
+                                    </li>
+                                    <li class="menu_3_1" data-menu-seq="364">
+                                      <a href="/adm/aaa" target="_self" class=""><span>집합교육</span></a>
+                                    </li>
+                                    <li class="menu_3_2" data-menu-seq="365">
+                                      <a href="/adm/aaa" target="_self" class=""><span>혼합교육</span></a>
+                                    </li>
+                                    <li class="menu_3_3" data-menu-seq="367">
+                                      <a href="/adm/aaa" target="_self" class=""><span>실시간교육</span></a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="menu_2_2" data-menu-seq="366">
+                                  <a href="/adm/aaa" target="_self" class=""><span>자격증</span></a>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+
+                          <script type="text/javascript">
+                            var domId = 'adminDynamicMenuLNB' ? 'adminDynamicMenuLNB' : '';
+
+                            if (domId.toUpperCase().indexOf('LNB') > -1) {
+                              // 계층구조를 이용해 부모까지 a 태그에 active 클래스를 부여한다.
+                              $('#adminDynamicMenuLNB .active')
+                                .parentsUntil('#adminDynamicMenuLNB')
+                                .each(function () {
+                                  $(this).removeClass('hidden').addClass('active');
+                                });
+                            } else {
+                              // GNB일 경우
+                              $('#adminDynamicMenuLNB .active')
+                                .parentsUntil('#adminDynamicMenuLNB')
+                                .each(function () {
+                                  if ($(this).attr('class').indexOf('menu_1_') > -1) {
+                                    $(this).removeClass('hidden').addClass('active');
+                                  }
+                                });
+                            }
+
+                            (function () {
+                              // 하위 메뉴를 가지고 있는 경우 has_child 클래스를 부여한다.
+                              $('#adminDynamicMenuLNB li').each(function (index, item) {
+                                var $li = $(item);
+                                var $ul = $li.find('> ul');
+
+                                if ($ul.length > 0) $li.addClass('has_child');
+                              });
+
+                              // lnb 에 active 적용
+                              var _path = decodeURI(location.href);
+                              // 동일한 문자가 더 많은 메뉴를 판정한다.
+                              var _selectItemPoint = -1;
+                              var $selectItem = null;
+
+                              $('#adminDynamicMenuLNB li').each(function (index, item) {
+                                var $item = $(item);
+                                var href = $item.find('a').attr('href');
+
+                                if (_path.indexOf(href) > -1 && href.length >= _selectItemPoint) {
+                                  _selectItemPoint = href.length;
+                                  $selectItem = $item;
+                                }
+                              });
+
+                              if ($selectItem != null) $selectItem.children().last().find('span').addClass('active_txt');
+                            })();
+
+                            $(function () {
+                              // 관리자 페이지 타이틀 네비게이터
+                              //     	bm.wvLayoutFieldManager.setAdminPageTitle();
+                              bm.wvLayoutFieldManager.setAdminPageTitleAsc();
+                            });
+                          </script>
+                        </div>
+                      </div>
+
+                      <script type="text/javascript">
+                        var setSecond;
+                        var closeSecond;
+                        var newTime;
+
+                        function setCountNumber() {
+                          --setSecond;
+                          if (closeSecond == setSecond) {
+                            clearInterval(newTime);
+                            if (opener) {
+                              self.close();
+                              return;
+                            }
+                            location.href = WEB_ROOT + 'logout';
+                            alert('세션이 종료되어 로그아웃 되었습니다.');
+                          }
+                        }
+
+                        function startCount() {
+                          setSecond = 120 * 60; // 초단위임
+                          closeSecond = 1 * 60;
+                          newTime = setInterval(setCountNumber, 1000);
+                        }
+
+                        $(function () {
+                          startCount();
+                        });
+                      </script>
+                    </div>
+                    <!-- //side -->
+
+                    <!-- contents -->
+                    <div class="contents_wrap h-100 admin_contents_min_height">
+                      <div class="left_margin_border"></div>
+                      <div class="h-100 pl22 pr22 over-hidden contents_con admin_contents_min_height">
+                        <!-- 페이지 타이틀 -->
+                        <div class="col-12 show-table contents_header">
+                          <h3 class="show-tablecell vm fontsize20" data-wv-layout-field="page-title"><span class="asc">강의활동관리</span><span class="asc current_menu_point">출결관리</span></h3>
+                        </div>
+                        <!-- //페이지 타이틀 -->
+
+                        <!-- 페이지 컨텐츠 -->
+                        <div class="col-12 pt30 pb90 contents_body">
+                          <div class="col-12" data-wv-layout-element="layout-page" data-wv-layout-element-param="null">
+                            <div class="col-12" id="adminAttendanceCheckStepView" style="display: block">
+                              <!-- style="float: left; width: 100%; display: block" -->
+                              <div class="panel">
+                                <div class="panel_container">
+                                  <div class="panel_header style_1">
+                                    <div>
+                                      <h4 class="section_title">강의정보</h4>
+                                    </div>
+                                  </div>
+                                  <div class="panel_body bm_slick_grid">
+                                    <div id="crudList2" data-wv-type="list" data-wv-option="{url: '/adm/checkMemberAttend/selectCourseOrderDetailOne', param: {odr_mastr_sn: 7032}}">
+                                      <table style="width: 100%">
+                                        <caption></caption>
+                                        <colgroup>
+                                          <col width="200px" />
+                                          <col width="auto" />
+                                          <col width="auto" />
+                                          <col width="200px" />
+                                        </colgroup>
+                                        <thead>
+                                          <tr>
+                                            <th class="grid_header">교육기간</th>
+                                            <th class="grid_header">단체명</th>
+                                            <th class="grid_header">과정명(차수)</th>
+                                            <th class="grid_header">강사명</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr data-wv-template="">
+                                            <td>2025-09-26 ~ 2025-09-26</td>
+                                            <td>제주대학교</td>
+                                            <td class="brd_tit">[교원양성기관] 응급처치 및 심폐소생술 실습 A형(631차)</td>
+                                            <td>손선영</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                      <div class="nodata tc pt15 pb15" style="display: none">조회된 데이터가 없습니다.</div>
+                                    </div>
+                                  </div>
+                                  <br />
+                                  <!-- 2025.7.31 과목정보 추가 -->
+                                  <div class="panel_body bm_slick_grid" id="crudList3" style="width: 100%" data-wv-type="list" data-wv-option="{url: '/adm/checkMemberAttend/selectCourseRequest', param: {odr_mastr_sn: 7032}}">
+                                    <table>
+                                      <colgroup>
+                                        <col width="200" />
+                                        <col width="auto" />
+                                        <col class="only_group_items" width="auto" />
+                                      </colgroup>
+                                      <thead>
+                                        <tr>
+                                          <th class="grid_header">교시</th>
+                                          <th class="grid_header">과목</th>
+                                          <th class="grid_header only_group_items">시간</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr data-wv-template="">
+                                          <td>1</td>
+                                          <td>응급처치 및 심폐소생술</td>
+                                          <td>10 : 00 ~ 13 : 00</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <div class="nodata tc pt15 pb15" style="display: none">조회된 데이터가 없습니다.</div>
+                                  </div>
+                                  <!-- //과목정보 -->
+                                </div>
+                                <div class="panel_container">
+                                  <div class="panel_header style_1">
+                                    <div>
+                                      <h4 class="section_title">QR 코드 정보</h4>
+                                    </div>
+                                  </div>
+                                  <div class="panel_body bm_slick_grid">
+                                    <div id="crudList" data-wv-type="list" data-wv-option="{url: '/adm/checkMemberAttend/selectCheckCourseData', param: {mode: 'update', odr_mastr_sn: 7032, crse_code : OC000463}, confirmMsg: '저장되었습니다.'}">
+                                      <table style="width: 100%">
+                                        <colgroup>
+                                          <col width="200px" />
+                                          <col class="perAuto" />
+                                          <col width="200px" />
+                                          <col width="200px" />
+                                          <col width="120px" />
+                                          <col width="120px" />
+                                        </colgroup>
+                                        <thead>
+                                          <tr>
+                                            <th class="grid_header">과정코드</th>
+                                            <th class="grid_header">기준시간</th>
+                                            <th class="grid_header">회차</th>
+                                            <th class="grid_header">구분</th>
+                                            <th class="grid_header">출석체크</th>
+                                            <th class="grid_header">삭제</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr data-wv-template="">
+                                            <td>OC000463</td>
+                                            <td class="tc">2025.09.26_12시 30분</td>
+                                            <td>1</td>
+                                            <td>퇴실</td>
+                                            <td>
+                                              <a href="javascript:void(0)" class="btn_small lime" onclick="checkMemberAttend.startQRCheck('7008');"> 출석체크 </a>
+                                            </td>
+                                            <td>
+                                              <a href="javascript:void(0)" class="btn_small lime" onclick="checkMemberAttend.deleteQRCheck('7008');"> 삭제 </a>
+                                            </td>
+                                          </tr>
+                                          <tr data-wv-template="">
+                                            <td>OC000463</td>
+                                            <td class="tc">2025.09.26_10시 30분</td>
+                                            <td>1</td>
+                                            <td>입실</td>
+                                            <td>
+                                              <a href="javascript:void(0)" class="btn_small lime" onclick="checkMemberAttend.startQRCheck('7007');"> 출석체크 </a>
+                                            </td>
+                                            <td>
+                                              <a href="javascript:void(0)" class="btn_small lime" onclick="checkMemberAttend.deleteQRCheck('7007');"> 삭제 </a>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                      <div class="nodata tc pt15 pb15" style="display: none">조회된 데이터가 없습니다.</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- <div class="col-12"> -->
+                                <div class="panel_container">
+                                  <div class="panel_header style_1">
+                                    <div>
+                                      <h4 class="section_title">QR 코드 생성</h4>
+                                    </div>
+                                  </div>
+                                  <div class="mb10">
+                                    <p class="point_red">※ 입실 출석체크 QR 코드 생성 시, 교육시작 시간 +30분으로 생성 ex) 13시 교육 시작 - 13:30으로 생성</p>
+                                    <p class="point_red">※ 퇴실 출석체크 QR 코드 생성 시, 교육종료 시간 -30분으로 생성 ex) 15시 교육 종료 - 14:30으로 생성</p>
+                                  </div>
+                                  <div class="panel_body bm_slick_grid">
+                                    <table style="width: 100%">
+                                      <caption>
+                                        QR 코드 생성 설정
+                                      </caption>
+                                      <colgroup>
+                                        <col class="perAuto" />
+                                        <col class="perAuto" />
+                                        <col class="perAuto" />
+                                        <col class="perAuto" />
+                                      </colgroup>
+                                      <thead>
+                                        <tr>
+                                          <th class="grid_header">기준 일</th>
+                                          <th class="grid_header">기준 시각</th>
+                                          <th class="grid_header">회차</th>
+                                          <th class="grid_header">출석상태</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr data-wv-template="">
+                                          <td>
+                                            <div class="calendar_con">
+                                              <input type="text" placeholder="기간선택" id="atend_date" class="is_calendar" data-wv-handler="{type:datepicker, isClear:true, isVital: true}" data-wv-valid="날짜를 입력해주세요." />
+                                              <a class="btn_del_date fontsize8" data-formrenderer-datepicker-btn-clear="" style="display: none">X</a>
+                                            </div>
+                                          </td>
+                                          <td>
+                                            <select name="atend_hour" class="select_style0" style="width: 100px; margin-right: 24px" id="atend_hour">
+                                              <option value="1">1</option>
+                                              <option value="2">2</option>
+                                              <option value="3">3</option>
+                                              <option value="4">4</option>
+                                              <option value="5">5</option>
+                                              <option value="6">6</option>
+                                              <option value="7">7</option>
+                                              <option value="8">8</option>
+                                              <option value="9">9</option>
+                                              <option value="10">10</option>
+                                              <option value="11">11</option>
+                                              <option value="12">12</option>
+                                              <option value="13">13</option>
+                                              <option value="14">14</option>
+                                              <option value="15">15</option>
+                                              <option value="16">16</option>
+                                              <option value="17">17</option>
+                                              <option value="18">18</option>
+                                              <option value="19">19</option>
+                                              <option value="20">20</option>
+                                              <option value="21">21</option>
+                                              <option value="22">22</option>
+                                              <option value="23">23</option>
+                                            </select>
+                                            :
+                                            <select name="atend_minute" class="select_style0" style="width: 100px; margin-left: 24px" id="atend_minute">
+                                              <option value="1">1</option>
+                                              <option value="2">2</option>
+                                              <option value="3">3</option>
+                                              <option value="4">4</option>
+                                              <option value="5">5</option>
+                                              <option value="6">6</option>
+                                              <option value="7">7</option>
+                                              <option value="8">8</option>
+                                              <option value="9">9</option>
+                                              <option value="10">10</option>
+                                              <option value="11">11</option>
+                                              <option value="12">12</option>
+                                              <option value="13">13</option>
+                                              <option value="14">14</option>
+                                              <option value="15">15</option>
+                                              <option value="16">16</option>
+                                              <option value="17">17</option>
+                                              <option value="18">18</option>
+                                              <option value="19">19</option>
+                                              <option value="20">20</option>
+                                              <option value="21">21</option>
+                                              <option value="22">22</option>
+                                              <option value="23">23</option>
+                                              <option value="24">24</option>
+                                              <option value="25">25</option>
+                                              <option value="26">26</option>
+                                              <option value="27">27</option>
+                                              <option value="28">28</option>
+                                              <option value="29">29</option>
+                                              <option value="30">30</option>
+                                              <option value="31">31</option>
+                                              <option value="32">32</option>
+                                              <option value="33">33</option>
+                                              <option value="34">34</option>
+                                              <option value="35">35</option>
+                                              <option value="36">36</option>
+                                              <option value="37">37</option>
+                                              <option value="38">38</option>
+                                              <option value="39">39</option>
+                                              <option value="40">40</option>
+                                              <option value="41">41</option>
+                                              <option value="42">42</option>
+                                              <option value="43">43</option>
+                                              <option value="44">44</option>
+                                              <option value="45">45</option>
+                                              <option value="46">46</option>
+                                              <option value="47">47</option>
+                                              <option value="48">48</option>
+                                              <option value="49">49</option>
+                                              <option value="50">50</option>
+                                              <option value="51">51</option>
+                                              <option value="52">52</option>
+                                              <option value="53">53</option>
+                                              <option value="54">54</option>
+                                              <option value="55">55</option>
+                                              <option value="56">56</option>
+                                              <option value="57">57</option>
+                                              <option value="58">58</option>
+                                              <option value="59">59</option>
+                                            </select>
+                                          </td>
+                                          <td>
+                                            <select name="atend_time" class="select_style0" style="width: 100px; margin-right: 10px" id="atend_time">
+                                              <option value="1">1</option>
+                                              <option value="2">2</option>
+                                              <option value="3">3</option>
+                                              <option value="4">4</option>
+                                              <option value="5">5</option>
+                                            </select>
+                                          </td>
+                                          <td>
+                                            <select name="req_status" class="select_style0" style="width: 100px; margin-left: 20px" id="req_status">
+                                              <option value="0">입실</option>
+                                              <option value="1">퇴실</option>
+                                              <option value="2">확인</option>
+                                            </select>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                                <div class="panel_util">
+                                  <a href="javascript:void(0)" class="btn_guide blue" id="insertQRCheckData">코드생성</a>
+                                </div>
+                                <!-- </div> -->
+
+                                <div class="panel_container">
+                                  <div class="panel_header style_1">
+                                    <div>
+                                      <h4 class="section_title">수강생 명단</h4>
+                                      <span class="show vm pt10">Total : <span id="crudTotalCount">4</span>건</span>
+                                    </div>
+                                  </div>
+                                  <div class="panel_body bm_slick_grid">
+                                    <table class="acdm-table-list" role="table" aria-label="수강생 명단 목록">
+                                      <caption class="acdm-table-caption">
+                                        수강생 명단 목록 정보를 제공하는 테이블입니다. 이름(아이디), 생년월일, 성별, 단체명, 출석현황(입실, 퇴실) 정보를 포함합니다.
+                                      </caption>
+                                      <colgroup>
+                                        <col />
+                                        <col />
+                                        <col style="width: 150px" />
+                                        <col style="width: 150px" />
+                                      </colgroup>
+                                      <thead class="acdm-table-head">
+                                        <tr>
+                                          <th data-wv-cell="" class="grid_header asc" scope="col" rowspan="2">이름(아이디)</th>
+                                          <th data-wv-cell="" class="grid_header asc" scope="col" rowspan="2">생년월일</th>
+                                          <th data-wv-cell="" class="grid_header asc" scope="col" rowspan="2">성별</th>
+                                          <th data-wv-cell="" class="grid_header asc" scope="col" rowspan="2">단체명</th>
+                                          <th class="grid_header" scope="col" colspan="2">출석현황</th>
+                                        </tr>
+                                        <tr>
+                                          <th class="grid_header" scope="col">입실</th>
+                                          <th class="grid_header" scope="col">퇴실</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td>홍길동(test1234)</td>
+                                          <td>1990</td>
+                                          <td>남</td>
+                                          <td>대한체육회</td>
+                                          <td>
+                                            <span class="mr10">13:35:40</span>
+                                            <button class="btn_small lime">입실처리</button>
+                                          </td>
+                                          <td>
+                                            <span class="mr10">15:50:30</span>
+                                            <button class="btn_small lime">퇴실처리</button>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>홍길동(test1234)</td>
+                                          <td>1990</td>
+                                          <td>남</td>
+                                          <td>대한체육회</td>
+                                          <td>
+                                            <span class="mr10">13:35:40</span>
+                                            <button class="btn_small lime">입실처리</button>
+                                          </td>
+                                          <td>
+                                            <span class="mr10">15:50:30</span>
+                                            <button class="btn_small lime">퇴실처리</button>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>홍길동(test1234)</td>
+                                          <td>1990</td>
+                                          <td>남</td>
+                                          <td>대한체육회</td>
+                                          <td>
+                                            <span class="mr10">13:35:40</span>
+                                            <button class="btn_small lime">입실처리</button>
+                                          </td>
+                                          <td>
+                                            <span class="mr10">15:50:30</span>
+                                            <button class="btn_small lime">퇴실처리</button>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>홍길동(test1234)</td>
+                                          <td>1990</td>
+                                          <td>남</td>
+                                          <td>대한체육회</td>
+                                          <td>
+                                            <span class="mr10">13:35:40</span>
+                                            <button class="btn_small lime">입실처리</button>
+                                          </td>
+                                          <td>
+                                            <span class="mr10">15:50:30</span>
+                                            <button class="btn_small lime">퇴실처리</button>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- contents -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //container -->
+
+                <!-- footer -->
+                <!-- <div class="col-12 mb5 pt22 footer_wrap">
+        <div class="col-12 footer_con">
+            <div class="col-12 tc pt49 pr15 pb60 pl15">
+                <p class="mb17 fontsize13 footer_copy">
+                    Copyright ⓒ Financial Security Institute. All Right reserved.
+                </p>
+                <div>
+                    <img src="http://dev.edu.sportsafety.or.kr/weven_template/theme/_admin_style4_new/1/resource/img/logo.png" alt="로고"/>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+                <!-- //footer -->
+              </div>
+            </div>
+            <!-- //container -->
+
+            <!-- @@include('../../common/footer.html') -->
+        </div>
+    </div>
+    <div id="give-freely-root-mbnbehikldjhnfehhnaidhjhoofhpehk" class="give-freely-root" data-extension-id="mbnbehikldjhnfehhnaidhjhoofhpehk" data-extension-name="CSS Peeper" style="display: block"></div>
+    <convert-webpage-to-pdf-extension data-wxt-shadow-root=""></convert-webpage-to-pdf-extension>
+    <div id="css-checker-widget"></div>
+</body>
+</html>
+

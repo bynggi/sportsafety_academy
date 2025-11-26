@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('../../../common/user/head.html')
+    <link rel="stylesheet" href="/assets/css/user-style.css">
+</head>
+<body data-wv-agent="chrome" data-wv-pc="pc" cz-shortcut-listen="true">
+    <div data-wv-layout="layout" data-wv-layout-element="layout_screen" data-wv-layout-seq="2" data-wv-page-seq="2" data-wv-menu-seq="-1">
+      <div class="wrapper sub">
+            @@include('../../../common/user/header.html')
+
+            <!-- container -->
+           <div class="col-12 contents_container">
+            <div class="col-12 sub_layout_title_con">
+              <div class="col-12 col-center mw-1200 pl30 pr30 pl-md-60 pr-md-60 pl-lg-15 pr-lg-15 sub_layout_title">
+                <div class="img_box">
+                  <img src="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/img/academy_private/academy_sub_layout_web_icon.png" alt="서브레이아웃 이미지" />
+                </div>
+                <div class="desc_box">
+                  <div class="col-12 font_gongGothic sub_title point1">스포츠안전아카데미</div>
+                  <div class="col-12 font_gongGothic title"><span class="point0 font_gongGothic">마이</span>페이지</div>
+                </div>
+              </div>
+              <div class="right_bg"></div>
+            </div>
+            <div class="col-12" data-wv-layout-element="layout-page" data-wv-layout-element-param="null">
+              <style>
+                .course_view_top_contents_con .course_view_top_contents_info_list_con .course_view_top_contents_info_list:last-child li:last-child > span:first-child::after {
+                  height: calc(100% + 1px);
+                  top: -5px;
+                }
+                .course_view_top_contents_con .course_view_top_contents_info_list li > span:first-child::after {
+                  height: calc(100% - 5px);
+                }
+                @media all and (min-width: 1200px) {
+                  .course_view_top_contents_con .course_view_top_contents_info_list_con .course_view_top_contents_info_list:last-child li:last-child > span:first-child::after {
+                    height: calc(100% + 1px);
+                  }
+                }
+              </style>
+              <div class="col-12 mb50 sub_layout_lnb_menu_wrap">
+                <div class="col-12 col-center mw-1200 sub_layout_lnb_menu_con">
+                  <div class="pl15 sub_layout_lnb_active_depth">
+                    <div class="col-12" data-wv-layout-element="menu" data-wv-layout-element-param="%7B%22renderDepth%22%3A2%2C%22domId%22%3A%22lnb%22%2C%22style%22%3Anull%2C%22indexPath%22%3Anull%2C%22extraClass%22%3A%22lnb_menu_con%22%7D">
+                      <ul class="lnb_menu_con menu_con menu_depth_1" id="lnb">
+                        <li class="menu_1_0" data-menu-seq="185">
+                          <a href="/page/main" target="" class=""><span>홈</span></a>
+                        </li>
+                        <li class="menu_1_1" data-menu-seq="193">
+                          <a href="/page/academy_intro" target="" class=""><span>아카데미소개</span></a>
+                          <ul class="menu_con menu_depth_2">
+                            <li class="menu_2_0" data-menu-seq="251">
+                              <a href="/page/academy_intro" target="" class=""><span>교육소개</span></a>
+                            </li>
+                            <li class="menu_2_1" data-menu-seq="252">
+                              <a href="/page/job_analysis" target="" class=""><span>직무 및 역량분석</span></a>
+                            </li>
+                            <li class="menu_2_2" data-menu-seq="253">
+                              <a href="/page/major_curriculum" target="" class=""><span>주요교육과정</span></a>
+                            </li>
+                            <li class="menu_2_3" data-menu-seq="254">
+                              <a href="/page/how_to_apply" target="" class=""><span>신청방법</span></a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="menu_1_2" data-menu-seq="194">
+                          <a href="/page/course_search_list" target="" class=""><span>과정안내/신청</span></a>
+                          <ul class="menu_con menu_depth_2">
+                            <li class="menu_2_0" data-menu-seq="195">
+                              <a href="/page/course_search_list" target="" class=""><span>과정검색</span></a>
+                            </li>
+                            <li class="menu_2_1" data-menu-seq="199">
+                              <a href="/page/course_open_apply" target="" class=""><span>과정개설신청</span></a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="menu_1_3" data-menu-seq="186">
+                          <a href="/page/open_course" target="" class=""><span>오픈강좌</span></a>
+                        </li>
+                        <li class="menu_1_4" data-menu-seq="202">
+                          <a href="/page/notice_list" target="" class=""><span>학습지원센터</span></a>
+                          <ul class="menu_con menu_depth_2">
+                            <li class="menu_2_0" data-menu-seq="203">
+                              <a href="/page/notice_list" target="" class=""><span>공지사항</span></a>
+                            </li>
+                            <li class="menu_2_1" data-menu-seq="205">
+                              <a href="/page/faq" target="" class=""><span>자주하는질문</span></a>
+                            </li>
+                            <li class="menu_2_2" data-menu-seq="206">
+                              <a href="/page/inquiry_list" target="" class=""><span>문의하기</span></a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="menu_1_5 active" data-menu-seq="208">
+                          <a href="/page/my_course_list" target="" class=""><span>마이페이지</span></a>
+                          <ul class="menu_con menu_depth_2 active">
+                            <li class="menu_2_0" data-menu-seq="209">
+                              <a href="/page/my_course_list" target="" class=""><span>나의강의실</span></a>
+                            </li>
+                            <li class="menu_2_2" data-menu-seq="217">
+                              <a href="/page/process_apply_record" target="" class=""><span>과정개설신청이력</span></a>
+                            </li>
+                            <li class="menu_2_3" data-menu-seq="250">
+                              <a href="/page/course_open_history" target="" class=""><span>오픈강좌시청이력</span></a>
+                            </li>
+                            <li class="menu_2_4" data-menu-seq="218">
+                              <a href="/page/mypage_modify" target="" class=""><span>정보수정</span></a>
+                            </li>
+                            <li class="" data-menu-seq="">
+                              <a href="마이페이지_강의활동관리_프로필관리.html" target="" class=""><span>강의활동관리</span></a>
+                            </li>
+                            <li class="active" data-menu-seq="">
+                              <a href="마이페이지_강의결과보고서.html" target="" class=""><span>강의결과보고서</span></a>
+                            </li>
+                            <li class="" data-menu-seq="">
+                              <a href="마이페이지_출결관리.html" target="" class=""><span>출결관리</span></a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+
+                      <script type="text/javascript">
+                        // 계층구조를 이용해 부모까지 a 태그에 active 클래스를 부여한다.
+                        $('#lnb .active')
+                          .parentsUntil('#lnb')
+                          .each(function () {
+                            $(this).removeClass('hidden').addClass('active');
+                          });
+
+                        var loc = location.href;
+
+                        // 모든 자식이 hidden 인경우 부모 ul 도 hidden 시킨다.
+                        (function () {
+                          $('#lnb ul').each(function (index, item) {
+                            var $li = $(item).find('> li');
+                            var len = $li.length;
+                            if (len == 0) return;
+                            $li.each(function () {
+                              if ($(this).hasClass('hidden')) len--;
+                            });
+
+                            if (loc.indexOf('find_pw_search') > -1) {
+                              $(this).removeClass('active').show();
+                            } else if (len == 0) {
+                              $(this).removeClass('active').hide();
+                            }
+                          });
+                        })();
+                      </script>
+                    </div>
+                  </div>
+                  <div class="pr15 sub_layout_lnb_menu_route">
+                    <div class="col-12" data-wv-layout-element="menu" data-wv-layout-element-param="%7B%22renderDepth%22%3A2%2C%22domId%22%3A%22lnb%22%2C%22style%22%3Anull%2C%22indexPath%22%3Anull%2C%22extraClass%22%3A%22lnb_menu_con%22%7D">
+                      <ul class="lnb_menu_con menu_con menu_depth_1" id="lnb">
+                        <li class="menu_1_0" data-menu-seq="185">
+                          <a href="/page/main" target="" class=""><span>홈</span></a>
+                        </li>
+                        <li class="menu_1_1" data-menu-seq="193">
+                          <a href="/page/academy_intro" target="" class=""><span>아카데미소개</span></a>
+                          <ul class="menu_con menu_depth_2">
+                            <li class="menu_2_0" data-menu-seq="251">
+                              <a href="/page/academy_intro" target="" class=""><span>교육소개</span></a>
+                            </li>
+                            <li class="menu_2_1" data-menu-seq="252">
+                              <a href="/page/job_analysis" target="" class=""><span>직무 및 역량분석</span></a>
+                            </li>
+                            <li class="menu_2_2" data-menu-seq="253">
+                              <a href="/page/major_curriculum" target="" class=""><span>주요교육과정</span></a>
+                            </li>
+                            <li class="menu_2_3" data-menu-seq="254">
+                              <a href="/page/how_to_apply" target="" class=""><span>신청방법</span></a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="menu_1_2" data-menu-seq="194">
+                          <a href="/page/course_search_list" target="" class=""><span>과정안내/신청</span></a>
+                          <ul class="menu_con menu_depth_2">
+                            <li class="menu_2_0" data-menu-seq="195">
+                              <a href="/page/course_search_list" target="" class=""><span>과정검색</span></a>
+                            </li>
+                            <li class="menu_2_1" data-menu-seq="199">
+                              <a href="/page/course_open_apply" target="" class=""><span>과정개설신청</span></a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="menu_1_3" data-menu-seq="186">
+                          <a href="/page/open_course" target="" class=""><span>오픈강좌</span></a>
+                        </li>
+                        <li class="menu_1_4" data-menu-seq="202">
+                          <a href="/page/notice_list" target="" class=""><span>학습지원센터</span></a>
+                          <ul class="menu_con menu_depth_2">
+                            <li class="menu_2_0" data-menu-seq="203">
+                              <a href="/page/notice_list" target="" class=""><span>공지사항</span></a>
+                            </li>
+                            <li class="menu_2_1" data-menu-seq="205">
+                              <a href="/page/faq" target="" class=""><span>자주하는질문</span></a>
+                            </li>
+                            <li class="menu_2_2" data-menu-seq="206">
+                              <a href="/page/inquiry_list" target="" class=""><span>문의하기</span></a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="menu_1_5 active" data-menu-seq="208">
+                          <a href="/page/my_course_list" target="" class=""><span>마이페이지</span></a>
+                          <ul class="menu_con menu_depth_2 active">
+                            <li class="menu_2_0" data-menu-seq="209">
+                              <a href="/page/my_course_list" target="" class=""><span>나의강의실</span></a>
+                            </li>
+                            <li class="menu_2_2" data-menu-seq="217">
+                              <a href="/page/process_apply_record" target="" class=""><span>과정개설신청이력</span></a>
+                            </li>
+                            <li class="menu_2_3" data-menu-seq="250">
+                              <a href="/page/course_open_history" target="" class=""><span>오픈강좌시청이력</span></a>
+                            </li>
+                            <li class="menu_2_4" data-menu-seq="218">
+                              <a href="/page/mypage_modify" target="" class=""><span>정보수정</span></a>
+                            </li>
+                            <li class="" data-menu-seq="">
+                              <a href="마이페이지_강의활동관리_프로필관리.html" target="" class=""><span>강의활동관리</span></a>
+                            </li>
+                            <li class="active" data-menu-seq="">
+                              <a href="마이페이지_강의결과보고서.html" target="" class=""><span>강의결과보고서</span></a>
+                            </li>
+                            <li class="" data-menu-seq="">
+                              <a href="마이페이지_출결관리.html" target="" class=""><span>출결관리</span></a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+
+                      <script type="text/javascript">
+                        // 계층구조를 이용해 부모까지 a 태그에 active 클래스를 부여한다.
+                        $('#lnb .active')
+                          .parentsUntil('#lnb')
+                          .each(function () {
+                            $(this).removeClass('hidden').addClass('active');
+                          });
+
+                        var loc = location.href;
+
+                        // 모든 자식이 hidden 인경우 부모 ul 도 hidden 시킨다.
+                        (function () {
+                          $('#lnb ul').each(function (index, item) {
+                            var $li = $(item).find('> li');
+                            var len = $li.length;
+                            if (len == 0) return;
+                            $li.each(function () {
+                              if ($(this).hasClass('hidden')) len--;
+                            });
+
+                            if (loc.indexOf('find_pw_search') > -1) {
+                              $(this).removeClass('active').show();
+                            } else if (len == 0) {
+                              $(this).removeClass('active').hide();
+                            }
+                          });
+                        })();
+                      </script>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12" data-wv-layout-element="pgm-content" data-wv-layout-element-param="%7B%22id%22%3A%22my_lecture%22%7D">
+                <input type="hidden" id="eduStatus" value="END" />
+
+                <input type="hidden" id="eduStatus" value="END" />
+
+                <script>
+                  $(function () {
+                    $('.sportFoundation_filter_style_1_wrap')
+                      .find('.sportFoundation_filter_style_1_mobile_open_btn > span')
+                      .on('click', function () {
+                        if (checkMobileSize()) {
+                          if (!$(this).closest('.sportFoundation_filter_style_1_wrap').hasClass('open')) {
+                            $(this).closest('.sportFoundation_filter_style_1_wrap').addClass('open');
+                          } else {
+                            $(this).closest('.sportFoundation_filter_style_1_wrap').removeClass('open');
+                          }
+                        }
+                      });
+                  });
+                </script>
+                <div class="col-12 col-center mw-1200 mb28 pl30 pr30 pl-md-60 pr-md-60 pl-lg-15 pr-lg-15 contents_top_con">
+                  <div class="col-12 page_title">강의결과보고서</div>
+                </div>
+                <div class="col-12 contents_inner">
+                  <div class="col-12 tab_style_1_wrap">
+                    <div class="col-12 tab_style_1_contents_con">
+                      <!-- 신청과정 -->
+                      <div class="col-12 tab_style_1_contents">
+                        <!-- filter -->
+                        <div class="col-12 mb48 col-center mw-1200 pl30 pr30 pl-md-60 pr-md-60 pl-lg-15 pr-lg-15 sportFoundation_filter_style_1_wrap" id="crudFilter" data-wv-type="filter" data-wv-bind="crudList">
+                          <div class="col-12 sportFoundation_filter_style_1_mobile_open_btn">
+                            <span>강의결과보고서 상세검색</span>
+                          </div>
+                          <div class="col-12 sportFoundation_filter_style_1_contents_con type_2">
+                            <div class="col-12 col-sm-6 mb20 pr-sm-9 pr-md-15 sportFoundation_filter_style_1_contents type_select">
+                              <div class="label_box">
+                                <label for="orgName">단체명</label>
+                              </div>
+                              <div class="contents_box">
+                                <div class="col-12 lms_form_style_list_0_contents_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_contents_box" data-wv-res-id="___lms_form_style_list_0_contents_box___-1___1605856444422___" contenteditable="false" data-wv-removetempid="true">
+                                  <div class="col-12 sportFoundation_input_style_0_con" data-wv-layout-element="block" data-wv-block-id="___lms_input_style_0" data-wv-res-id="___lms_input_style_0___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true">
+                                    <input type="text" class="input_100" id="orgName" placeholder="단체명을 입력해주세요" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-12 col-sm-6 mb20 pl-sm-12 pl-md-20 sportFoundation_filter_style_1_contents">
+                              <div class="label_box">
+                                <label for="contactPersonName">담당자명</label>
+                              </div>
+                              <div class="contents_box">
+                                <div class="col-12 lms_form_style_list_0_contents_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_contents_box" data-wv-res-id="___lms_form_style_list_0_contents_box___-1___1605856444422___" contenteditable="false" data-wv-removetempid="true">
+                                  <div class="col-12 sportFoundation_input_style_0_con" data-wv-layout-element="block" data-wv-block-id="___lms_input_style_0" data-wv-res-id="___lms_input_style_0___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true">
+                                    <input type="text" class="input_100" id="contactPersonName" placeholder="담당자명을 입력해주세요" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-12 col-sm-6 mb20 pr-sm-9 pr-md-15 sportFoundation_filter_style_1_contents type_select">
+                              <div class="label_box">현황</div>
+                              <div class="contents_box">
+                                <div class="col-12 sportFoundation_select_style_1_wrap type_2 pt5">
+                                  <div class="col-12 lms_form_style_list_0_contents_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_contents_box" data-wv-res-id="___lms_form_style_list_0_contents_box___-1___1605856444422___" contenteditable="false" data-wv-removetempid="true">
+                                    <div class="mr10" data-wv-layout-element="block" data-wv-block-id="___lms_radio_style_0" data-wv-res-id="___lms_radio_style_0___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true">
+                                      <input type="radio" name="approval_status" value="Y" id="approval_status1" checked="" />
+                                      <label for="approval_status1">전체</label>
+                                    </div>
+                                    <div class="show mr10" data-wv-layout-element="block" data-wv-block-id="___lms_radio_style_0" data-wv-res-id="___lms_radio_style_0___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true">
+                                      <input type="radio" name="approval_status" value="N" id="approval_status2" />
+                                      <label for="approval_status2">승인</label>
+                                    </div>
+                                    <div class="show mr10" data-wv-layout-element="block" data-wv-block-id="___lms_radio_style_0" data-wv-res-id="___lms_radio_style_0___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true">
+                                      <input type="radio" name="approval_status" value="N" id="approval_status3" />
+                                      <label for="approval_status3">반려</label>
+                                    </div>
+                                    <div class="show mr10" data-wv-layout-element="block" data-wv-block-id="___lms_radio_style_0" data-wv-res-id="___lms_radio_style_0___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true">
+                                      <input type="radio" name="approval_status" value="N" id="approval_status4" />
+                                      <label for="approval_status4">확인중</label>
+                                    </div>
+                                    <div class="show mr10" data-wv-layout-element="block" data-wv-block-id="___lms_radio_style_0" data-wv-res-id="___lms_radio_style_0___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true">
+                                      <input type="radio" name="approval_status" value="N" id="approval_status4" />
+                                      <label for="approval_status4">미제출</label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-12 col-sm-6 mb20 mb-sm-0 pl-sm-12 pl-md-20 sportFoundation_filter_style_1_contents type_period">
+                              <div class="label_box">교육기간</div>
+                              <div class="contents_box">
+                                <div class="col-12 sportFoundation_input_style_0_con type_calendar" data-wv-layout-element="block" data-wv-block-id="___lms_input_style_0" data-wv-res-id="___lms_input_style_0___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true">
+                                  <input type="hidden" data-wv-key="searchKey[]" value="edc_dt_start" />
+                                  <input type="text" name="edc_dt_start" id="edc_dt_start" placeholder="기간선택" data-wv-handler="{type:datepicker, isClear:false}" readonly="" data-wv-key="searchValue[]" />
+                                </div>
+                                <div class="col-0 font_style_15 addr_icon" data-wv-layout-element="block" data-wv-block-id="___font_style_15" data-wv-res-id="___font_style_15___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true" data-wv-layout-element-type="text">-</div>
+                                <div class="col-12 sportFoundation_input_style_0_con type_calendar" data-wv-layout-element="block" data-wv-block-id="___lms_input_style_0" data-wv-res-id="___lms_input_style_0___-1___1605679997802___" contenteditable="false" data-wv-removetempid="true">
+                                  <input type="hidden" data-wv-key="searchKey[]" value="edc_dt_end" />
+                                  <input type="text" name="edc_dt_end" id="edc_dt_end" placeholder="기간선택" data-wv-handler="{type:datepicker, isClear:false}" readonly="" data-wv-key="searchValue[]" />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-12 col-sm-6 pr-sm-9 pr-md-15 sportFoundation_filter_style_1_contents">
+                              <div class="label_box">과정명</div>
+                              <div class="contents_box">
+                                <div class="col-12 sportFoundation_input_style_0_con type_search">
+                                  <input type="hidden" data-wv-key="searchKeyLike[]" value="crse_nm" />
+                                  <input type="text" name="crse_nm" id="crse_nm" data-wv-key="searchValueLike[]" />
+                                  <div class="search_btn bg_point0" data-wv-filtersubmit=""></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-12 col-center mw-1200 pl21 pr21 pl-md-51 pr-md-51 pl-lg-6 pr-lg-6 sport_academy_card_style_0_wrap">
+                          <div class="col-12">
+                            <div class="acdm-table-wrapper">
+                              <div class="acdm-table-controls">
+                                <div class="col-7 col-md-10 control-left">
+                                  <span class="count"><strong>4</strong>건</span>
+                                </div>
+                                <div class="col-5 col-md-2 control-right">
+                                  <div class="col-12 sportFoundation_filter_style_1_contents type_select">
+                                    <div class="sportFoundation_select_style_0_wrap type_2">
+                                      <label for="numPerPaging" class="screen-reader-only">목록 갯수</label>
+                                      <select name="numPerPaging" id="numPerPaging" class="sportFoundation_select_style_0" data-wv-type="choice" data-wv-com="selectbox" style="display: none">
+                                        <option value="">10개씩 보기</option>
+                                        <option value="0">50개씩 보기</option>
+                                        <option value="1">100개씩 보기</option>
+                                        <option value="2">300개씩 보기</option>
+                                        <option value="3">500개씩 보기</option>
+                                        <option value="4">1000개씩 보기</option>
+                                      </select>
+                                      <div class="selected_item_con bm_select_box" style="z-index: 9998">
+                                        <div class="selected_item">10개씩 보기</div>
+                                        <div class="sportFoundation_select_style_0_con">
+                                          <ul class="sportFoundation_select_style_0">
+                                            <li data-value=""><a href="javascript:void(0)">10개씩 보기</a></li>
+                                            <li data-value="0"><a href="javascript:void(0)">50개씩 보기</a></li>
+                                            <li data-value="1"><a href="javascript:void(0)">100개씩 보기</a></li>
+                                            <li data-value="2"><a href="javascript:void(0)">300개씩 보기</a></li>
+                                            <li data-value="3"><a href="javascript:void(0)">500개씩 보기</a></li>
+                                            <li data-value="4"><a href="javascript:void(0)">1000개씩 보기</a></li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="acdm-table-scroll">
+                                <div class="acdm-table-inner">
+                                  <table class="acdm-table-list" role="table" aria-label="강의결과보고서">
+                                    <caption class="acdm-table-caption">
+                                      강의결과보고서 정보를 제공하는 테이블입니다. 번호, 과정명, 교육일시, 단체명, 담당자, 교육위치, 현황, 강의결과보고서, 지급조서 정보를 포함합니다.
+                                    </caption>
+                                    <colgroup>
+                                      <col style="width: 40px" />
+                                      <col />
+                                      <col style="width: 100px" />
+                                      <col />
+                                      <col style="width: 120px" />
+                                      <col />
+                                      <col style="width: 80px" />
+                                      <col style="width: 135px" />
+                                      <col style="width: 135px" />
+                                    </colgroup>
+                                    <thead class="acdm-table-head">
+                                      <tr class="acdm-table-row">
+                                        <th class="acdm-table-header" scope="col">번호</th>
+                                        <th class="acdm-table-header" scope="col">과정명(차수)</th>
+                                        <th class="acdm-table-header" scope="col">교육일시</th>
+                                        <th class="acdm-table-header" scope="col">단체명</th>
+                                        <th class="acdm-table-header" scope="col">담당자(연락처)</th>
+                                        <th class="acdm-table-header" scope="col">교육위치</th>
+                                        <th class="acdm-table-header" scope="col">현황</th>
+                                        <th class="acdm-table-header" scope="col">강의결과보고서</th>
+                                        <th class="acdm-table-header" scope="col">지급조서</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody class="acdm-table-body">
+                                      <tr class="acdm-table-row">
+                                        <td class="acdm-table-cell" data-label="번호">1</td>
+                                        <td class="acdm-table-cell tl fontweight500" data-label="과정명(차수)">
+                                          <a class="view-link" href="http://dev.edu.sportsafety.or.kr/page/process_apply_record?mode=view&seq1=6916&seq2=6614">[법정교육] 체육행사 안전관리 법정교육 과정(안전요원)(19차)</a>
+                                        </td>
+                                        <td class="acdm-table-cell" data-label="교육일시">
+                                          2025-05-12<br class="hidden show-sm-block" />
+                                          10:00 ~ 12:00
+                                        </td>
+                                        <td class="acdm-table-cell" data-label="단체명">단체없음(경남자원봉사센터)</td>
+                                        <td class="acdm-table-cell" data-label="담당자(연락처)">백수진<br class="hidden show-sm-block" />(010-2889-3676)</td>
+                                        <td class="acdm-table-cell tl" data-label="교육위치">경상남도 진주시 내동면 삼계로 430 진주시평생학습관</td>
+                                        <td class="acdm-table-cell fontweight500" data-label="현황">
+                                          <!-- [dev] 상태값 -->
+                                          <span class="point0">승인</span>
+                                          <!-- <span class="point_pink">반려</span>
+                                          <span class="point1">확인중</span>
+                                          <span class="point_orange">미제출</span> -->
+                                        </td>
+                                        <td class="acdm-table-cell" data-label="강의결과보고서">
+                                          <button class="col-sm-12 acdm-btn acdm-btn-sm acdm-btn-primary-outline" onclick="location.href='마이페이지_강의결과보고서_상세.html'">강의결과보고서</button>
+                                        </td>
+                                        <td class="acdm-table-cell" data-label="지급조서">
+                                          <button class="col-sm-12 acdm-btn acdm-btn-sm acdm-btn-primary-outline" onclick="location.href='마이페이지_강의결과보고서_지급조서_수수료집행내역서.html'">지급조서 서명</button>
+                                          <button class="col-sm-12 acdm-btn acdm-btn-sm acdm-btn-primary-outline mt5" onclick="location.href='마이페이지_강의결과보고서_지급조서_교통비집행내역서.html'">교통비지급조서</button>
+                                        </td>
+                                      </tr>
+                                      <tr class="acdm-table-row">
+                                        <td class="acdm-table-cell" data-label="번호">1</td>
+                                        <td class="acdm-table-cell tl fontweight500" data-label="과정명(차수)">
+                                          <a class="view-link" href="http://dev.edu.sportsafety.or.kr/page/process_apply_record?mode=view&seq1=6916&seq2=6614">[공통] 스포츠응급처치 과정 A형(8차)</a>
+                                        </td>
+                                        <td class="acdm-table-cell" data-label="교육일시">
+                                          2025-05-12<br class="hidden show-sm-block" />
+                                          10:00 ~ 12:00
+                                        </td>
+                                        <td class="acdm-table-cell" data-label="단체명">서울올림픽기념국민체육진흥공단</td>
+                                        <td class="acdm-table-cell" data-label="담당자(연락처)">김필성<br class="hidden show-sm-block" />(070-4390-1110)</td>
+                                        <td class="acdm-table-cell tl" data-label="교육위치">대구광역시 수성구 미술관로 88 1층 대구체력인증센터</td>
+                                        <td class="acdm-table-cell fontweight500" data-label="현황">
+                                          <button class="point_pink text-underline openRejectionPopBtn">반려</button>
+                                        </td>
+                                        <td class="acdm-table-cell" data-label="강의결과보고서">
+                                          <button class="col-sm-12 acdm-btn acdm-btn-sm acdm-btn-primary-outline" onclick="location.href='마이페이지_강의결과보고서_상세.html'">강의결과보고서</button>
+                                        </td>
+                                        <td class="acdm-table-cell" data-label="지급조서">
+                                          <button class="col-sm-12 acdm-btn acdm-btn-sm acdm-btn-primary-outline" onclick="location.href='마이페이지_강의결과보고서_지급조서_수수료집행내역서.html'">지급조서 서명</button>
+                                          <button class="col-sm-12 acdm-btn acdm-btn-sm acdm-btn-primary-outline mt5" onclick="location.href='마이페이지_강의결과보고서_지급조서_교통비집행내역서.html'">교통비지급조서</button>
+                                        </td>
+                                      </tr>
+                                      <tr class="acdm-table-row">
+                                        <td class="acdm-table-cell" data-label="번호">3</td>
+                                        <td class="acdm-table-cell tl fontweight500" data-label="과정명(차수)">
+                                          <a class="view-link" href="http://dev.edu.sportsafety.or.kr/page/process_apply_record?mode=view&seq1=6916&seq2=6614">[공통] 스포츠테이핑 과정 B형(2차)</a>
+                                        </td>
+                                        <td class="acdm-table-cell" data-label="교육일시">
+                                          2025-05-12<br class="hidden show-sm-block" />
+                                          10:00 ~ 12:00
+                                        </td>
+                                        <td class="acdm-table-cell" data-label="단체명">단체없음(단체명_250901)</td>
+                                        <td class="acdm-table-cell" data-label="담당자(연락처)">김성우<br class="hidden show-sm-block" />(010-6683-1291)</td>
+                                        <td class="acdm-table-cell tl" data-label="교육위치">대전광역시 서구 대덕대로234번길 46 2층</td>
+                                        <td class="acdm-table-cell fontweight500" data-label="현황">
+                                          <span class="point1">확인중</span>
+                                        </td>
+                                        <td class="acdm-table-cell" data-label="강의결과보고서">
+                                          <button class="col-sm-12 acdm-btn acdm-btn-sm acdm-btn-primary-outline" onclick="location.href='마이페이지_강의결과보고서_상세.html'">강의결과보고서</button>
+                                        </td>
+                                        <td class="acdm-table-cell" data-label="지급조서">
+                                          <button class="col-sm-12 acdm-btn acdm-btn-sm acdm-btn-primary-outline" onclick="location.href='마이페이지_강의결과보고서_지급조서_수수료집행내역서.html'">지급조서 서명</button>
+                                          <button class="col-sm-12 acdm-btn acdm-btn-sm acdm-btn-primary-outline mt5" onclick="location.href='마이페이지_강의결과보고서_지급조서_교통비집행내역서.html'">교통비지급조서</button>
+                                        </td>
+                                      </tr>
+                                      <tr class="acdm-table-row">
+                                        <td class="acdm-table-cell" data-label="번호">4</td>
+                                        <td class="acdm-table-cell tl fontweight500" data-label="과정명(차수)">
+                                          <a class="view-link" href="http://dev.edu.sportsafety.or.kr/page/process_apply_record?mode=view&seq1=6916&seq2=6614">[재단 주관] 체육행사 안전관리 법정교육 과정(안전관리책임자/안전관리자)(22차)</a>
+                                        </td>
+                                        <td class="acdm-table-cell" data-label="교육일시">
+                                          2025-05-12<br class="hidden show-sm-block" />
+                                          10:00 ~ 12:00
+                                        </td>
+                                        <td class="acdm-table-cell" data-label="단체명">서울특별시체육회</td>
+                                        <td class="acdm-table-cell" data-label="담당자(연락처)">데이터쿡_002<br class="hidden show-sm-block" />(010-1111-1111)</td>
+                                        <td class="acdm-table-cell tl" data-label="교육위치">서울특별시 강남구 테헤란로2길 27 405</td>
+                                        <td class="acdm-table-cell fontweight500" data-label="현황">
+                                          <span class="point_orange">미제출</span>
+                                        </td>
+                                        <td class="acdm-table-cell" data-label="강의결과보고서">
+                                          <button class="col-sm-12 acdm-btn acdm-btn-sm acdm-btn-primary-outline" onclick="location.href='마이페이지_강의결과보고서_상세.html'">강의결과보고서</button>
+                                        </td>
+                                        <td class="acdm-table-cell" data-label="지급조서">
+                                          <button class="col-sm-12 acdm-btn acdm-btn-sm acdm-btn-primary-outline" onclick="location.href='마이페이지_강의결과보고서_지급조서_수수료집행내역서.html'">지급조서 서명</button>
+                                          <button class="col-sm-12 acdm-btn acdm-btn-sm acdm-btn-primary-outline mt5" onclick="location.href='마이페이지_강의결과보고서_지급조서_교통비집행내역서.html'">교통비지급조서</button>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-12 pt50 pb30 mb50 nodata_con">
+                              <div class="nodata_icon"><img src="http://dev.edu.sportsafety.or.kr/weven_template/theme/PORTAL/1/resource/img/academy_private/nodata_icon.png" alt="내용없음" /></div>
+                              <div class="font_gongGothic point0 nodata_text">검색된 내용이 없습니다!</div>
+                            </div>
+                          </div>
+                          <!-- pagination -->
+                          <div class="col-12 col-center mw-1200 pl30 pr30 pl-md-60 pr-md-60 pl-lg-15 pr-lg-15 sportFoundation_pagination_style_0_con" data-wv-layout-element="block" data-wv-block-id="___expert_layout_000" data-wv-res-id="___lms_pagination_style_0_con___-1___1606378447219___" contenteditable="false" data-wv-removetempid="true" data-wv-layout-element-type="text" id="crudPaging" data-wv-type="paging" data-wv-option="{selectedIndex:1,numPerPage:10}" data-wv-bind="crudList">
+                            <ul class="paging_button_con" data-wv-comp-pagenavi="" data-wv-pagination-type="custom">
+                              <li class="btn_singlePage" data-wv-page-btn="first">&lt;&lt;</li>
+                              <li class="btn_singlePage" data-wv-page-btn="prev">&lt;</li>
+                              <li class="btn_page first selected" data-wv-page-btn="template">1</li>
+                              <li class="btn_singlePage" data-wv-page-btn="next">&gt;</li>
+                              <li class="btn_singlePage" data-wv-page-btn="last">&gt;&gt;</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            <!-- //container -->
+            @@include('../../../common/user/footer.html')
+        </div>
+    </div>
+    <div class="col-12 lms_popup_style_1_wrap" id="rejectionPop">
+      <div class="col-12 popup_con" style="max-width: 500px">
+        <div class="col-12 popup_inner">
+          <div class="popup_close_btn_wrap">
+            <a href="javascript:void(0)" onclick="popupManager.removePopLatest(true)" class="popup_close_btn_con">
+              <div class="popup_close_btn_bg"></div>
+              <div class="popup_close_btn"></div>
+            </a>
+          </div>
+          <div class="col-12 popup_header_con">
+            <div class="fl font_gongGothic popup_title">반려 사유</div>
+          </div>
+          <div class="col-12 pb50 popup_contents_con type_4">
+            <div class="col-12 popup_contents">
+              <div class="col-12" data-wv-block-id="___lms_table_style_000" data-wv-res-id="___lms_table_style_000___-1___1606198010106___" contenteditable="false">
+                <div class="col-12">
+                  <div class="col-12 pb30 pb-md-0 mb27 mb-md-14 lms_form_style_list_0 type_textarea" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0" data-wv-res-id="___lms_form_style_list_0___0___1605681620338___" contenteditable="false" data-wv-removetempid="true">
+                    <div class="lms_form_style_list_0_label_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_label_box" contenteditable="false" data-wv-res-id="___lms_form_style_list_0_label_box___-1___1605679273106___" data-wv-removetempid="true" data-wv-layout-element-type="text">반려 내용</div>
+                    <div class="col-12 lms_form_style_list_0_contents_box" data-wv-layout-element="block" data-wv-block-id="___lms_form_style_list_0_contents_box" data-wv-res-id="___lms_form_style_list_0_contents_box___-1___1605856444422___" contenteditable="false" data-wv-removetempid="true">
+                      <div class="col-12" data-wv-layout-element="block" data-wv-block-id="___lms_textarea_style_0" contenteditable="false" data-wv-res-id="___lms_textarea_style_0___-1___1605770162768___" data-wv-removetempid="true">
+                        <textarea cols="30" rows="10" placeholder="반려 내용을 입력해주세요" name="requst_matter">강의 내용을 더 입력해 주세요. 사진의 화질이 좋지 않습니다.</textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 acdm-btn-group">
+                    <button class="acdm-btn acdm-btn-secondary-fill">
+                      <span>취소</span>
+                    </button>
+                    <button class="acdm-btn acdm-btn-primary-fill">
+                      <span>확인</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $('.openRejectionPopBtn').on('click', function () {
+          popupManager.add('#rejectionPop');
+        });
+
+        new BMSelectBox($('#numPerPaging')[0]);
+      });
+    </script>
+
+    <div id="give-freely-root-mbnbehikldjhnfehhnaidhjhoofhpehk" class="give-freely-root" data-extension-id="mbnbehikldjhnfehhnaidhjhoofhpehk" data-extension-name="CSS Peeper" style="display: block"></div>
+    <convert-webpage-to-pdf-extension data-wxt-shadow-root=""></convert-webpage-to-pdf-extension>
+    <div id="css-checker-widget"></div>
+</body>
+</html>
+
