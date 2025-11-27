@@ -267,6 +267,19 @@ body#printArea {
 }
 
 @media print {
+  /* 페이지 설정 - 여백 최소화 */
+  @page {
+    size: A4;
+    margin: 5mm;
+  }
+  
+  /* 전역 스타일 초기화 */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
   header,
   footer {
     display: none !important;
@@ -275,9 +288,369 @@ body#printArea {
   body * {
     -webkit-print-color-adjust: exact !important;
   }
-  @page {
-    margin-top: 20px;
+  
+  /* body와 html 초기화 */
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    width: 100%;
+    height: auto;
+    font-family: "맑은 고딕", "Malgun Gothic", sans-serif;
+    font-size: 12px !important;
+    line-height: 1.6;
+  }
+  
+  /* 모든 요소 숨기기 */
+  body > *:not(#print-container-temp) {
+    display: none !important;
+  }
+  
+  /* 인쇄용 임시 컨테이너 표시 */
+  #print-container-temp {
+    display: block !important;
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    box-shadow: none !important; /* 프린트 시 box-shadow 제거 */
+  }
+  
+  /* 임시 컨테이너 내부의 모든 요소 표시 */
+  #print-container-temp > * {
+    display: block !important;
+  }
+  
+  /* print-preview-content 영역 표시 */
+  .print-preview-content {
+    display: block !important;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    box-shadow: none !important; /* 프린트 시 box-shadow 제거 */
+  }
+  
+  /* 모든 print-report-page 관련 요소의 box-shadow 제거 */
+  .print-report-page,
+  .print-report-page *,
+  #print-container-temp * {
+    box-shadow: none !important;
+  }
+  
+  /* 인쇄 영역 스타일 - A4 크기, 여백 최소화 */
+  .print-report-page {
+    display: block !important;
+    position: relative;
+    width: 200mm; /* @page margin 5mm * 2 = 10mm 제외 */
+    min-height: auto !important; /* 빈 페이지 방지 - 내용에 맞게 자동 조정 */
+    margin: 0 auto;
+    padding: 10mm; /* 여백 최소화 */
+    box-shadow: none !important; /* 프린트 시 box-shadow 제거 */
+    border: none !important;
+    page-break-after: always;
+    break-after: page;
+    font-family: "맑은 고딕", "Malgun Gothic", sans-serif !important;
+    font-size: 12px;
+    line-height: 1.6;
+    background: #fff;
+    overflow: visible;
+    box-sizing: border-box;
+  }
+  
+  /* 수정된 부분 251127: 모든 텍스트 요소에 폰트 크기 12px !important 추가 */
+  /* 인쇄 시 모든 텍스트 요소에 맑은 고딕 적용 및 폰트 크기 12px 통일 */
+  .print-report-page,
+  .print-report-page *,
+  .print-report-table,
+  .print-report-table th,
+  .print-report-table td,
+  .acdm-table-wrapper,
+  .acdm-table-detail,
+  .acdm-table-detail th,
+  .acdm-table-detail td,
+  .acdm-table-body,
+  .acdm-table-cell,
+  .print-report-section,
+  .print-report-section-item,
+  .print-report-section-item p,
+  .print-report-section-item strong,
+  .print-report-signature,
+  .print-report-signature-label,
+  .print-report-photos,
+  .print-report-photos-label {
+    font-family: "맑은 고딕", "Malgun Gothic", sans-serif !important;
+    font-size: 12px !important;
+  }
+  
+  /* 마지막 페이지는 페이지 나누기 제거 및 빈 페이지 방지 */
+  .print-report-page:last-of-type {
+    page-break-after: auto !important;
+    break-after: auto !important;
+    min-height: auto !important;
+  }
+  
+  /* 빈 페이지 방지 - 내용이 없는 페이지는 표시하지 않음 */
+  .print-report-page:empty {
+    display: none !important;
+  }
+  
+  /* 페이지 나누기 요소 (화면용과 동일하므로 상속) */
+  
+  /* 타이틀 스타일 - 프린트 시 20px로 설정 */
+  .print-report-title {
+    font-size: 20px !important;
+    font-weight: bold;
     margin-bottom: 20px;
+    text-align: center;
+    font-family: "맑은 고딕", "Malgun Gothic", sans-serif !important;
+  }
+  
+  /* 수정된 부분 251127: 보더 색상 변경 (#000 → #e9ecef) */
+  /* 테이블 스타일 */
+  .print-report-table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-size: 12px;
+    border: 1px solid #e9ecef;
+    margin-bottom: 20px;
+  }
+  
+  .print-report-table th,
+  .print-report-table td {
+    font-size: 12px;
+    padding: 8px;
+    border: 1px solid #e9ecef;
+    text-align: left;
+    vertical-align: top;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .print-report-table th {
+    background: #f5f5f5;
+    font-weight: bold;
+  }
+
+  /* 수정된 부분 251127: 보더 색상 변경 및 헤더/바디 구분 (#000 → #e9ecef, #e9f0f3) */
+  /* acdm-table-detail 인쇄 스타일 */
+  .acdm-table-wrapper .acdm-table-detail {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-size: 12px;
+    border: 1px solid #e9ecef;
+    margin-bottom: 20px;
+  }
+  
+  .acdm-table-detail .acdm-table-head .acdm-table-row {
+    border-top: 1px solid #e9f0f3;
+    border-bottom: 1px solid #e9f0f3;
+  }
+  
+  .acdm-table-detail .acdm-table-body .acdm-table-row {
+    border-top: 1px solid #e9ecef;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .acdm-table-detail .acdm-table-body .acdm-table-cell {
+    font-size: 12px;
+    padding: 8px;
+    border: 1px solid #e9ecef;
+    text-align: left;
+    vertical-align: top;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .acdm-table-detail .acdm-table-body th.acdm-table-cell {
+    background: #f5f5f5;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  /* 수정된 부분 251127: 보더 색상 변경 (#000 → #e9ecef, #e9f0f3) */
+  /* acdm-table-list 인쇄 스타일 */
+  .acdm-table-list {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-size: 12px;
+    border: 1px solid #e9ecef;
+    margin-bottom: 20px;
+  }
+  
+  .acdm-table-list .acdm-table-head .acdm-table-row {
+    border-top: 1px solid #e9f0f3;
+    border-bottom: 1px solid #e9f0f3;
+  }
+  
+  .acdm-table-list .acdm-table-head .acdm-table-row .acdm-table-header {
+    font-size: 12px;
+    padding: 8px;
+    border: 1px solid #e9ecef;
+    text-align: center;
+    vertical-align: middle;
+    background: #f5f5f5;
+    font-weight: bold;
+  }
+  
+  .acdm-table-list .acdm-table-body .acdm-table-row {
+    border-top: 1px solid #e9ecef;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .acdm-table-list .acdm-table-body .acdm-table-cell {
+    font-size: 12px;
+    padding: 8px;
+    border: 1px solid #e9ecef;
+    text-align: left;
+    vertical-align: top;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .acdm-table-list .acdm-table-body .acdm-table-cell.text-center {
+    text-align: center;
+  }
+  
+  .acdm-table-list .acdm-table-body .acdm-table-cell.text-right {
+    text-align: right;
+  }
+  
+  /* 섹션 스타일 */
+  .print-report-section {
+    margin-bottom: 20px;
+    /* 페이지를 넘어가면 자동으로 다음 페이지로 */
+    page-break-inside: auto;
+    break-inside: auto;
+  }
+  
+  .print-report-section-item {
+    margin-bottom: 15px;
+    font-size: 12px;
+    /* 항목이 페이지를 넘어가면 자동으로 다음 페이지로 */
+    page-break-inside: auto;
+    break-inside: auto;
+  }
+  
+  .print-report-section-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .print-report-section-item strong {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    /* 제목은 다음 페이지로 넘어가지 않도록, 하지만 내용이 길면 함께 넘어감 */
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+  
+  .print-report-section-item p {
+    font-size: 12px;
+    line-height: 1.8;
+    margin: 0;
+    text-align: justify;
+    orphans: 3;
+    widows: 3;
+    /* 텍스트가 페이지를 넘어가면 자동으로 다음 페이지로 */
+    page-break-inside: auto;
+    break-inside: auto;
+  }
+  
+  /* 테이블 행이 페이지를 넘어가면 자동으로 다음 페이지로 */
+  .print-report-table tr {
+    /* page-break-inside: avoid 제거 - 행이 길면 다음 페이지로 이동 */
+    page-break-inside: auto;
+    break-inside: auto;
+  }
+  
+  /* 테이블 셀 내용이 길면 자동으로 다음 페이지로 */
+  .print-report-table td {
+    page-break-inside: auto;
+    break-inside: auto;
+  }
+  
+  /* 서명 영역 */
+  .print-report-signature {
+    margin-top: 30px;
+    text-align: right;
+    font-size: 12px;
+    /* 서명 영역이 페이지를 넘어가면 자동으로 다음 페이지로 */
+    page-break-inside: auto;
+    break-inside: auto;
+  }
+  
+  .print-report-signature-label {
+    font-size: 12px;
+  }
+  
+  /* 사진 영역 */
+  .print-report-photos {
+    /* page-break-inside: avoid 제거 - 영역이 넘어가면 다음 페이지로 자동 이동 */
+    page-break-inside: auto;
+    break-inside: auto;
+  }
+  
+  .print-report-photos-label {
+    font-size: 12px;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+  
+  .print-report-photos-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  
+  .print-report-photo-item {
+    flex: 1;
+    width: 50%;
+    /* 이미지가 페이지를 넘어가면 자동으로 다음 페이지로 이동 */
+    page-break-inside: auto;
+    break-inside: auto;
+    page-break-before: auto;
+    break-before: auto;
+    overflow: visible;
+    /* 이미지 항목이 페이지 높이를 초과하면 다음 페이지로 */
+    min-height: 0;
+  }
+  
+  .print-report-photo-item img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+    /* 이미지 자체는 잘리지 않도록, 하지만 페이지를 넘어가면 다음 페이지로 */
+    page-break-inside: avoid;
+    break-inside: avoid;
+    object-fit: contain;
+    /* max-height 제거 - 이미지가 크면 자동으로 다음 페이지로 이동 */
+  }
+  
+  /* 추가 프린트 스타일 요소들 12px 통일 */
+  .print-report-header-info,
+  .print-report-section-label,
+  .print-report-calculation-title,
+  .print-report-date,
+  .print-report-footnotes,
+  .print-report-signature-note {
+    font-size: 12px !important;
+  }
+  
+  .noprint {
+    display: none !important;
   }
   .noprint {
     display: none !important;
@@ -605,24 +978,29 @@ body#printArea {
   .generate-qrcode {grid-template-columns: 1fr;border-radius: 8px;}
 }
 
-/* 인쇄 미리보기 관련 스타일 (관리자단에서 가져옴) */
+
+/* 추가된 부분 251127: 프린트 미리보기 팝업 스타일 */
+/* 팝업 컨텐츠 래퍼 (스크롤 가능 영역) */
 .print-preview-contents-wrapper {
   max-height: calc(100vh - 200px);
   overflow-y: auto;
   padding: 20px;
 }
 
+/* 프린트 미리보기 컨테이너 */
 .print-preview-container {
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
 }
 
+/* 프린트 미리보기 컨텐츠 영역 */
 .print-preview-content {
   width: 100%;
   background: #fff;
 }
 
+/* A4 용지 크기 기준 페이지 레이아웃 (화면 미리보기용) */
 .print-report-page {
   display: flex;
   flex-direction: column;
@@ -636,6 +1014,7 @@ body#printArea {
   box-sizing: border-box;
 }
 
+/* 프린트 리포트 헤더 및 타이틀 */
 .print-report-header {
   text-align: center;
   margin-bottom: 25px;
@@ -647,18 +1026,19 @@ body#printArea {
   margin: 0;
 }
 
+/* 프린트 리포트 테이블 스타일 */
 .print-report-table {
   width: 100%;
   table-layout: fixed;
   border-collapse: collapse;
   margin-bottom: 25px;
-  border: 1px solid #000;
+  border: 1px solid #e9ecef;
   flex-shrink: 0;
 }
 .print-report-table th,
 .print-report-table td {
   padding: 12px;
-  border: 1px solid #000;
+  border: 1px solid #e9ecef;
   text-align: left;
   vertical-align: top;
   font-size: 14px;
@@ -689,6 +1069,7 @@ body#printArea {
   text-align: justify;
 }
 
+/* 페이지 나누기 요소 */
 .print-report-page-break {
   page-break-before: always;
   break-before: page;
@@ -698,6 +1079,7 @@ body#printArea {
   padding: 0;
 }
 
+/* 프린트 리포트 사진 영역 */
 .print-report-photos {
   margin-top: 30px;
 }
@@ -722,6 +1104,7 @@ body#printArea {
   border: 1px solid #ddd;
 }
 
+/* 프린트 리포트 서명 영역 */
 .print-report-signature {
   display: flex;
   justify-content: flex-end;
@@ -817,4 +1200,141 @@ body#printArea {
 
 .print-report-table-margin-top {
   margin-top: 30px;
+}
+
+/* 지급조서 팝업 테이블 스타일 (acdm-table-detail과 동일한 스타일 적용) */
+.payment-voucher-info-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1.4rem;
+  table-layout: fixed;
+  margin-bottom: 20px;
+}
+
+.payment-voucher-info-table thead tr {
+  border-top: 1px solid #e9f0f3;
+  border-bottom: 1px solid #e9f0f3;
+}
+
+.payment-voucher-info-table thead th {
+  padding: 18px 15px;
+  vertical-align: middle;
+  font-weight: 500;
+  color: #353a40;
+  background-color: #f7f8fd;
+  text-align: center;
+  border: 1px solid #e9ecef;
+}
+
+.payment-voucher-info-table thead th:last-child {
+  border-right: none;
+}
+
+.payment-voucher-info-table tbody tr {
+  border-top: 1px solid #e9ecef;
+  border-bottom: 1px solid #e9ecef;
+  transition: background-color 0.2s ease;
+}
+
+.payment-voucher-info-table tbody td {
+  padding: 18px 15px;
+  vertical-align: middle;
+  color: #495057;
+  font-size: 1.4rem;
+  font-weight: 300;
+  background: #fff;
+  border: 1px solid #e9ecef;
+}
+
+.payment-voucher-info-table tbody th {
+  padding: 18px 15px;
+  vertical-align: middle;
+  font-weight: 500;
+  color: #353a40;
+  background-color: #f7f8fd;
+  text-align: center;
+  border: 1px solid #e9ecef;
+}
+
+.payment-voucher-info-table tbody td.text-center {
+  text-align: center;
+}
+
+.payment-voucher-info-table tbody td.text-right {
+  text-align: right;
+}
+
+.payment-voucher-info-table tbody td.vertical-middle {
+  vertical-align: middle;
+}
+
+.payment-voucher-info-table tbody th.vertical-middle {
+  vertical-align: middle;
+}
+
+/* 인쇄 시 스타일 (acdm-table-detail 인쇄 스타일과 동일) */
+@media print {
+  .payment-voucher-info-table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-size: 12px;
+    border: 1px solid #e9ecef;
+    margin-bottom: 20px;
+  }
+  
+  .payment-voucher-info-table thead tr {
+    border-top: 1px solid #e9f0f3;
+    border-bottom: 1px solid #e9f0f3;
+  }
+  
+  .payment-voucher-info-table tbody tr {
+    border-top: 1px solid #e9ecef;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .payment-voucher-info-table tbody th,
+  .payment-voucher-info-table tbody td {
+    font-size: 12px;
+    padding: 8px;
+    border: 1px solid #e9ecef;
+    text-align: left;
+    vertical-align: top;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .payment-voucher-info-table tbody th {
+    background: #f5f5f5;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .payment-voucher-info-table thead th {
+    font-size: 12px;
+    padding: 8px;
+    border: 1px solid #e9ecef;
+    text-align: center;
+    vertical-align: middle;
+    background: #f5f5f5;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .payment-voucher-info-table {
+    page-break-inside: avoid;
+  }
+  
+  .payment-voucher-info-table thead {
+    display: table-header-group;
+  }
+  
+  .payment-voucher-info-table tbody {
+    display: table-row-group;
+  }
+  
+  .payment-voucher-info-table tr {
+    page-break-inside: avoid;
+  }
 }

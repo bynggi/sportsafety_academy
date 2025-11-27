@@ -541,6 +541,7 @@
                         <div class="mr15 font_gongGothic type_2" data-wv-layout-element="block" data-wv-block-id="___lms_btn_style_0" data-wv-res-id="___lms_btn_style_0___-1___1606208813703___" contenteditable="false" data-wv-removetempid="true" data-wv-layout-element-type="text">
                           <span data-wv-res-id="___0___1606209325434___">임시저장</span>
                         </div>
+                        <!-- 추가된 부분 251127: 교통비 집행 내역서 미리보기 팝업 호출 버튼 -->
                         <div class="bg_point1 font_gongGothic" data-wv-layout-element="block" data-wv-block-id="___lms_btn_style_0" data-wv-res-id="___lms_btn_style_0___-1___1606208813703___" contenteditable="false" data-wv-removetempid="true" data-wv-layout-element-type="text" onclick="showPaymentVoucherPop();" style="cursor: pointer;">
                           <span data-wv-res-id="___0___1606209325434___" data-wv-updatebtn="">제출</span>
                         </div>
@@ -560,7 +561,9 @@
         </div>
     </div>
 
-    <!-- 팝업 : 교통비 집행 내역서 출력 미리보기 -->
+    <!-- 추가된 부분 251127: 교통비 집행 내역서 미리보기 팝업 HTML -->
+    <!-- 팝업 기능: 교통비 집행 내역서를 프린트하기 전 미리보기할 수 있는 팝업 -->
+    <!-- 팝업 구조: 헤더(제목) + 컨텐츠 영역(프린트 미리보기) + 액션 버튼 -->
     <div id="paymentVoucherPop" class="col-12 lms_popup_style_1_wrap type_2" style="display: none; z-index: 10003; position: fixed; top: 0px; left: 0px;">
       <div class="col-12 popup_con" style="max-width: 1170px;">
         <div class="col-12 popup_inner">
@@ -590,51 +593,45 @@
                 </div>
 
                 <!-- 지급내역 테이블 -->
-                <div class="acdm-table-wrapper">
-                  <div class="acdm-table-scroll">
-                    <div class="acdm-table-inner">
-                      <table class="acdm-table-list" role="table" aria-label="지급내역">
-                        <caption class="acdm-table-caption">
-                          지급내역 정보를 제공하는 테이블입니다. 순번, 이름, 은행, 계좌번호, 교통비 이동구간, 지급액, 서명 정보를 포함합니다.
-                        </caption>
-                        <colgroup>
-                          <col width="8%" />
-                          <col width="12%" />
-                          <col width="10%" />
-                          <col width="12%" />
-                          <col width="20%" />
-                          <col width="18%" />
-                          <col width="20%" />
-                        </colgroup>
-                        <thead class="acdm-table-head">
-                          <tr class="acdm-table-row">
-                            <th class="acdm-table-header" rowspan="2" scope="col">순번</th>
-                            <th class="acdm-table-header" rowspan="2" scope="col">이름</th>
-                            <th class="acdm-table-header" rowspan="2" scope="col">은행</th>
-                            <th class="acdm-table-header" rowspan="2" scope="col">계좌번호</th>
-                            <th class="acdm-table-header" colspan="2" scope="colgroup">교통비</th>
-                            <th class="acdm-table-header" rowspan="2" scope="col">서명<br /><span class="print-report-signature-note">※개인정보활용<br />동의 포함</span></th>
-                          </tr>
-                          <tr class="acdm-table-row">
-                            <th class="acdm-table-header" scope="col">이동구간</th>
-                            <th class="acdm-table-header" scope="col">지급액</th>
-                          </tr>
-                        </thead>
-                        <tbody class="acdm-table-body">
-                          <tr class="acdm-table-row">
-                            <td class="acdm-table-cell text-center">1</td>
-                            <td class="acdm-table-cell">{{위원명}}</td>
-                            <td class="acdm-table-cell">{{은행}}</td>
-                            <td class="acdm-table-cell">{{계좌번호}}</td>
-                            <td class="acdm-table-cell">{{출발지}} - {{도착지}} ({{거리}}km)</td>
-                            <td class="acdm-table-cell text-right">{{지급액}}원</td>
-                            <td class="acdm-table-cell"></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
+                <table class="payment-voucher-info-table" role="table" aria-label="지급내역">
+                  <caption class="acdm-table-caption">
+                    지급내역 정보를 제공하는 테이블입니다. 순번, 이름, 은행, 계좌번호, 교통비 이동구간, 지급액, 서명 정보를 포함합니다.
+                  </caption>
+                  <colgroup>
+                    <col width="8%" />
+                    <col width="12%" />
+                    <col width="10%" />
+                    <col width="12%" />
+                    <col width="20%" />
+                    <col width="18%" />
+                    <col width="20%" />
+                  </colgroup>
+                  <thead class="acdm-table-head">
+                    <tr class="acdm-table-row">
+                      <th class="acdm-table-header" rowspan="2" scope="col">순번</th>
+                      <th class="acdm-table-header" rowspan="2" scope="col">이름</th>
+                      <th class="acdm-table-header" rowspan="2" scope="col">은행</th>
+                      <th class="acdm-table-header" rowspan="2" scope="col">계좌번호</th>
+                      <th class="acdm-table-header" colspan="2" scope="colgroup">교통비</th>
+                      <th class="acdm-table-header" rowspan="2" scope="col">서명<br /><span class="print-report-signature-note">※개인정보활용<br />동의 포함</span></th>
+                    </tr>
+                    <tr class="acdm-table-row">
+                      <th class="acdm-table-header" scope="col">이동구간</th>
+                      <th class="acdm-table-header" scope="col">지급액</th>
+                    </tr>
+                  </thead>
+                  <tbody class="acdm-table-body">
+                    <tr class="acdm-table-row">
+                      <td class="acdm-table-cell text-center">1</td>
+                      <td class="acdm-table-cell">{{위원명}}</td>
+                      <td class="acdm-table-cell">{{은행}}</td>
+                      <td class="acdm-table-cell">{{계좌번호}}</td>
+                      <td class="acdm-table-cell">{{출발지}} - {{도착지}} ({{거리}}km)</td>
+                      <td class="acdm-table-cell text-right">{{지급액}}원</td>
+                      <td class="acdm-table-cell"></td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
               <div class="print-report-page">
                 <!-- 산출근거 섹션 -->
@@ -656,49 +653,43 @@
                 </div>
 
                 <!-- 확인 테이블 -->
-                <div class="acdm-table-wrapper" style="margin-top: 30px;">
-                  <div class="acdm-table-scroll">
-                    <div class="acdm-table-inner">
-                      <table class="acdm-table-list" role="table" aria-label="확인">
-                        <caption class="acdm-table-caption">
-                          확인 정보를 제공하는 테이블입니다. 구분, 부서, 직급, 이름, 확인 정보를 포함합니다.
-                        </caption>
-                        <colgroup>
-                          <col width="15%" />
-                          <col width="20%" />
-                          <col width="20%" />
-                          <col width="20%" />
-                          <col width="25%" />
-                        </colgroup>
-                        <thead class="acdm-table-head">
-                          <tr class="acdm-table-row">
-                            <th class="acdm-table-header" scope="col">구분</th>
-                            <th class="acdm-table-header" scope="col">부서</th>
-                            <th class="acdm-table-header" scope="col">직급</th>
-                            <th class="acdm-table-header" scope="col">이름</th>
-                            <th class="acdm-table-header" scope="col">확인</th>
-                          </tr>
-                        </thead>
-                        <tbody class="acdm-table-body">
-                          <tr class="acdm-table-row">
-                            <td class="acdm-table-cell">작성자</td>
-                            <td class="acdm-table-cell">안전관리실</td>
-                            <td class="acdm-table-cell">주임</td>
-                            <td class="acdm-table-cell">박</td>
-                            <td class="acdm-table-cell"></td>
-                          </tr>
-                          <tr class="acdm-table-row">
-                            <td class="acdm-table-cell">확인자</td>
-                            <td class="acdm-table-cell">안전관리실</td>
-                            <td class="acdm-table-cell">팀장</td>
-                            <td class="acdm-table-cell">임</td>
-                            <td class="acdm-table-cell"></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
+                <table class="payment-voucher-info-table" role="table" aria-label="확인">
+                  <caption class="acdm-table-caption">
+                    확인 정보를 제공하는 테이블입니다. 구분, 부서, 직급, 이름, 확인 정보를 포함합니다.
+                  </caption>
+                  <colgroup>
+                    <col width="15%" />
+                    <col width="20%" />
+                    <col width="20%" />
+                    <col width="20%" />
+                    <col width="25%" />
+                  </colgroup>
+                  <thead class="acdm-table-head">
+                    <tr class="acdm-table-row">
+                      <th class="acdm-table-header" scope="col">구분</th>
+                      <th class="acdm-table-header" scope="col">부서</th>
+                      <th class="acdm-table-header" scope="col">직급</th>
+                      <th class="acdm-table-header" scope="col">이름</th>
+                      <th class="acdm-table-header" scope="col">확인</th>
+                    </tr>
+                  </thead>
+                  <tbody class="acdm-table-body">
+                    <tr class="acdm-table-row">
+                      <td class="acdm-table-cell">작성자</td>
+                      <td class="acdm-table-cell">안전관리실</td>
+                      <td class="acdm-table-cell">주임</td>
+                      <td class="acdm-table-cell">박</td>
+                      <td class="acdm-table-cell"></td>
+                    </tr>
+                    <tr class="acdm-table-row">
+                      <td class="acdm-table-cell">확인자</td>
+                      <td class="acdm-table-cell">안전관리실</td>
+                      <td class="acdm-table-cell">팀장</td>
+                      <td class="acdm-table-cell">임</td>
+                      <td class="acdm-table-cell"></td>
+                    </tr>
+                  </tbody>
+                </table>
 
                 <!-- 각주 -->
                 <div class="print-report-footnotes">
@@ -709,13 +700,14 @@
             </div>
           </div>
           <div class="col-12 tc" data-wv-layout-element="block" data-wv-block-id="___lms_btn_style_0_con" data-wv-res-id="___lms_btn_style_0_con___-1___1606208948906___" contenteditable="false" data-wv-removetempid="true" style="padding: 20px 0;">
-            <div class="show font_gongGothic bg_point1" data-wv-layout-element="block" onclick="javascript:send();" data-wv-block-id="___lms_btn_style_0" data-wv-res-id="___lms_btn_style_0___-1___1606208813703___" contenteditable="false" data-wv-removetempid="true" data-wv-layout-element-type="text">
-              <span data-wv-res-id="___0___1606209325434___">제출</span>
+            <div class="show font_gongGothic bg_point1" data-wv-layout-element="block" onclick="javascript:printPaymentVoucher();" data-wv-block-id="___lms_btn_style_0" data-wv-res-id="___lms_btn_style_0___-1___1606208813703___" contenteditable="false" data-wv-removetempid="true" data-wv-layout-element-type="text">
+              <span data-wv-res-id="___0___1606209325434___">인쇄</span>
             </div>
           </div>
         </div>
       </div>
     </div>
+<!-- 추가된 부분 251127: 교통비 집행 내역서 미리보기 팝업 제어 스크립트 -->
 <script>
     function showPaymentVoucherPop() {
         document.getElementById('paymentVoucherPop').style.display = 'block';
@@ -725,6 +717,56 @@
     function hidePaymentVoucherPop() {
         document.getElementById('paymentVoucherPop').style.display = 'none';
         document.body.style.overflow = '';
+    }
+    
+    // 인쇄 버튼 클릭 이벤트 - 동적으로 인쇄 영역 준비
+    function printPaymentVoucher() {
+        try {
+            // print-preview-content 영역의 HTML 가져오기
+            const printContent = document.querySelector("#paymentVoucherPop .print-preview-content");
+
+            if (!printContent) {
+                alert("인쇄할 내용을 찾을 수 없습니다.");
+                return;
+            }
+
+            // 인쇄용 임시 컨테이너 생성 (화면에는 보이지 않음)
+            let printContainer = document.getElementById("print-container-temp");
+
+            // 기존 컨테이너가 있으면 제거
+            if (printContainer) {
+                printContainer.remove();
+            }
+
+            // 새로운 인쇄용 컨테이너 생성
+            printContainer = document.createElement("div");
+            printContainer.id = "print-container-temp";
+            printContainer.style.position = "absolute";
+            printContainer.style.left = "-9999px";
+            printContainer.style.top = "-9999px";
+            printContainer.style.width = "1px";
+            printContainer.style.height = "1px";
+            printContainer.style.overflow = "hidden";
+
+            // print-preview-content의 내용 복사
+            printContainer.innerHTML = printContent.innerHTML;
+
+            // body에 추가 (화면에는 보이지 않음)
+            document.body.appendChild(printContainer);
+
+            // 인쇄 실행
+            window.print();
+
+            // 인쇄 후 임시 컨테이너 제거
+            setTimeout(function () {
+                if (printContainer && printContainer.parentNode) {
+                    printContainer.remove();
+                }
+            }, 100);
+        } catch (error) {
+            console.error("인쇄 중 오류 발생:", error);
+            alert("인쇄 중 오류가 발생했습니다.");
+        }
     }
 </script>
 </body>

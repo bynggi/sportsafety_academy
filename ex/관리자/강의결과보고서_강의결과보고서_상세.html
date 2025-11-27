@@ -1602,8 +1602,9 @@
       </div>
     </div>
 
-    <!-- 팝업 -->
-    <!-- 팝업 : 강의결과보고서 출력 미리보기 -->
+    <!-- 추가된 부분 251127: 강의결과보고서 미리보기 팝업 HTML -->
+    <!-- 팝업 기능: 강의결과보고서를 프린트하기 전 미리보기할 수 있는 팝업 -->
+    <!-- 팝업 구조: 헤더(제목) + 컨텐츠 영역(프린트 미리보기) -->
     <div id="printReportPop" class="hidden col-10 popup_wrap">
       <!-- 팝업 타이틀 & 닫기 버튼 -->
       <div class="popup_title_close_con print-preview-header-sticky">
@@ -1627,84 +1628,76 @@
                   <h1 class="print-report-title">강의결과보고서</h1>
                 </div>
 
-                <table class="print-report-table">
-                  <colgroup>
-                    <col width="18%" />
-                    <col width="28%" />
-                    <col width="18%" />
-                    <col width="28%" />
-                    <col width="18%" />
-                    <col width="28%" />
-                  </colgroup>
-                  <tbody>
-                    <tr>
-                      <th>교육분류</th>
-                      <td colspan="5">☑ 법정 ☐ 전문 ☐ 일반 ☐ 자격</td>
-                    </tr>
-                    <tr>
-                      <th>프로그램</th>
-                      <td colspan="5">체육행사 재난사고 대응관리 및 안전점검 실무</td>
-                    </tr>
-                    <tr>
-                      <th>과정명</th>
-                      <td colspan="5">체육행사 안전관리 법정교육 (안전관리책임자/안전관리자)</td>
-                    </tr>
-                    <tr>
-                      <th>교육대상</th>
-                      <td>안전관리책임자/안전관리자</td>
-                      <th>신청기관</th>
-                      <td colspan="3">한국프로스포츠협회</td>
-                    </tr>
-                    <tr>
-                      <th>장소</th>
-                      <td colspan="5">비앤디파트너스 서울역점 강당(서울시 용산구 한강대로 372, KDB 생명타워 지하 2층)</td>
-                    </tr>
-                    <tr>
-                      <th>일시</th>
-                      <td colspan="5">2025년 07월 15일(화요일) 14시 00분 ~ 17시 00분</td>
-                    </tr>
-                    <tr>
-                      <th>이수인원</th>
-                      <td>47명</td>
-                      <th>강사명</th>
-                      <td>안경준</td>
-                      <th>장애여부</th>
-                      <td>비장애</td>
-                    </tr>
-                  </tbody>
-                </table>
-
-                <div class="print-report-section">
-                  <div class="print-report-section-item">
-                    <strong>시설</strong>
-                    <p>
-                      교육장 시설은 교육생들이 모두 착석할 수 있도록 좌석이
-                      준비되어 있었습니다.
-                    </p>
-                  </div>
-                  <div class="print-report-section-item">
-                    <strong>참여자</strong>
-                    <p>
-                      교육 참여자들 중 대부분은 강사가 준비한 교육에 높은 관심을
-                      가져주었습니다.
-                    </p>
-                  </div>
-                  <div class="print-report-section-item">
-                    <strong>신청기관 담당자</strong>
-                    <p>
-                      신청기관 담당자는 사전에 교육에 필요한 사항 및 준비해야 할
-                      사항에 대해 안내해 주었으며, 현장에서는 강사가 강의에
-                      집중할 수 있도록 교육장 시설을 잘 갖춰 주었고, 현장에 항시
-                      대기하며 강사가 강의에 임하였습니다.
-                    </p>
-                  </div>
-                  <div class="print-report-section-item">
-                    <strong>종합</strong>
-                    <p>
-                      잘 갖춰진 교육장 시설과 신청기관 담당자 덕분에 원활한
-                      교육을 진행할 수 있었습니다.
-                    </p>
-                  </div>
+                <div class="acdm-table-wrapper">
+                  <table class="acdm-table-detail" role="table" aria-label="강의결과보고서 상세정보">
+                    <caption class="acdm-table-caption">
+                      강의결과보고서 상세정보를 제공하는 테이블입니다. 교육분류, 프로그램, 과정명, 교육대상, 신청기관, 장소, 일시, 이수인원, 강사명, 장애여부 정보를 포함합니다.
+                    </caption>
+                    <colgroup>
+                      <col width="14%" />
+                      <col width="36%" />
+                      <col width="14%" />
+                      <col width="11%" />
+                      <col width="14%" />
+                      <col width="11%" />
+                    </colgroup>
+                    <tbody class="acdm-table-body">
+                      <tr class="acdm-table-row">
+                        <th class="acdm-table-cell" scope="row">교육분류</th>
+                        <td class="acdm-table-cell" data-label="교육분류">☑ 법정 ☐ 전문 ☐ 일반 ☐ 자격</td>
+                        <th rowspan="2" class="acdm-table-cell" scope="row">프로그램</th>
+                        <td colspan="3" rowspan="2" class="acdm-table-cell" data-label="프로그램">체육행사 재난사고 대응관리 및 안전점검 실무</td>
+                      </tr>
+                      <tr class="acdm-table-row">
+                        <th class="acdm-table-cell" scope="row">과정명</th>
+                        <td class="acdm-table-cell" data-label="과정명">체육행사 안전관리 법정교육 (안전관리책임자/안전관리자)</td>
+                      </tr>
+                      <tr class="acdm-table-row">
+                        <th class="acdm-table-cell" scope="row">교육대상</th>
+                        <td class="acdm-table-cell" data-label="교육대상">안전관리책임자/안전관리자</td>
+                        <th class="acdm-table-cell" scope="row">신청기관</th>
+                        <td colspan="3" class="acdm-table-cell" data-label="신청기관">한국프로스포츠협회</td>
+                      </tr>
+                      <tr class="acdm-table-row">
+                        <th class="acdm-table-cell" scope="row">일시</th>
+                        <td class="acdm-table-cell" data-label="일시">2025년 07월 15일(화요일) 14시 00분 ~ 17시 00분</td>
+                        <th class="acdm-table-cell" scope="row">장소</th>
+                        <td colspan="3" class="acdm-table-cell" data-label="장소">비앤디파트너스 서울역점 강당(서울시 용산구 한강대로 372, KDB 생명타워 지하 2층)</td>
+                      </tr>
+                      <tr class="acdm-table-row">
+                        <th class="acdm-table-cell" scope="row">강사명</th>
+                        <td class="acdm-table-cell" data-label="강사명">안경준</td>
+                        <th class="acdm-table-cell" scope="row">이수인원</th>
+                        <td class="acdm-table-cell" data-label="이수인원">47명</td>
+                        <th class="acdm-table-cell" scope="row">장애여부</th>
+                        <td class="acdm-table-cell" data-label="장애여부">비장애</td>
+                      </tr>
+                      <tr class="acdm-table-row">
+                        <th class="acdm-table-cell" scope="row">시설</th>
+                        <td colspan="5" class="acdm-table-cell" data-label="시설">
+                          교육장 시설은 비앤디파트너스 서울역점 강당으로 교육생들이 모두 착석할 수 있도록 넓은 공간이 마련되어 있었고, 노트북, 화면, 프로젝터, 마이크 등 교육에 필요한 시설이 잘 갖춰져 있었습니다.
+                        </td>
+                      </tr>
+                      <tr class="acdm-table-row">
+                        <th class="acdm-table-cell" scope="row">참여자</th>
+                        <td colspan="5" class="acdm-table-cell" data-label="참여자">
+                          교육 참여자들은 프로야구, 프로축구, 프로농구, 프로배구, 프로골프팀의 안전관리책임자/안전관리자들이었으며, 대부분은 강사가 준비한 교육에 높은 관심을 보였고 휴식시간에 질문을 하는 등 적극적으로 참여하였습니다. 다만 일부 참여자들은 진행 중인 리그로 인해 업무에 집중하는 모습도 있었습니다.
+                        </td>
+                      </tr>
+                      <tr class="acdm-table-row">
+                        <th class="acdm-table-cell" scope="row">신청기관 담당자</th>
+                        <td colspan="5" class="acdm-table-cell" data-label="신청기관 담당자">
+                          신청기관 담당자는 강사에게 사전에 교육에 필요한 사항 및 준비해야 할 사항에 대해 상세히 안내해 주었으며, 현장에서는 강사가 강의에 집중할 수 있도록 교육장 시설을 잘 갖춰 주었고, 현장에 항시 대기하며 강사가 강의에 임할 수 있도록 적극적으로 지원해 주었습니다.
+                        </td>
+                      </tr>
+                      <tr class="acdm-table-row">
+                        <th class="acdm-table-cell" scope="row">종합</th>
+                        <td colspan="5" class="acdm-table-cell" data-label="종합">
+                          잘 갖춰진 교육장 시설과 적극적으로 참여한 교육생들, 그리고 신청기관 담당자의 적극적인 지원 덕분에 교육이 성공적으로 진행되었습니다.
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
                 <div class="print-report-signature">
                   <div class="print-report-signature-label">

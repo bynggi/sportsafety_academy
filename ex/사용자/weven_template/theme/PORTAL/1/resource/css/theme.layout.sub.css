@@ -275,6 +275,12 @@ body#printArea {
   body * {
     -webkit-print-color-adjust: exact !important;
   }
+  
+  body,
+  html {
+    font-size: 12px !important;
+  }
+  
   @page {
     margin-top: 20px;
     margin-bottom: 20px;

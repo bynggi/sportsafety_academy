@@ -10,6 +10,9 @@
 /* 목록 검색영역 검색버튼 */
 /* .sportFoundation_input_style_0_con.type_search {display: flex;align-items: center;justify-content: center;}
 .sportFoundation_input_style_0_con.type_search input + div.search_btn {position: relative;flex-shrink: 0;margin-left: 20px;} */
+/* theme.layout.sub.css */
+.sub_layout_lnb_menu_wrap .sub_layout_lnb_active_depth ul.lnb_menu_con > li.active {padding-right: 50px;}
+.sub_layout_lnb_menu_wrap .sub_layout_lnb_active_depth ul.lnb_menu_con > li.active > ul > li {padding-right: 14px;margin-right: 14px;}
 /* theme.page.sub.css */
 .course_view_top_contents_con.type_2 {position: relative;}
 .course_view_top_contents_con.type_2 .btn-cancle-crse {position: absolute;right: 10px;top: 10px;padding: 8px 20px;font-size: 14px;font-weight: 500;color: #666666;border: 1px solid #E0E0E0;border-radius: 6px;cursor: pointer;transition: all 0.2s ease;white-space: nowrap;}
@@ -119,7 +122,7 @@
   .acdm-table-wrapper .acdm-table-list {min-width: auto;display: block;font-size: 12px;}
   .acdm-table-list .acdm-table-head {overflow: hidden;position: absolute;clip: rect(0, 0, 0, 0);clip-path: polygon(0 0, 0 0, 0 0);width: 1px;height: 1px;margin: -1px;white-space: nowrap;}
   .acdm-table-list .acdm-table-body {display: block;}
-  .acdm-table-list .acdm-table-body .acdm-table-row {display: block;margin-bottom: 16px;border: 1px solid #eceaf7;border-radius: 8px;padding: 16px 20px;background: white;position: relative;}
+  .acdm-table-list .acdm-table-body .acdm-table-row {display: block !important;margin-bottom: 16px;border: 1px solid #eceaf7;border-radius: 8px;padding: 16px 20px;background: white;position: relative;}
   .acdm-table-list .acdm-table-body .acdm-table-row:last-child {margin-bottom: 0;}
   .acdm-table-list .acdm-table-head .acdm-table-header,.acdm-table-list .acdm-table-body .acdm-table-cell {padding: 12px 10px;}
   .acdm-table-list .acdm-table-body .acdm-table-cell {position: relative;display: flex;flex-direction: column;align-items: flex-start;padding: 10px 0;padding-left: 110px;border: none;text-align: left;font-size: 1.4rem;}
@@ -245,4 +248,510 @@
 }
 @media screen and (max-width: 768px) {
   .generate-qrcode {grid-template-columns: 1fr;border-radius: 8px;}
+}
+
+/* 추가된 부분 251127: 프린트 미리보기 팝업 스타일 */
+/* 팝업 컨텐츠 래퍼 (스크롤 가능 영역) */
+.print-preview-contents-wrapper {
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+  padding: 20px;
+}
+
+/* 프린트 미리보기 컨테이너 */
+.print-preview-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* 프린트 미리보기 컨텐츠 영역 */
+.print-preview-content {
+  width: 100%;
+  background: #fff;
+}
+
+/* A4 용지 크기 기준 페이지 레이아웃 (화면 미리보기용) */
+.print-report-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto 20px;
+  padding: 20mm;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* 프린트 리포트 헤더 및 타이틀 */
+.print-report-header {
+  text-align: center;
+  margin-bottom: 25px;
+  flex-shrink: 0;
+}
+
+.print-report-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* 프린트 리포트 테이블 스타일 */
+.print-report-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+  border: 1px solid #e9ecef;
+  flex-shrink: 0;
+}
+
+.print-report-table th,
+.print-report-table td {
+  padding: 12px;
+  border: 1px solid #e9ecef;
+  text-align: left;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.print-report-table th {
+  background: #f5f5f5;
+  font-weight: bold;
+}
+
+.print-report-section-item {
+  margin-bottom: 15px;
+  flex-shrink: 0;
+}
+
+.print-report-section-item:last-child {
+  margin-bottom: 0;
+}
+
+.print-report-section-item strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.print-report-section-item p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.print-report-page-break {
+  page-break-before: always;
+  break-before: page;
+  display: block;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.print-report-photos {
+  margin-top: 30px;
+}
+
+.print-report-photos-label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.print-report-photos-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.print-report-photo-item {
+  flex: 1;
+  width: 50%;
+}
+
+.print-report-photo-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #ddd;
+}
+
+.print-report-signature {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: 40px;
+  text-align: right;
+  position: relative;
+}
+
+.print-report-signature-label {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.print-report-signature-img {
+  display: inline-block;
+  height: 70px;
+}
+
+.print-report-signature-img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.print-report-header-info {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.print-report-section-label {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.print-report-table-fixed {
+  margin-top: 10px;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.print-report-table th.text-center,
+.print-report-table td.text-center {
+  text-align: center;
+}
+
+.print-report-table th.text-right,
+.print-report-table td.text-right {
+  text-align: right;
+}
+
+.print-report-table th.vertical-middle {
+  vertical-align: middle;
+}
+
+.print-report-table td.vertical-middle {
+  vertical-align: middle;
+}
+
+.print-report-signature-note {
+  font-size: 10px;
+}
+
+.print-report-calculation-section {
+  margin-top: 30px;
+}
+
+.print-report-calculation-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.print-report-calculation-image {
+  border: 1px solid #000;
+  padding: 10px;
+  min-height: 200px;
+}
+
+.print-report-calculation-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.print-report-date {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.print-report-footnotes {
+  margin-top: 30px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.print-report-table-margin-top {
+  margin-top: 30px;
+}
+
+/* 지급조서 팝업 테이블 스타일 (acdm-table-detail과 동일한 스타일 적용) */
+.payment-voucher-info-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1.4rem;
+  table-layout: fixed;
+  margin-bottom: 20px;
+}
+
+.payment-voucher-info-table thead tr {
+  border-top: 1px solid #e9f0f3;
+  border-bottom: 1px solid #e9f0f3;
+}
+
+.payment-voucher-info-table thead th {
+  padding: 18px 15px;
+  vertical-align: middle;
+  font-weight: 500;
+  color: #353a40;
+  background-color: #f7f8fd;
+  text-align: center;
+  border: 1px solid #e9ecef;
+}
+
+.payment-voucher-info-table tbody tr {
+  border-top: 1px solid #e9ecef;
+  border-bottom: 1px solid #e9ecef;
+  transition: background-color 0.2s ease;
+}
+
+.payment-voucher-info-table tbody td {
+  padding: 18px 15px;
+  vertical-align: middle;
+  color: #495057;
+  font-size: 1.4rem;
+  font-weight: 300;
+  background: #fff;
+  border: 1px solid #e9ecef;
+}
+
+.payment-voucher-info-table tbody th {
+  padding: 18px 15px;
+  vertical-align: middle;
+  font-weight: 500;
+  color: #353a40;
+  background-color: #f7f8fd;
+  text-align: center;
+  border: 1px solid #e9ecef;
+}
+
+.payment-voucher-info-table tbody td.text-center {
+  text-align: center;
+}
+
+.payment-voucher-info-table tbody td.text-right {
+  text-align: right;
+}
+
+.payment-voucher-info-table tbody td.vertical-middle {
+  vertical-align: middle;
+}
+
+.payment-voucher-info-table tbody th.vertical-middle {
+  vertical-align: middle;
+}
+
+/* 인쇄 시 스타일 (acdm-table-detail 인쇄 스타일과 동일) */
+/* 추가된 부분 251127: 프린트 스타일 개선 */
+/* 프린트 시 모든 폰트 크기를 12px로 통일 및 보더 색상 화면과 동일하게 조정 */
+@media print {
+  /* 페이지 설정 - 여백 최소화 */
+  @page {
+    size: A4;
+    margin: 5mm;
+  }
+  
+  /* 전역 스타일 초기화 */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* body와 html 초기화 */
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    width: 100%;
+    height: auto;
+    font-family: "맑은 고딕", "Malgun Gothic", sans-serif;
+    font-size: 12px !important;
+    line-height: 1.6;
+  }
+  
+  /* 모든 요소 숨기기 */
+  body > *:not(#print-container-temp) {
+    display: none !important;
+  }
+  
+  /* 인쇄용 임시 컨테이너 표시 */
+  #print-container-temp {
+    display: block !important;
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* 임시 컨테이너 내부의 모든 요소 표시 */
+  #print-container-temp > * {
+    display: block !important;
+  }
+  
+  /* print-preview-content 영역 표시 */
+  .print-preview-content {
+    display: block !important;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+  }
+  
+  /* 모든 print-report-page 관련 요소의 box-shadow 제거 */
+  .print-report-page,
+  .print-report-page *,
+  #print-container-temp * {
+    box-shadow: none !important;
+  }
+  
+  /* 인쇄 영역 스타일 - A4 크기, 여백 최소화 */
+  .print-report-page {
+    display: block !important;
+    position: relative;
+    width: 200mm; /* @page margin 5mm * 2 = 10mm 제외 */
+    min-height: auto !important; /* 빈 페이지 방지 - 내용에 맞게 자동 조정 */
+    margin: 0 auto;
+    padding: 10mm; /* 여백 최소화 */
+    box-shadow: none !important; /* 프린트 시 box-shadow 제거 */
+    border: none !important;
+    page-break-after: always;
+    break-after: page;
+    font-family: "맑은 고딕", "Malgun Gothic", sans-serif !important;
+    font-size: 12px;
+    line-height: 1.6;
+    background: #fff;
+    overflow: visible;
+    box-sizing: border-box;
+  }
+  
+  /* 마지막 페이지는 페이지 나누기 제거 및 빈 페이지 방지 */
+  .print-report-page:last-of-type {
+    page-break-after: auto !important;
+    break-after: auto !important;
+    min-height: auto !important;
+  }
+  
+  /* 빈 페이지 방지 - 내용이 없는 페이지는 표시하지 않음 */
+  .print-report-page:empty {
+    display: none !important;
+  }
+  
+  /* 모든 프린트 리포트 요소에 12px 폰트 크기 적용 */
+  .print-report-page,
+  .print-report-page *,
+  .print-report-table,
+  .print-report-table th,
+  .print-report-table td,
+  .acdm-table-wrapper,
+  .acdm-table-detail,
+  .acdm-table-detail th,
+  .acdm-table-detail td,
+  .acdm-table-body,
+  .acdm-table-cell,
+  .print-report-section,
+  .print-report-section-item,
+  .print-report-section-item p,
+  .print-report-section-item strong,
+  .print-report-signature,
+  .print-report-signature-label,
+  .print-report-photos,
+  .print-report-photos-label,
+  .print-report-header-info,
+  .print-report-section-label,
+  .print-report-calculation-title,
+  .print-report-date,
+  .print-report-footnotes,
+  .print-report-signature-note {
+    font-family: "맑은 고딕", "Malgun Gothic", sans-serif !important;
+    font-size: 12px !important;
+  }
+  
+  /* 타이틀 스타일 - 프린트 시 20px로 설정 */
+  .print-report-title {
+    font-size: 20px !important;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: "맑은 고딕", "Malgun Gothic", sans-serif !important;
+  }
+  
+  .payment-voucher-info-table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-size: 12px;
+    border: 1px solid #e9ecef;
+    margin-bottom: 20px;
+  }
+  
+  .payment-voucher-info-table thead tr {
+    border-top: 1px solid #e9f0f3;
+    border-bottom: 1px solid #e9f0f3;
+  }
+  
+  .payment-voucher-info-table tbody tr {
+    border-top: 1px solid #e9ecef;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .payment-voucher-info-table tbody th,
+  .payment-voucher-info-table tbody td {
+    font-size: 12px;
+    padding: 8px;
+    border: 1px solid #e9ecef;
+    text-align: left;
+    vertical-align: top;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .payment-voucher-info-table tbody th {
+    background: #f5f5f5;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .payment-voucher-info-table thead th {
+    font-size: 12px;
+    padding: 8px;
+    border: 1px solid #e9ecef;
+    text-align: center;
+    vertical-align: middle;
+    background: #f5f5f5;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .payment-voucher-info-table {
+    page-break-inside: avoid;
+  }
+  
+  .payment-voucher-info-table thead {
+    display: table-header-group;
+  }
+  
+  .payment-voucher-info-table tbody {
+    display: table-row-group;
+  }
+  
+  .payment-voucher-info-table tr {
+    page-break-inside: avoid;
+  }
 }

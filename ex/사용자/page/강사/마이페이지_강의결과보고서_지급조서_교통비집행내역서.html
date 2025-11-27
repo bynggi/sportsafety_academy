@@ -67,6 +67,152 @@
 
     <script type="text/javascript" charset="utf-8" src="../../weven_service/asset/js/libs/signature_pad/signature_pad.umd.min.js"></script>
 
+    <!-- 추가된 부분 251127: 서명 관련 JavaScript -->
+    <script>
+      let signaturePad;
+
+      // 페이지 로드 시 초기화
+      document.addEventListener('DOMContentLoaded', function () {
+        // SignaturePad 라이브러리가 로드되었는지 확인
+        if (typeof SignaturePad !== 'undefined') {
+          initSignaturePad();
+        } else {
+          // 라이브러리가 아직 로드되지 않은 경우, 약간의 지연 후 재시도
+          setTimeout(function() {
+            if (typeof SignaturePad !== 'undefined') {
+              initSignaturePad();
+            } else {
+              console.error('SignaturePad 라이브러리를 로드할 수 없습니다.');
+            }
+          }, 100);
+        }
+      });
+
+      // 서명패드 초기화
+      function initSignaturePad() {
+        const canvas = document.getElementById('signature-canvas');
+        if (!canvas) return;
+
+        // SignaturePad가 로드되지 않은 경우
+        if (typeof SignaturePad === 'undefined') {
+          console.error('SignaturePad가 로드되지 않았습니다.');
+          return;
+        }
+
+        // CSS 크기 기준으로 해상도 조정
+        resizeCanvasResolution(canvas);
+
+        // SignaturePad 인스턴스 생성
+        signaturePad = new SignaturePad(canvas, {
+          backgroundColor: 'rgba(255, 255, 255, 0)',
+          penColor: 'rgb(0, 0, 0)',
+          minWidth: 1,
+          maxWidth: 3,
+          throttle: 16,
+          minDistance: 5,
+          velocityFilterWeight: 0.7,
+        });
+      }
+
+      // CSS 크기 기준으로 해상도만 조정
+      function resizeCanvasResolution(canvas) {
+        const displayWidth = canvas.offsetWidth;
+        const displayHeight = canvas.offsetHeight;
+        const ratio = Math.min(window.devicePixelRatio || 1, 2);
+
+        canvas.width = displayWidth * ratio;
+        canvas.height = displayHeight * ratio;
+        canvas.style.maxWidth = displayWidth + 'px';
+        canvas.style.height = displayHeight + 'px';
+
+        const ctx = canvas.getContext('2d');
+        ctx.scale(ratio, ratio);
+      }
+
+      // 서명 저장 (캔버스 숨김 + 서명 이미지 표시)
+      function saveSignature() {
+        if (!signaturePad || signaturePad.isEmpty()) {
+          alert('서명을 먼저 작성해주세요.');
+          return;
+        }
+
+        const dataURL = signaturePad.toDataURL('image/png');
+
+        // 캔버스 숨김
+        const canvas = document.getElementById('signature-canvas');
+        if (canvas) {
+          canvas.classList.add('hidden');
+        }
+
+        // instructor-signature 영역 표시 및 이미지 추가
+        const signatureDisplay = document.getElementById('instructor-signature');
+        if (signatureDisplay) {
+          signatureDisplay.innerHTML = '';
+          signatureDisplay.style.display = 'block';
+
+          const img = document.createElement('img');
+          img.src = dataURL;
+          img.alt = '강사 서명';
+          signatureDisplay.appendChild(img);
+        }
+
+        // 저장 버튼 상태 변경
+        const saveBtn = document.getElementById('saveBtn');
+        if (saveBtn) {
+          saveBtn.textContent = '적용 완료';
+          saveBtn.disabled = true;
+        }
+      }
+
+      // 서명 지우기 (캔버스 다시 표시 + 서명 이미지 제거)
+      function clearSignature() {
+        // 캔버스 다시 표시
+        const canvas = document.getElementById('signature-canvas');
+        if (canvas) {
+          canvas.classList.remove('hidden');
+        }
+
+        // 서명 이미지 영역 숨김
+        const signatureDisplay = document.getElementById('instructor-signature');
+        if (signatureDisplay) {
+          signatureDisplay.style.display = 'none';
+          signatureDisplay.innerHTML = '';
+        }
+
+        // 서명 지우기
+        if (signaturePad) {
+          signaturePad.clear();
+        }
+
+        // 저장 버튼 상태 초기화
+        const saveBtn = document.getElementById('saveBtn');
+        if (saveBtn) {
+          saveBtn.textContent = '서명 적용';
+          saveBtn.disabled = false;
+        }
+      }
+
+      // 윈도우 리사이즈 처리
+      let resizeTimeout;
+      window.addEventListener('resize', function () {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+          const canvas = document.getElementById('signature-canvas');
+
+          // 캔버스가 보이는 상태일 때만 리사이즈 처리
+          if (signaturePad && canvas && !canvas.classList.contains('hidden')) {
+            if (!signaturePad.isEmpty()) {
+              const data = signaturePad.toData();
+              resizeCanvasResolution(canvas);
+              signaturePad.fromData(data);
+            } else {
+              resizeCanvasResolution(canvas);
+            }
+          }
+        }, 250);
+      });
+    </script>
+
     <script type="text/javascript">
       var WEB_ROOT = '/';
       var FRONT_ROOT = '/';
@@ -1528,7 +1674,8 @@
                         <div class="mr15 font_gongGothic type_2" data-wv-layout-element="block" data-wv-block-id="___lms_btn_style_0" data-wv-res-id="___lms_btn_style_0___-1___1606208813703___" contenteditable="false" data-wv-removetempid="true" data-wv-layout-element-type="text">
                           <span data-wv-res-id="___0___1606209325434___">임시저장</span>
                         </div>
-                        <div class="bg_point1 font_gongGothic" data-wv-layout-element="block" data-wv-block-id="___lms_btn_style_0" data-wv-res-id="___lms_btn_style_0___-1___1606208813703___" contenteditable="false" data-wv-removetempid="true" data-wv-layout-element-type="text">
+                        <!-- 추가된 부분 251127: 교통비 집행 내역서 미리보기 팝업 호출 버튼 -->
+                        <div class="bg_point1 font_gongGothic" data-wv-layout-element="block" data-wv-block-id="___lms_btn_style_0" data-wv-res-id="___lms_btn_style_0___-1___1606208813703___" contenteditable="false" data-wv-removetempid="true" data-wv-layout-element-type="text" onclick="showPaymentVoucherPop();" style="cursor: pointer;">
                           <span data-wv-res-id="___0___1606209325434___" data-wv-updatebtn="">제출</span>
                         </div>
                       </div>
@@ -1685,122 +1832,218 @@
       </div>
     </div>
 
-    <!-- 팝업 -->
+    <!-- 추가된 부분 251127: 교통비 집행 내역서 미리보기 팝업 HTML -->
+    <!-- 팝업 기능: 교통비 집행 내역서를 프린트하기 전 미리보기할 수 있는 팝업 -->
+    <!-- 팝업 구조: 헤더(제목) + 컨텐츠 영역(프린트 미리보기) + 액션 버튼 -->
+    <div id="paymentVoucherPop" class="col-12 lms_popup_style_1_wrap type_2" style="display: none; z-index: 10003; position: fixed; top: 0px; left: 0px;">
+      <div class="col-12 popup_con" style="max-width: 1170px;">
+        <div class="col-12 popup_inner">
+          <div class="popup_close_btn_wrap" style="border-top-right-radius: 0px;">
+            <a href="javascript:void(0)" onclick="hidePaymentVoucherPop();" class="popup_close_btn_con" aria-label="팝업 닫기">
+              <div class="popup_close_btn_bg"></div>
+              <div class="popup_close_btn"></div>
+            </a>
+          </div>
+          <div class="col-12 popup_header_con">
+            <div class="fl font_gongGothic popup_title">교통비 집행 내역서 출력 미리보기</div>
+          </div>
+          <div class="col-12 popup_contents_con print-preview-contents-wrapper">
+            <div class="print-preview-container">
+              <div class="print-preview-content">
+              <!-- 1페이지: 교통비 집행 내역서 -->
+              <div class="print-report-page">
+                <div class="print-report-header">
+                  <h1 class="print-report-title">교통비 집행 내역서</h1>
+                  <div class="print-report-header-info">
+                    <p>- 집행내역: 2025년도</p>
+                  </div>
+                </div>
+
+                <div class="print-report-section-label">
+                  <p>- 지급내역</p>
+                </div>
+
+                <!-- 지급내역 테이블 -->
+                <table class="payment-voucher-info-table" role="table" aria-label="지급내역">
+                  <caption class="acdm-table-caption">
+                    지급내역 정보를 제공하는 테이블입니다. 순번, 이름, 은행, 계좌번호, 교통비 이동구간, 지급액, 서명 정보를 포함합니다.
+                  </caption>
+                  <colgroup>
+                    <col width="8%" />
+                    <col width="12%" />
+                    <col width="10%" />
+                    <col width="12%" />
+                    <col width="20%" />
+                    <col width="18%" />
+                    <col width="20%" />
+                  </colgroup>
+                  <thead class="acdm-table-head">
+                    <tr class="acdm-table-row">
+                      <th class="acdm-table-header" rowspan="2" scope="col">순번</th>
+                      <th class="acdm-table-header" rowspan="2" scope="col">이름</th>
+                      <th class="acdm-table-header" rowspan="2" scope="col">은행</th>
+                      <th class="acdm-table-header" rowspan="2" scope="col">계좌번호</th>
+                      <th class="acdm-table-header" colspan="2" scope="colgroup">교통비</th>
+                      <th class="acdm-table-header" rowspan="2" scope="col">서명<br /><span class="print-report-signature-note">※개인정보활용<br />동의 포함</span></th>
+                    </tr>
+                    <tr class="acdm-table-row">
+                      <th class="acdm-table-header" scope="col">이동구간</th>
+                      <th class="acdm-table-header" scope="col">지급액</th>
+                    </tr>
+                  </thead>
+                  <tbody class="acdm-table-body">
+                    <tr class="acdm-table-row">
+                      <td class="acdm-table-cell text-center">1</td>
+                      <td class="acdm-table-cell">{{위원명}}</td>
+                      <td class="acdm-table-cell">{{은행}}</td>
+                      <td class="acdm-table-cell">{{계좌번호}}</td>
+                      <td class="acdm-table-cell">{{출발지}} - {{도착지}} ({{거리}}km)</td>
+                      <td class="acdm-table-cell text-right">{{지급액}}원</td>
+                      <td class="acdm-table-cell"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="print-report-page">
+                <!-- 산출근거 섹션 -->
+                <div class="print-report-calculation-section">
+                  <div class="print-report-calculation-title">산출근거 (재단작성)</div>
+                  <div class="print-report-calculation-image">
+                    <img
+                      src="/assets/images/ex/eximg.png"
+                      alt="산출근거 지도"
+                      onerror="this.style.display='none';"
+                    />
+                  </div>
+                </div>
+              </div>
+               <div class="print-report-page">
+                <!-- 날짜 -->
+                <div class="print-report-date">
+                  2025년 {{월}}월 {{일}}일
+                </div>
+
+                <!-- 확인 테이블 -->
+                <table class="payment-voucher-info-table" role="table" aria-label="확인">
+                  <caption class="acdm-table-caption">
+                    확인 정보를 제공하는 테이블입니다. 구분, 부서, 직급, 이름, 확인 정보를 포함합니다.
+                  </caption>
+                  <colgroup>
+                    <col width="15%" />
+                    <col width="20%" />
+                    <col width="20%" />
+                    <col width="20%" />
+                    <col width="25%" />
+                  </colgroup>
+                  <thead class="acdm-table-head">
+                    <tr class="acdm-table-row">
+                      <th class="acdm-table-header" scope="col">구분</th>
+                      <th class="acdm-table-header" scope="col">부서</th>
+                      <th class="acdm-table-header" scope="col">직급</th>
+                      <th class="acdm-table-header" scope="col">이름</th>
+                      <th class="acdm-table-header" scope="col">확인</th>
+                    </tr>
+                  </thead>
+                  <tbody class="acdm-table-body">
+                    <tr class="acdm-table-row">
+                      <td class="acdm-table-cell">작성자</td>
+                      <td class="acdm-table-cell">안전관리실</td>
+                      <td class="acdm-table-cell">주임</td>
+                      <td class="acdm-table-cell">박</td>
+                      <td class="acdm-table-cell"></td>
+                    </tr>
+                    <tr class="acdm-table-row">
+                      <td class="acdm-table-cell">확인자</td>
+                      <td class="acdm-table-cell">안전관리실</td>
+                      <td class="acdm-table-cell">팀장</td>
+                      <td class="acdm-table-cell">임</td>
+                      <td class="acdm-table-cell"></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <!-- 각주 -->
+                <div class="print-report-footnotes">
+                  <p>* 수집된 개인정보는 교통비지급의 목적으로만 사용되며, 타용도로는 사용되지 않습니다.</p>
+                  <p>• 지급된 교통비는 기타소득으로 신고하며, 기타소득에 대한 원천소득공제(8.8%) 공제 한 후 지급</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 tc" data-wv-layout-element="block" data-wv-block-id="___lms_btn_style_0_con" data-wv-res-id="___lms_btn_style_0_con___-1___1606208948906___" contenteditable="false" data-wv-removetempid="true" style="padding: 20px 0;">
+            <div class="show font_gongGothic bg_point1" data-wv-layout-element="block" onclick="javascript:printPaymentVoucher();" data-wv-block-id="___lms_btn_style_0" data-wv-res-id="___lms_btn_style_0___-1___1606208813703___" contenteditable="false" data-wv-removetempid="true" data-wv-layout-element-type="text">
+              <span data-wv-res-id="___0___1606209325434___">인쇄</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div id="give-freely-root-mbnbehikldjhnfehhnaidhjhoofhpehk" class="give-freely-root" data-extension-id="mbnbehikldjhnfehhnaidhjhoofhpehk" data-extension-name="CSS Peeper" style="display: block"></div>
     <convert-webpage-to-pdf-extension data-wxt-shadow-root=""></convert-webpage-to-pdf-extension>
     <div id="css-checker-widget"></div>
 
+    <!-- 추가된 부분 251127: 교통비 집행 내역서 미리보기 팝업 제어 스크립트 -->
     <script>
-      let signaturePad;
+    function showPaymentVoucherPop() {
+        document.getElementById('paymentVoucherPop').style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function hidePaymentVoucherPop() {
+        document.getElementById('paymentVoucherPop').style.display = 'none';
+        document.body.style.overflow = '';
+    }
+    
+    // 인쇄 버튼 클릭 이벤트 - 동적으로 인쇄 영역 준비
+    function printPaymentVoucher() {
+        try {
+            // print-preview-content 영역의 HTML 가져오기
+            const printContent = document.querySelector("#paymentVoucherPop .print-preview-content");
 
-      // 페이지 로드 시 초기화
-      document.addEventListener('DOMContentLoaded', function () {
-        initSignaturePad();
-      });
-
-      // 서명패드 초기화
-      function initSignaturePad() {
-        const canvas = document.getElementById('signature-canvas');
-
-        // CSS 크기 기준으로 해상도 조정
-        resizeCanvasResolution(canvas);
-
-        // SignaturePad 인스턴스 생성
-        signaturePad = new SignaturePad(canvas, {
-          backgroundColor: 'rgba(255, 255, 255, 0)',
-          penColor: 'rgb(0, 0, 0)',
-          minWidth: 1,
-          maxWidth: 3,
-          throttle: 16,
-          minDistance: 5,
-          velocityFilterWeight: 0.7,
-        });
-      }
-
-      // CSS 크기 기준으로 해상도만 조정
-      function resizeCanvasResolution(canvas) {
-        const displayWidth = canvas.offsetWidth;
-        const displayHeight = canvas.offsetHeight;
-        const ratio = Math.min(window.devicePixelRatio || 1, 2);
-
-        canvas.width = displayWidth * ratio;
-        canvas.height = displayHeight * ratio;
-        canvas.style.maxWidth = displayWidth + 'px';
-        canvas.style.height = displayHeight + 'px';
-
-        const ctx = canvas.getContext('2d');
-        ctx.scale(ratio, ratio);
-      }
-
-      // 서명 저장 (캔버스 숨김 + 서명 이미지 표시)
-      function saveSignature() {
-        if (signaturePad.isEmpty()) {
-          alert('서명을 먼저 작성해주세요.');
-          return;
-        }
-
-        const dataURL = signaturePad.toDataURL('image/png');
-
-        // 캔버스 숨김
-        const canvas = document.getElementById('signature-canvas');
-        canvas.classList.add('hidden');
-
-        // instructor-signature 영역 표시 및 이미지 추가
-        const signatureDisplay = document.getElementById('instructor-signature');
-        signatureDisplay.innerHTML = '';
-        signatureDisplay.style.display = 'block';
-
-        const img = document.createElement('img');
-        img.src = dataURL;
-        img.alt = '강사 서명';
-        signatureDisplay.appendChild(img);
-
-        // 저장 버튼 상태 변경
-        const saveBtn = document.getElementById('saveBtn');
-        saveBtn.textContent = '적용 완료';
-        saveBtn.disabled = true;
-      }
-
-      // 서명 지우기 (캔버스 다시 표시 + 서명 이미지 제거)
-      function clearSignature() {
-        // 캔버스 다시 표시
-        const canvas = document.getElementById('signature-canvas');
-        canvas.classList.remove('hidden');
-
-        // 서명 이미지 영역 숨김
-        const signatureDisplay = document.getElementById('instructor-signature');
-        signatureDisplay.style.display = 'none';
-        signatureDisplay.innerHTML = '';
-
-        // 서명 지우기
-        signaturePad.clear();
-
-        // 저장 버튼 상태 초기화
-        const saveBtn = document.getElementById('saveBtn');
-        saveBtn.textContent = '서명 적용';
-        saveBtn.disabled = false;
-      }
-
-      // 윈도우 리사이즈 처리
-      let resizeTimeout;
-      window.addEventListener('resize', function () {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(() => {
-          const canvas = document.getElementById('signature-canvas');
-
-          // 캔버스가 보이는 상태일 때만 리사이즈 처리
-          if (signaturePad && !canvas.classList.contains('hidden')) {
-            if (!signaturePad.isEmpty()) {
-              const data = signaturePad.toData();
-              resizeCanvasResolution(canvas);
-              signaturePad.fromData(data);
-            } else {
-              resizeCanvasResolution(canvas);
+            if (!printContent) {
+                alert("인쇄할 내용을 찾을 수 없습니다.");
+                return;
             }
-          }
-        }, 250);
-      });
+
+            // 인쇄용 임시 컨테이너 생성 (화면에는 보이지 않음)
+            let printContainer = document.getElementById("print-container-temp");
+
+            // 기존 컨테이너가 있으면 제거
+            if (printContainer) {
+                printContainer.remove();
+            }
+
+            // 새로운 인쇄용 컨테이너 생성
+            printContainer = document.createElement("div");
+            printContainer.id = "print-container-temp";
+            printContainer.style.position = "absolute";
+            printContainer.style.left = "-9999px";
+            printContainer.style.top = "-9999px";
+            printContainer.style.width = "1px";
+            printContainer.style.height = "1px";
+            printContainer.style.overflow = "hidden";
+
+            // print-preview-content의 내용 복사
+            printContainer.innerHTML = printContent.innerHTML;
+
+            // body에 추가 (화면에는 보이지 않음)
+            document.body.appendChild(printContainer);
+
+            // 인쇄 실행
+            window.print();
+
+            // 인쇄 후 임시 컨테이너 제거
+            setTimeout(function () {
+                if (printContainer && printContainer.parentNode) {
+                    printContainer.remove();
+                }
+            }, 100);
+        } catch (error) {
+            console.error("인쇄 중 오류 발생:", error);
+            alert("인쇄 중 오류가 발생했습니다.");
+        }
+    }
     </script>
   </body>
 </html>

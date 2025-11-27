@@ -1066,7 +1066,9 @@
         </div>
     </div>
 
-    <!-- 팝업 : 수당 등 수수료 집행 내역서 출력 미리보기 -->
+    <!-- 추가된 부분 251127: 교통비 집행 내역서 미리보기 팝업 HTML -->
+    <!-- 팝업 기능: 교통비 집행 내역서를 프린트하기 전 미리보기할 수 있는 팝업 -->
+    <!-- 팝업 구조: 헤더(제목) + 컨텐츠 영역(프린트 미리보기) -->
     <div id="paymentVoucherPop" class="hidden col-10 popup_wrap">
       <!-- 팝업 타이틀 & 닫기 버튼 -->
       <div class="popup_title_close_con print-preview-header-sticky">
@@ -1098,7 +1100,10 @@
                 </div>
 
                 <!-- 지급내역 테이블 -->
-                <table class="print-report-table print-report-table-fixed">
+                 <table class="payment-voucher-info-table" role="table" aria-label="지급내역">
+                  <caption class="acdm-table-caption">
+                    지급내역 정보를 제공하는 테이블입니다. 순번, 이름, 은행, 계좌번호, 교통비 이동구간, 지급액, 서명 정보를 포함합니다.
+                  </caption>
                   <colgroup>
                     <col width="8%" />
                     <col width="12%" />
@@ -1108,29 +1113,29 @@
                     <col width="18%" />
                     <col width="20%" />
                   </colgroup>
-                  <thead>
-                    <tr>
-                      <th rowspan="2" class="text-center vertical-middle">순번</th>
-                      <th rowspan="2" class="text-center vertical-middle">이름</th>
-                      <th rowspan="2" class="text-center vertical-middle">은행</th>
-                      <th rowspan="2" class="text-center vertical-middle">계좌번호</th>
-                      <th colspan="2" class="text-center">교통비</th>
-                      <th rowspan="2" class="text-center vertical-middle">서명<br /><span class="print-report-signature-note">※개인정보활용<br />동의 포함</span></th>
+                  <thead class="acdm-table-head">
+                    <tr class="acdm-table-row">
+                      <th class="acdm-table-header" rowspan="2" scope="col">순번</th>
+                      <th class="acdm-table-header" rowspan="2" scope="col">이름</th>
+                      <th class="acdm-table-header" rowspan="2" scope="col">은행</th>
+                      <th class="acdm-table-header" rowspan="2" scope="col">계좌번호</th>
+                      <th class="acdm-table-header" colspan="2" scope="colgroup">교통비</th>
+                      <th class="acdm-table-header" rowspan="2" scope="col">서명<br /><span class="print-report-signature-note">※개인정보활용<br />동의 포함</span></th>
                     </tr>
-                    <tr>
-                      <th class="text-center">이동구간</th>
-                      <th class="text-center">지급액</th>
+                    <tr class="acdm-table-row">
+                      <th class="acdm-table-header" scope="col">이동구간</th>
+                      <th class="acdm-table-header" scope="col">지급액</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <td class="text-center">1</td>
-                      <td>{{위원명}}</td>
-                      <td>{{은행}}</td>
-                      <td>{{계좌번호}}</td>
-                      <td>{{출발지}} - {{도착지}} ({{거리}}km)</td>
-                      <td class="text-right">{{지급액}}원</td>
-                      <td></td>
+                  <tbody class="acdm-table-body">
+                    <tr class="acdm-table-row">
+                      <td class="acdm-table-cell text-center">1</td>
+                      <td class="acdm-table-cell">{{위원명}}</td>
+                      <td class="acdm-table-cell">{{은행}}</td>
+                      <td class="acdm-table-cell">{{계좌번호}}</td>
+                      <td class="acdm-table-cell">{{출발지}} - {{도착지}} ({{거리}}km)</td>
+                      <td class="acdm-table-cell text-right">{{지급액}}원</td>
+                      <td class="acdm-table-cell"></td>
                     </tr>
                   </tbody>
                 </table>
@@ -1155,7 +1160,10 @@
                 </div>
 
                 <!-- 확인 테이블 -->
-                <table class="print-report-table print-report-table-margin-top">
+                <table class="payment-voucher-info-table" role="table" aria-label="확인">
+                  <caption class="acdm-table-caption">
+                    확인 정보를 제공하는 테이블입니다. 구분, 부서, 직급, 이름, 확인 정보를 포함합니다.
+                  </caption>
                   <colgroup>
                     <col width="15%" />
                     <col width="20%" />
@@ -1163,29 +1171,29 @@
                     <col width="20%" />
                     <col width="25%" />
                   </colgroup>
-                  <thead>
-                    <tr>
-                      <th class="text-center">구분</th>
-                      <th class="text-center">부서</th>
-                      <th class="text-center">직급</th>
-                      <th class="text-center">이름</th>
-                      <th class="text-center">확인</th>
+                  <thead class="acdm-table-head">
+                    <tr class="acdm-table-row">
+                      <th class="acdm-table-header" scope="col">구분</th>
+                      <th class="acdm-table-header" scope="col">부서</th>
+                      <th class="acdm-table-header" scope="col">직급</th>
+                      <th class="acdm-table-header" scope="col">이름</th>
+                      <th class="acdm-table-header" scope="col">확인</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <td>작성자</td>
-                      <td>안전관리실</td>
-                      <td>주임</td>
-                      <td>박</td>
-                      <td></td>
+                  <tbody class="acdm-table-body">
+                    <tr class="acdm-table-row">
+                      <td class="acdm-table-cell">작성자</td>
+                      <td class="acdm-table-cell">안전관리실</td>
+                      <td class="acdm-table-cell">주임</td>
+                      <td class="acdm-table-cell">박</td>
+                      <td class="acdm-table-cell"></td>
                     </tr>
-                    <tr>
-                      <td>확인자</td>
-                      <td>안전관리실</td>
-                      <td>팀장</td>
-                      <td>임</td>
-                      <td></td>
+                    <tr class="acdm-table-row">
+                      <td class="acdm-table-cell">확인자</td>
+                      <td class="acdm-table-cell">안전관리실</td>
+                      <td class="acdm-table-cell">팀장</td>
+                      <td class="acdm-table-cell">임</td>
+                      <td class="acdm-table-cell"></td>
                     </tr>
                   </tbody>
                 </table>
