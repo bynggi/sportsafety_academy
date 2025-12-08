@@ -27,6 +27,8 @@
       .list-dot > li:before {content: '';position: absolute;display: inline-block;top: 10px;left: 0;width: 2px;height: 2px;background: #666;}
       .text-blue {color: #4573f0;}
       .text-red {color: #d11515;}
+      .text-green {color: #28a745;font-weight: 600;}
+      .updated-page::after {content: ' ✓';color: #28a745;font-weight: bold;margin-left: 5px;}
       table,tr,td,th {border-collapse: collapse;border-spacing: 0px;}
       caption {width: 0;height: 0;font-size: 0;overflow: hidden;padding: 0;margin: 0;}
     </style>
@@ -41,6 +43,7 @@
         [스포츠안전재단] 아카데미 고도화 관련 퍼블 작업물입니다. <br />
         'SSES_PO_18_01_화면설계서_Ver0.4_250916.pptx' 기준으로 현행화 작업 완료. (25-09-22) <br />
         dev서버의 소스를 다운로드 받아서 수정 및 추가되는 페이지만 작업했습니다.<br />
+        <span class="text-green">✓ 표시는 최근 수정된 페이지입니다.</span><br />
       </p>
       <div class="table-style">
         <table>
@@ -107,7 +110,7 @@
             <tr>
               <td>나의강의실</td>
               <td>수강신청이력</td>
-              <td><a href="사용자/page/수강생/마이페이지_나의강의실_수강신청이력.html" target="_blank">마이페이지_나의강의실_수강신청이력.html</a></td>
+              <td><a href="사용자/page/수강생/마이페이지_나의강의실_수강신청이력.html" target="_blank" class="updated-page">마이페이지_나의강의실_수강신청이력.html</a> <span class="text-green" style="font-size: 12px;">(수정: 2025-12-08 - 수료증 css배치수정)</span></td>
             </tr>
             <tr>
               <td>나의강의실</td>

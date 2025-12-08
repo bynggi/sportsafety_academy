@@ -1343,7 +1343,7 @@
                               <div class="acdm-table-inner">
                                 <table class="acdm-table-list" role="table" aria-label="과정 신청 현황">
                                   <caption class="acdm-table-caption">
-                                    과정 신청 현황 정보를 제공하는 테이블입니다. 구분, 교육형태, 과정명, 신청기간, 교육기간, 현황, 강의실, 설문조사, 수료증 정보를 포함합니다.
+                                    과정 신청 현황 정보를 제공하는 테이블입니다. 구분, 교육형태, 과정명, 신청기간, 교육기간, 현황, 강의실, 설문조사, 수료증, 자격취득확인서 정보를 포함합니다.
                                   </caption>
                                   <colgroup>
                                     <col style="width: 80px" />
@@ -1352,6 +1352,7 @@
                                     <col style="width: 100px" />
                                     <col style="width: 100px" />
                                     <col style="width: 80px" />
+                                    <col style="width: 125px" />
                                     <col style="width: 125px" />
                                     <col style="width: 125px" />
                                     <col style="width: 125px" />
@@ -1367,6 +1368,7 @@
                                       <th class="acdm-table-header" scope="col">강의실</th>
                                       <th class="acdm-table-header" scope="col">설문조사</th>
                                       <th class="acdm-table-header" scope="col">수료증</th>
+                                      <th class="acdm-table-header" scope="col">자격취득확인서</th>
                                     </tr>
                                   </thead>
                                   <tbody class="acdm-table-body">
@@ -1390,6 +1392,9 @@
                                       <td class="acdm-table-cell" data-label="수료증">
                                         <button class="acdm-btn acdm-btn-sm acdm-btn-primary-outline" onclick="certificate.openPop('N', 182244);">수료증 출력</button>
                                       </td>
+                                      <td class="acdm-table-cell" data-label="자격취득확인서">
+                                        <button class="acdm-btn acdm-btn-sm acdm-btn-primary-outline" onclick="certificate.openPop('Q', 182244);">확인서 출력</button>
+                                      </td>
                                     </tr>
                                     <tr class="acdm-table-row">
                                       <td class="acdm-table-cell" data-label="구분">일반교육</td>
@@ -1410,6 +1415,9 @@
                                       </td>
                                       <td class="acdm-table-cell" data-label="수료증">
                                         <button class="acdm-btn acdm-btn-sm acdm-btn-primary-outline" onclick="certificate.openPop('N', 182244);">수료증 출력</button>
+                                      </td>
+                                      <td class="acdm-table-cell" data-label="자격취득확인서">
+                                        <button class="acdm-btn acdm-btn-sm acdm-btn-primary-outline" onclick="certificate.openPop('Q', 182244);">확인서 출력</button>
                                       </td>
                                     </tr>
                                     <tr class="acdm-table-row">
@@ -1432,6 +1440,9 @@
                                       <td class="acdm-table-cell" data-label="수료증">
                                         <button class="acdm-btn acdm-btn-sm acdm-btn-primary-outline" onclick="certificate.openPop('N', 182244);">수료증 출력</button>
                                       </td>
+                                      <td class="acdm-table-cell" data-label="자격취득확인서">
+                                        <button class="acdm-btn acdm-btn-sm acdm-btn-primary-outline" onclick="certificate.openPop('Q', 182244);">확인서 출력</button>
+                                      </td>
                                     </tr>
                                   </tbody>
                                 </table>
@@ -1444,57 +1455,83 @@
                   </div>
                 </div>
               </div>
-              <!-- 자격취득 확인서 출력 팝업-->
-              <!-- style="display: block; z-index: 10006; position: fixed; top: 0; left: 0" -->
-              <div class="col-12 lms_popup_style_1_wrap type_2" id="printQualCertificatePopup">
-                <div class="col-12 popup_con" style="max-width: 1170px">
-                  <div class="col-12 popup_inner">
-                    <div class="col-12 popup_header_con">
-                      <div class="col-8 col-md-0 fl font_gongGothic popup_title">자격취득 확인서 출력</div>
-                      <div class="popup_close_btn_wrap">
-                        <a href="javascript:void(0)" onclick="popupManager.removePopLatest()" class="popup_close_btn_con">
-                          <div class="popup_close_btn_bg"></div>
-                          <div class="popup_close_btn"></div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="col-12 popup_contents_con">
-                      <div class="col-12 popup_contents type_info">
-                        <div class="col-12 mb36 mb-md-46 popup_contents_title_box">
-                          <div class="col-12 font_gongGothic popup_contents_title">자격취득 확인서를 프린트하실 수 있습니다</div>
-                        </div>
-                        <div class="col-12 mb50 certificate_style_0_wrap type_3" id="qualfPrintPop" data-wv-type="view" data-wv-option=""></div>
-                      </div>
 
-                      <div class="col-12 tc" data-wv-layout-element="block" data-wv-block-id="___lms_btn_style_0_con" data-wv-res-id="___lms_btn_style_0_con___-1___1606208948906___" contenteditable="false" data-wv-removetempid="true">
-                        <div class="show font_gongGothic bg_point1" data-wv-layout-element="block" onclick="certificate.onStartPrint($('#qualfPrintPop'));" data-wv-block-id="___lms_btn_style_0" data-wv-res-id="___lms_btn_style_0___-1___1606208813703___" contenteditable="false" data-wv-removetempid="true" data-wv-layout-element-type="text">
-                          <span data-wv-res-id="___0___1606209325434___">출력하기</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- 자격취득 확인서 출력 팝업-->
-              <!-- 수료증 출력 팝업-->
-              <div class="col-12 lms_popup_style_1_wrap type_2" id="printCertificatePopup">
+              <!-- 수료증 출력 팝업 -->
+              <div class="col-12 lms_popup_style_1_wrap type_2" id="printCertificatePopup" >
                 <div class="col-12 popup_con" style="max-width: 1170px">
                   <div class="col-12 popup_inner">
+                    <div class="popup_close_btn_wrap" style="border-top-right-radius: 0px">
+                      <a href="javascript:void(0)" onclick="popupManager.removePopLatest()" class="popup_close_btn_con">
+                        <div class="popup_close_btn_bg"></div>
+                        <div class="popup_close_btn"></div>
+                      </a>
+                    </div>
                     <div class="col-12 popup_header_con">
                       <div class="col-8 col-md-0 fl font_gongGothic popup_title">교육수료증 출력</div>
-                      <div class="popup_close_btn_wrap">
-                        <a href="javascript:void(0)" onclick="popupManager.removePopLatest()" class="popup_close_btn_con">
-                          <div class="popup_close_btn_bg"></div>
-                          <div class="popup_close_btn"></div>
-                        </a>
-                      </div>
                     </div>
                     <div class="col-12 popup_contents_con">
                       <div class="col-12 popup_contents type_info">
                         <div class="col-12 mb36 mb-md-46 popup_contents_title_box">
                           <div class="col-12 font_gongGothic popup_contents_title">교육수료증을 프린트하실 수 있습니다</div>
                         </div>
-                        <div class="col-12 mb50 certificate_style_0_wrap" id="certPrintPop" data-wv-type="view" data-wv-option=""></div>
+                        <div class="col-12 mb50 certificate_style_0_wrap" id="certPrintPop" data-wv-type="view" data-wv-option="">
+                          <div class="col-12" data-wv-interpreter="" style="display: block">
+                            <img class="certificate_bg" src="/weven_template/theme/PORTAL/1/resource/img/common/certificate_bg_img.png" alt="증명서 배경 이미지" />
+                            <div class="col-12">
+                              <div class="col-12 mb40 mb-sm-52 certificate_top_con">
+                                <div class="col-12 mb26 mb-md-46 id_num">제 EDU-2024-22698호</div>
+                                <div class="col-12 tc mb37 certificate_logo">
+                                  <img src="/weven_template/theme/PORTAL/1/resource/img/common/certificate_logo.png" alt="스포츠안전재단" />
+                                </div>
+                                <div class="col-12 tc font_nanumMyeongjo certificate_title">수 &nbsp;&nbsp;료 &nbsp;&nbsp;증</div>
+                              </div>
+                              <div class="col-0 fr mb86 certificate_subject_info_con">
+                                <div class="col-0 certificate_subject_info">
+                                  <div class="col-0 info_title"><span>성</span><span>명</span></div>
+                                  <div class="col-0 info_text">정서현</div>
+                                </div>
+                                <div class="col-0 certificate_subject_info">
+                                  <div class="col-0 info_title"><span>생</span><span>년</span><span>월</span><span>일</span></div>
+                                  <div class="col-0 info_text">2004.11.10</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-12 mb29 certificate_contents_con">
+                              <div class="col-12 mb82 certificate_contents_desc_list_box">
+                                <div class="col-12 certificate_contents_desc_list">
+                                  <div class="col-0 certificate_contents_desc_title">과정명</div>
+                                  <div class="col-0 certificate_contents_desc_text">[자격과정] 스포츠안전관리사 2급 자격 취득과정</div>
+                                </div>
+                                <div class="col-12 certificate_contents_desc_list">
+                                  <div class="col-0 certificate_contents_desc_title">교육일시</div>
+                                  <div class="col-0 certificate_contents_desc_text">2024.11.27 - 2024.11.27 (총 480분)</div>
+                                </div>
+                                <div class="col-12 certificate_contents_desc_list block">
+                                  <div class="col-0 certificate_contents_desc_title">과목명</div>
+                                  <div class="col-0 certificate_contents_desc_text" id="sbjectListCon">
+                                    <div class="col-12">스포츠행사 안전관리 일반(자격과정)</div>
+                                    <div class="col-12">스포츠행사 군중안전관리(자격과정)</div>
+                                    <div class="col-12">스포츠응급처치Ⅰ(자격과정)</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12 tc certificate_contents_text_box">
+                                위 사람은 (재)스포츠안전재단에서 실시하는<br class="show-sm hidden" />
+                                위의 교육과정을 이수하였기에 이 증서를 수여합니다.<br class="show-sm hidden" />
+                              </div>
+                            </div>
+                            <div class="col-12 certificate_bottom_con">
+                              <img src="/weven_template/theme/PORTAL/1/resource/img/common/certificate_sticker.png" alt="스포츠안전재단" />
+
+                              <div class="col-12 tc mb20 mb-sm-27 date"><span class="yearType2">2025</span>년 &nbsp; <span class="monthType2">01</span>월 &nbsp; <span class="dateType2">2</span>일</div>
+
+                              <div class="col-12 tc font_nanumMyeongjo representative">
+                                <span>스포츠안전재단 이사장</span>
+                                <img src="/weven_template/theme/PORTAL/1/resource/img/common/certificate_stamp.png" alt="이사장 직인" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
 
                       <div class="col-12 tc" data-wv-layout-element="block" data-wv-block-id="___lms_btn_style_0_con" data-wv-res-id="___lms_btn_style_0_con___-1___1606208948906___" contenteditable="false" data-wv-removetempid="true">
@@ -1506,7 +1543,9 @@
                   </div>
                 </div>
               </div>
-              <!-- 수료증 출력 팝업-->
+              <!-- 수료증 출력 팝업 -->
+
+              <!-- 자격취득 확인서 출력 팝업은 하단에 정의되어 있음-->
 
               <!-- 혼합과정 상세보기 팝업 (카드형) -->
               <div class="col-12 lms_popup_style_1_wrap" id="hybridListPopup">
@@ -1702,6 +1741,93 @@
 
     <!-- 팝업 -->
 
+    <!-- 자격취득 확인서 출력 팝업 2025-12-04 추가-->
+    <div class="col-12 lms_popup_style_1_wrap type_2" id="printQualCertificatePopup">
+      <div class="col-12 popup_con" style="max-width: 1170px">
+        <div class="col-12 popup_inner">
+          <div class="col-12 popup_header_con">
+            <div class="col-8 col-md-0 fl font_gongGothic popup_title">자격취득 확인서 출력</div>
+            <div class="popup_close_btn_wrap">
+              <a href="javascript:void(0)" onclick="popupManager.removePopLatest()" class="popup_close_btn_con">
+                <div class="popup_close_btn_bg"></div>
+                <div class="popup_close_btn"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-12 popup_contents_con">
+            <div class="col-12 popup_contents type_info">
+              <div class="col-12 mb36 mb-md-46 popup_contents_title_box">
+                <div class="col-12 font_gongGothic popup_contents_title">자격취득 확인서를 프린트하실 수 있습니다</div>
+              </div>
+              <!-- 클레스네임 추가 renew 2025-12-08 -->
+              <div class="certificate_style_0_wrap renew" id="certPrintPop" data-wv-type="view" data-wv-option="">
+                <!-- 자격증 초안 (원본 디자인 적용) -->
+                <div class="certificate-container">
+                  <div style="box-sizing: content-box">
+                    <!-- 상단 영역 -->
+                    <div class="certificate-top-con">
+                      <div class="certificate-doc-number">제2019-005169호</div>
+                      <div class="certificate-logo">
+                        <img class="certificate_logo" src="../../weven_template/theme/PORTAL/1/resource/img/logo_big.png" alt="스포츠안전재단" />
+                      </div>
+                      <div class="certificate-title">
+                        <div class="title-kr">자&nbsp;&nbsp;격&nbsp;&nbsp;증</div>
+                        <div class="title-en">Certificate of Qualification</div>
+                      </div>
+                    </div>
+
+                    <!-- 개인정보 -->
+                    <div class="certificate-info">
+                      <div class="info-row">
+                        <div class="info-label"><span>성</span><span>명</span></div>
+                        <div class="info-value">정서현</div>
+                      </div>
+                      <div class="info-row">
+                        <div class="info-label"><span>생</span><span>년</span><span>월</span><span>일</span></div>
+                        <div class="info-value">20041110</div>
+                      </div>
+                      <div class="info-row">
+                        <div class="info-label"><span>자</span><span>격</span><span>명</span></div>
+                        <div class="info-value">스포츠안전관리사 2급</div>
+                      </div>
+                      <div class="info-row">
+                        <div class="info-label"><span>자</span><span>격</span><span>번</span><span>호</span></div>
+                        <div class="info-value">2024-20401</div>
+                      </div>
+                    </div>
+
+                    <!-- 본문 텍스트 -->
+                    <div class="certificate-body">
+                      <div class="body-text-kr">
+                        &nbsp;위 사람은 스포츠안전재단에서 주관하는 소정의 교육과정을 이수하고, 자격시험에 합격하였으므로 자격관리ㆍ운영 규정에 의거하여 이 자격증을 수여합니다.<br class="show-sm hidden" />
+                        <div class="body-text-en">This certificate is awarded to above-mentioned person who has completed an education course and success in the test of Korea Sports Safety Foundation in accordance with the Regulations for Qualification Management and Operations.</div>
+                      </div>
+                    </div>
+
+                    <!-- 하단 발급 정보 -->
+                    <div class="certificate-footer">
+                      <div class="issue-date">2025년 12월 03일</div>
+                      <div class="issuer-name">
+                        <span>스포츠안전재단 이사장</span>
+                      </div>
+                      <div class="issuer-seal"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 tc" data-wv-layout-element="block" data-wv-block-id="___lms_btn_style_0_con" data-wv-res-id="___lms_btn_style_0_con___-1___1606208948906___" contenteditable="false" data-wv-removetempid="true">
+              <button type="button" class="show font_gongGothic bg_point1" data-wv-layout-element="block" onclick="certificate.onStartPrint($('#certPrintPop'));" data-wv-block-id="___lms_btn_style_0" data-wv-res-id="___lms_btn_style_0___-1___1606208813703___" contenteditable="false" data-wv-removetempid="true" data-wv-layout-element-type="text" style="border: none">
+                <span data-wv-res-id="___0___1606209325434___">출력하기</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 자격취득 확인서 출력 팝업 2025-12-04 추가-->
+
     <!-- 팝업: 권한설정 -->
     <div class="col-12 lms_popup_style_1_wrap" id="changeAuthPopup">
       <div class="col-12 popup_con" style="max-width: 500px">
@@ -1729,8 +1855,8 @@
                       <!-- 안전관리포털과 동일하게 사용 -->
                       <div id="roleSelectArea" class="role_select_area">
                         <!-- [dev] 현재 선택된 권한에 클래스명 추가 (current) -->
-                        <label class="auth-item"><input type="radio" name="selRole" value="0" checked><span>수강생</span></label>
-                        <label class="auth-item current"><input type="radio" name="selRole" value="1"><span>강사</span></label>
+                        <label class="auth-item"><input type="radio" name="selRole" value="0" checked /><span>수강생</span></label>
+                        <label class="auth-item current"><input type="radio" name="selRole" value="1" /><span>강사</span></label>
                       </div>
                     </div>
                   </div>
@@ -1748,6 +1874,102 @@
           popupManager.add('#changeAuthPopup');
         });
       });
+
+      // 수료증 출력 팝업 관련 함수
+      var certificate = certificate || {};
+
+      // 수료증 팝업 열기
+      certificate.openPop = function (type, courseSeq) {
+        // type이 'Q'이면 확인서 팝업, 그 외에는 수료증 팝업
+        var popupId = type === 'Q' ? '#printQualCertificatePopup' : '#printCertificatePopup';
+
+        // 팝업이 이미 열려있으면 먼저 닫기
+        var $popup = $(popupId);
+        if ($popup.is(':visible')) {
+          if (typeof popupManager !== 'undefined') {
+            popupManager.removePopLatest();
+          } else if (typeof bm !== 'undefined' && bm.popupManager) {
+            bm.popupManager.removePopLatest();
+          } else {
+            $popup.hide();
+          }
+        }
+
+        // 팝업 열기 (약간의 딜레이를 주어 DOM이 준비되도록)
+        setTimeout(function () {
+          if (typeof popupManager !== 'undefined') {
+            popupManager.add(popupId);
+          } else if (typeof bm !== 'undefined' && bm.popupManager) {
+            bm.popupManager.add(popupId);
+          } else {
+            $popup.show();
+          }
+
+          // 팝업이 완전히 열린 후 콘텐츠가 제대로 표시되도록 추가 딜레이
+          setTimeout(function () {
+            // 팝업 내부 요소들이 제대로 렌더링되도록 강제 업데이트
+            var $popupContent = $popup.find('.certificate_style_0_wrap.renew');
+            if ($popupContent.length > 0) {
+              // 이미지가 있다면 다시 로드
+              $popupContent.find('img').each(function () {
+                var $img = $(this);
+                var src = $img.attr('src');
+                if (src) {
+                  $img.attr('src', src + '?t=' + new Date().getTime());
+                }
+              });
+            }
+          }, 100);
+        }, 50);
+
+        // 여기에 실제 데이터 로드 로직 추가 가능
+        // 예: AJAX로 courseSeq를 이용해 자격증 데이터 가져오기
+      };
+
+      // 수료증 인쇄 시작
+      certificate.onStartPrint = function ($element) {
+        if (!$element || $element.length === 0) {
+          alert('인쇄할 내용을 찾을 수 없습니다.');
+          return;
+        }
+
+        try {
+          // 인쇄용 임시 컨테이너 생성
+          let printContainer = document.getElementById('print-container-temp');
+
+          if (printContainer) {
+            printContainer.remove();
+          }
+
+          printContainer = document.createElement('div');
+          printContainer.id = 'print-container-temp';
+          printContainer.style.position = 'absolute';
+          printContainer.style.left = '-9999px';
+          printContainer.style.top = '-9999px';
+          printContainer.style.width = '1px';
+          printContainer.style.height = '1px';
+          printContainer.style.overflow = 'hidden';
+
+          // 인쇄할 내용 복사
+          printContainer.innerHTML = $element.html();
+
+          // body에 추가
+          document.body.appendChild(printContainer);
+
+          // 인쇄 실행
+          window.print();
+
+          // 인쇄 후 임시 컨테이너 제거
+          setTimeout(function () {
+            if (printContainer && printContainer.parentNode) {
+              printContainer.remove();
+            }
+          }, 100);
+        } catch (error) {
+          console.error('인쇄 중 오류 발생:', error);
+          alert('인쇄 중 오류가 발생했습니다.');
+        }
+      };
     </script>
 
     <div id="give-freely-root-mbnbehikldjhnfehhnaidhjhoofhpehk" class="give-freely-root" data-extension-id="mbnbehikldjhnfehhnaidhjhoofhpehk" data-extension-name="CSS Peeper" style="display: block"></div>
