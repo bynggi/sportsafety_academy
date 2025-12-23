@@ -1659,8 +1659,8 @@
     line-height: 1.6;
   }
 
-  /* 모든 요소 숨기기 */
-  body>*:not(#print-container-temp) {
+  /* 모든 요소 숨기기 - print-container-temp가 존재할 때만 적용 */
+  body:has(#print-container-temp) > *:not(#print-container-temp) {
     display: none !important;
   }
 
@@ -2315,5 +2315,233 @@
   .certificate-footer .issuer-seal {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
+  }
+}
+
+@media print {
+  /* 페이지 설정 */
+  @page {
+    size: A4;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 수료증 래퍼 - 한 페이지 인쇄 설정 */
+  .certificate_style_0_wrap.one_page_content {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    page-break-after: avoid !important;
+    page-break-before: avoid !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    border: 0 !important;
+    padding: 0 !important;
+    height: 297mm !important;
+    min-height: 297mm !important;
+    max-height: 297mm !important;
+    overflow: hidden !important;
+    position: relative !important;
+    background: #fff !important;
+  }
+
+  /* 수료증 내부 컨테이너 */
+  .certificate_style_0_wrap.one_page_content > div[data-wv-interpreter] {
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 297mm !important;
+    display: block !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* 수료증 배경 이미지 */
+  .certificate_style_0_wrap.one_page_content img.certificate_bg {
+    /* position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important; */
+    /* width: 100% !important; */
+    /* height: 100% !important; */
+    margin-top: -80px;
+    z-index: 0 !important;
+    object-fit: fill !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* 수료증 이미지 인쇄 최적화 */
+  .certificate_style_0_wrap.one_page_content img {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* 수료증 상단 영역 */
+  .certificate_style_0_wrap.one_page_content .certificate_top_con {
+    position: relative !important;
+    z-index: 1 !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    padding: 60px 80px 0 !important;
+    margin-bottom: 30px !important;
+  }
+
+  /* 수료증 번호 */
+  .certificate_style_0_wrap.one_page_content .id_num {
+    margin-bottom: 20px !important;
+    margin-left: 60px;
+  }
+
+  /* 수료증 로고 */
+  .certificate_style_0_wrap.one_page_content .certificate_logo {
+    margin-bottom: 25px !important;
+    text-align: center !important;
+  }
+
+  .certificate_style_0_wrap.one_page_content .certificate_logo img {
+    max-width: 180px !important;
+    height: auto !important;
+    margin: 0 auto !important;
+  }
+
+  /* 수료증 제목 */
+  .certificate_style_0_wrap.one_page_content .certificate_title {
+    font-size: 48px !important;
+    /* font-weight: 800 !important; */
+    text-align: center !important;
+    margin-bottom: 0 !important;
+    letter-spacing: 8px !important;
+  }
+
+  /* 수료증 수강생 정보 */
+  .certificate_style_0_wrap.one_page_content .certificate_subject_info_con {
+    margin-bottom: 86px !important;
+    padding-right: 80px !important;
+  }
+
+  .certificate_style_0_wrap.one_page_content .certificate_subject_info {
+    margin-bottom: 15px !important;
+  }
+
+  .certificate_style_0_wrap.one_page_content .certificate_subject_info .info_title {
+    /* font-size: 18px !important; */
+    /* font-weight: 800 !important; */
+    margin-right: 10px !important;
+  }
+
+  .certificate_style_0_wrap.one_page_content .certificate_subject_info .info_text {
+    /* font-size: 18px !important; */
+    /* font-weight: 500 !important; */
+  }
+
+  /* 수료증 본문 영역 */
+  .certificate_style_0_wrap.one_page_content .certificate_contents_con {
+    position: relative !important;
+    z-index: 1 !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    padding: 0 80px !important;
+    margin-bottom: 40px !important;
+  }
+
+  .certificate_contents_con .certificate_contents_text_box br.show-sm.hidden {
+    display: block !important;
+  }
+
+  /* 수료증 과정 정보 박스 */
+  .certificate_style_0_wrap.one_page_content .certificate_contents_desc_list_box {
+    margin-bottom: 50px !important;
+  }
+
+  .certificate_style_0_wrap.one_page_content .certificate_contents_desc_list {
+    margin-bottom: 15px !important;
+    display: flex !important;
+    align-items: flex-start !important;
+  }
+
+  .certificate_style_0_wrap.one_page_content .certificate_contents_desc_title {
+    font-size: 16px !important;
+    /* font-weight: 800 !important; */
+    min-width: 80px !important;
+    margin-right: 15px !important;
+  }
+
+  .certificate_style_0_wrap.one_page_content .certificate_contents_desc_text {
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    flex: 1 !important;
+  }
+
+  /* 수료증 본문 텍스트 - 중앙 정렬 */
+  .certificate_style_0_wrap.one_page_content .certificate_contents_text_box {
+    font-size: 20px !important;
+    line-height: 32px !important;
+    text-align: center !important;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+    position: relative !important;
+    z-index: 1 !important;
+    padding: 0 80px !important;
+  }
+
+  /* 수료증 하단 영역 */
+  .certificate_style_0_wrap.one_page_content .certificate_bottom_con {
+    position: relative !important;
+    z-index: 1 !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    padding: 0 80px 60px !important;
+    text-align: center !important;
+    width: 100%;
+  }
+
+  /* 수료증 하단 스티커 */
+  .certificate_style_0_wrap.one_page_content .certificate_bottom_con > img:first-child {
+    display: block !important;
+    max-width: 120px !important;
+    height: auto !important;
+    margin: 0 auto 25px !important;
+    left: 60px;
+  }
+
+  /* 수료증 날짜 */
+  .certificate_style_0_wrap.one_page_content .certificate_bottom_con .date {
+    font-size: 20px !important;
+    /* font-weight: 800 !important; */
+    margin-bottom: 20px !important;
+    padding-right: 140px !important;
+    text-align: right !important;
+  }
+
+  /* 수료증 이사장 */
+  .certificate_style_0_wrap.one_page_content .certificate_bottom_con .representative {
+    font-size: 48px !important;
+    font-weight: 800 !important;
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 15px !important;
+  }
+
+  .certificate_style_0_wrap.one_page_content .certificate_bottom_con .representative span {
+    font-size: 42px !important;
+  }
+
+  /* 수료증 직인 */
+  .certificate_style_0_wrap.one_page_content .certificate_bottom_con .representative img {
+    max-width: 80px !important;
+    height: auto !important;
+    display: inline-block !important;
+    right: 130px;
+  }
+
+  /* 수료증 내부 col-12 리셋 */
+  .certificate_style_0_wrap.one_page_content .col-12 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }
